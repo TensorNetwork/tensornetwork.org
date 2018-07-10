@@ -1,5 +1,6 @@
-header_prenav = open("header_prenav") do file readstring(file) end
-footer = open("footer") do file readstring(file) end
+header_prenav = open("header_prenav.html") do file readstring(file) end
+header_postnav = open("header_postnav.html") do file readstring(file) end
+footer = open("footer.html") do file readstring(file) end
 
 idir = "src"
 odir = "pages"
@@ -20,6 +21,7 @@ for (root,dirs,files) in walkdir(idir)
     html = Base.Markdown.html(Markdown.parse_file(ifname))
     of = open(ofname,"w")
     print(of,header_prenav)
+    print(of,header_postnav)
     print(of,html)
     print(of,footer)
     close(of)
