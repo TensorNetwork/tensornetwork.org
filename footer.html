@@ -6,5 +6,40 @@
 
 </div> <!--class="main"-->
 
+<script type="text/javascript">
+$(document).ready(function() 
+    {
+    $('.rounded').corner("7px");
+
+    $('.example_clicker').next().hide();
+
+    $('.example_clicker').click(
+    function(e)
+        {
+        /*
+        $(e.target).toggle(
+        function(e) { $(e.target).text("Show Example").stop(); },
+        function(e) { $(e.target).text("Hide Example").stop(); });
+        */
+
+        $(e.target).next('.highlight').slideToggle(100);
+
+        /* Change text */
+        var str = $(e.target).text();
+        if(str.search("Show") > -1)
+            {
+            str = str.split("Show").join("Hide");
+            }
+        else
+            {
+            str = str.split("Hide").join("Show");
+            }
+
+        var set_text = function() { $(e.target).text(str); }
+        window.setTimeout(set_text, 200);
+        });
+    });
+</script>
+
 </body>
 </html>

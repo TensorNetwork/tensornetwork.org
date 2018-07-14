@@ -18,7 +18,7 @@ for (root,dirs,files) in walkdir(idir)
     (ext!="md") && continue
     ifname = curri*"/"*f
     ofname = curro*"/"*base*".html"
-    html = Base.Markdown.html(Markdown.parse_file(ifname))
+    html = Base.Markdown.html(Markdown.parse_file(ifname;flavor=Markdown.github))
     of = open(ofname,"w")
     print(of,header_prenav)
     print(of,header_postnav)
