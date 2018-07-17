@@ -1,5 +1,5 @@
 
-# Tensor Diagram Notation
+## Tensor Diagram Notation
 
 Tensor diagram notation is a simple, yet very powerful
 graphical notation for networks of contracted tensors.
