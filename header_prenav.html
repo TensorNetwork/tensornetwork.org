@@ -19,23 +19,29 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/style.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!--<link rel="icon" type="image/png" href="images/favicon.png">-->
+
+  <!-- MathJax -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['\$','\$'] ], displayMath: [ ['@@','@@'] ] }});
+  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML"></script>
 
 </head>
 <body>
 
  <div class="container">
  <div class="row" style="margin-top: 2%">
-    <div class="one column"><img height="40px" src="images/tn_logo.png"/></div>
+    <div class="one column"><img height="40px" src="/images/tn_logo.png"/></div>
     <div class="eleven columns top_navbar">
-       <a href="index.html">Main</a> 
-       <a href="about.html">About</a>
+       <a href="/">Main</a> 
+       <a href="about/">About</a>
     </div>
   </div>
   <br/>
