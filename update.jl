@@ -3,8 +3,10 @@ header_postnav = open("header_postnav.html") do file readstring(file) end
 footer = open("footer.html") do file readstring(file) end
 
 idir = "src"
-odir = "pages"
+odir = "../tensornetwork.org"
 run(`mkdir -p $odir`)
+run(`cp -r css $odir/`)
+run(`cp -r images $odir/`)
 
 for (root,dirs,files) in walkdir(idir)
   curri = idir * root[4:end]
