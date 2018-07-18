@@ -17,15 +17,18 @@ for (root,dirs,files) in walkdir(idir)
   for f in files
     (f[1]=='.') && continue
     (base,ext) = split(f,".")
-    (ext!="md") && continue
     ifname = curri*"/"*f
-    ofname = curro*"/"*base*".html"
-    html = Base.Markdown.html(Markdown.parse_file(ifname;flavor=Markdown.github))
-    of = open(ofname,"w")
-    print(of,header_prenav)
-    print(of,header_postnav)
-    print(of,html)
-    print(of,footer)
-    close(of)
+    if ext == "md"
+      ofname = curro*"/"*base*".html"
+      html = Base.Markdown.html(Markdown.parse_file(ifname;flavor=Markdown.github))
+      of = open(ofname,"w")
+      print(of,header_prenav)
+      print(of,header_postnav)
+      print(of,html)
+      print(of,footer)
+      close(of)
+    elseif ext == "png" || ext == "jpg"
+      run(`cp $ifname $(curro*"/"*f)`)
+    end#if
   end
 end
