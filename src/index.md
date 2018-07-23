@@ -9,3 +9,16 @@ useful for applied mathematics, physics, machine
 learning, and possibly many other fields.
 
 ![medium](tensor_networks.png)
+
+Sections:
+- [[Fundamentals|fundamentals]]
+- [[Physics|physics]]
+- [[Mathematics|mathematics]]
+- [[Software|software]]
+
+Some literal Markdown: `![medium](tensor_networks.png)`
+And some code:
+
+    function add(n::Int,m::Int)
+      return n+m
+    end
