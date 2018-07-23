@@ -11,12 +11,27 @@ li > p:first-child
 
 .top_navbar
     { 
-    border-radius: 10px;
     background: #872518; 
-    text-align: left; 
-    padding: 5px 10px 5px 20px;
-    font-size: 140%;
     font-family: sans-serif;
+    font-size: 100%;
+    vertical-align: middle;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2%;
+
+    margin-left: 10px;
+    margin-right: 0px;
+    /*
+    padding-right: auto;
+    */
+    /*       t   r    b   l*/
+    /*
+    text-align: left; 
+    margin:  3px 0px  0px  0px;
+    padding: 4px 10px 12px 30px;
+    */
+    border-radius: 10px;
     -moz-box-shadow: 1px 1px 1px #999;
     -webkit-box-shadow: 1px 1px 1px #999;
     box-shadow: 1px 1px 1px #999;
@@ -24,7 +39,7 @@ li > p:first-child
 .top_navbar a
     {
     color: #fff;
-    font-size: 80%;
+    font-size: 100%;
     margin-right: 20px;
     }
 
