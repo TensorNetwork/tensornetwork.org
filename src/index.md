@@ -10,6 +10,7 @@ learning, and possibly many other fields.
 
 ![medium](tensor_networks.png)
 
+<!--
 Sections:
 - [[Fundamentals|fundamentals]]
 - [[Physics|physics]]
@@ -22,3 +23,4 @@ And some code:
     function add(n::Int,m::Int)
       return n+m
     end
+-->
