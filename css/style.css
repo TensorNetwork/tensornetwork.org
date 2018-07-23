@@ -9,6 +9,16 @@ li > p:first-child
     display: inline;
     }
 
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
 .top_navbar
     { 
     background: #872518; 
@@ -32,9 +42,12 @@ li > p:first-child
     padding: 4px 10px 12px 30px;
     */
     border-radius: 10px;
+
+    /*
     -moz-box-shadow: 1px 1px 1px #999;
     -webkit-box-shadow: 1px 1px 1px #999;
     box-shadow: 1px 1px 1px #999;
+    */
     }
 .top_navbar a
     {
