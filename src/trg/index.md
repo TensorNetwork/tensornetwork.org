@@ -1,6 +1,7 @@
-# Case Study: TRG Algorithm
+# TRG Algorithm
 
-First proposed by Levin and Nave (cond-mat/0611687), TRG is a strategy for contracting a network
+First proposed by Levin and Nave (cond-mat/0611687), TRG ("tensor renormalization group") 
+is a strategy for contracting a network
 of tensors connected in a two-dimensional lattice pattern by decimating the network
 in a heirarchical fashion. The term ["renormalization group"](http://physics.ohio-state.edu/~jay/846/Wilson.pdf) 
 refers to processes where less important information at small distance scales is 
