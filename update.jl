@@ -27,6 +27,28 @@ function processCitations(html::String)
 end
 
 #
+# Process MathJax
+# 
+function processMathJax(html::String)
+  imj_re = r"(\@\@.+?\@\@)"s
+  res = ""
+  pos = 1
+  match = false
+  for m in eachmatch(imj_re,html)
+    match = true
+    res *= html[pos:m.offset-1]
+    res *= "\n\n<div>"*m.captures[1]*"</div>\n\n"
+    pos = m.offset+length(m.match)
+  end
+  if !match 
+    return html 
+  else
+    res *= html[pos:end]
+  end
+  return res
+end
+
+#
 # Process wiki-style links
 # 
 function processWikiLinks(html::String)
@@ -38,9 +60,9 @@ function processWikiLinks(html::String)
     match = true
     res *= html[pos:m.offset-1]
     if isdir("src/"*m.captures[2])
-      res *= "["*m.captures[1]*"]("*m.captures[2]*")"
+      res *= "["*m.captures[1]*"](/"*m.captures[2]*")"
     elseif isfile("src/"*m.captures[2]*".md")
-      res *= "["*m.captures[1]*"]("*m.captures[2]*".html)"
+      res *= "["*m.captures[1]*"](/"*m.captures[2]*".html)"
     else
       res *= "["*m.captures[1]*"](unknown_file)"
     end
@@ -99,6 +121,7 @@ for (root,dirs,files) in walkdir(idir)
     if ext == "md"
       ofname = curro*"/"*base*".html"
       mdstring = readstring(`cat $ifname`)
+      mdstring = processMathJax(mdstring)
       mdstring = processWikiLinks(mdstring)
       mdstring = processArxivLinks(mdstring)
       mdstring = processCitations(mdstring)
