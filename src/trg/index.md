@@ -3,7 +3,7 @@
 First proposed by Levin and Nave (cond-mat/0611687), TRG ("tensor renormalization group") 
 is a strategy for contracting a network
 of tensors connected in a two-dimensional lattice pattern by decimating the network
-in a heirarchical fashion. The term ["renormalization group"](http://physics.ohio-state.edu/~jay/846/Wilson.pdf) 
+in a heirarchical fashion. The term ["renormalization group"](https://websites.pmc.ucsc.edu/~wrs/Project/2014-summer%20seminar/Renorm/Wilson-many%20scales-Sci%20Am-79.pdf) 
 refers to processes where less important information at small distance scales is 
 repeatedly discarded until only the most important information remains.
 
