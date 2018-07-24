@@ -13,19 +13,43 @@ can be expressed in [[tensor diagram notation|diagrams]] as
 
 ![medium](mpstt_diagram.png)
 
-where for concreteness $T$ is taken to have six indices. But the 
-pattern above can be generalized without loss of efficiency for
-a tensor with an arbitrary number of indices.;
+where for concreteness $T$ is taken to have six indices, but the 
+pattern above can be generalized for a tensor with any number of indices.
 
 Alternatively, the MPS/TT factorization of a tensor
 can be expressed in traditional notation as
 
-<div>@@
-T^{s_1 s_2 s_3 s_4 s_5 s_6} = \sum_{\alpha} A^{s_1}_{\alpha_1} 
+@@
+T^{s_1 s_2 s_3 s_4 s_5 s_6} = \sum_{\{\mathbf{\alpha}\}} A^{s_1}_{\alpha_1} 
 A^{s_2}_{\alpha_1 \alpha_2}
 A^{s_3}_{\alpha_2 \alpha_3} 
 A^{s_4}_{\alpha_3 \alpha_4} 
 A^{s_5}_{\alpha_4 \alpha_5} 
 A^{s_6}_{\alpha_5}
-@@</div>
+@@
+
+where the bond indices $\alpha$ are contracted, or summed over.
+
+Any tensor can be exactly represented in MPS / TT form for a large enough
+size of the bond indices $\alpha$.
+
+## Bond Dimension / Rank
+
+A key concept in understanding the matrix product state or tensor train 
+factorization is the _bond dimension_ or _tensor-train rank_, sometimes
+also called the virtual dimension. This is the dimension of the bond 
+index connecting one tensor in the chain to the next, and can vary
+from bond to bond. The bond dimension can be thought of as a 
+parameter controlling the expressivity of a MPS/TT network. 
+In the example above, it is the dimension of the $\alpha$ indices.
+
+Given a large enough bond dimension or rank, an MPS/TT can
+represent an arbitrary tensor. Consider a tensor
+$T^{s_1 s_2 \cdots s_N}$ having N indices all of dimension $d$.
+Then this tensor can be represented exactly as an MPS/TT with
+bond dimension $m=d^{N/2}$.
+
+However, in most applications the MPS/TT form is used as an approximation.
+In such cases, the bond dimension or rank is either fixed at a moderate size,
+or determined adaptively.
 
