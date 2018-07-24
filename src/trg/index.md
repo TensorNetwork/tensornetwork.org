@@ -1,9 +1,5 @@
 # Case Study: TRG Algorithm
 
-The handful of techniques we have covered so far (ITensor contraction and SVD)
-are already enough to implement a powerful algorithm: the *tensor renormalization group*
-(TRG).
-
 First proposed by Levin and Nave (cond-mat/0611687), TRG is a strategy for contracting a network
 of tensors connected in a two-dimensional lattice pattern by decimating the network
 in a heirarchical fashion. The term ["renormalization group"](http://physics.ohio-state.edu/~jay/846/Wilson.pdf) 
