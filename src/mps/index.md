@@ -1,7 +1,7 @@
 
 # Matrix Product State / Tensor Train
 
-The matrix product state (MPS) or tensor train (TT) tensor network
+The matrix product state (MPS)\cite{Fannes,Ostlund} or tensor train (TT)\cite{Oseledets} tensor network
 is a factorization of a [[tensor|tensor]] with N indices
 into a chain-like product of three-index tensors.
 The MPS/TT is one of the best understood tensor networks for which

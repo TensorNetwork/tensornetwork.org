@@ -3,6 +3,30 @@
 # 
 
 #
+# Process citations
+# 
+function processCitations(html::String)
+  cite_re = r"\\cite{(.+?)}"
+  res = ""
+  pos = 1
+  match = false
+  num = 1
+  for m in eachmatch(cite_re,html)
+    match = true
+    res *= html[pos:m.offset-1]
+    res *= "<a class=\"citation\" href=\""*m.captures[1]*"\">[$num]</a>"
+    num += 1
+    pos = m.offset+length(m.match)
+  end
+  if !match 
+    return html 
+  else
+    res *= html[pos:end]
+  end
+  return res
+end
+
+#
 # Process wiki-style links
 # 
 function processWikiLinks(html::String)
@@ -77,6 +101,7 @@ for (root,dirs,files) in walkdir(idir)
       mdstring = readstring(`cat $ifname`)
       mdstring = processWikiLinks(mdstring)
       mdstring = processArxivLinks(mdstring)
+      mdstring = processCitations(mdstring)
       open("_tmp_file.md","w") do tf
         print(tf,mdstring)
       end

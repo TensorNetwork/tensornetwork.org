@@ -57,6 +57,14 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     margin-right: 20px;
     }
 
+a.citation
+    {
+    vertical-align: super;
+    font-size: 60%;
+    font-weight: bold;
+    margin-left: 1px;
+    }
+
 img[alt=small] 
     { 
     width: 30%; 
