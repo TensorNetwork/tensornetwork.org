@@ -5,7 +5,7 @@ applications, and software.
 Tensor networks are a technique for factorizing
 a many-index tensor into a contracted
 network of few-index tensors, and are very
-useful for applied mathematics, physics, machine
+useful for applied mathematics, chemistry, physics, machine
 learning, and possibly many other fields.
 
 ![medium](tensor_networks.png)
