@@ -1,11 +1,18 @@
 # TRG Algorithm
 
-First proposed by Levin and Nave (cond-mat/0611687), TRG ("tensor renormalization group") 
-is a strategy for contracting a network
-of tensors connected in a two-dimensional lattice pattern by decimating the network
-in a heirarchical fashion. The term ["renormalization group"](https://websites.pmc.ucsc.edu/~wrs/Project/2014-summer%20seminar/Renorm/Wilson-many%20scales-Sci%20Am-79.pdf) 
-refers to processes where less important information at small distance scales is 
-repeatedly discarded until only the most important information remains.
+The TRG algorithm, which stands for _tensor renormalization group_
+is a strategy for evaluating a fully contracted network of tensors
+by decimating the network in a heirarchical fashion.\cite{Levin} 
+The strategy is to factorize each tensor in the network using a truncated
+[[singular value decomposition|background/svd]] (SVD) into two smaller
+factor tensors. Then each factor tensor is contracted with another factor
+from a neighboring tensor, resulting in a new contracted lattice of half 
+as many tensors.
+
+The term ["renormalization group"](https://websites.pmc.ucsc.edu/~wrs/Project/2014-summer%20seminar/Renorm/Wilson-many%20scales-Sci%20Am-79.pdf) is a term used in the physics
+literature to refer to processes where less important 
+information at small distance scales is repeatedly discarded until only the 
+most important information remains.
 
 ## The Problem
 
@@ -151,7 +158,15 @@ the original network is equal to the following "double trace" of $A_N$:
 
 ![small](TRG_top.png)
 
-## References
+## Extensions
+
+Extensions of the basic TRG algorithm include:
+- _tensor entanglement renormalization group_ (TERG)\cite{Gu:2008}, 
+- _tensor network renormalization_ (TNR)\cite{Evenbly:2015} 
+- loop-TNR\cite{Yang}
+- GILT\cite{Hauru:2017}
+
+## Suggested Reading
 
 - *The original paper on TRG*:
 

@@ -2,28 +2,38 @@
 # Static site generator for Tensor Network website
 # 
 
+include("bibtex.jl")
+
 #
 # Process citations
 # 
-function processCitations(html::String)
+function processCitations(html::String)::Tuple{String,Dict{String,Int}}
   cite_re = r"\\cite{(.+?)}"
-  res = ""
+  citenums = Dict{String,Int}()
+  res = String("")
   pos = 1
   match = false
-  num = 1
+  counter = 1
   for m in eachmatch(cite_re,html)
     match = true
     res *= html[pos:m.offset-1]
-    res *= "<a class=\"citation\" href=\""*m.captures[1]*"\">[$num]</a>"
-    num += 1
+    name = convert(String,m.captures[1])
+    if haskey(citenums,name)
+      num = citenums[name]
+    else
+      citenums[name] = counter
+      num = counter
+      counter += 1
+    end
+    res *= "<a class=\"citation\" href=\"#$(name)_$(num)\">[$num]</a>"
     pos = m.offset+length(m.match)
   end
   if !match 
-    return html 
+    return (html,citenums)
   else
     res *= html[pos:end]
   end
-  return res
+  return (res,citenums)
 end
 
 #
@@ -98,6 +108,28 @@ function processArxivLinks(html::String)
   return res
 end
 
+function printEditFooter(of::IOStream,fname::String)
+  template_edit_footer = open("template_edit_footer.html") do file readstring(file) end
+  link = "https://github.com/TensorNetwork/tensornetwork.org/edit/master/"*fname
+  out = replace(template_edit_footer,r"{github_link}",link)
+  #@show out
+  print(of,out)
+end
+
+function generateRefs(citenums,btentries)
+  keys = Array{String,1}(length(citenums))
+  for (k,v) in citenums
+    keys[v] = k
+  end
+  rhtml = "## References\n"
+  for (n,k) in enumerate(keys)
+    bt = btentries[k]
+    rhtml *= "$n. <a name=\"$(bt.name)_$(n)\"></a>"*convertToMD(bt)
+    rhtml *= "\n"
+  end
+  return rhtml
+end
+
 header_prenav = open("header_prenav.html") do file readstring(file) end
 header_postnav = open("header_postnav.html") do file readstring(file) end
 footer = open("footer.html") do file readstring(file) end
@@ -123,8 +155,17 @@ for (root,dirs,files) in walkdir(idir)
       mdstring = readstring(`cat $ifname`)
       mdstring = processMathJax(mdstring)
       mdstring = processWikiLinks(mdstring)
+
+      (mdstring,citenums) = processCitations(mdstring)
+      btfile = curri*"/"*base*".bib"
+      if isfile(btfile)
+        bt = parseBibTex(btfile)
+        refmd = generateRefs(citenums,bt)
+        mdstring *= refmd
+      end
+
       mdstring = processArxivLinks(mdstring)
-      mdstring = processCitations(mdstring)
+
       open("_tmp_file.md","w") do tf
         print(tf,mdstring)
       end
@@ -133,6 +174,7 @@ for (root,dirs,files) in walkdir(idir)
         print(of,header_prenav)
         print(of,header_postnav)
         print(of,html)
+        printEditFooter(of,ifname)
         print(of,footer)
       end
       run(`rm -f _tmp_file.md`)
