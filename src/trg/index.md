@@ -162,7 +162,7 @@ the original network is equal to the following "double trace" of $A_N$:
 
 Extensions of the basic TRG algorithm include:
 - _tensor entanglement renormalization group_ (TERG)\cite{Gu:2008}, 
-- _tensor network renormalization_ (TNR)\cite{Evenbly:2015} 
+- _tensor network renormalization_ (TNR)\cite{Evenbly:2015}\cite{Evenbly:2015algs}\cite{Evenbly:2015tnrm} 
 - loop-TNR\cite{Yang}
 - GILT\cite{Hauru:2017}
 
