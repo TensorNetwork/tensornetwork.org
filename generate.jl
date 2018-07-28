@@ -87,7 +87,7 @@ function processWikiLinks(html::String)
 end
 
 #
-# Process wiki-style links
+# Process arxiv preprint links
 # 
 function processArxivLinks(html::String)
   link_re = r"arxiv:\W*?(\d+?\.\d+)"
@@ -123,9 +123,11 @@ function generateRefs(citenums,btentries)
   end
   rhtml = "## References\n"
   for (n,k) in enumerate(keys)
-    bt = btentries[k]
-    rhtml *= "$n. <a name=\"$(bt.name)_$(n)\"></a>"*convertToMD(bt)
-    rhtml *= "\n"
+    if haskey(btentries,k)
+      bt = btentries[k]
+      rhtml *= "$n. <a name=\"$(bt.name)_$(n)\"></a>"*convertToMD(bt)
+      rhtml *= "\n"
+    end
   end
   return rhtml
 end
