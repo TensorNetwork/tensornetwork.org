@@ -1,7 +1,7 @@
 
 # Matrix Product State / Tensor Train
 
-The matrix product state (MPS)\cite{Fannes,Ostlund} or tensor train (TT)\cite{Oseledets} tensor network
+The matrix product state (MPS)\cite{Fannes:1992}\cite{Lange:1994}\cite{Ostlund:1995} or tensor train (TT)\cite{Oseledets:2011} tensor network
 is a factorization of a [[tensor|tensor]] with N indices
 into a chain-like product of three-index tensors.
 The MPS/TT is one of the best understood tensor networks for which
@@ -42,6 +42,8 @@ index connecting one tensor in the chain to the next, and can vary
 from bond to bond. The bond dimension can be thought of as a 
 parameter controlling the expressivity of a MPS/TT network. 
 In the example above, it is the dimension of the $\alpha$ indices.
+
+![medium](bond_visible_dim.png)
 
 Given a large enough bond dimension or rank, an MPS/TT can
 represent an arbitrary tensor. Consider a tensor
