@@ -1,16 +1,16 @@
 Welcome to the tensor network. This site is a
 resource for tensor network algorithms, theory, 
-applications, and software.
+ and software.
 
 Tensor networks are a technique for factorizing
 a many-index tensor into a contracted
 network of few-index tensors, and are very
 useful for applied mathematics, chemistry, physics, machine
-learning, and possibly many other fields.
+learning, and likely many other fields.
 
 Sample pages:
-- [[TRG Algorithm|trg]]
 - [[Matrix Product State / Tensor Train Network|mps]]
+- [[TRG Algorithm|trg]]
 
 ![medium](tensor_networks.png)
 
