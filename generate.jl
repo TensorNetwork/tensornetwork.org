@@ -24,15 +24,22 @@ function processCitations(html::String)::Tuple{String,Dict{String,Int}}
   for m in eachmatch(cite_re,html)
     match = true
     res *= html[pos:m.offset-1]
-    name = convert(String,m.captures[1])
-    if haskey(citenums,name)
-      num = citenums[name]
-    else
-      citenums[name] = counter
-      num = counter
-      counter += 1
+    names = split(convert(String,m.captures[1]),",")
+    namenums = Tuple{Int,String}[]
+    for name in names
+      if haskey(citenums,name)
+        num = citenums[name]
+      else
+        citenums[name] = counter
+        num = counter
+        counter += 1
+      end
+      push!(namenums,(num,name))
     end
-    res *= "<a class=\"citation\" href=\"#$(name)_$(num)\">[$num]</a>"
+    sort!(namenums, by = x -> x[1])
+    for (num,name) in namenums
+      res *= "<a class=\"citation\" href=\"#$(name)_$(num)\">[$num]</a>"
+    end
     pos = m.offset+length(m.match)
   end
   if !match 
