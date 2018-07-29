@@ -30,7 +30,22 @@
   <!-- MathJax -->
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['\$','\$'] ], displayMath: [ ['@@','@@'] ]},
+        TeX: 
+            {
+            Macros: 
+                { 
+                avg: ["{\\langle #1\\rangle}",1],
+                iprod: ["{\\langle #1, #2 \\rangle}",2],
+                bra: ["{\\langle #1|}",1],
+                ket: ["{|#1\\rangle}",1]
+                },
+            equationNumbers: { autoNumber: "AMS" }
+            },
+        tex2jax: 
+            {
+            inlineMath: [['\$','\$'] ], 
+            displayMath: [ ['@@','@@'] ]
+            },
         "HTML-CSS": {scale: 100}
         });
   </script>

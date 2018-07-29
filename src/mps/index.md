@@ -19,12 +19,14 @@ pattern above can be generalized for a tensor with any number of indices.
 Alternatively, the MPS/TT factorization of a tensor
 can be expressed in traditional notation as
 
-@@T^{s_1 s_2 s_3 s_4 s_5 s_6} = \sum_{\{\mathbf{\alpha}\}} A^{s_1}_{\alpha_1} 
+\begin{equation}
+T^{s_1 s_2 s_3 s_4 s_5 s_6} = \sum_{\{\mathbf{\alpha}\}} A^{s_1}_{\alpha_1} 
 A^{s_2}_{\alpha_1 \alpha_2}
 A^{s_3}_{\alpha_2 \alpha_3} 
 A^{s_4}_{\alpha_3 \alpha_4} 
 A^{s_5}_{\alpha_4 \alpha_5} 
-A^{s_6}_{\alpha_5}@@
+A^{s_6}_{\alpha_5}
+\end{equation}
 
 where the bond indices $\alpha$ are contracted, or summed over.
 Note that each of the $A$ tensors can in general be different
@@ -71,12 +73,12 @@ Consider two high-order tensors $T^{s_1 s_2 s_3 s_4 s_5 s_6}$
 and $W^{s_1 s_2 s_3 s_4 s_5 s_6}$. Say that we want to compute the inner product of 
 $T$ and $W$, viewed as vectors. That is, we want to compute:
 
-@@
-T \cdot W =
+\begin{equation}
+\langle T, W\rangle =
 \sum_{\{\mathbf{s}\}} 
 T^{s_1 s_2 s_3 s_4 s_5 s_6} 
 W^{s_1 s_2 s_3 s_4 s_5 s_6} 
-@@
+\end{equation}
 
 ![small](TdotW.png)
 
@@ -85,7 +87,7 @@ In the case of $T = W$, then this operation computes the Frobenius norm of $T$.
 Now assume that $T$ and $W$ each can be efficiently represented or approximated by 
 MPS/TT tensor networks as follows:
 
-@@
+\begin{equation}
 T^{s_1 s_2 s_3 s_4 s_5 s_6} = \sum_{\{\mathbf{\alpha}\}} 
 A^{s_1}_{\alpha_1} 
 A^{s_2}_{\alpha_1 \alpha_2}
@@ -93,9 +95,9 @@ A^{s_3}_{\alpha_2 \alpha_3}
 A^{s_4}_{\alpha_3 \alpha_4} 
 A^{s_5}_{\alpha_4 \alpha_5} 
 A^{s_6}_{\alpha_5}
-@@
+\end{equation}
 
-@@
+\begin{equation}
 W^{s_1 s_2 s_3 s_4 s_5 s_6} = \sum_{\{\mathbf{\beta}\}} 
 B^{s_1}_{\beta_1} 
 B^{s_2}_{\beta_1 \beta_2}
@@ -103,14 +105,15 @@ B^{s_3}_{\beta_2 \beta_3}
 B^{s_4}_{\beta_3 \beta_4} 
 B^{s_5}_{\beta_4 \beta_5} 
 B^{s_6}_{\beta_5}
-@@
+\end{equation}
 
 ![medium](TW_MPSTT.png)
 
-The strategy to efficiently compute $T\cdot W$ is to contract $A^{s_1}$ with 
-$B^{s_1}$, forming a tensor $E^{\alpha_1}_{\beta_1}$. Then this tensor $E$ is 
-contracted with $A^{s_2}$ and $B^{s_2}$ to form another intermediate tensor 
-$E^{\alpha_2}_{\beta_2}$, etc. 
+The strategy to efficiently compute $\iprod{T}{W}$ is to contract $A^{s_1}$ with 
+$B^{s_1}$ over the $s_1$ index, forming a tensor $E^{\alpha_1}_{\beta_1}$. 
+Then this tensor $E$ is contracted with $A^{s_2}$ and $B^{s_2}$ to form 
+another intermediate tensor $E^{\alpha_2}_{\beta_2}$, etc. 
+
 Let us express this process more simply in diagrammatic notation:
 
 ![medium](InnerMPSTT.png)
