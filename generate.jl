@@ -4,6 +4,13 @@
 
 include("bibtex.jl")
 
+function pause() 
+  a = readline(STDIN)
+  (length(a) == 0) && return
+  (a[1]=='q') && exit(0)
+end
+
+
 #
 # Process citations
 # 
@@ -40,39 +47,31 @@ end
 # Process MathJax
 # 
 function processMathJax(html::String)
-  mmj_re = r"(\@\@.+?\@\@)"s
+  mj_re = r"(\@\@.+?\@\@|\$.+?\$)"s
+  mjlist = String[]
   res = ""
   pos = 1
   match = false
-  for m in eachmatch(mmj_re,html)
+  for m in eachmatch(mj_re,html)
     match = true
     res *= html[pos:m.offset-1]
-    res *= "\n\n<div>"*m.captures[1]*"</div>\n\n"
+    #res *= "\n\n<div>"*m.captures[1]*"</div>\n\n"
+    push!(mjlist,m.captures[1])
+    res *= "(MathJax$(length(mjlist)))"
     pos = m.offset+length(m.match)
   end
-  if !match 
-    return html 
-  else
+  if match 
     res *= html[pos:end]
+  else
+    res = html
   end
-  return res
+  return (res,mjlist)
 end
 
-function processInlineMathJax(html::String)
-  imj_re = r"(\$.+?\$)"
-  res = ""
-  pos = 1
-  match = false
-  for m in eachmatch(imj_re,html)
-    match = true
-    res *= html[pos:m.offset-1]
-    res *= "<span>"*m.captures[1]*"</span>\n"
-    pos = m.offset+length(m.match)
-  end
-  if !match 
-    return html 
-  else
-    res *= html[pos:end]
+function restoreMathJax(html::String,mjlist::Array{String,1})
+  res = html
+  for (n,mj) in enumerate(mjlist)
+    res = replace(res,"(MathJax$n)",mj)
   end
   return res
 end
@@ -131,7 +130,6 @@ function printEditFooter(of::IOStream,fname::String)
   template_edit_footer = open("template_edit_footer.html") do file readstring(file) end
   link = "https://github.com/TensorNetwork/tensornetwork.org/edit/master/"*fname
   out = replace(template_edit_footer,r"{github_link}",link)
-  #@show out
   print(of,out)
 end
 
@@ -173,9 +171,8 @@ for (root,dirs,files) in walkdir(idir)
     ifname = curri*"/"*f
     if ext == "md"
       ofname = curro*"/"*base*".html"
-      mdstring = readstring(`cat $ifname`)
-      mdstring = processMathJax(mdstring)
-      mdstring = processInlineMathJax(mdstring)
+      mdstring = readstring(ifname)
+      (mdstring,mjlist) = processMathJax(mdstring)
       mdstring = processWikiLinks(mdstring)
 
       (mdstring,citenums) = processCitations(mdstring)
@@ -191,8 +188,11 @@ for (root,dirs,files) in walkdir(idir)
       open("_tmp_file.md","w") do tf
         print(tf,mdstring)
       end
-      #html = readstring(`cmark _tmp_file.md`)
-      html = readstring(`python2.7 -m markdown _tmp_file.md`)
+      html = readstring(`cmark _tmp_file.md`)
+      #html = readstring(`python2.7 -m markdown _tmp_file.md`)
+
+      html = restoreMathJax(html,mjlist)
+
       open(ofname,"w") do of
         print(of,header_prenav)
         print(of,header_postnav)
