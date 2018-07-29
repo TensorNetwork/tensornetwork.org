@@ -40,14 +40,33 @@ end
 # Process MathJax
 # 
 function processMathJax(html::String)
-  imj_re = r"(\@\@.+?\@\@)"s
+  mmj_re = r"(\@\@.+?\@\@)"s
+  res = ""
+  pos = 1
+  match = false
+  for m in eachmatch(mmj_re,html)
+    match = true
+    res *= html[pos:m.offset-1]
+    res *= "\n\n<div>"*m.captures[1]*"</div>\n\n"
+    pos = m.offset+length(m.match)
+  end
+  if !match 
+    return html 
+  else
+    res *= html[pos:end]
+  end
+  return res
+end
+
+function processInlineMathJax(html::String)
+  imj_re = r"(\$.+?\$)"
   res = ""
   pos = 1
   match = false
   for m in eachmatch(imj_re,html)
     match = true
     res *= html[pos:m.offset-1]
-    res *= "\n\n<div>"*m.captures[1]*"</div>\n\n"
+    res *= "<span>"*m.captures[1]*"</span>\n"
     pos = m.offset+length(m.match)
   end
   if !match 
@@ -156,6 +175,7 @@ for (root,dirs,files) in walkdir(idir)
       ofname = curro*"/"*base*".html"
       mdstring = readstring(`cat $ifname`)
       mdstring = processMathJax(mdstring)
+      mdstring = processInlineMathJax(mdstring)
       mdstring = processWikiLinks(mdstring)
 
       (mdstring,citenums) = processCitations(mdstring)
