@@ -8,6 +8,10 @@ network of few-index tensors, and are very
 useful for applied mathematics, chemistry, physics, machine
 learning, and possibly many other fields.
 
+Sample pages:
+- [[TRG Algorithm|trg]]
+- [[Matrix Product State / Tensor Train Network|mps]]
+
 ![medium](tensor_networks.png)
 
 <!--
@@ -16,11 +20,4 @@ Sections:
 - [[Physics|physics]]
 - [[Mathematics|mathematics]]
 - [[Software|software]]
-
-Some literal Markdown: `![medium](tensor_networks.png)`
-And some code:
-
-    function add(n::Int,m::Int)
-      return n+m
-    end
 -->
