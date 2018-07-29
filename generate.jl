@@ -191,7 +191,8 @@ for (root,dirs,files) in walkdir(idir)
       open("_tmp_file.md","w") do tf
         print(tf,mdstring)
       end
-      html = readstring(`cmark _tmp_file.md`)
+      #html = readstring(`cmark _tmp_file.md`)
+      html = readstring(`python2.7 -m markdown _tmp_file.md`)
       open(ofname,"w") do of
         print(of,header_prenav)
         print(of,header_postnav)
