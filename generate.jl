@@ -108,6 +108,31 @@ end
 # Process arxiv preprint links
 # 
 function processArxivLinks(html::String)
+  link_re = r"(arxiv|cond-mat|quant-ph|math|math-ph|physics)[/:]\W*?([\d\.]+)"
+  res = ""
+  pos = 1
+  match = false
+  for m in eachmatch(link_re,html)
+    match = true
+    res *= html[pos:m.offset-1]
+    prefix = m.captures[1]
+    number = m.captures[2]
+    if prefix == "arxiv:"
+      res *= "arxiv:[$number](https://arxiv.org/abs/$number)"
+    else
+      prefix = replace(prefix,"-","&#8209;") #non-breaking hypen
+      res *= "<span>$prefix/[$number](https://arxiv.org/abs/cond-mat/$number)</span>"
+    end
+    pos = m.offset+length(m.match)
+  end
+  if !match 
+    return html 
+  else
+    res *= html[pos:end]
+  end
+  return res
+end
+function processCondMatLinks(html::String)
   link_re = r"arxiv:\W*?(\d+?\.\d+)"
   res = ""
   pos = 1
