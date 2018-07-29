@@ -19,14 +19,12 @@ pattern above can be generalized for a tensor with any number of indices.
 Alternatively, the MPS/TT factorization of a tensor
 can be expressed in traditional notation as
 
-@@
-T^{s_1 s_2 s_3 s_4 s_5 s_6} = \sum_{\{\mathbf{\alpha}\}} A^{s_1}_{\alpha_1} 
+@@T^{s_1 s_2 s_3 s_4 s_5 s_6} = \sum_{\{\mathbf{\alpha}\}} A^{s_1}_{\alpha_1} 
 A^{s_2}_{\alpha_1 \alpha_2}
 A^{s_3}_{\alpha_2 \alpha_3} 
 A^{s_4}_{\alpha_3 \alpha_4} 
 A^{s_5}_{\alpha_4 \alpha_5} 
-A^{s_6}_{\alpha_5}
-@@
+A^{s_6}_{\alpha_5}@@
 
 where the bond indices $\alpha$ are contracted, or summed over.
 Note that each of the $A$ tensors can in general be different
@@ -65,7 +63,7 @@ carry out operations on a large, high-order tensor $T$ by manipulating
 the much smaller factors making up the MPS/TT representation of $T$.
 
 There are many known algorithms for computations involving MPS/TT networks.
-Below, we highlight some of the simplest and most foundational examples.
+Below, we highlight some of the simplest and most fundamental examples.
 
 ### Inner Product of Two MPS/TT
 
@@ -110,10 +108,10 @@ B^{s_6}_{\beta_5}
 ![medium](TW_MPSTT.png)
 
 The strategy to efficiently compute $T\cdot W$ is to contract $A^{s_1}$ with 
-$B^{s_1}$, forming a tensor 
-$E^{\alpha_1}_{\beta_1}$. Then this tensor $E$ is 
-contracted with $A^{s_2}$ and $B^{s_2}$ to form another intermediate tensor
-$E^{\alpha_2}_{\beta_2}$, etc. Let us express this process more simply
-in diagrammatic notation:
+$B^{s_1}$, forming a tensor $E^{\alpha_1}_{\beta_1}$. Then this tensor $E$ is 
+contracted with $A^{s_2}$ and $B^{s_2}$ to form another intermediate tensor 
+$E^{\alpha_2}_{\beta_2}$, etc. 
+Let us express this process more simply in diagrammatic notation:
 
+![medium](InnerMPSTT.png)
 
