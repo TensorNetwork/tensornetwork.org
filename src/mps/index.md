@@ -1,7 +1,7 @@
 
 # Matrix Product State / Tensor Train
 
-The matrix product state (MPS)\cite{Fannes:1992}\cite{Lange:1994}\cite{Ostlund:1995} or tensor train (TT)\cite{Oseledets:2011} tensor network
+The matrix product state (MPS)\cite{Fannes:1992,Klumper:1992,Ostlund:1995} or tensor train (TT)\cite{Oseledets:2011} tensor network
 is a factorization of a [[tensor|tensor]] with N indices
 into a chain-like product of three-index tensors.
 The MPS/TT is one of the best understood tensor networks for which
@@ -34,7 +34,7 @@ from each other; instead of denoting them with different letters,
 it is a useful convention to just distinguish them by their indices.
 
 Any tensor can be exactly represented in MPS / TT form for a large
-enough dimension of the bond indices $\alpha$.
+enough dimension of the bond indices $\alpha$. \cite{Vidal:2003,Oseledets:2011}
 
 ## Bond Dimension / Rank
 
@@ -94,7 +94,7 @@ the much smaller factors making up the MPS/TT representation of $T$.
 There are many known algorithms for computations involving MPS/TT networks.
 Below, we highlight some of the simplest and most fundamental examples.
 
-### Inner Product of Two MPS/TT
+### Inner Product of Two MPS/TT \cite{Perez-Garcia:2007}
 
 Consider two high-order tensors $T^{s_1 s_2 s_3 s_4 s_5 s_6}$ 
 and $W^{s_1 s_2 s_3 s_4 s_5 s_6}$. Say that we want to compute the inner product of 
