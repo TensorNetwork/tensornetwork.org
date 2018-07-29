@@ -58,6 +58,33 @@ However, in most applications the MPS/TT form is used as an approximation.
 In such cases, the bond dimension or rank is either fixed at a moderate size,
 or determined adaptively.
 
+## Number of Parameters
+
+Consider a tensor with $N$ indices, each of dimension $d$. Generically,
+such a tensor must be specified by $d^N$ parameters.
+In contrast, representing such a tensor by an MPS/TT network of bond dimension $m$
+requires
+
+\begin{equation}
+N m^2 d
+\end{equation}
+
+parameters at most.
+
+If the MPS/TT representation of the tensor is a good approximation, then
+it represents a massive compression from a set of parameters growing
+exponentially with $N$, to a set of parameters growing just linearly with $N$.
+
+It is possible to reduce the number of parameters even further, without
+loss of expressive power, by exploiting the redundancy inherit in the MPS/TT network. 
+For more information about this redundancy, see the section on MPS/TT gauges
+below.
+
+For a tensor with an infinite number of indices, the MPS/TT parameters can 
+be made independent of $N$ by assuming that all of the factor tensors are the same
+(or the same up to a gauge transformation).;
+
+
 ## Elementary Operations Involving MPS/TT
 
 The MPS/TT tensor network format makes it possible to efficiently
@@ -117,4 +144,20 @@ another intermediate tensor $E^{\alpha_2}_{\beta_2}$, etc.
 Let us express this process more simply in diagrammatic notation:
 
 ![medium](InnerMPSTT.png)
+
+The above algorithm makes no approximations, yet is very efficient.
+In contrast, if one worked with the full $T$ 
+and $W$ tensors and did not use the MPS/TT form the cost of
+calculating $\iprod{T}{W}$ would be $d^N$.
+
+A careful analysis of each step shows that the cost of the algorithm scales as
+
+\begin{equation}
+m^3\,d
+\end{equation}
+
+where $m$ is the bond dimension or rank of the MPS/TT networks and $d$ is the dimension
+of the visible indices. (If the separate networks have bond dimension $m$ and $n$,
+respectively, then the scaling is $m^2 n d + m n^2 d$.)
+
 
