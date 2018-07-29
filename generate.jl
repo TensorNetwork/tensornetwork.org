@@ -158,6 +158,8 @@ odir = "../tensornetwork.org"
 run(`mkdir -p $odir`)
 run(`cp -r css $odir/`)
 run(`cp -r images $odir/`)
+run(`cp -r htaccess_file $odir/.htaccess`)
+run(`chmod 644 $odir/.htaccess`)
 
 for (root,dirs,files) in walkdir(idir)
   curri = idir * root[4:end]
