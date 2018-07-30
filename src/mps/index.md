@@ -203,3 +203,10 @@ where $m$ is the bond dimension or rank of the MPS/TT networks and $d$ is the di
 of the external indices. In contrast, if one worked with the full $T$ 
 and $W$ tensors and did not use the MPS/TT form the cost of
 calculating $\iprod{T}{W}$ would be $d^N$.
+
+### Compression / Rounding
+
+A particularly powerful operation is the compression of a tensor network into 
+MPS/TT form. Here we will focus on the compression of a larger bond dimension MPS/TT
+into one with a smaller dimension, but the algorithm can be readily generalized 
+to other inputs. 
