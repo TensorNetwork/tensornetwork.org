@@ -87,12 +87,59 @@ be made independent of $N$ by assuming that all of the factor tensors are the sa
 
 ## Elementary Operations Involving MPS/TT
 
+<!--
+Other algorithms to add:
+- retrieving a component of an MPS/TT
+- compressing/rounding to a smaller bond dimension
+-->
+
 The MPS/TT tensor network format makes it possible to efficiently
 carry out operations on a large, high-order tensor $T$ by manipulating
 the much smaller factors making up the MPS/TT representation of $T$.
 
 There are many known algorithms for computations involving MPS/TT networks.
 Below, we highlight some of the simplest and most fundamental examples.
+
+### Retrieving a Component from an MPS/TT  
+
+Consider an order-$N$ tensor $T$. In general, cost of storing and retrieving 
+its components scales exponentially with $N$. However, if $T$ can be 
+represented or approximated by an MPS/TT network, one can obtain
+specific tensor components with an efficient algorithm.
+
+Say we want to obtain the specific component $T^{s_1 s_2 s_3 \cdots s_N}$,
+where the values $s_1, s_2, s_3, \ldots, s_N$ should be considered fixed,
+yet arbitrary.
+
+If $T$ is given by the MPS/TT
+\begin{equation}
+T^{s_1 s_2 s_3 \cdots s_N} = \sum_{\{\mathbf{\alpha}\}} 
+A^{s_1}_{\alpha_1} 
+A^{s_2}_{\alpha_1 \alpha_2}
+A^{s_3}_{\alpha_2 \alpha_3} 
+\cdots
+A^{s_N}_{\alpha_{N-1}}
+\end{equation}
+then the algorithm to retrieve this component is very simple. Fix the
+$s_j$ indices on each of the $A$ factor tensors. Then, thinking of the
+tensor $A^{(s_1)}_{\alpha_1}$ as a row vector and $A^{(s_2)}_{\alpha_1 \alpha_2}$
+as a matrix, contract these over the $\alpha_1$ index. The result is a new 
+vector $L_{\alpha_2}$ that one can next contract with $A^{(s_3)}_{\alpha_2 \alpha_3}$.
+Continuing in this manner, one obtains the $s_1,s_2,s_3,\ldots,s_N$ component
+via a sequence of vector-matrix multiplications.
+
+Diagramatically, the algorithm for retrieving a tensor component can be written as
+(for the illustrative case of $N=6$):
+
+![medium](MPSTT_component_alg.png)
+
+If the typical bond dimension of the MPS/TT is $m$, then the computational cost
+for retrieving a single tensor component scales as $N m^2$.
+
+In the physics literature, the name _matrix product state_ refers to the 
+fact that an individual tensor component (in the context of a quantum state or 
+wavefunction) is parameterized as a product of matrices as in the algorithm above.
+
 
 ### Inner Product of Two MPS/TT \cite{Perez-Garcia:2007}
 
