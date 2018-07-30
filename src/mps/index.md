@@ -200,11 +200,10 @@ calculating $\iprod{T}{W}$ would be $d^N$.
 A careful analysis of each step shows that the cost of the algorithm scales as
 
 \begin{equation}
-m^3\,d
+N m^3\,d
 \end{equation}
 
 where $m$ is the bond dimension or rank of the MPS/TT networks and $d$ is the dimension
-of the visible indices. (If the separate networks have bond dimension $m$ and $n$,
-respectively, then the scaling is $m^2 n d + m n^2 d$.)
+of the visible indices.
 
 
