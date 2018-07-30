@@ -46,7 +46,7 @@ from bond to bond. The bond dimension can be thought of as a
 parameter controlling the expressivity of a MPS/TT network. 
 In the example above, it is the dimension of the $\alpha$ indices.
 
-![medium](bond_visible_dim.png)
+![medium](bond_external_dim.png)
 
 Given a large enough bond dimension or rank, an MPS/TT can
 represent an arbitrary tensor. Consider a tensor
@@ -200,6 +200,6 @@ N m^3\,d
 \end{equation}
 
 where $m$ is the bond dimension or rank of the MPS/TT networks and $d$ is the dimension
-of the visible indices. In contrast, if one worked with the full $T$ 
+of the external indices. In contrast, if one worked with the full $T$ 
 and $W$ tensors and did not use the MPS/TT form the cost of
 calculating $\iprod{T}{W}$ would be $d^N$.
