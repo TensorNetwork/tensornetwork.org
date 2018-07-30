@@ -188,6 +188,7 @@ footer = open("footer.html") do file readstring(file) end
 idir = "src"
 odir = "../tensornetwork.org"
 run(`mkdir -p $odir`)
+run(`rm -f $odir/\*`)
 run(`cp -r css $odir/`)
 run(`cp -r images $odir/`)
 run(`cp -r htaccess_file $odir/.htaccess`)
