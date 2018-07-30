@@ -193,10 +193,6 @@ Let us express this process more simply in diagrammatic notation:
 ![medium](InnerMPSTT.png)
 
 The above algorithm makes no approximations, yet is very efficient.
-In contrast, if one worked with the full $T$ 
-and $W$ tensors and did not use the MPS/TT form the cost of
-calculating $\iprod{T}{W}$ would be $d^N$.
-
 A careful analysis of each step shows that the cost of the algorithm scales as
 
 \begin{equation}
@@ -204,6 +200,6 @@ N m^3\,d
 \end{equation}
 
 where $m$ is the bond dimension or rank of the MPS/TT networks and $d$ is the dimension
-of the visible indices.
-
-
+of the visible indices. In contrast, if one worked with the full $T$ 
+and $W$ tensors and did not use the MPS/TT form the cost of
+calculating $\iprod{T}{W}$ would be $d^N$.
