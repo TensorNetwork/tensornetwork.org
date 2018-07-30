@@ -139,6 +139,7 @@ for retrieving a single tensor component scales as $N m^2$.
 In the physics literature, the name _matrix product state_ refers to the 
 fact that an individual tensor component (in the context of a quantum state or 
 wavefunction) is parameterized as a product of matrices as in the algorithm above.
+(This name is even clearer in the case of [[periodic MPS|periodicMPS]].)
 
 
 ### Inner Product of Two MPS/TT \cite{Perez-Garcia:2007}
