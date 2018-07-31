@@ -205,9 +205,31 @@ of the external indices. In contrast, if one worked with the full $T$
 and $W$ tensors and did not use the MPS/TT form the cost of
 calculating $\iprod{T}{W}$ would be $d^N$.
 
-### Compression / Rounding
+### Compression / Rounding \cite{McCulloch:2007,Oseledets:2011}
 
 A particularly powerful operation is the compression of a tensor network into 
 MPS/TT form. Here we will focus on the compression of a larger bond dimension MPS/TT
 into one with a smaller dimension, but the algorithm can be readily generalized 
-to other inputs. 
+to other inputs, such as sums of MPS/TT networks, sums of rank-1 tensors, 
+other [[tree tensor network|ttn]] formats, and more, with the result that these
+inputs are controllably approximated by a single MPS/TT.
+
+The algorithm we follow here was proposed in Ref. \onlinecite{McCulloch:2007}
+and based on the original [[DMRG|DMRG]] concept of White.\cite{White:1992}
+However, other approaches to compression include SVD-based 
+compression,\cite{Schollwoeck:2011} such as the TT-SVD algorithm,\cite{Oseledets:2011}
+or variational compression.\cite{Perez-Garcia:2007}
+
+
+For concreteness, say we want to compress an MPS/TT of bond dimension $M$ into
+one of bond dimension $m$, such that the new MPS/TT is as close as possible to 
+the original one, in the sense of Euclidean distance (see above discussion of inner product).
+
+![medium](mpstt_compress.png)
+
+The first step of the compression procedure
+
+![medium](dm_comput.png)
+
+![medium](diag_rho6.png)
+

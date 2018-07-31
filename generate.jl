@@ -15,7 +15,7 @@ end
 # Process citations
 # 
 function processCitations(html::String)::Tuple{String,Dict{String,Int}}
-  cite_re = r"\\cite{(.+?)}"
+  cite_re = r"\\(cite|onlinecite){(.+?)}"
   citenums = Dict{String,Int}()
   res = String("")
   pos = 1
@@ -24,8 +24,8 @@ function processCitations(html::String)::Tuple{String,Dict{String,Int}}
   for m in eachmatch(cite_re,html)
     match = true
     res *= html[pos:m.offset-1]
-    names = split(convert(String,m.captures[1]),",")
-    namenums = Tuple{Int,String}[]
+    names = split(convert(String,m.captures[2]),",")
+    namenums = Tuple{Int,String,String}[]
     for name in names
       if haskey(citenums,name)
         num = citenums[name]
@@ -34,11 +34,15 @@ function processCitations(html::String)::Tuple{String,Dict{String,Int}}
         num = counter
         counter += 1
       end
-      push!(namenums,(num,name))
+      push!(namenums,(num,name,convert(String,m.captures[1])))
     end
     sort!(namenums, by = x -> x[1])
-    for (num,name) in namenums
-      res *= "<a class=\"citation\" href=\"#$(name)_$(num)\">[$num]</a>"
+    for (num,name,cmd) in namenums
+      if cmd == "cite"
+        res *= "<a class=\"citation\" href=\"#$(name)_$(num)\">[$num]</a>"
+      elseif cmd == "onlinecite"
+        res *= "<a class=\"online_citation\" href=\"#$(name)_$(num)\">$num</a>"
+      end
     end
     pos = m.offset+length(m.match)
   end
