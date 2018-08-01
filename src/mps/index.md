@@ -242,6 +242,6 @@ Having computed all of the $E_j$ tensors, it is now possible to form the object 
 
 To begin forming the new, compressed MPS/TT, one diagonalizes $\rho_6$ as shown in the last expression above. It is a manifestly Hermitian matrix, so it can always be diagonalized by a unitary $U_6$, which is the box-shaped matrix in the last diagram above.
 
-Crucially, at this step one only keeps the $m$ largest eigenvalues of $\rho_6$, discarding the rest and truncating the corresponding columns of $U_6$. The reason for this trunction is that the unitary $U_6$ is actually the first piece of the new, compressed MPS/TT we are constructing, which we wanted to have bond dimension $m$. In passing, we note that other truncation strategies are possible, such as truncating based on a threshold for small versus large eigenvalues, or even stochastically truncating by sampling over the eigenvalues.\cite{Ferris:2015}.
+Crucially, at this step one only keeps the $m$ largest eigenvalues of $\rho_6$, discarding the rest and truncating the corresponding columns of $U_6$. The reason for this trunction is that the unitary $U_6$ is actually the first piece of the new, compressed MPS/TT we are constructing, which we wanted to have bond dimension $m$. In passing, we note that other truncation strategies are possible, such as truncating based on a threshold for small versus large eigenvalues, or even stochastically truncating by sampling over the eigenvalues.\cite{Ferris:2015}
 
 ![medium](diag_rho56.png)
