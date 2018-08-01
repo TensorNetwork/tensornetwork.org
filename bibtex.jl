@@ -61,12 +61,12 @@ function convertToMD(bt::BTEntry)::String
     if bt.pages != ""
       md *= ", $(bt.pages)"
     end
-    if bt.year != ""
-      md *= " ($(bt.year))"
-    end
+  end
+  if bt.year != ""
+    md *= " ($(bt.year))"
   end
   if bt.eprint != ""
-    md *= " "*bt.eprint
+    md *= ", "*bt.eprint
   end
   return md
 end
@@ -117,14 +117,12 @@ function parseBibTex(fname::String)
       authors = split(all_authors,"and")
       for a in authors
         a = strip(a)
-        r1 = r"(\w+?), (\w+)"
-        r2 = r"(\w+)\W+(\w+)$"
-        if ismatch(r1,a)
-          m1 = match(r1,a)
-          push!(bt.authors,"$(m1.captures[2]) $(m1.captures[1])")
-        elseif ismatch(r2,a)
-          m2 = match(r2,a)
-          push!(bt.authors,"$(m2.captures[1]) $(m2.captures[2])")
+        rev = r"(\w+?), (.+)"
+        if ismatch(rev,a)
+          m = match(rev,a)
+          push!(bt.authors,"$(m.captures[2]) $(m.captures[1])")
+        else
+          push!(bt.authors,a)
         end
       end
     end
