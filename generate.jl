@@ -128,7 +128,7 @@ function processArxivLinks(html::String)
     res *= html[pos:m.offset-1]
     prefix = m.captures[1]
     number = m.captures[2]
-    if prefix == "arxiv:"
+    if prefix == "arxiv"
       res *= "arxiv:[$number](https://arxiv.org/abs/$number)"
     else
       prefix = replace(prefix,"-","&#8209;") #non-breaking hypen
