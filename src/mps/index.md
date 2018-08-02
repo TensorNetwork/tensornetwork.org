@@ -244,4 +244,24 @@ To begin forming the new, compressed MPS/TT, one diagonalizes $\rho_6$ as shown 
 
 Crucially, at this step one only keeps the $m$ largest eigenvalues of $\rho_6$, discarding the rest and truncating the corresponding columns of $U_6$. The reason for this trunction is that the unitary $U_6$ is actually the first piece of the new, compressed MPS/TT we are constructing, which we wanted to have bond dimension $m$. In passing, we note that other truncation strategies are possible, such as truncating based on a threshold for small versus large eigenvalues, or even stochastically truncating by sampling over the eigenvalues.\cite{Ferris:2015}.
 
+To obtain the next tensor of the new, compressed MPS/TT, one next forms the following "density matrix" and diagonalizes it (with truncation) as shown below
+
 ![medium](diag_rho56.png)
+
+In defining this matrix, $U_6$ was used to transform the basis of the last site. As each $U$ is obtained, it is used in a similar way to compress the space, otherwise the cost of the algorithm would become unmanageable and each next $U$ tensor would not be defined in a basis compatible with the previous $U$'s.
+
+Having obtained $U_5$ as shown above, one next computes the following density matrix, again using all previous $U$ tensors to rotate and compress the space spanned by all previous 
+external indices as shown:
+
+![medium](diag_rho456.png)
+
+The pattern is repeated going further leftward down the chain to obtain $U_4$:
+
+![medium](diag_rho3456.png)
+
+(In passing, note that a matter of efficiency, the contraction of the $U$ and $U^\dagger$ tensors with the uncompressed MPS/TT tensors does not have to be recalculated at each step, but partial contractions can be saved to form the next one efficiently. This sub-step of the algorithm is in fact identical to the inner product algorithm described above, except that it proceeds from right to left.)
+
+Once all of the $U$ tensors are obtained by repeating the steps above. The final tensor of the MPS/TT, which carries the first external index, can be obtained from the following contraction:
+
+
+![medium](first_tensor.png)
