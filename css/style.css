@@ -19,6 +19,16 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     background: transparent;
 }
 
+#logo_image
+    {
+    height:100%; 
+    max-height: 40px; 
+    padding:0; 
+    margin-top: 5px; 
+    margin-right:10px; 
+    vertical-align: middle;
+    }
+
 .top_navbar
     { 
     background: #872518; 
