@@ -9,6 +9,7 @@ useful for applied mathematics, chemistry, physics, machine
 learning, and likely many other fields.
 
 Sample pages:
+- [[Tensor Diagram Notation|diagrams]]
 - [[Matrix Product State / Tensor Train Network|mps]]
 - [[TRG Algorithm|trg]]
 
