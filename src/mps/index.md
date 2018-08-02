@@ -268,4 +268,9 @@ Once all of the $U$ tensors are obtained by repeating the steps above, the last 
 As the curtain falls on this little algorithmic drama, our characters can now join hands and
 take a bow. The final compressed version of the original MPS/TT is:
 
+![medium](compressed_mpstt.png)
+
+Note that in this last expression, the indices of various tensors have been oriented differently 
+on the page than in their original definitions above. But recall that it is the connectivity 
+of indices, not their orientation, that carries the meaning of tensor diagrams.
 
