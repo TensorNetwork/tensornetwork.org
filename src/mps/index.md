@@ -261,7 +261,11 @@ The pattern is repeated going further leftward down the chain to obtain $U_4$:
 
 (In passing, note that a matter of efficiency, the contraction of the $U$ and $U^\dagger$ tensors with the uncompressed MPS/TT tensors does not have to be recalculated at each step, but partial contractions can be saved to form the next one efficiently. This sub-step of the algorithm is in fact identical to the inner product algorithm described above, except that it proceeds from right to left.)
 
-Once all of the $U$ tensors are obtained by repeating the steps above. The final tensor of the MPS/TT, which carries the first external index, can be obtained from the following contraction:
-
+Once all of the $U$ tensors are obtained by repeating the steps above, the last step of the algorithm is to obtain the first tensor of the new MPS/TT by the following contracted diagram:
 
 ![medium](first_tensor.png)
+
+As the curtain falls on this little algorithmic drama, our characters can now join hands and
+take a bow. The final compressed version of the original MPS/TT is:
+
+
