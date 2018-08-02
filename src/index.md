@@ -1,10 +1,10 @@
-Welcome to the tensor network. This site is a
-resource for tensor network algorithms, theory, 
- and software.
+### Welcome to the Tensor Network
+
+This site is a resource for tensor network algorithms, theory, and software.
 
 Tensor networks are a technique for factorizing
 a many-index tensor into a contracted
-network of few-index tensors, and are very
+network of few-index tensors, and are becoming increasingly
 useful for applied mathematics, chemistry, physics, machine
 learning, and likely many other fields.
 

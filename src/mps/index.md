@@ -274,3 +274,14 @@ Note that in this last expression, the indices of various tensors have been orie
 on the page than in their original definitions above. But recall that it is the connectivity 
 of indices, not their orientation, that carries the meaning of tensor diagrams.
 
+## Further Reading and Resources
+
+- <b>The Density-Matrix Renormalization Group in the Age of Matrix Product 
+  States</b>\cite{Schollwoeck:2011} A very thorough and accessible review article
+  focused on matrix product state tensor networks in a physics context, with
+  many helpful figures.
+
+- <b>Tensor Train Decomposition</b>\cite{Oseledets:2011} A clear exposition of 
+  the MPS/TT network and algorithms geared at an applied mathematics audience.
+
+
