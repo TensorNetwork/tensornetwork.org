@@ -274,14 +274,35 @@ Note that in this last expression, the indices of various tensors have been orie
 on the page than in their original definitions above. But recall that it is the connectivity 
 of indices, not their orientation, that carries the meaning of tensor diagrams.
 
+## Connections to Other Formats and Concepts
+
+- An MPS/TT network can be viewed as a maximally unbalanced
+  special case of a [[tree tensor network|ttn]].
+
+- MPS/TT with all factor tensors chosen to be the same and 
+  with a specified choice of boundary conditions are equivalent
+  to _weighted finite automata_ (WFA).\cite{Balle:2014}
+  (Though the interpretation and applications of MPS and WFA may be rather
+  different. For an interesting connection between the WFA
+  and quantum physics literature see Ref. \onlinecite{Bailly:2011}.)
+
+- MPS/TT networks constrained to have strictly non-negative
+  entries can be mapped to _hidden Markov models_ (HMM).
+  Such constrained MPS have been studied using physics concepts 
+  in Ref. \onlinecite{Temme:2010}. 
+
 ## Further Reading and Resources
 
 - <b>The Density-Matrix Renormalization Group in the Age of Matrix Product 
-  States</b>\cite{Schollwoeck:2011} A very thorough and accessible review article
+  States</b>\cite{Schollwoeck:2011} A very thorough review article
   focused on matrix product state tensor networks in a physics context, with
   many helpful figures.
 
 - <b>Tensor Train Decomposition</b>\cite{Oseledets:2011} A clear exposition of 
   the MPS/TT network and algorithms geared at an applied mathematics audience.
 
+- <b>A practical introduction to tensor networks: Matrix product states and projected entangled pair states</b>\cite{Orus:2014a} A friendly overview of tensor networks using physics terminology
+  but aiming to be non-technical.
+
+- <b>Hand-waving and Interpretive Dance: An Introductory Course on Tensor Networks</b>\cite{Bridgeman:2016} Detailed review article about tensor networks with a quantum information perspective.
 
