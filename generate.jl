@@ -121,7 +121,7 @@ end
 # Process arxiv preprint links
 # 
 function processArxivLinks(html::String)
-  link_re = r"(arxiv|cond-mat|quant-ph|math|math-ph|physics)[/:]\W*?([\d\.]+)"
+  link_re = r"(arxiv|cond-mat|quant-ph|math|math-ph|physics)[/:]\W*?([\d\.]+)"i
   res = ""
   pos = 1
   match = false
@@ -130,7 +130,7 @@ function processArxivLinks(html::String)
     res *= html[pos:m.offset-1]
     prefix = m.captures[1]
     number = m.captures[2]
-    if prefix == "arxiv"
+    if lowercase(prefix) == "arxiv"
       res *= "arxiv:[$number](https://arxiv.org/abs/$number)"
     else
       prefix = replace(prefix,"-","&#8209;") #non-breaking hypen
