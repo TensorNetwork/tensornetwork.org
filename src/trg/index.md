@@ -92,7 +92,7 @@ to be
 A^{\sigma_t \sigma_r \sigma_b \sigma_l} = e^{-(\sigma_t \sigma_r + \sigma_r \sigma_b + \sigma_b \sigma_l + \sigma_l \sigma_t)/T}
 @@
 
-![small](TRG_Atensor.png)
+![medium](TRG_Atensor.png)
 
 The interpretation of this tensor is that it computes the local energies between the four spins that
 live on its indices, and its value is the Boltzmann probability weight $e^{-E/T}$ associated with
@@ -156,16 +156,16 @@ repeats the above two steps (factor and recombine) N times until only a single
 tensor remains. Calling this final tensor $A_N$, the result $Z$ of contracting
 the original network is equal to the following "double trace" of $A_N$:
 
-![small](TRG_top.png)
+![medium](TRG_top.png)
 
 ## Extensions
 
 Extensions of the basic TRG algorithm include:
 
-- _tensor entanglement renormalization group_ (TERG)\cite{Gu:2008}, 
-- _tensor network renormalization_ (TNR)\cite{Evenbly:2015}\cite{Evenbly:2015algs}\cite{Evenbly:2015tnrm} 
-- loop-TNR\cite{Yang}
-- GILT\cite{Hauru:2017}
+- _tensor entanglement renormalization group_ (TERG) Ref. \onlinecite{Gu:2008}
+- _tensor network renormalization_ (TNR) Refs. \onlinecite{Evenbly:2015,Evenbly:2015algs,Evenbly:2015tnrm} 
+- loop-TNR Ref. \onlinecite{Yang}
+- GILT Ref. \onlinecite{Hauru:2017}
 
 ## Suggested Reading
 
