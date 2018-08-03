@@ -16,7 +16,7 @@ Types of Tensor Networks:
 
 - [[Matrix Product State / Tensor Train Network|mps]]
 - [[Tree Tensor Network / Hierarchical Tucker|ttn]] (coming soon)
-- [[PEPS|peps]] (coming soon)
+- [[PEPS|peps]]
 - [[MERA|mera]] (coming soon)
 
 Tensor Network Algorithms:
