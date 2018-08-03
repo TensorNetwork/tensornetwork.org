@@ -1,6 +1,6 @@
 ### Welcome to the Tensor Network
 
-<img src="tensor_networks.png" style="float:right; width:400px; margin-left: 40px;"/>
+<img src="tensor_networks.png" style="float:right; width:40%; margin-left: 40px;"/>
 
 This site is a resource for tensor network algorithms, theory, and software.
 
@@ -27,9 +27,9 @@ Tensor Network Algorithms:
 
 - [[TRG Algorithm|trg]]
 
-Software:
+Computing with Tensor Networks:
 
-- [[Tensor Libraries|software/libraries]] (coming soon)
+- [[Tensor Software|software]] (coming soon)
 - [[Tensor Benchmarks|software/benchmarks]] (coming soon)
 
 
