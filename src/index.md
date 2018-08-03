@@ -1,12 +1,16 @@
 ### Welcome to the Tensor Network
 
+<img src="tensor_networks.png" style="float:right; width:400px; margin-left: 40px;"/>
+
 This site is a resource for tensor network algorithms, theory, and software.
+
 
 Tensor networks are a technique for factorizing
 a many-index tensor into a contracted
 network of few-index tensors, and are becoming increasingly
 useful for applied mathematics, chemistry, physics, machine
 learning, and likely many other fields.
+
 
 Fundamentals:
 
@@ -28,9 +32,9 @@ Software:
 - [[Tensor Libraries|software/libraries]] (coming soon)
 - [[Tensor Benchmarks|software/benchmarks]] (coming soon)
 
-![medium](tensor_networks.png)
 
 <!--
+![medium](tensor_networks.png)
 Sections:
 - [[Fundamentals|fundamentals]]
 - [[Physics|physics]]
