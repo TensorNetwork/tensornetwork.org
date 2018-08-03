@@ -29,7 +29,15 @@ Some other tips and guidelines for writing:
 - Keep formal or heavy mathematical notation (such as
   set notation) to a minimum except when:
 
-  1. it is helpful for clarifying subtle or formal concepts
-  2. it appears within a section explicitly dedicated to 
-     rigorous treatments or mathematics literature
+  1. it is used to describe rigorous results, such as theorems
+  2. it provides a useful clarification of subtle or formal concepts
 
+- Keep the focus primarily on the subject matter.
+  Avoid lengthy discussions of contributions of individuals
+  or historical matters regarding academic literature, 
+  except on pages explicitly devoted to historical topics.
+
+- Pages should not simply summarize academic papers. Instead,
+  they should focus on a clearly defined, single topic. 
+  These topics may happen to correspond to one particular 
+  seminal paper, but the focus should remain on the topic itself.

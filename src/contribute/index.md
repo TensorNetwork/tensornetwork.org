@@ -21,8 +21,8 @@ so you can receive credit for your valuable time.
 
 For more information about contributing content, the following guides are available:
 
-- [[Tensor terminology conventions|conventions]]
-- [[Writing style guidelines|contribute/style]] (coming soon)
+- [[Tensor terminology conventions|contribute/conventions]]
+- [[Writing style guidelines|contribute/style]]
 - [[TensorNetwork.org Markdown Syntax|contribute/markdown]] (coming soon)
 - [[Citing references|contribute/references]] (coming soon)
 - [[Preparing and including figures|contribute/figures]] (coming soon)

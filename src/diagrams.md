@@ -1,6 +1,6 @@
 # Tensor Diagram Notation
 
-Tensor diagram notation is a simple, yet powerful
+Tensor diagram notation\cite{Penrose:1971} is a simple, yet powerful
 graphical notation for networks of contracted tensors.
 
 A tensor contraction of the form $\sum_j M_{ij} N_{jkl}$ can be notated 
@@ -54,12 +54,10 @@ is optional. (Technically the second example is ambiguous about
 which index is $i$ and which is $k$, but in practice this ambiguity
 is rarely a problem, or when it is, the labels can be notated.)
 
-## History and Other Resources
+## Other Resources
 
-Probably the first person to use tensor diagram notation was 
-Roger Penrose.\cite{Penrose:1971} The notation as it is 
-used in the tensor network literature is relatively informal
-and has quite a range of variation, but more formal
+The diagram notation used in the tensor network literature is relatively 
+informal and has quite a range of variation, but more formal
 specifications have been [proposed](https://en.wikipedia.org/wiki/Penrose_graphical_notation).
 
 
