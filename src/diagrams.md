@@ -8,7 +8,8 @@ A tensor contraction of the form $\sum_j M_{ij} N_{jkl}$ can be notated
 ![medium](generic_diagram.png)
 
 Despite its graphical and intuitive nature, tensor diagram notation
-is completely rigorous and well defined. It is inspired by
+is completely rigorous and well defined: it is just a graphical
+notation for sums. It is inspired by
 the Einstein summation convention for notating tensor contractions.
 
 ## Tensor Diagram Rules
@@ -52,3 +53,13 @@ notated on the diagram. But the other examples emphasize that this
 is optional. (Technically the second example is ambiguous about
 which index is $i$ and which is $k$, but in practice this ambiguity
 is rarely a problem, or when it is, the labels can be notated.)
+
+## History and Other Resources
+
+Probably the first person to use tensor diagram notation was 
+Roger Penrose.\cite{Penrose:1971} The notation as it is 
+used in the tensor network literature is relatively informal
+and has quite a range of variation, but more formal
+specifications have been [proposed](https://en.wikipedia.org/wiki/Penrose_graphical_notation).
+
+
