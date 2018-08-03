@@ -37,11 +37,13 @@ function processCitations(html::String)::Tuple{String,Dict{String,Int}}
       push!(namenums,(num,name,convert(String,m.captures[1])))
     end
     sort!(namenums, by = x -> x[1])
-    for (num,name,cmd) in namenums
+    for i in 1:length(namenums)
+      (num,name,cmd) = namenums[i]
       if cmd == "cite"
         res *= "<a class=\"citation\" href=\"#$(name)_$(num)\">[$num]</a>"
       elseif cmd == "onlinecite"
         res *= "<a class=\"online_citation\" href=\"#$(name)_$(num)\">$num</a>"
+        if i < length(namenums) res *= ", " end
       end
     end
     pos = m.offset+length(m.match)
