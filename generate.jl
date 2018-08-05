@@ -133,8 +133,8 @@ function processArxivLinks(html::String)
     if lowercase(prefix) == "arxiv"
       res *= "arxiv:[$number](https://arxiv.org/abs/$number)"
     else
-      prefix = replace(prefix,"-","&#8209;") #non-breaking hypen
-      res *= "<span>$prefix/[$number](https://arxiv.org/abs/cond-mat/$number)</span>"
+      nbprefix = replace(prefix,"-","&#8209;") #non-breaking hypen
+      res *= "<span>$nbprefix/[$number](https://arxiv.org/abs/$prefix/$number)</span>"
     end
     pos = m.offset+length(m.match)
   end
