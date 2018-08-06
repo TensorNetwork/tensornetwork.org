@@ -90,12 +90,6 @@ be made independent of $N$ by assuming that all of the factor tensors are the sa
 
 ## Elementary Operations Involving MPS/TT
 
-<!--
-Other algorithms to add:
-- retrieving a component of an MPS/TT
-- compressing/rounding to a smaller bond dimension
--->
-
 The MPS/TT tensor network format makes it possible to efficiently
 carry out operations on a large, high-order tensor $T$ by manipulating
 the much smaller factors making up the MPS/TT representation of $T$.
@@ -103,6 +97,9 @@ the much smaller factors making up the MPS/TT representation of $T$.
 There are many known algorithms for computations involving MPS/TT networks.
 Below, we highlight some of the simplest and most fundamental examples.
 
+To read about other MPS/TT algorithms, see [[this page|mps/algorithms]].
+
+<a name="component"></a>
 ### Retrieving a Component from an MPS/TT  
 
 Consider an order-$N$ tensor $T$. In general, cost of storing and retrieving 
@@ -144,7 +141,7 @@ fact that an individual tensor component (in the context of a quantum state or
 wavefunction) is parameterized as a product of matrices as in the algorithm above.
 (This name is even clearer in the case of [[periodic MPS|periodicMPS]].)
 
-
+<a name="innerprod"></a>
 ### Inner Product of Two MPS/TT \cite{Perez-Garcia:2007}
 
 Consider two high-order tensors $T^{s_1 s_2 s_3 s_4 s_5 s_6}$ 
@@ -208,6 +205,7 @@ of the external indices. In contrast, if one worked with the full $T$
 and $W$ tensors and did not use the MPS/TT form the cost of
 calculating $\iprod{T}{W}$ would be $d^N$.
 
+<a name="compression"></a>
 ### Compression / Rounding \cite{McCulloch:2007,Oseledets:2011}
 
 A particularly powerful operation is the compression of a tensor network into 
