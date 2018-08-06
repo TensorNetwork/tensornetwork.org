@@ -1,6 +1,7 @@
 
 # Matrix Product State / Tensor Train
 
+
 The matrix product state (MPS)\cite{Fannes:1992,Klumper:1992,Ostlund:1995} or tensor train (TT)\cite{Oseledets:2011} tensor network
 is a factorization of a [[tensor|tensor]] with N indices
 into a chain-like product of three-index tensors.
@@ -12,6 +13,8 @@ A matrix product state / tensor train factorization of a tensor $T$
 can be expressed in [[tensor diagram notation|diagrams]] as
 
 ![medium](mpstt_diagram.png)
+
+<!--TOC-->
 
 where for concreteness $T$ is taken to have six indices, but the 
 pattern above can be generalized for a tensor with any number of indices.
