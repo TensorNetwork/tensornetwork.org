@@ -94,16 +94,23 @@ end
 # 
 function processWikiLinks(html::String)
   link_re = r"\[\[(.+?)\|(.*?)\]\]"
+  sub_re = r"(.*?)(#.*)"
   res = ""
   pos = 1
   match = false
   for m in eachmatch(link_re,html)
     match = true
     res *= html[pos:m.offset-1]
-    if isdir("src/"*m.captures[2])
-      res *= "["*m.captures[1]*"](/"*m.captures[2]*")"
-    elseif isfile("src/"*m.captures[2]*".md")
-      res *= "["*m.captures[1]*"](/"*m.captures[2]*".html)"
+    target = convert(String,m.captures[2])
+    sublink = ""
+    for sm in eachmatch(sub_re,target)
+      target = convert(String,sm.captures[1])
+      sublink = convert(String,sm.captures[2])
+    end
+    if isdir("src/"*target)
+      res *= "["*m.captures[1]*"](/"*target*"/index.html$sublink)"
+    elseif isfile("src/"*target*".md")
+      res *= "["*m.captures[1]*"](/"*target*".html$sublink)"
     else
       res *= "["*m.captures[1]*"](unknown_file)"
     end
