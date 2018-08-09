@@ -24,7 +24,7 @@ There are two hard-and-fast rules of tensor diagrams:
 
 Other rules and conventions are sometimes adopted by 
 authors or used in specific contexts. These extensions
-include using specific shapes or 
+include the use of specific shapes or 
 shadings to designated properties of tensors;
 orienting index lines according to certain conventions;
 or putting arrows on lines to distinguish
