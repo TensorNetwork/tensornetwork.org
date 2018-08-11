@@ -85,7 +85,7 @@ below.
 
 For a tensor with an infinite number of indices, the MPS/TT parameters can 
 be made independent of $N$ by assuming that all of the factor tensors are the same
-(or the same up to a gauge transformation).;
+(or the same up to a gauge transformation).
 
 
 ## Elementary Operations Involving MPS/TT
