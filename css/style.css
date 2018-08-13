@@ -19,6 +19,16 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     background: transparent;
 }
 
+#logo_image
+    {
+    height:100%; 
+    max-height: 40px; 
+    padding:0; 
+    margin-top: 5px; 
+    margin-right:10px; 
+    vertical-align: middle;
+    }
+
 .top_navbar
     { 
     background: #872518; 
@@ -77,6 +87,13 @@ img[alt=small]
     margin-left: auto;
     margin-right: auto;
     }
+img[alt=small40] 
+    { 
+    width: 40%; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
 img[alt=medium] 
     { 
     width: 60%; 
@@ -90,4 +107,18 @@ img[alt=large]
     display: block;
     margin-left: auto;
     margin-right: auto;
+    }
+
+.toc
+    {
+    float:right; 
+    width:40%; 
+    margin-left: 40px;
+    border: solid 3px;
+    border-color: #872518;
+    padding-top: 20px;
+    padding-bottom: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #EEE;
     }

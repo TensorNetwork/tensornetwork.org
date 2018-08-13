@@ -1,3 +1,4 @@
+## Tensor Terminology Conventions
 
 Conventions for describing tensors and tensor networks:
 

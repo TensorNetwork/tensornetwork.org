@@ -1,5 +1,7 @@
 # TRG Algorithm
 
+<!--TOC-->
+
 The TRG algorithm, which stands for _tensor renormalization group_
 is a strategy for evaluating a fully contracted network of tensors
 by decimating the network in a heirarchical fashion.\cite{Levin} 
@@ -14,7 +16,7 @@ literature to refer to processes where less important
 information at small distance scales is repeatedly discarded until only the 
 most important information remains.
 
-## The Problem
+## Motivation --- Ising Model
 
 TRG can be used to compute certain large, non-trivial sums by exploiting
 the fact that they can be recast as the contraction of a lattice of small tensors.
@@ -33,7 +35,7 @@ In the two-dimensional case described below, there is a "critical" temperature $
 at which this Ising system develops an interesting hidden scale invariance.
 
 
-## One dimension
+### Background: Ising Model in One dimension
 
 In one dimension, spins only have two neighbors since they are arranged along a chain.
 For a finite-size system of N Ising spins, the usual convention is to use periodic boundary conditions 
@@ -68,7 +70,7 @@ For this one-dimensional case, the trick to compute $Z$ is just to diagonalize $
 If $M$ has eigenvalues $\lambda_1$ and $\lambda_2$, it follows that 
 $Z = \lambda_1^N + \lambda_2^N$ by the basis invariance of the trace operation.
 
-##  Two dimensions
+###  Two dimensional Ising Model
 
 Now let us consider the main problem of interest. For two dimensions, the energy function
 can be written as
@@ -92,7 +94,7 @@ to be
 A^{\sigma_t \sigma_r \sigma_b \sigma_l} = e^{-(\sigma_t \sigma_r + \sigma_r \sigma_b + \sigma_b \sigma_l + \sigma_l \sigma_t)/T}
 @@
 
-![small](TRG_Atensor.png)
+![medium](TRG_Atensor.png)
 
 The interpretation of this tensor is that it computes the local energies between the four spins that
 live on its indices, and its value is the Boltzmann probability weight $e^{-E/T}$ associated with
@@ -156,16 +158,16 @@ repeats the above two steps (factor and recombine) N times until only a single
 tensor remains. Calling this final tensor $A_N$, the result $Z$ of contracting
 the original network is equal to the following "double trace" of $A_N$:
 
-![small](TRG_top.png)
+![medium](TRG_top.png)
 
 ## Extensions
 
 Extensions of the basic TRG algorithm include:
 
-- _tensor entanglement renormalization group_ (TERG)\cite{Gu:2008}, 
-- _tensor network renormalization_ (TNR)\cite{Evenbly:2015}\cite{Evenbly:2015algs}\cite{Evenbly:2015tnrm} 
-- loop-TNR\cite{Yang}
-- GILT\cite{Hauru:2017}
+- _tensor entanglement renormalization group_ (TERG) Ref. \onlinecite{Gu:2008}
+- _tensor network renormalization_ (TNR) Refs. \onlinecite{Evenbly:2015,Evenbly:2015algs,Evenbly:2015tnrm} 
+- loop-TNR Ref. \onlinecite{Yang}
+- GILT Ref. \onlinecite{Hauru:2017}
 
 ## Suggested Reading
 
