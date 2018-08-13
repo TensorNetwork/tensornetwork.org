@@ -14,6 +14,8 @@ can be expressed in [[tensor diagram notation|diagrams]] as
 
 ![medium](mpstt_diagram.png)
 
+<!--TOC-->
+
 where for concreteness $T$ is taken to have six indices, but the 
 pattern above can be generalized for a tensor with any number of indices.
 
@@ -34,7 +36,6 @@ Note that each of the $A$ tensors can in general be different
 from each other; instead of denoting them with different letters,
 it is a useful convention to just distinguish them by their indices.
 
-<!--TOC-->
 
 Any tensor can be exactly represented in MPS / TT form for a large
 enough dimension of the bond indices $\alpha$. \cite{Vidal:2003,Oseledets:2011}
