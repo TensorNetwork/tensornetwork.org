@@ -14,7 +14,6 @@ can be expressed in [[tensor diagram notation|diagrams]] as
 
 ![medium](mpstt_diagram.png)
 
-<!--TOC-->
 
 where for concreteness $T$ is taken to have six indices, but the 
 pattern above can be generalized for a tensor with any number of indices.
@@ -30,6 +29,8 @@ A^{s_4}_{\alpha_3 \alpha_4}
 A^{s_5}_{\alpha_4 \alpha_5} 
 A^{s_6}_{\alpha_5}
 \end{equation}
+
+<!--TOC-->
 
 where the bond indices $\alpha$ are contracted, or summed over.
 Note that each of the $A$ tensors can in general be different
