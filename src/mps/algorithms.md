@@ -24,8 +24,8 @@ by an MPO tensor network, resulting in a new MPS/TT that approximates
 the result.
 
 - [[Density Matrix Algorithm|mps/algorithms/dm_mpo]] (coming soon)
-- [[Fitting Algorithm|mps/algorithms/zip_up]] (coming soon)
-- [[Zip-Up Algorithm|mps/algorithms/zip_up]] (coming soon)
+- [[Fitting Algorithm|mps/algorithms/fitting_mpo]] (coming soon)
+- [[Zip-Up Algorithm|mps/algorithms/zip_up_mpo]] (coming soon)
 
 ## Time Evolution Algorithms
 
@@ -47,5 +47,5 @@ The following algorithms involve solving equations such as $A x = \lambda x$
 or $A x = b$ where $x$ is a tensor in MPS/TT form.
 
 - [[DMRG &mdash; Density Matrix Renormalization Group|mps/algorithms/dmrg]].
-  Adaptive algorithm for finding eigenvectors in MPS form. (coming soon)
+  Adaptive algorithm for finding eigenvectors in MPS form.
 
