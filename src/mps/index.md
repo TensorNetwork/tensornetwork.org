@@ -71,10 +71,11 @@ In contrast, representing such a tensor by an MPS/TT network of bond dimension $
 requires
 
 \begin{equation}
-N m^2 d
+N d m^2
 \end{equation}
 
-parameters at most.
+parameters, and this number can be reduced even further by imposing or 
+exploiting certain constraints on the factor tensors.
 
 If the MPS/TT representation of the tensor is a good approximation, then
 it represents a massive compression from a set of parameters growing
