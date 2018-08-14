@@ -84,7 +84,7 @@ end
 function restoreMathJax(html::String,mjlist::Array{String,1})
   res = html
   for (n,mj) in enumerate(mjlist)
-    res = replace(res,"(MathJax$n)",mj)
+    res = replace(res,"(MathJax$n)" => mj)
   end
   return res
 end
@@ -151,7 +151,7 @@ function processArxivLinks(html::String)
     if lowercase(prefix) == "arxiv"
       res *= "arxiv:[$number](https://arxiv.org/abs/$number)"
     else
-      nbprefix = replace(prefix,"-","&#8209;") #non-breaking hypen
+      nbprefix = replace(prefix,"-" => "&#8209;") #non-breaking hypen
       res *= "<span>$nbprefix/[$number](https://arxiv.org/abs/$prefix/$number)</span>"
     end
     pos = m.offset+length(m.match)
@@ -183,14 +183,14 @@ function processCondMatLinks(html::String)
 end
 
 function printEditFooter(of::IOStream,fname::String)
-  template_edit_footer = open("template_edit_footer.html") do file readstring(file) end
+  template_edit_footer = open("template_edit_footer.html") do file read(file,String) end
   link = "https://github.com/TensorNetwork/tensornetwork.org/edit/master/"*fname
-  out = replace(template_edit_footer,r"{github_link}",link)
+  out = replace(template_edit_footer,r"{github_link}" => link)
   print(of,out)
 end
 
 function generateRefs(citenums,btentries)
-  keys = Array{String,1}(length(citenums))
+  keys = Array{String,1}(undef,length(citenums))
   for (k,v) in citenums
     keys[v] = k
   end
@@ -211,7 +211,7 @@ end
 # 
 function generateTOC(input::String,has_refs::Bool)
   toc_re = r"<!--TOC-->"is
-  if ismatch(toc_re,input)
+  if occursin(toc_re,input)
     output = ""
     toc_html = "\n\n\n<div class=\"toc\">\n"
     toc_html *= "<b>Table of Contents</b><br/><br/>\n"
@@ -225,8 +225,8 @@ function generateTOC(input::String,has_refs::Bool)
       if nlev > 1
         output *= " <a name=\"toc_$count\"></a>\n"
         name = strip(convert(String,m.captures[2]))
-        name = replace(name,r"\\cite{.*?}","")
-        name = replace(name,r"\\onlinecite{.*?}","")
+        name = replace(name,r"\\cite{.*?}" => "")
+        name = replace(name,r"\\onlinecite{.*?}" => "")
         for n in 1:nlev toc_html *= "  " end
         if nlev == lev+1
           toc_html *= "<ul>"
@@ -246,14 +246,14 @@ function generateTOC(input::String,has_refs::Bool)
     toc_html *= "</ul></div>\n\n\n"
     output *= input[pos:end]
     #println(toc_html)
-    return replace(output,toc_re,toc_html)
+    return replace(output,toc_re => toc_html)
   end
   return input
 end
 
-header_prenav = open("header_prenav.html") do file readstring(file) end
-header_postnav = open("header_postnav.html") do file readstring(file) end
-footer = open("footer.html") do file readstring(file) end
+header_prenav = open("header_prenav.html") do file read(file,String) end
+header_postnav = open("header_postnav.html") do file read(file,String) end
+footer = open("footer.html") do file read(file,String) end
 
 idir = "src"
 odir = "../tensornetwork.org"
@@ -276,7 +276,7 @@ for (root,dirs,files) in walkdir(idir)
     ifname = curri*"/"*f
     if ext == "md"
       ofname = curro*"/"*base*".html"
-      mdstring = readstring(ifname)
+      mdstring = read(ifname,String)
 
       btfile = curri*"/"*base*".bib"
       has_refs = isfile(btfile)
@@ -300,8 +300,8 @@ for (root,dirs,files) in walkdir(idir)
       open("_tmp_file.md","w") do tf
         print(tf,mdstring)
       end
-      html = readstring(`cmark _tmp_file.md`)
-      #html = readstring(`python2.7 -m markdown _tmp_file.md`)
+      html = read(`cmark _tmp_file.md`,String)
+      #html = read(`python2.7 -m markdown _tmp_file.md`,String)
 
       html = restoreMathJax(html,mjlist)
 
