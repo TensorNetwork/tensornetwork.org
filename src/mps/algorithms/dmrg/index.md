@@ -33,7 +33,9 @@ The DMRG algorithm seeks the dominant eigenvector of $H$ in the form of an MPS t
 
 ![medium](H_eigenvector.png)
 
-Here $E_0 (\leq E_1 \leq E_2 \ldots)$ is the minimum eigenvalue $E_n$ of $H$.
+Here $E_0$  $(\leq E_1 \leq E_2 \ldots)$ is the minimum eigenvalue of $H$.
+(See below for a discussion of what the DMRG algorithm does when $H$ has more
+than one minimum eigenvalue.)
 
 For the algorithm to be efficient, $H$ must have certain simplifying properties.
 For example $H$ could be a sum of local terms
@@ -44,11 +46,13 @@ or, more generally, $H$ could be given as an [[MPO|mpo]] tensor network
 
 ![medium](H_MPO_form.png)
 
-Other simplifying forms of $H$ can also permit efficient formulations of the DMRG
+The MPO form is the most natural one for the DMRG algorithm, and can efficiently
+represent many cases one wants to consider, such as when $H$ is a sum of local
+terms.
+
+However, other simplifying forms of $H$ can also permit efficient formulations of the DMRG
 algorithm, such as if $H$ is a sum of MPO tensor networks or outer products of MPS
 tensor networks.
-
-
 
 ## Steps of the DMRG Algorithm
 
