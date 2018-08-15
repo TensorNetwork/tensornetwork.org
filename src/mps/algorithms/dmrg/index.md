@@ -1,10 +1,11 @@
 # Density Matrix Renormalization Group Algorithm (DMRG)
 
-The density matrix renormalization group (DMRG) 
-is an adaptive algorithm for optimizing a [[matrix product state (or tensor train)|mps]] (MPS) tensor
-network, such that after optimization, the MPS is approximately the dominant eigenvector of a large matrix $H$.
-The matrix $H$ is usually assumed to be a Hermitian matrix, but the algorithm can also be formulated for more 
-general matrices.
+The density matrix renormalization group (DMRG)\cite{White:1992,White:1993den,Schollwoeck:2005}
+is an adaptive algorithm for optimizing a [[matrix product state (MPS)|mps]] (or tensor train) 
+tensor network, such that after optimization, the MPS is approximately the dominant 
+eigenvector of a large matrix $H$.
+The matrix $H$ is usually assumed to be a Hermitian matrix, but the 
+algorithm can also be formulated for more general matrices.
 
 The DMRG algorithm works by optimizing two neighboring MPS tensors at a time, temporarily 
 combining them into a single tensor to be optimized. The optimization is performed using 
