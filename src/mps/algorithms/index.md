@@ -9,6 +9,14 @@ for [[MPS/TT tensor networks|mps]].
 - [[Inner Product of Two MPS/TT|mps/index#innerprod]]
 - [[Compression of MPS/TT|mps/index#compression]] (Using Density Matrix Algorithm)
 
+## Solving Linear Equations
+
+The following algorithms involve solving equations such as $A x = \lambda x$
+or $A x = b$ where $x$ is a tensor in MPS/TT form.
+
+- [[DMRG &mdash; Density Matrix Renormalization Group|mps/algorithms/dmrg]].
+  Adaptive algorithm for finding eigenvectors in MPS form.
+
 ## Summing MPS/TT networks
 
 The following are algorithms for summing two or more MPS/TT networks
@@ -41,11 +49,5 @@ systems.
 - [[MPO Time Evolution|mps/algorithms/mpo_tevol]] (coming soon)
 - [[Krylov Time Evolution|mps/algorithms/krylov_tevol]] (coming soon)
 
-## Solving Linear Equations
 
-The following algorithms involve solving equations such as $A x = \lambda x$
-or $A x = b$ where $x$ is a tensor in MPS/TT form.
-
-- [[DMRG &mdash; Density Matrix Renormalization Group|mps/algorithms/dmrg]].
-  Adaptive algorithm for finding eigenvectors in MPS form.
 
