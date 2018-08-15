@@ -111,6 +111,8 @@ img[alt=large]
 
 .toc
     {
+    display: none;
+
     float:right; 
     width:40%; 
     margin-left: 40px;
@@ -122,3 +124,11 @@ img[alt=large]
     padding-right: 20px;
     background-color: #EEE;
     }
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+.toc
+    {
+    display: block;
+    }
+}

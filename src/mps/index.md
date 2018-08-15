@@ -14,6 +14,7 @@ can be expressed in [[tensor diagram notation|diagrams]] as
 
 ![medium](mpstt_diagram.png)
 
+
 where for concreteness $T$ is taken to have six indices, but the 
 pattern above can be generalized for a tensor with any number of indices.
 
@@ -29,12 +30,13 @@ A^{s_5}_{\alpha_4 \alpha_5}
 A^{s_6}_{\alpha_5}
 \end{equation}
 
+<!--TOC-->
+
 where the bond indices $\alpha$ are contracted, or summed over.
 Note that each of the $A$ tensors can in general be different
 from each other; instead of denoting them with different letters,
 it is a useful convention to just distinguish them by their indices.
 
-<!--TOC-->
 
 Any tensor can be exactly represented in MPS / TT form for a large
 enough dimension of the bond indices $\alpha$. \cite{Vidal:2003,Oseledets:2011}
@@ -69,10 +71,11 @@ In contrast, representing such a tensor by an MPS/TT network of bond dimension $
 requires
 
 \begin{equation}
-N m^2 d
+N d m^2
 \end{equation}
 
-parameters at most.
+parameters, and this number can be reduced even further by imposing or 
+exploiting certain constraints on the factor tensors.
 
 If the MPS/TT representation of the tensor is a good approximation, then
 it represents a massive compression from a set of parameters growing

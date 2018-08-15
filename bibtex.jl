@@ -84,14 +84,14 @@ function getEntry(contents::String,start::Int)::String
 end
 
 function parseBibTex(fname::String)
-  contents = open(fname) do file readstring(file) end
+  contents = open(fname) do file read(file,String) end
 
   entries = Dict{String,BTEntry}()
 
   btre = r"@article{(.+?),"s
 
   function getField(re,source::String)::String
-    if ismatch(re,source)
+    if occursin(re,source)
       return strip(match(re,source).captures[1])
     end
     return ""
@@ -118,7 +118,7 @@ function parseBibTex(fname::String)
       for a in authors
         a = strip(a)
         rev = r"(\w+?), (.+)"
-        if ismatch(rev,a)
+        if occursin(rev,a)
           m = match(rev,a)
           push!(bt.authors,"$(m.captures[2]) $(m.captures[1])")
         else
