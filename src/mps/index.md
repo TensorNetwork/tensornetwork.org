@@ -269,7 +269,7 @@ Once all of the $U$ tensors are obtained by repeating the steps above, the last 
 
 ![medium](first_tensor.png)
 
-As the curtain falls on this little algorithmic drama, our characters can now join hands and
+As the curtain falls on this algorithmic drama, the characters can now join hands and
 take a bow. The final compressed version of the original MPS/TT is:
 
 ![medium](compressed_mpstt.png)
@@ -278,16 +278,32 @@ Note that in this last expression, the indices of various tensors have been orie
 on the page than in their original definitions above. But recall that it is the connectivity 
 of indices, not their orientation, that carries the meaning of tensor diagrams.
 
+## Gauges and Canonical Forms
+
+The compression, or rounding, algorithm above leads to an interesting observation:
+the MPS/TT network after the compression can be made arbitrary close to the original
+one, but is made of isometric tensors $U_j$ (technically [partial isometries](https://en.wikipedia.org/wiki/Partial_isometry)).
+Because these tensors were the result of diagonalizing Hermitian matrices,
+they have the property that $U^\dagger U = I$, or diagrammatically:
+
+![small](isometric_U.png)
+
+Written in the orientation these tensors take when viewed as part of an MPS/TT,
+they have the property that:
+
+![small](U_right_ortho.png)
+
+
 ## Connections to Other Formats and Concepts
 
 - An MPS/TT network can be viewed as a maximally unbalanced
-  special case of a [[tree tensor network|ttn]].
+  case of a [[tree tensor network|ttn]].
 
 - MPS/TT with all factor tensors chosen to be the same and 
   with a specified choice of boundary conditions are equivalent
   to _weighted finite automata_ (WFA).\cite{Balle:2014}
-  (Though the interpretation and applications of MPS and WFA may be rather
-  different. For an interesting connection between the WFA
+  (However, the interpretation and applications of MPS and WFA can 
+  be rather different. For an interesting connection between the WFA
   and quantum physics literature see Ref. \onlinecite{Bailly:2011}.)
 
 - MPS/TT networks constrained to have strictly non-negative
@@ -308,5 +324,5 @@ of indices, not their orientation, that carries the meaning of tensor diagrams.
 - <b>A practical introduction to tensor networks: Matrix product states and projected entangled pair states</b>\cite{Orus:2014a} A friendly overview of tensor networks using physics terminology
   but aiming to be non-technical.
 
-- <b>Hand-waving and Interpretive Dance: An Introductory Course on Tensor Networks</b>\cite{Bridgeman:2016} Detailed review article about tensor networks with a quantum information perspective.
+- <b>Hand-waving and Interpretive Dance: An Introductory Course on Tensor Networks</b>\cite{Bridgeman:2017} Detailed review article about tensor networks with a quantum information perspective.
 
