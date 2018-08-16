@@ -54,10 +54,49 @@ is optional. (Technically the second example is ambiguous about
 which index is $i$ and which is $k$, but in practice this ambiguity
 is rarely a problem, or when it is, the labels can be notated.)
 
+## Identity Matrices
+
+Because contracting a tensor over one of its indices with the
+identity matrix has no effect, it is customary to notate 
+identity matrices just as plain lines with no "blob" or "shape"
+as with other tensors. Diagrammatically, this looks like:
+
+![small](identity_diagram.png)
+
+This notation is useful, because the diagram for contracting with
+an identity matrix just extends an index line i.e. has no effect
+on the tensor:
+
+![large](identity_contraction.png)
+
+## Advantages of Tensor Diagram Notation
+
+Tensor diagram notation has many benefits compared to other notations:
+
+- Multiple operations, such as traces, tensor products, and contractions
+  can be expressed in a simple way without required extra notation.
+
+  * A tensor product simply corresponds to placing tensors next to each other.
+  * A trace is notated by joining two lines of the same tensor.
+  * A contraction is indicated by joining two lines of different tensors.
+
+- Names of indices and tensors can often be omitted. This can serve to save
+  much time and lighten the notation, and is 
+  especially useful for indices internal to a network which exist 
+  mainly to be summed over.
+
+- The order of the final tensor resulting from a complicated network of 
+  contractions can be determined by inspection: it is just the number of
+  unpaired lines. For example, a tensor network with all lines joined 
+  can immediately be seen to result in a scalar no matter how complex.
+
 ## Other Resources
 
 The diagram notation used in the tensor network literature is relatively 
 informal and has quite a range of variation, but more formal
 specifications have been [proposed](https://en.wikipedia.org/wiki/Penrose_graphical_notation).
+
+A helpful introduction to diagram notation as it is used in quantum physics is
+given by Bridgeman and Chubb.\cite{Bridgeman:2017}
 
 
