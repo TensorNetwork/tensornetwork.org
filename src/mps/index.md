@@ -294,6 +294,8 @@ they have the property that:
 ![small](U_right_ortho.png)
 
 
+
+
 ## Connections to Other Formats and Concepts
 
 - An MPS/TT network can be viewed as a maximally unbalanced
@@ -326,3 +328,9 @@ they have the property that:
 
 - <b>Hand-waving and Interpretive Dance: An Introductory Course on Tensor Networks</b>\cite{Bridgeman:2017} Detailed review article about tensor networks with a quantum information perspective.
 
+
+<!--
+Other topics to cover:
+- correlation structure of an MPS/TT (assuming L2/Born probability interpretation)
+- entanglement entropy: boundary law (link to page about min-cut argument)
+-->
