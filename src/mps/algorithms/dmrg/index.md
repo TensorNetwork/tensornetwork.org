@@ -16,7 +16,7 @@ adapted. This adaptation is optimal in the sense of preserving the distance betw
 network just after the optimization step and the network with restored MPS form.
 
 In physics and chemistry applications, DMRG is mainly used to find ground states of Hamiltonians of many-body
-quantum systems. It has also been extended to compute excited states, as well as simulate
+quantum systems. It has also been extended to compute excited states, and to simulate
 dynamical, finite-temperature, and non-equilibrium systems. 
 
 Algorithms similar to or inspired by DMRG have been developed for more general MPS computations, such
@@ -86,7 +86,7 @@ form restored:
 
 ## Connections to Other Algorithms
 
-- An algorithm with similar steps as DMRG has been developed for 
+- An algorithm with similar steps as DMRG has been developed for <!--Discuss Rolfe EM algorithm -->
 
 
 
