@@ -96,7 +96,7 @@ img[alt=small40]
     }
 img[alt=medium] 
     { 
-    width: 60%; 
+    width: 60%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -108,3 +108,27 @@ img[alt=large]
     margin-left: auto;
     margin-right: auto;
     }
+
+.toc
+    {
+    display: none;
+
+    float:right; 
+    width:40%; 
+    margin-left: 40px;
+    border: solid 3px;
+    border-color: #872518;
+    padding-top: 20px;
+    padding-bottom: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #EEE;
+    }
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+.toc
+    {
+    display: block;
+    }
+}

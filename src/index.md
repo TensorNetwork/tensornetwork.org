@@ -25,6 +25,7 @@ Types of Tensor Networks:
 
 Tensor Network Algorithms:
 
+- [[MPS/TT and MPO Algorithms|mps/algorithms]]
 - [[TRG Algorithm|trg]]
 
 Computing with Tensor Networks:

@@ -84,7 +84,7 @@ end
 function restoreMathJax(html::String,mjlist::Array{String,1})
   res = html
   for (n,mj) in enumerate(mjlist)
-    res = replace(res,"(MathJax$n)",mj)
+    res = replace(res,"(MathJax$n)" => mj)
   end
   return res
 end
@@ -92,22 +92,40 @@ end
 #
 # Process wiki-style links
 # 
-function processWikiLinks(html::String)
+function processWikiLinks(html::String,ifname::String)
   link_re = r"\[\[(.+?)\|(.*?)\]\]"
+  sub_re = r"(.*?)(#.*)"
+  missing_links = String[]
   res = ""
   pos = 1
   match = false
   for m in eachmatch(link_re,html)
     match = true
     res *= html[pos:m.offset-1]
-    if isdir("src/"*m.captures[2])
-      res *= "["*m.captures[1]*"](/"*m.captures[2]*")"
-    elseif isfile("src/"*m.captures[2]*".md")
-      res *= "["*m.captures[1]*"](/"*m.captures[2]*".html)"
+    target = convert(String,m.captures[2])
+
+    #If link has a "#" in it, split into target and sublink
+    sublink = ""
+    for sm in eachmatch(sub_re,target)
+      target = convert(String,sm.captures[1])
+      sublink = convert(String,sm.captures[2])
+    end
+
+    if isdir("src/"*target)
+      res *= "["*m.captures[1]*"](/"*target*"/index.html$sublink)"
+    elseif isfile("src/"*target*".md")
+      res *= "["*m.captures[1]*"](/"*target*".html$sublink)"
     else
       res *= "["*m.captures[1]*"](unknown_file)"
+      push!(missing_links,target)
     end
     pos = m.offset+length(m.match)
+  end
+  if length(missing_links) > 0
+    println("Missing/Incorrect Wiki Links in File $ifname:")
+    for link in missing_links
+      println("  $link")
+    end
   end
   if !match 
     return html 
@@ -133,8 +151,8 @@ function processArxivLinks(html::String)
     if lowercase(prefix) == "arxiv"
       res *= "arxiv:[$number](https://arxiv.org/abs/$number)"
     else
-      prefix = replace(prefix,"-","&#8209;") #non-breaking hypen
-      res *= "<span>$prefix/[$number](https://arxiv.org/abs/cond-mat/$number)</span>"
+      nbprefix = replace(prefix,"-" => "&#8209;") #non-breaking hypen
+      res *= "<span>$nbprefix/[$number](https://arxiv.org/abs/$prefix/$number)</span>"
     end
     pos = m.offset+length(m.match)
   end
@@ -165,18 +183,19 @@ function processCondMatLinks(html::String)
 end
 
 function printEditFooter(of::IOStream,fname::String)
-  template_edit_footer = open("template_edit_footer.html") do file readstring(file) end
+  template_edit_footer = open("template_edit_footer.html") do file read(file,String) end
   link = "https://github.com/TensorNetwork/tensornetwork.org/edit/master/"*fname
-  out = replace(template_edit_footer,r"{github_link}",link)
+  out = replace(template_edit_footer,r"{github_link}" => link)
   print(of,out)
 end
 
 function generateRefs(citenums,btentries)
-  keys = Array{String,1}(length(citenums))
+  keys = Array{String,1}(undef,length(citenums))
   for (k,v) in citenums
     keys[v] = k
   end
-  rhtml = "## References\n"
+  rhtml = "<a name=\"toc_refs\"></a>\n"
+  rhtml *= "## References\n"
   for (n,k) in enumerate(keys)
     if haskey(btentries,k)
       bt = btentries[k]
@@ -187,9 +206,54 @@ function generateRefs(citenums,btentries)
   return rhtml
 end
 
-header_prenav = open("header_prenav.html") do file readstring(file) end
-header_postnav = open("header_postnav.html") do file readstring(file) end
-footer = open("footer.html") do file readstring(file) end
+#
+# Generate a Table of Contents if Requested
+# 
+function generateTOC(input::String,has_refs::Bool)
+  toc_re = r"<!--TOC-->"is
+  if occursin(toc_re,input)
+    output = ""
+    toc_html = "\n\n\n<div class=\"toc\">\n"
+    toc_html *= "<b>Table of Contents</b><br/><br/>\n"
+    lev = 1
+    sec_re = r"\n(#+)(.*)"
+    count = 1
+    pos = 1
+    for m in eachmatch(sec_re,input)
+      nlev = length(m.captures[1])
+      output *= input[pos:m.offset-1]
+      if nlev > 1
+        output *= " <a name=\"toc_$count\"></a>\n"
+        name = strip(convert(String,m.captures[2]))
+        name = replace(name,r"\\cite{.*?}" => "")
+        name = replace(name,r"\\onlinecite{.*?}" => "")
+        for n in 1:nlev toc_html *= "  " end
+        if nlev == lev+1
+          toc_html *= "<ul>"
+        elseif nlev == lev-1
+          toc_html *= "</ul>"
+        end
+        toc_html *= "<li><a href=\"#toc_$count\">$name</a></li>\n"
+        lev = nlev
+        count += 1
+      end
+      output *= m.match
+      pos = m.offset+length(m.match)
+    end
+    if has_refs 
+      toc_html *= "<li><a href=\"#toc_refs\">References</a></li>\n"
+    end
+    toc_html *= "</ul></div>\n\n\n"
+    output *= input[pos:end]
+    #println(toc_html)
+    return replace(output,toc_re => toc_html)
+  end
+  return input
+end
+
+header_prenav = open("header_prenav.html") do file read(file,String) end
+header_postnav = open("header_postnav.html") do file read(file,String) end
+footer = open("footer.html") do file read(file,String) end
 
 idir = "src"
 odir = "../tensornetwork.org"
@@ -212,13 +276,19 @@ for (root,dirs,files) in walkdir(idir)
     ifname = curri*"/"*f
     if ext == "md"
       ofname = curro*"/"*base*".html"
-      mdstring = readstring(ifname)
+      mdstring = read(ifname,String)
+
+      btfile = curri*"/"*base*".bib"
+      has_refs = isfile(btfile)
+
+      #generateTOC(mdstring) && println("Found TOC in $base")
+      mdstring = generateTOC(mdstring,has_refs)
       (mdstring,mjlist) = processMathJax(mdstring)
-      mdstring = processWikiLinks(mdstring)
+      mdstring = processWikiLinks(mdstring,ifname)
 
       (mdstring,citenums) = processCitations(mdstring)
       btfile = curri*"/"*base*".bib"
-      if isfile(btfile)
+      if has_refs
         bt = parseBibTex(btfile)
         refmd = generateRefs(citenums,bt)
         mdstring *= refmd
@@ -226,11 +296,12 @@ for (root,dirs,files) in walkdir(idir)
 
       mdstring = processArxivLinks(mdstring)
 
+
       open("_tmp_file.md","w") do tf
         print(tf,mdstring)
       end
-      html = readstring(`cmark _tmp_file.md`)
-      #html = readstring(`python2.7 -m markdown _tmp_file.md`)
+      html = read(`cmark _tmp_file.md`,String)
+      #html = read(`python2.7 -m markdown _tmp_file.md`,String)
 
       html = restoreMathJax(html,mjlist)
 

@@ -7,9 +7,9 @@ Therefore the majority of pages on the site should use
 domain-neutral language. This includes sticking to
 the same [[terminology conventions|contribute/conventions]] when
 describing tensors and avoiding using jargon or
-domain-specific terms such as "entanglement" (used
-in quantum physics), except in sections specifically
-dedicated to that topic.
+domain-specific terms. For example,
+the term "entanglement" should be avoided except in sections or on 
+pages specifically discussing quantum physics.
 
 Some other tips and guidelines for writing:
 

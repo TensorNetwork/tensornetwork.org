@@ -1,6 +1,7 @@
 
 # Matrix Product State / Tensor Train
 
+
 The matrix product state (MPS)\cite{Fannes:1992,Klumper:1992,Ostlund:1995} or tensor train (TT)\cite{Oseledets:2011} tensor network
 is a factorization of a [[tensor|tensor]] with N indices
 into a chain-like product of three-index tensors.
@@ -12,6 +13,7 @@ A matrix product state / tensor train factorization of a tensor $T$
 can be expressed in [[tensor diagram notation|diagrams]] as
 
 ![medium](mpstt_diagram.png)
+
 
 where for concreteness $T$ is taken to have six indices, but the 
 pattern above can be generalized for a tensor with any number of indices.
@@ -28,10 +30,13 @@ A^{s_5}_{\alpha_4 \alpha_5}
 A^{s_6}_{\alpha_5}
 \end{equation}
 
+<!--TOC-->
+
 where the bond indices $\alpha$ are contracted, or summed over.
 Note that each of the $A$ tensors can in general be different
 from each other; instead of denoting them with different letters,
 it is a useful convention to just distinguish them by their indices.
+
 
 Any tensor can be exactly represented in MPS / TT form for a large
 enough dimension of the bond indices $\alpha$. \cite{Vidal:2003,Oseledets:2011}
@@ -66,10 +71,11 @@ In contrast, representing such a tensor by an MPS/TT network of bond dimension $
 requires
 
 \begin{equation}
-N m^2 d
+N d m^2
 \end{equation}
 
-parameters at most.
+parameters, and this number can be reduced even further by imposing or 
+exploiting certain constraints on the factor tensors.
 
 If the MPS/TT representation of the tensor is a good approximation, then
 it represents a massive compression from a set of parameters growing
@@ -82,16 +88,10 @@ below.
 
 For a tensor with an infinite number of indices, the MPS/TT parameters can 
 be made independent of $N$ by assuming that all of the factor tensors are the same
-(or the same up to a gauge transformation).;
+(or the same up to a gauge transformation).
 
 
 ## Elementary Operations Involving MPS/TT
-
-<!--
-Other algorithms to add:
-- retrieving a component of an MPS/TT
-- compressing/rounding to a smaller bond dimension
--->
 
 The MPS/TT tensor network format makes it possible to efficiently
 carry out operations on a large, high-order tensor $T$ by manipulating
@@ -100,6 +100,9 @@ the much smaller factors making up the MPS/TT representation of $T$.
 There are many known algorithms for computations involving MPS/TT networks.
 Below, we highlight some of the simplest and most fundamental examples.
 
+To read about other MPS/TT algorithms, see [[this page|mps/algorithms]].
+
+<a name="component"></a>
 ### Retrieving a Component from an MPS/TT  
 
 Consider an order-$N$ tensor $T$. In general, cost of storing and retrieving 
@@ -141,7 +144,7 @@ fact that an individual tensor component (in the context of a quantum state or
 wavefunction) is parameterized as a product of matrices as in the algorithm above.
 (This name is even clearer in the case of [[periodic MPS|periodicMPS]].)
 
-
+<a name="innerprod"></a>
 ### Inner Product of Two MPS/TT \cite{Perez-Garcia:2007}
 
 Consider two high-order tensors $T^{s_1 s_2 s_3 s_4 s_5 s_6}$ 
@@ -205,6 +208,7 @@ of the external indices. In contrast, if one worked with the full $T$
 and $W$ tensors and did not use the MPS/TT form the cost of
 calculating $\iprod{T}{W}$ would be $d^N$.
 
+<a name="compression"></a>
 ### Compression / Rounding \cite{McCulloch:2007,Oseledets:2011}
 
 A particularly powerful operation is the compression of a tensor network into 
@@ -265,7 +269,7 @@ Once all of the $U$ tensors are obtained by repeating the steps above, the last 
 
 ![medium](first_tensor.png)
 
-As the curtain falls on this little algorithmic drama, our characters can now join hands and
+As the curtain falls on this algorithmic drama, the characters can now join hands and
 take a bow. The final compressed version of the original MPS/TT is:
 
 ![medium](compressed_mpstt.png)
@@ -274,16 +278,32 @@ Note that in this last expression, the indices of various tensors have been orie
 on the page than in their original definitions above. But recall that it is the connectivity 
 of indices, not their orientation, that carries the meaning of tensor diagrams.
 
+## Gauges and Canonical Forms
+
+The compression, or rounding, algorithm above leads to an interesting observation:
+the MPS/TT network after the compression can be made arbitrary close to the original
+one, but is made of isometric tensors $U_j$ (technically [partial isometries](https://en.wikipedia.org/wiki/Partial_isometry)).
+Because these tensors were the result of diagonalizing Hermitian matrices,
+they have the property that $U^\dagger U = I$, or diagrammatically:
+
+![small](isometric_U.png)
+
+Written in the orientation these tensors take when viewed as part of an MPS/TT,
+they have the property that:
+
+![small](U_right_ortho.png)
+
+
 ## Connections to Other Formats and Concepts
 
 - An MPS/TT network can be viewed as a maximally unbalanced
-  special case of a [[tree tensor network|ttn]].
+  case of a [[tree tensor network|ttn]].
 
 - MPS/TT with all factor tensors chosen to be the same and 
   with a specified choice of boundary conditions are equivalent
   to _weighted finite automata_ (WFA).\cite{Balle:2014}
-  (Though the interpretation and applications of MPS and WFA may be rather
-  different. For an interesting connection between the WFA
+  (However, the interpretation and applications of MPS and WFA can 
+  be rather different. For an interesting connection between the WFA
   and quantum physics literature see Ref. \onlinecite{Bailly:2011}.)
 
 - MPS/TT networks constrained to have strictly non-negative
@@ -304,5 +324,5 @@ of indices, not their orientation, that carries the meaning of tensor diagrams.
 - <b>A practical introduction to tensor networks: Matrix product states and projected entangled pair states</b>\cite{Orus:2014a} A friendly overview of tensor networks using physics terminology
   but aiming to be non-technical.
 
-- <b>Hand-waving and Interpretive Dance: An Introductory Course on Tensor Networks</b>\cite{Bridgeman:2016} Detailed review article about tensor networks with a quantum information perspective.
+- <b>Hand-waving and Interpretive Dance: An Introductory Course on Tensor Networks</b>\cite{Bridgeman:2017} Detailed review article about tensor networks with a quantum information perspective.
 
