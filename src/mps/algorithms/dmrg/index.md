@@ -56,6 +56,8 @@ tensor networks.
 
 ## Steps of the DMRG Algorithm
 
+Before beginning the DMRG algorithm, it is imperative to bring the initial MPS into an orthogonal form via a [[gauge transformation|mps#toc_7]]. Here we will choose to begin the DMRG algorithm assuming the MPS tensors 2,3,...,N are all right-orthogonal:
+
 
 ## Convergence Properties
 
