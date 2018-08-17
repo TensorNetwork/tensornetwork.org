@@ -83,6 +83,11 @@ defining the $E_j$ "edge" tensors along the way:
 
 ![medium](H_edge.png)
 
+For efficiency, it is crucial that the edge tensors be created by contracting 
+each MPS or MPO tensor one at a time in a certain order, as follows:
+
+![medium](H_edge_ordering.png)
+
 
 <!--
 ## Convergence Properties
