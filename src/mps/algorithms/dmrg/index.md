@@ -1,11 +1,14 @@
 # Density Matrix Renormalization Group Algorithm (DMRG)
 
+<!--TOC-->
+
 The density matrix renormalization group (DMRG)\cite{White:1992,White:1993den,Schollwoeck:2005}
 is an adaptive algorithm for optimizing a [[matrix product state (MPS)|mps]] (or tensor train) 
 tensor network, such that after optimization, the MPS is approximately the dominant 
 eigenvector of a large matrix $H$.
 The matrix $H$ is usually assumed to be a Hermitian matrix, but the 
 algorithm can also be formulated for more general matrices.
+
 
 The DMRG algorithm works by optimizing two neighboring MPS tensors at a time, temporarily 
 combining them into a single tensor to be optimized. The optimization is performed using 
@@ -14,6 +17,7 @@ factorized using an [[SVD|svd]] or density matrix decomposition in order to rest
 During this factorization, the bond dimension (or tensor train rank) of the MPS can be
 adapted. This adaptation is optimal in the sense of preserving the distance between the 
 network just after the optimization step and the network with restored MPS form.
+
 
 In physics and chemistry applications, DMRG is mainly used to find ground states of Hamiltonians of many-body
 quantum systems. It has also been extended to compute excited states, and to simulate
@@ -56,17 +60,39 @@ tensor networks.
 
 ## Steps of the DMRG Algorithm
 
-Before beginning the DMRG algorithm, it is imperative to bring the initial MPS into an orthogonal form via a [[gauge transformation|mps#toc_7]]. Here we will choose to begin the DMRG algorithm assuming the MPS tensors 2,3,...,N are all right-orthogonal:
+### Step 0: Setup
+
+Before beginning the DMRG algorithm, it is imperative to bring the initial MPS into an orthogonal form via a [[gauge transformation|mps#toc_7]]. Here we will choose to begin the DMRG algorithm assuming (without loss of generality) that the MPS tensors 2,3,...,N are all right-orthogonal:
+
+![medium](right_ortho_MPS.png)
+
+Because of the right-orthogonality property, we can interpret the MPS tensors numbers
+$3,4,5,\ldots$ collectively as a change of basis from the basis of visible indices
+$i_3,i_4,i_5,\ldots$ to the bond index $\alpha_2$ as follows:
+
+![medium](MPS_change_of_basis.png)
+
+This interpretation motivates transforming the matrix $H$ into the $i_1,i_2,\alpha_2$
+basis as given by the following diagram:
+
+![medium](projected_H.png)
 
 
-## Convergence Properties
+If we take $H$ to be in [[MPO|mpo]] form, we can compute the transformation efficiently,
+defining the $E_j$ "edge" tensors along the way:
+
+![medium](H_edge.png)
+
 
 <!--
+## Convergence Properties
+
 - Exponential convergence in sweeps when H is 1D, local, gapped / finite correlation length
 - Not guaranteed to converge to dominant eigenvector: "sticking problem"
 - Discuss case of degenerate minimum eigenvalues (MES hypothesis)
 -->
 
+<!--
 ## DMRG for Tree Tensor Networks
 
 The DMRG algorithm can be extended straightforwardly to arbitrary [[tree tensor networks|ttn]], of 
@@ -86,9 +112,13 @@ form restored:
 
 ![medium](ttn_dmrg_restored.png)
 
+-->
+
+<!--
 ## Connections to Other Algorithms
 
-- An algorithm with similar steps as DMRG has been developed for <!--Discuss Rolfe EM algorithm -->
+- An algorithm with similar steps as DMRG has been developed for (Discuss Rolfe EM algorithm)
+-->
 
 
 
