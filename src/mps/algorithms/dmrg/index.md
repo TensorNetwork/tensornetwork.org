@@ -1,10 +1,14 @@
 # Density Matrix Renormalization Group Algorithm (DMRG)
 
-The density matrix renormalization group (DMRG) 
-is an adaptive algorithm for optimizing a [[matrix product state (or tensor train)|mps]] (MPS) tensor
-network, such that after optimization, the MPS is approximately the dominant eigenvector of a large matrix $H$.
-The matrix $H$ is usually assumed to be a Hermitian matrix, but the algorithm can also be formulated for more 
-general matrices.
+<!--TOC-->
+
+The density matrix renormalization group (DMRG)\cite{White:1992,White:1993den,Schollwoeck:2005}
+is an adaptive algorithm for optimizing a [[matrix product state (MPS)|mps]] (or tensor train) 
+tensor network, such that after optimization, the MPS is approximately the dominant 
+eigenvector of a large matrix $H$.
+The matrix $H$ is usually assumed to be a Hermitian matrix, but the 
+algorithm can also be formulated for more general matrices.
+
 
 The DMRG algorithm works by optimizing two neighboring MPS tensors at a time, temporarily 
 combining them into a single tensor to be optimized. The optimization is performed using 
@@ -14,8 +18,9 @@ During this factorization, the bond dimension (or tensor train rank) of the MPS 
 adapted. This adaptation is optimal in the sense of preserving the distance between the 
 network just after the optimization step and the network with restored MPS form.
 
+
 In physics and chemistry applications, DMRG is mainly used to find ground states of Hamiltonians of many-body
-quantum systems. It has also been extended to compute excited states, as well as simulate
+quantum systems. It has also been extended to compute excited states, and to simulate
 dynamical, finite-temperature, and non-equilibrium systems. 
 
 Algorithms similar to or inspired by DMRG have been developed for more general MPS computations, such
@@ -32,7 +37,9 @@ The DMRG algorithm seeks the dominant eigenvector of $H$ in the form of an MPS t
 
 ![medium](H_eigenvector.png)
 
-Here $E_0 (\leq E_1 \leq E_2 \ldots)$ is the minimum eigenvalue $E_n$ of $H$.
+Here $E_0$  $(\leq E_1 \leq E_2 \ldots)$ is the minimum eigenvalue of $H$.
+(See below for a discussion of what the DMRG algorithm does when $H$ has more
+than one minimum eigenvalue.)
 
 For the algorithm to be efficient, $H$ must have certain simplifying properties.
 For example $H$ could be a sum of local terms
@@ -43,23 +50,54 @@ or, more generally, $H$ could be given as an [[MPO|mpo]] tensor network
 
 ![medium](H_MPO_form.png)
 
-Other simplifying forms of $H$ can also permit efficient formulations of the DMRG
+The MPO form is the most natural one for the DMRG algorithm, and can efficiently
+represent many cases one wants to consider, such as when $H$ is a sum of local
+terms.
+
+However, other simplifying forms of $H$ can also permit efficient formulations of the DMRG
 algorithm, such as if $H$ is a sum of MPO tensor networks or outer products of MPS
 tensor networks.
 
-
-
 ## Steps of the DMRG Algorithm
 
+### Step 0: Setup
 
-## Convergence Properties
+Before beginning the DMRG algorithm, it is imperative to bring the initial MPS into an orthogonal form via a [[gauge transformation|mps#toc_7]]. Here we will choose to begin the DMRG algorithm assuming (without loss of generality) that the MPS tensors 2,3,...,N are all right-orthogonal:
+
+![medium](right_ortho_MPS.png)
+
+Because of the right-orthogonality property, we can interpret the MPS tensors numbers
+$3,4,5,\ldots$ collectively as a change of basis from the basis of visible indices
+$i_3,i_4,i_5,\ldots$ to the bond index $\alpha_2$ as follows:
+
+![medium](MPS_change_of_basis.png)
+
+This interpretation motivates transforming the matrix $H$ into the $i_1,i_2,\alpha_2$
+basis as given by the following diagram:
+
+![medium](projected_H.png)
+
+
+If we take $H$ to be in [[MPO|mpo]] form, we can compute the transformation efficiently,
+defining the $E_j$ "edge" tensors along the way:
+
+![medium](H_edge.png)
+
+For efficiency, it is crucial that the edge tensors be created by contracting 
+each MPS or MPO tensor one at a time in a certain order, as follows:
+
+![medium](H_edge_ordering.png)
+
 
 <!--
+## Convergence Properties
+
 - Exponential convergence in sweeps when H is 1D, local, gapped / finite correlation length
 - Not guaranteed to converge to dominant eigenvector: "sticking problem"
 - Discuss case of degenerate minimum eigenvalues (MES hypothesis)
 -->
 
+<!--
 ## DMRG for Tree Tensor Networks
 
 The DMRG algorithm can be extended straightforwardly to arbitrary [[tree tensor networks|ttn]], of 
@@ -79,9 +117,13 @@ form restored:
 
 ![medium](ttn_dmrg_restored.png)
 
+-->
+
+<!--
 ## Connections to Other Algorithms
 
-- An algorithm with similar steps as DMRG has been developed for 
+- An algorithm with similar steps as DMRG has been developed for (Discuss Rolfe EM algorithm)
+-->
 
 
 
