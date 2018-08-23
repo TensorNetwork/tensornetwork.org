@@ -13,8 +13,8 @@ perspective of one group of authors.
 
 Though every page of this website is editable, it is not a wiki per se. 
 Instead, it is an "open source website", similar to open source software.
-Improvements to the site are managed through 
-[https://github.org/TensorNetwork/tensornetwork.org](Github)
+Improvements to the site are managed through Github
+([link to Github repository](https://github.com/TensorNetwork/tensornetwork.org))
 to ensure quality and so academic contributors can be credited for
 their work.
 
