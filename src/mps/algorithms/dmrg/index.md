@@ -245,6 +245,35 @@ tensors $(N-1)$ and $N$ back to the first bond. After reaching the
 first bond again, one has done a full sweep of DMRG.
 
 
+## Diagrammatic Summary of Main Steps
+
+To convey the bigger picture of what the DMRG algorithm does, it is
+helpful to summarize the main steps diagrammatically.
+
+At each bond one optimizes, the two MPS tensors sharing the bond 
+index are contracted together, then multiplied by $H$. To make 
+this multiplication efficient, $H$ is transformed into the basis
+in which the bond tensor is defined by contracting $H$ with all of
+the other MPS tensors:
+
+![medium](summary_opt.png)
+
+The full optimization of the bond tensor involves other steps as 
+well, depending on the particular eigensolver algorithm being used
+(such as Davidson or Lanczos), but multiplication by $H$ is the most
+costly and technical step.
+
+After the bond tensor is optimized, it is factorized using a truncated
+SVD to restore MPS form:
+
+![medium](summary_SVD.png)
+
+Here, in the last equation, one has multiplied the singular values into the right-hand SVD
+factor tensor, intending to optimize the bond to the right next.
+
+Now the process can be repeated for the next bond (to the right)
+and all bonds of the MPS in turn.
+
 <!--
 ## Convergence Properties
 
