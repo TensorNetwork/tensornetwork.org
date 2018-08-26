@@ -4,10 +4,9 @@
 
 This site is a resource for tensor network algorithms, theory, and software.
 
-Tensor networks are a technique for factorizing
-a many-index tensor into a contracted
-network of few-index tensors, with applications
-in applied mathematics, chemistry, physics, machine
+Tensor networks are factorizations of very large tensors
+into networks of smaller tensors, 
+with applications in applied mathematics, chemistry, physics, machine
 learning, and many other fields.
 
 
