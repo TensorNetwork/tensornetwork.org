@@ -7,7 +7,7 @@ so you can receive credit for your valuable time.
 
 ### Steps to Contributing
 
-1. Create a [Github](https://github.com/) account if you do not have one.
+1. Create and log into your [Github](https://github.com/) account.
 2. To edit an existing page via the web, click on the "Edit This Page" link at the bottom.
    Edit the page in the Github browser editor, and commit your changes.
 3. To create a new page, visit the 
