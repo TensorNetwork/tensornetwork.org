@@ -4,12 +4,11 @@
 
 This site is a resource for tensor network algorithms, theory, and software.
 
-
 Tensor networks are a technique for factorizing
 a many-index tensor into a contracted
-network of few-index tensors, and are becoming increasingly
-useful for applied mathematics, chemistry, physics, machine
-learning, and likely many other fields.
+network of few-index tensors, with applications
+in applied mathematics, chemistry, physics, machine
+learning, and many other fields.
 
 
 Fundamentals:
@@ -26,6 +25,11 @@ Types of Tensor Networks:
 Tensor Network Algorithms:
 
 - [[MPS/TT and MPO Algorithms|mps/algorithms]]
+  * [[Elementary MPS/TT Algorithms|mps/algorithms#elementary]]
+  * [[Solving Linear Equations|mps/algorithms#linear]]
+  * [[Summing MPS/TT Networks|mps/algorithms#summing]]
+  * [[Multiplying an MPS/TT by an MPO|mps/algorithms#mpo]]
+  * [[Time Evolution Algorithms|mps/algorithms#tevol]]
 - [[TRG Algorithm|trg]]
 
 Computing with Tensor Networks:

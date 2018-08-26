@@ -3,12 +3,14 @@
 A wide variety of efficient algorithms have been developed
 for [[MPS/TT tensor networks|mps]].
 
+<a name="elementary"></a>
 ## Elementary MPS/TT Algorithms
 
 - [[Retrieving a Single MPS/TT Component|mps/index#component]]
 - [[Inner Product of Two MPS/TT|mps/index#innerprod]]
 - [[Compression of MPS/TT|mps/index#compression]] (Using Density Matrix Algorithm)
 
+<a name="linear"></a>
 ## Solving Linear Equations
 
 The following algorithms involve solving equations such as $A x = \lambda x$
@@ -17,6 +19,7 @@ or $A x = b$ where $x$ is a tensor in MPS/TT form.
 - [[DMRG &mdash; Density Matrix Renormalization Group|mps/algorithms/dmrg]].
   Adaptive algorithm for finding eigenvectors in MPS form.
 
+<a name="summing"></a>
 ## Summing MPS/TT networks
 
 The following are algorithms for summing two or more MPS/TT networks
@@ -25,6 +28,7 @@ and approximating the result by a single MPS/TT.
 - [[Density Matrix Algorithm|mps/algorithms/dm_sum]] (coming soon)
 - [[Direct Algorithm|mps/algorithms/sum_direct]] (coming soon)
 
+<a name="mpo"></a>
 ## Multiplying a MPS/TT by an MPO
 
 The following are algorithms for multiplying a given MPS/TT tensor network
@@ -35,6 +39,7 @@ the result.
 - [[Fitting Algorithm|mps/algorithms/fitting_mpo]] (coming soon)
 - [[Zip-Up Algorithm|mps/algorithms/zip_up_mpo]] (coming soon)
 
+<a name="tevol"></a>
 ## Time Evolution Algorithms
 
 One reason MPS are very useful in quantum physics applications
