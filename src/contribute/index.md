@@ -1,9 +1,9 @@
 ## Contributing Your Tensor Network Expertise
 
-Contributions to the Tensor Network are welcomed, and this 
+Contributions and edits to the Tensor Network are welcomed, and this 
 site is designed with them in mind. All changes are
 [tracked through Github](https://github.com/TensorNetwork/tensornetwork.org/graphs/contributors), 
-so you can receive credit for your valuable time.
+so you can receive credit for your valuable time and expertise.
 
 ### Steps to Contributing
 

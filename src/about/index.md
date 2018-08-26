@@ -1,17 +1,17 @@
 ### About the Tensor Network
 
-The goal of the Tensor Network website is to serve as a community 
-review article or textbook focused on tensor network algorithms, applications,
-and software.
+The Tensor Network is intended to be an 
+open-source review article focused on tensor network 
+algorithms, applications, and software.
 
 Tensor networks are already a well developed subject, but many key advances
 appear in appendices of specialized papers or in little-known preprints,
 typically using domain-specific terminology and notation.
 Excellent review articles have been written to synthesize the tensor network literature, 
-but these articles have the drawback of being static objects representing the
+but these articles have the drawback of being static and representing the
 perspective of one group of authors.
 
-Though every page of this website is editable, it is not a wiki per se. 
+Every page of this website is editable, but it is not a wiki per se. 
 Instead, it is an "open source website", similar to open source software.
 Improvements to the site are managed through Github
 ([link to Github repository](https://github.com/TensorNetwork/tensornetwork.org))
