@@ -1,14 +1,14 @@
 ### About the Tensor Network
 
-The Tensor Network is intended to be an 
+The Tensor Network is an 
 open-source review article focused on tensor network 
 algorithms, applications, and software.
 
-Tensor networks are already a well developed subject, but many key advances
-appear in appendices of specialized papers or in little-known preprints,
-typically using domain-specific terminology and notation.
-Excellent review articles have been written to synthesize the tensor network literature, 
-but these articles have the drawback of being static and representing the
+Tensor networks are a well developed subject, but many key advances
+appear in appendices of specialized papers or obscure preprints,
+using domain-specific terminology and notation.
+There are excellent review articles which synthesize the tensor network literature, 
+but which also have the drawback of being static and representing the
 perspective of one group of authors.
 
 Every page of this website is editable, but it is not a wiki per se. 
