@@ -25,7 +25,7 @@ Tensor Network Algorithms:
 
 - [[MPS/TT and MPO Algorithms|mps/algorithms]]
   * [[Elementary MPS/TT Algorithms|mps/algorithms#elementary]]
-  * [[Solving Linear Equations|mps/algorithms#linear]]
+  * [[Solving Linear Equations (DMRG, etc.)|mps/algorithms#linear]]
   * [[Summing MPS/TT Networks|mps/algorithms#summing]]
   * [[Multiplying an MPS/TT by an MPO|mps/algorithms#mpo]]
   * [[Time Evolution Algorithms|mps/algorithms#tevol]]
