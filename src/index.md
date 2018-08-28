@@ -18,6 +18,7 @@ Types of Tensor Networks:
 
 - [[CP Decomposition|cp]] (coming soon)
 - [[Matrix Product State / Tensor Train Network|mps]]
+- [[Matrix Product Operator|mpo]] (coming soon)
 - [[Tree Tensor Network / Hierarchical Tucker|ttn]] (coming soon)
 - [[PEPS|peps]]
 - [[MERA|mera]] (coming soon)
