@@ -35,7 +35,7 @@ The following are algorithms for multiplying a given MPS/TT tensor network
 by an MPO tensor network, resulting in a new MPS/TT that approximates
 the result.
 
-- [[Density Matrix Algorithm|mps/algorithms/dm_mpo]] (coming soon)
+- [[Density Matrix Algorithm|mps/algorithms/denmat_mpo_mps]]
 - [[Fitting Algorithm|mps/algorithms/fitting_mpo]] (coming soon)
 - [[Zip-Up Algorithm|mps/algorithms/zip_up_mpo]] (coming soon)
 
