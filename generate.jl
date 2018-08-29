@@ -313,7 +313,9 @@ for (root,dirs,files) in walkdir(idir)
         print(of,footer)
       end
       run(`rm -f _tmp_file.md`)
-    elseif ext == "png" || ext == "jpg"
+
+    #elseif ext == "png" || ext == "jpg"
+    else
       run(`cp $ifname $(curro*"/"*f)`)
     end
   end
