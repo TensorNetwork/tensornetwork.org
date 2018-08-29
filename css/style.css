@@ -132,3 +132,14 @@ img[alt=large]
     display: block;
     }
 }
+
+.simple_table td
+    {
+    padding: 5px;
+    }
+
+.simple_table
+    {
+    margin-left: auto; margin-right: auto;
+    margin-bottom: 20px;
+    }

@@ -21,7 +21,7 @@ def main():
     dat = [ 
             ("Eigen",'v', eigen),
             ("numpy",'<',numpy),
-            ("iTensor",'o',itensor),
+            ("ITensor",'o',itensor),
             ("Tensor Toolbox",'>',tt),
             ("TBLIS",'d',tblis),
             ("TCL", '^',tcl)]
