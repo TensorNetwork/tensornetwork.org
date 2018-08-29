@@ -36,7 +36,7 @@ Tensor Network Algorithms:
 Computing with Tensor Networks:
 
 - [[Tensor Software|software]] (coming soon)
-- [[Tensor Benchmarks|software/benchmarks]] (coming soon)
+- [[Tensor Benchmarks|benchmarks]] (coming soon)
 
 
 <!--
