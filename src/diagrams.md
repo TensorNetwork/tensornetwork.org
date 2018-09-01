@@ -22,10 +22,9 @@ There are two hard-and-fast rules of tensor diagrams:
 2. Connecting two index lines implies a contraction, or summation
    over the connected indices.
 
-Other rules and conventions are sometimes adopted by 
-authors or used in specific contexts. These extensions
-include the use of specific shapes or 
-shadings to designated properties of tensors;
+Other conventions are often adopted by certain
+authors or in specific contexts. For example, using shapes or 
+shadings to designate properties of tensors;
 orienting index lines according to certain conventions;
 or putting arrows on lines to distinguish
 contravariant and covariant indices.
@@ -73,22 +72,22 @@ on the tensor:
 
 Tensor diagram notation has many benefits compared to other notations:
 
-- Multiple operations, such as traces, tensor products, and contractions
-  can be expressed in a simple way without required extra notation.
+- Various operations, such as a trace, tensor product, or tensor contraction
+  can be expressed simply without extra notation.
 
-  * A tensor product simply corresponds to placing tensors next to each other.
-  * A trace is notated by joining two lines of the same tensor.
-  * A contraction is indicated by joining two lines of different tensors.
+  * Placing tensors next to each other denotes a tensor/outer product.
+  * Connecting two index lines of the same tensor corresponds to a trace.
+  * Connecting index lines of different tensors denotes a tensor contraction.
 
-- Names of indices and tensors can often be omitted. This can serve to save
-  much time and lighten the notation, and is 
-  especially useful for indices internal to a network which exist 
+- Names of indices and tensors can often be omitted. This saves
+  time and lightens the notation, and is 
+  especially useful for internal indices which exist 
   mainly to be summed over.
 
-- The order of the final tensor resulting from a complicated network of 
+- The order of the tensor resulting from a complicated network of 
   contractions can be determined by inspection: it is just the number of
-  unpaired lines. For example, a tensor network with all lines joined 
-  can immediately be seen to result in a scalar no matter how complex.
+  unpaired lines. For example, a tensor network with all lines joined, no
+  matter how complicated, must result in a scalar.
 
 ## Other Resources
 
