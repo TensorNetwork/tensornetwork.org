@@ -278,6 +278,7 @@ Note that in this last expression, the indices of various tensors have been orie
 on the page than in their original definitions above. But recall that it is the connectivity 
 of indices, not their orientation, that carries the meaning of tensor diagrams.
 
+<a name="gauges"></a>
 ## Gauges and Canonical Forms
 
 The compression, or rounding, algorithm above leads to an interesting observation:

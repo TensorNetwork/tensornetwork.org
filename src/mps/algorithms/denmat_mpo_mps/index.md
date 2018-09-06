@@ -121,6 +121,8 @@ we seek is:
 
 ![medium](finalMPS.png)
 
+As a bonus, the resulting MPS has the property of being in the [[right orthogonal gauge|mps#gauges]].
+
 
 ## Acknowledgements
 
