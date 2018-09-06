@@ -1,6 +1,6 @@
 # Tensor Operation Benchmarks
 
-## Synthetic Benchmark
+## Synthetic Benchmark \cite{Springer2018}
 
 This benchmark consists of 1000 random tensor contractions. The tensor contractions exhibit very different number of indices, index dimensions, and permutation of the indices to stress the performance of any tensor contraction implementation across a wide range of use cases, ranging from very bandwidth-bound contractions all the way to very compute-bound contractions.  Moreover, tensor contractions that natively map to a direct matrix-matrix multiplication are omitted (i.e., only "pure" tensor contractions).  
 
@@ -11,6 +11,7 @@ You can find the python script that was used to generated the data <a href="plot
 The reported performance measurements were conducted on a two socket Intel Xeon E5 2680 v3 (i.e., Haswell) with 2x 12 cores using double precision. Numbers reported below are gigaflops per second; higher is better.
 
 <table class="simple_table">
+<tr colspan=4><td><b>Tensor contraction performance in GFLOPS/s:</b></td></tr>
 <tr><td></td><td>min</td><td>avg</td><td>max</td></tr>
 <tr>
     <td><a href="https://github.com/springer13/tcl">TCL</a></td>

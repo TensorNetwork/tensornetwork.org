@@ -17,6 +17,7 @@
 
 mutable struct BTEntry
   ref_num::Int
+  btype::String
   name::String
   authors ::Array{String,1}
   journal ::String
@@ -27,9 +28,11 @@ mutable struct BTEntry
   year::String
   pages::String
   volume::String
+  school::String
 
-  function BTEntry(name_::String)
+  function BTEntry(btype_::String,name_::String)
     return new(0,
+               btype_,
                name_,
                [], #authors
                "", #journal
@@ -39,34 +42,53 @@ mutable struct BTEntry
                "", #eprint
                "",  #year
                "", #pages
-               "")  #volume
+               "",  #volume
+               "")  #school
   end
 end
 
 function convertToMD(bt::BTEntry)::String
   md = ""
-  if bt.url != ""
-    md *= "[_$(bt.title)_]($(bt.url))"
+  if bt.btype == "phdthesis"
+    for a in bt.authors
+      md *= "$a: "
+    end
+    if bt.url != ""
+      md *= "[_$(bt.title)_]($(bt.url))"
+    else
+      md *= "_$(bt.title)_"
+    end
+    md *= " (Doctoral Thesis)"
+    if bt.school != ""
+      md *= ", $(bt.school)"
+    end
+    if bt.year != ""
+      md *= ", $(bt.year)"
+    end
   else
-    md *= "_$(bt.title)_"
-  end
-  for a in bt.authors
-    md *= ", $a"
-  end
-  if bt.journal != ""
-    md *= ", <i>"*bt.journal*"</i>"
-    if bt.volume != ""
-      md *= " <b>$(bt.volume)</b>"
+    if bt.url != ""
+      md *= "[_$(bt.title)_]($(bt.url))"
+    else
+      md *= "_$(bt.title)_"
     end
-    if bt.pages != ""
-      md *= ", $(bt.pages)"
+    for a in bt.authors
+      md *= ", $a"
     end
-  end
-  if bt.year != ""
-    md *= " ($(bt.year))"
-  end
-  if bt.eprint != ""
-    md *= ", "*bt.eprint
+    if bt.journal != ""
+      md *= ", <i>"*bt.journal*"</i>"
+      if bt.volume != ""
+        md *= " <b>$(bt.volume)</b>"
+      end
+      if bt.pages != ""
+        md *= ", $(bt.pages)"
+      end
+    end
+    if bt.year != ""
+      md *= " ($(bt.year))"
+    end
+    if bt.eprint != ""
+      md *= ", "*bt.eprint
+    end
   end
   return md
 end
@@ -88,7 +110,7 @@ function parseBibTex(fname::String)
 
   entries = Dict{String,BTEntry}()
 
-  btre = r"@article{(.+?),"s
+  btre = r"@(.+?){(.+?),"s
 
   function getField(re,source::String)::String
     if occursin(re,source)
@@ -98,11 +120,13 @@ function parseBibTex(fname::String)
   end
 
   for m in eachmatch(btre,contents)
-    name = convert(String,m.captures[1])
-    bt = BTEntry(name)
+    btype = convert(String,m.captures[1])
+    name = convert(String,m.captures[2])
+    bt = BTEntry(btype,name)
     start = m.offset+length(m.match)
     entry = getEntry(contents,start)
 
+    bt.btype = btype
     bt.title = getField(r"title\W*=\W*{(.+?)}"is,entry)
     bt.journal = getField(r"journal\W*=\W*{(.+?)}"is,entry)
     bt.volume = getField(r"volume\W*=\W*{(.+?)}"is,entry)
@@ -111,6 +135,7 @@ function parseBibTex(fname::String)
     bt.doi = getField(r"doi\W*=\W*{(.+?)}"is,entry)
     bt.eprint = getField(r"eprint\W*=\W*{(.+?)}"is,entry)
     bt.url = getField(r"url\W*=\W*{(.+?)}"is,entry)
+    bt.school = getField(r"school\W*=\W*{(.+?)}"is,entry)
 
     all_authors = getField(r"author[s]*\W*=\W*{(.+?)}"is,entry)
     if all_authors != ""
