@@ -95,16 +95,32 @@ except for a Hermitian conjugation of the tensors. So one can
 begin to save this part of the diagram so as not to compute it more
 than once:
 
-![medium](C5.png)
+![small](C6.png)
 
 Having obtained $U_5$ above, one applies it to transform the basis
 and uncovers another external index of the MPO-MPS product, reusing
 the saved $L_3$ tensor to obtain the density matrix $\rho_{456}$. 
-Diagonalizing this density matrix gives the next MPS tensor $U_4$:
+Diagonalizing this density matrix (with truncation) gives the next MPS tensor $U_4$:
 
 ![medium](rho456.png)
 
-Continuing with steps similar to the 
+Continuing with steps similar to the ones above, one can continue
+to obtain the tensors $U_3$, $U_2$, etc. which diagonalize the
+reduced density matrices obtained by exposing each previous 
+external index. For example, the steps to obtain $U_3$ are:
+
+![medium](rho3456.png)
+
+Finally, once all of the tensors down to $U_2$ have been obtained,
+the MPS tensor $M_1$ carrying the first external index can be computed as:
+
+![medium](M1.png)
+
+Having obtained this tensor, the final MPS which represents the MPO-MPS product
+we seek is:
+
+![medium](finalMPS.png)
+
 
 ## Acknowledgements
 
