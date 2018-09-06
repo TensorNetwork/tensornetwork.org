@@ -29,34 +29,82 @@ The algorithm uses the fact that the MPS representation of a large
 tensor can be computed by singular value decompositions of the 
 tensor over bipartitions of its indices. Just as the singular value
 of a matrix $M$ can be computed by diagonalizing $M^\dagger M$ 
-and $M M^\dagger$, so an MPS can be computed by squaring a tensor,
-summing over different subsets of its indices. These squarings
+and $M M^\dagger$, so an MPS can be computed by squaring a tensor
+over different subsets of its indices. These squarings
 of the tensor we wish to compress are the density matrices,
 and the tensor we are compressing is the product of the MPS 
 times the MPO.
 
-### Step 1: Compute Partial Traces
 
-To begin the algorithm, one computes the following partial trace
-of the square of the MPO-MPS product:
+To begin the algorithm, one computes the following square or partial trace
+ of the MPO-MPS product:
 
 ![medium](trace.png)
 
-To make it easier to visualize the contractions, it is helpful
-to redraw the network to be computed as follows:
+Note that the the MPO-MPS product in the lower part of the diagram
+is the Hermitian conjugate of the original MPO-MPS product we want 
+to compute.
+
+To make it easier to visualize the contractions in the diagram
+above, it is helpful to redraw the network to be computed as follows:
 
 ![medium](simpler_trace.png)
 
 Now, one begins computing the network from the left, saving
-the $L_j$ tensors indicated in the figure below to be used
+the 'overlap' tensors $L_j$ indicated in the figure below to be used
 in later steps of the algorithm:
 
 ![medium](trace_steps.png)
 
-### Step 2: Diagonalize Density Matrices
+To compute these overlap tensors efficiently, one contracts the previous
+$L_j$ with the next MPS, MPO, then conjugate MPO and MPS tensors one 
+at a time (not shown).
 
-### Step 3: Compute the First MPS Tensor
+Having computed the partial overlap tensors $L_j$, one can
+now compute the reduced density matrix for the last visible
+index:
 
+![medium](rho6.png)
+
+The unitary $U_6$ which diagonalizes this (Hermitian) matrix 
+is the first tensor of the new MPS we seek:
+
+![medium](diag_rho6.png)
+
+To control the size of the new MPS, one truncates all but
+the $m$ largest eigenvalues of $\rho_6$, truncating the 
+corresponding columns of $U_6$ as well.
+
+Next, one uses a previous $L_j$ tensor to "uncover" the density
+matrix for the last two visible indices, while at the 
+same time applying the previous $U$ tensor to transform 
+the basis of this density matrix. The transformation
+by the $U$ tensors is necessary to keep the cost of
+the algorithm under control and to ensure that each
+new MPS tensor produced has compatible indices 
+with the previous one.
+
+Diagonalizing the density matrix $\rho_{56}$ and truncating
+the smallest eigenvalues gives the next MPS tensor $U_5$:
+
+![medium](rho56.png)
+
+For efficiency, note that the part of the above diagram nearby to
+$U_6$ is identical in the upper and lower part of the diagram,
+except for a Hermitian conjugation of the tensors. So one can
+begin to save this part of the diagram so as not to compute it more
+than once:
+
+![medium](C5.png)
+
+Having obtained $U_5$ above, one applies it to transform the basis
+and uncovers another external index of the MPO-MPS product, reusing
+the saved $L_3$ tensor to obtain the density matrix $\rho_{456}$. 
+Diagonalizing this density matrix gives the next MPS tensor $U_4$:
+
+![medium](rho456.png)
+
+Continuing with steps similar to the 
 
 ## Acknowledgements
 
