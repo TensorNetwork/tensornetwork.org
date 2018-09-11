@@ -112,7 +112,7 @@ function processWikiLinks(html::String,ifname::String)
     end
 
     if isdir("src/"*target)
-      res *= "["*m.captures[1]*"](/"*target*"/index.html$sublink)"
+      res *= "["*m.captures[1]*"](/"*target*"/$sublink)"
     elseif isfile("src/"*target*".md")
       res *= "["*m.captures[1]*"](/"*target*".html$sublink)"
     else
