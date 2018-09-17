@@ -27,3 +27,5 @@ part of the [Simons Foundation](http://simonsfoundation.org).
 
 ![small40](flatiron_logo.png)
 ![small40](simons_found_logo.jpg)
+
+Thank you to Claudius Hubig and Ulrich Schollw&ouml;ck for helpful discussions.
