@@ -16,7 +16,7 @@ Fundamentals:
 
 Types of Tensor Networks:
 
-- [[Matrix Product State / Tensor Train Network|mps]]
+- [[Matrix Product State / Tensor Train|mps]]
 - [[Matrix Product Operator|mpo]]
 - Tree Tensor Network / Hierarchical Tucker (coming soon)
 - [[PEPS|peps]]
