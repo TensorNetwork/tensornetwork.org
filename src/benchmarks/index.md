@@ -1,4 +1,4 @@
-# Tensor Operation Benchmarks
+# Tensor Software Benchmarks
 
 ## Synthetic Benchmark \cite{Springer2018}
 
