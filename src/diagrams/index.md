@@ -104,6 +104,7 @@ given by Bridgeman and Chubb.\cite{Bridgeman:2017}
   - n-mode product $\times_n$ (contraction of a matrix with one of the indices)
   - matricization (just grouping indices)
   - tracing index pairs
+  - tensor/outer product (just placing tensors next to each other)
   
 -->
 
