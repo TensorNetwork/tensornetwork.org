@@ -9,6 +9,13 @@ li > p:first-child
     display: inline;
     }
 
+/* Make text in li's align past the bullet */
+li
+    {
+    margin-left: 20px;
+    text-indent: -19px;
+    }
+
 table, caption, tbody, tfoot, thead, tr, th, td {
     margin: 0;
     padding: 0;
