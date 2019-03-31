@@ -315,17 +315,16 @@ for (root,dirs,files) in walkdir(idir)
         print(of,header_prenav)
 
         print(of,"<a href='/'>main</a>/")
-        #(length(folders) > 0) && print(of,"/")
         tfold = "/"
+        #@show f
+        #@show folders
         for fold in folders[1:end-1]
           tfold *= fold * "/"
           print(of,"<a href=\"$tfold\">$fold</a>/")
-          @show tfold
+          #@show tfold
         end
-        (length(folders) > 0) && print(of,"$(folders[end])")
-
-        #print(of,"</div>")
-
+        (length(folders) > 0) && print(of,"$(folders[end])/")
+        if f!="index.md" print(of,base) end
 
         print(of,header_postnav)
         print(of,html)
