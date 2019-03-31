@@ -13,6 +13,7 @@ learning, and many other fields.
 Fundamentals:
 
 - [[Tensor Diagram Notation|diagrams]]
+- [[Review Articles & Learning Resources|reviews_resources]]
 
 Types of Tensor Networks:
 
