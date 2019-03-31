@@ -265,8 +265,12 @@ run(`cp -r htaccess_file $odir/.htaccess`)
 run(`chmod 644 $odir/.htaccess`)
 
 for (root,dirs,files) in walkdir(idir)
-  curri = idir * root[4:end]
-  curro = odir * root[4:end]
+  folderstring = root[4:end]
+  curri = idir * folderstring
+  curro = odir * folderstring
+
+  folders = split(folderstring,"/")[2:end]
+
   for d in dirs
     run(`mkdir -p $curro/$d`)
   end
@@ -281,7 +285,6 @@ for (root,dirs,files) in walkdir(idir)
       btfile = curri*"/"*base*".bib"
       has_refs = isfile(btfile)
 
-      #generateTOC(mdstring) && println("Found TOC in $base")
       mdstring = generateTOC(mdstring,has_refs)
       (mdstring,mjlist) = processMathJax(mdstring)
       mdstring = processWikiLinks(mdstring,ifname)
@@ -307,6 +310,17 @@ for (root,dirs,files) in walkdir(idir)
 
       open(ofname,"w") do of
         print(of,header_prenav)
+
+        (length(folders) > 0) && print(of,"/")
+        tfold = "/"
+        for fold in folders[1:end-1]
+          tfold *= fold * "/"
+          print(of,"<a href=\"$tfold\">$fold</a>/")
+          @show tfold
+        end
+        (length(folders) > 0) && print(of,"$(folders[end]) <br/><br/>")
+
+
         print(of,header_postnav)
         print(of,html)
         printEditFooter(of,ifname)
