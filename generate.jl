@@ -308,17 +308,23 @@ for (root,dirs,files) in walkdir(idir)
 
       html = restoreMathJax(html,mjlist)
 
+      #
+      # Put in backlinks
+      #
       open(ofname,"w") do of
         print(of,header_prenav)
 
-        (length(folders) > 0) && print(of,"/")
+        print(of,"<a href='/'>main</a>/")
+        #(length(folders) > 0) && print(of,"/")
         tfold = "/"
         for fold in folders[1:end-1]
           tfold *= fold * "/"
           print(of,"<a href=\"$tfold\">$fold</a>/")
           @show tfold
         end
-        (length(folders) > 0) && print(of,"$(folders[end]) <br/><br/>")
+        (length(folders) > 0) && print(of,"$(folders[end])")
+
+        #print(of,"</div>")
 
 
         print(of,header_postnav)
