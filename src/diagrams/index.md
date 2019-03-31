@@ -98,4 +98,13 @@ specifications have been [proposed](https://en.wikipedia.org/wiki/Penrose_graphi
 A helpful introduction to diagram notation as it is used in quantum physics is
 given by Bridgeman and Chubb.\cite{Bridgeman:2017}
 
+<!-- TODO:
+* Give pictorial examples of operations from math/stats tensor literature 
+  drawn as tensor diagrams:
+  - n-mode product $\times_n$ (contraction of a matrix with one of the indices)
+  - matricization (just grouping indices)
+  - tracing index pairs
+  - tensor/outer product (just placing tensors next to each other)
+  
+-->
 

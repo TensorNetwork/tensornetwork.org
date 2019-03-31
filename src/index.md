@@ -16,8 +16,8 @@ Fundamentals:
 
 Types of Tensor Networks:
 
-- [[Matrix Product State / Tensor Train Network|mps]]
-- Matrix Product Operator (coming soon)
+- [[Matrix Product State / Tensor Train|mps]]
+- [[Matrix Product Operator|mpo]]
 - Tree Tensor Network / Hierarchical Tucker (coming soon)
 - [[PEPS|peps]]
 - MERA (coming soon)
@@ -35,7 +35,7 @@ Tensor Network Algorithms:
 Computing with Tensor Networks:
 
 - Tensor Software (coming soon)
-- [[Tensor Benchmarks|benchmarks]]
+- [[Software Benchmarks|benchmarks]]
 
 
 <!--
