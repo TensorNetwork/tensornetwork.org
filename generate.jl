@@ -314,18 +314,18 @@ for (root,dirs,files) in walkdir(idir)
       open(ofname,"w") do of
         print(of,header_prenav)
 
-        print(of,"<a href='/'>main</a>/")
-        tfold = "/"
-        #@show f
-        #@show folders
-        for fold in folders[1:end-1]
-          tfold *= fold * "/"
-          print(of,"<a href=\"$tfold\">$fold</a>/")
-          #@show tfold
+        if length(folders) > 0 || f!="index.md" #<-- don't show for main page
+          print(of,"<tr><td></td><td class='backlinks'>")
+          print(of,"<a href='/'>main</a>/")
+          tfold = "/"
+          for fold in folders[1:end-1]
+            tfold *= fold * "/"
+            print(of,"<a href=\"$tfold\">$fold</a>/")
+          end
+          (length(folders) > 0) && print(of,"$(folders[end])/")
+          if f!="index.md" print(of,base) end
+          print(of,"</td></tr>")
         end
-        (length(folders) > 0) && print(of,"$(folders[end])/")
-        if f!="index.md" print(of,base) end
-
         print(of,header_postnav)
         print(of,html)
         printEditFooter(of,ifname)
