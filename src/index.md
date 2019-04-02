@@ -1,4 +1,4 @@
-### Welcome to the Tensor Network
+### <b>Welcome to the Tensor Network</b>
 
 <img src="tensor_networks.png" style="float:right; width:40%; margin-left: 40px;"/>
 
@@ -10,12 +10,12 @@ with applications in applied mathematics, chemistry, physics, machine
 learning, and many other fields.
 
 
-Fundamentals:
+<b>Fundamentals</b>:
 
 - [[Tensor Diagram Notation|diagrams]]
 - [[Review Articles & Learning Resources|reviews_resources]]
 
-Types of Tensor Networks:
+<b>Types of Tensor Networks</b>:
 
 - [[Matrix Product State / Tensor Train|mps]]
 - [[Matrix Product Operator|mpo]]
@@ -23,7 +23,7 @@ Types of Tensor Networks:
 - [[PEPS|peps]]
 - MERA (coming soon)
 
-Tensor Network Algorithms:
+<b>Tensor Network Algorithms</b>:
 
 - [[MPS/TT and MPO Algorithms|mps/algorithms]]
   * [[Elementary MPS/TT Algorithms|mps/algorithms#elementary]]
@@ -33,7 +33,7 @@ Tensor Network Algorithms:
   * [[Time Evolution Algorithms|mps/algorithms#tevol]]
 - [[TRG Algorithm|trg]]
 
-Computing with Tensor Networks:
+<b>Computing with Tensor Networks</b>:
 
 - Tensor Software (coming soon)
 - [[Software Benchmarks|benchmarks]]
