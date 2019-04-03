@@ -31,7 +31,7 @@
 
 * **"Tensor Networks and Applications"**<br/>
   **Author:** Miles Stoudenmire<br/>
-  **Description:** This is a one-week course, mainly on matrix product state (MPS) tensor networks, aimed at graduate students familiar with many-body quantum mechanics. Covers the motivation for why tensor networks are an efficient description of ground states, followed by an introduction to technical aspects of matrix product states including canonical forms or gauges. Ends with applications to quantum chemistry and machine learning.<br/>
+  **Description:** This is a one-week course, mainly on matrix product state (MPS) tensor networks, aimed at graduate students familiar with many-body quantum mechanics. <br/>
   **Slides (pdf):** <br/>
   <a href="https://itensor.org/miles/BrazilLectures/TNAndApplications01.pdf" target="_blank">Lecture 1</a> &mdash; Entanglement in quantum many-body systems. <br/>
   <a href="https://itensor.org/miles/BrazilLectures/TNAndApplications02.pdf" target="_blank">Lecture 2</a> &mdash; Introduction to MPS; efficient computations with MPS; AKLT state example.<br/>
