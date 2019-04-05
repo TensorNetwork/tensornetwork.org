@@ -45,13 +45,41 @@
    **Journal**: <a href="https://doi.org/10.1016/j.aop.2010.09.012">Annals of Physics 326, 96 (2011)</a><br/>
    **Notes**: A nearly comprehensive, and very detailed explanation of matrix product state and DMRG methods as of 2011. This article could serve as a very good introduction for those familiar with quantum mechanics and who are willing to work carefully through the many helpful steps and details offered.
 
+### Selected Original Literature
 
-<!--
-Others:
-Schollwoeck
-Bridgeman
+* **"Tensor-Train Decomposition"**<br/>
+  **Author:** Ivan Oseledets<br/>
+  **Journal**: <a href="https://doi.org/10.1137/090752286">SIAM J. Sci. Comput., 33(5), 2295 (2011)</a><br/>
+  **Notes**: Very readable article introducing the idea of the [[tensor-train decomposition|mps]] 
+  into the mathematics literature.
 
-Readable Journal Articles:
-Tensor Train
-Vidal papers
--->
+* **"Matrix Product State Representations"**<br/>
+  **Authors:** D. Perez-Garcia, F. Verstraete, M.M. Wolf, J.I. Cirac<br/>
+  **Pre-print**: <a href="https://arxiv.org/abs/quant-ph/0608197">quant-ph/0608197</a><br/>
+  **Journal**: Quantum Info. Comput. 7, 401–430 (2007)<br/>
+  **Notes**: One of the earlier articles proposing the idea of canonical forms of 
+  [[matrix product states (MPS)|mps]], algorithms to compute MPS, and other properties of MPS.
+
+* **"Algorithms for Entanglement Renormalization (v2)"**<br/>
+  **Author:** G. Vidal<br/>
+  **Pre-print:** <a href="https://arxiv.org/abs/0707.1454v2">0707.1454v2</a><br/>
+  **Notes:** Version 2 of this article is very different from the final published
+  version (see below). It contains lots of interesting results about optimization 
+  strategies for tensor networks, and proposals to compute layers of hierarchical
+  tensor networks.
+
+* **"Algorithms for Entanglement Renormalization"**<br/>
+  **Authors:** G. Evenbly, G. Vidal<br/>
+  **Pre-print:** <a href="https://arxiv.org/abs/0707.1454">0707.1454</a><br/>
+  **Journal**: <a href="https://doi.org/10.1103/PhysRevB.79.144108">Phys. Rev. B 79, 144108</a><br/>
+  **Notes:** Readable article with many details about [[MERA|mera]] tensor networks
+  including strategies for optimizing them.
+
+* **"Finite automata for caching in matrix product algorithms"**<br/>
+  **Authors:** Gregory M. Crosswhite, Dave Bacon<br/>
+  **Pre-print:** <a href="https://arxiv.org/abs/0708.1221">0708.1221</a><br/>
+  **Journal**: <a href="https://doi.org/10.1103/PhysRevA.78.012356">Phys. Rev. A 78, 012356 (2008)</a><br/>
+  **Notes:** Provides a nice picture and detailed understanding of how [[MPS|mps]]
+  and [[MPO|mpo]] tensor networks represent certain high-dimensional tensors in terms
+  of a finite-state automaton picture.
+
