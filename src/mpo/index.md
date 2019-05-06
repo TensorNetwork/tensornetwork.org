@@ -2,6 +2,8 @@
 
 A matrix product operator (MPO) is a tensor network where each tensor has two external, uncontracted indices as well as two internal indices contracted with neighboring tensors in a chain-like fashion. Intuitively, if one thinks of a matrix product state (MPS) as parameterizing a large "vector" in a high-dimensional space, then an MPO is the generalization to the case of a "matrix" acting in the same space. 
 
+More formally, an MPO is a factorization of a tensor with N covariant and N contravariant indices.
+
 In traditional notation, an MPO is a tensor network of the form
 
 \begin{equation}
@@ -13,6 +15,12 @@ A^{s_4 \alpha_4}_{\alpha_3 s'_4}
 A^{s_5 \alpha_5}_{\alpha_4 s'_5}
 A^{s_6}_{\alpha_5 s'_6}
 \end{equation}
+
+or in diagrammatic form:
+
+![medium](mpo.png)
+
+
 
 One of the key uses of MPOs is to represent large, sparse matrices in a form convenient for MPS algorithms, such as finding MPS approximations of eigenvectors. MPOs also arise in certain algorithms for approximately contracting [[PEPS tensor networks|peps]].
 
