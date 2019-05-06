@@ -18,7 +18,7 @@ A^{s_6}_{\alpha_5 s'_6}
 
 or in diagrammatic form:
 
-![medium](mpo.png)
+![small](mpo.png)
 
 
 
