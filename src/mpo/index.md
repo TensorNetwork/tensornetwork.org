@@ -2,7 +2,7 @@
 
 A matrix product operator (MPO) is a tensor network where each tensor has two external, uncontracted indices as well as two internal indices contracted with neighboring tensors in a chain-like fashion. Intuitively, if one thinks of a matrix product state (MPS) as parameterizing a large "vector" in a high-dimensional space, then an MPO is the generalization to the case of a "matrix" acting in the same space. 
 
-More formally, an MPO is a factorization of a tensor with N covariant and N contravariant indices.
+More formally, an MPO is a factorization of a tensor with N covariant and N contravariant indices into a contracted product of smaller tensors, each carrying one of the original contravariant and covariant indices each, as well as "bond indices" connecting to the neighboring factor tensors.
 
 In traditional notation, an MPO is a tensor network of the form
 
@@ -20,9 +20,19 @@ or in diagrammatic form:
 
 ![small](mpo.png)
 
-
-
 One of the key uses of MPOs is to represent large, sparse matrices in a form convenient for MPS algorithms, such as finding MPS approximations of eigenvectors. MPOs also arise in certain algorithms for approximately contracting [[PEPS tensor networks|peps]].
+
+# Compressing Sums of Local Terms
+
+One particularly useful application of MPO tensor networks is representing sums of local terms
+in a compressed manner which is especially convenient for algorithms involving 
+the [[MPS/TT|mps]] format.
+
+A sum of local terms means a sum of the form:
+\begin{equation}
+\sum_{j} & = M^{s'_1}_{s_1} \otimes I^{s'_2}_{s_2} \otimes I^{s'_3}_{s_3} \otimes I^{s'_4}_{s_4} \\
+         & + I^{s'_1}_{s_1} \otimes M^{s'_2}_{s_2} \otimes I^{s'_3}_{s_3} \otimes I^{s'_4}_{s_4} 
+\end{equation}
 
 # Content Needed for this Page
 
