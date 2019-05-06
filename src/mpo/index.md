@@ -22,19 +22,31 @@ or in diagrammatic form:
 
 One of the key uses of MPOs is to represent large, sparse matrices in a form convenient for MPS algorithms, such as finding MPS approximations of eigenvectors. MPOs also arise in certain algorithms for approximately contracting [[PEPS tensor networks|peps]].
 
-# Compressing Sums of Local Terms
+## Compressing Sums of Local Terms
 
 One particularly useful application of MPO tensor networks is representing sums of local terms
 in a compressed manner which is especially convenient for algorithms involving 
 the [[MPS/TT|mps]] format.
 
-A sum of local terms means a sum of the form:
+By a sum of local terms, one means a sum such as:
 \begin{equation}
-\sum_{j} & = M^{s'_1}_{s_1} \otimes I^{s'_2}_{s_2} \otimes I^{s'_3}_{s_3} \otimes I^{s'_4}_{s_4} \\
-         & + I^{s'_1}_{s_1} \otimes M^{s'_2}_{s_2} \otimes I^{s'_3}_{s_3} \otimes I^{s'_4}_{s_4} 
+A^{s'_1}_{s_1} \otimes I^{s'_2}_{s_2} \otimes I^{s'_3}_{s_3} \otimes I^{s'_4}_{s_4} \otimes \cdots  \\
++ I^{s'_1}_{s_1} \otimes A^{s'_2}_{s_2} \otimes I^{s'_3}_{s_3} \otimes I^{s'_4}_{s_4} \otimes \cdots \\
++ I^{s'_1}_{s_1} \otimes I^{s'_2}_{s_2} \otimes A^{s'_3}_{s_3} \otimes I^{s'_4}_{s_4} \otimes \cdots \\
++ \ldots \\
++ B^{s'_1}_{s_1} \otimes C^{s'_2}_{s_2} \otimes I^{s'_3}_{s_3} \otimes I^{s'_4}_{s_4} \otimes \cdots  \\
++ I^{s'_1}_{s_1} \otimes B^{s'_2}_{s_2} \otimes C^{s'_3}_{s_3} \otimes I^{s'_4}_{s_4} \otimes \cdots  \\
++ I^{s'_1}_{s_1} \otimes I^{s'_2}_{s_2} \otimes B^{s'_3}_{s_3} \otimes C^{s'_4}_{s_4} \otimes \cdots  \\
 \end{equation}
+where $I^{s'_j}_{s_j}$ is the identity operator on vector space $j$ and $A,B,C$ are
+arbitrary matrices. The first group of terms are 1-local terms, the second group are 2-local, etc.
 
-# Content Needed for this Page
+References \onlinecite{Hubig:2017,McCulloch:2008} offer very detailed discussions about compressing sums of local terms into MPO tensor networks.
+
+
+
+
+## Content Needed for this Page
 
 - Examples of exact MPO representations
 
