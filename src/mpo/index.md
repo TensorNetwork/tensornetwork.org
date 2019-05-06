@@ -46,9 +46,9 @@ References \onlinecite{Hubig:2017,McCulloch:2008} offer very detailed discussion
 
 
 
-## Content Needed for this Page
+## Additional Content Needed for this Page
 
-- Examples of exact MPO representations
+- More examples of exact MPO representations
 
 - Representing long-range Hamiltonians with MPOs
 
