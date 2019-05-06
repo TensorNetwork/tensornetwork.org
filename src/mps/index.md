@@ -218,9 +218,8 @@ to other inputs, such as sums of MPS/TT networks, sums of rank-1 tensors,
 other [[tree tensor network|ttn]] formats, and more, with the result that these
 inputs are controllably approximated by a single MPS/TT.
 
-The algorithm we follow here was proposed in Ref. \onlinecite{McCulloch:2007}
-and is based on the original [[DMRG|DMRG]] concept of White.\cite{White:1993a}
-However, other approaches to compression include SVD-based 
+The algorithm we follow here was proposed in Ref. \onlinecite{McCulloch:2007}.
+Other approaches to compression include SVD-based 
 compression,\cite{Schollwoeck:2011} such as the TT-SVD algorithm,\cite{Oseledets:2011}
 or variational compression.\cite{Perez-Garcia:2007}
 
