@@ -45,6 +45,12 @@
    **Journal**: <a href="https://doi.org/10.1016/j.aop.2010.09.012">Annals of Physics 326, 96 (2011)</a><br/>
    **Notes**: A nearly comprehensive, and very detailed explanation of matrix product state and DMRG methods as of 2011. This article could serve as a very good introduction for those familiar with quantum mechanics and who are willing to work carefully through the many helpful steps and details offered.
 
+* **"Matrix Product Operators, Matrix Product States, and ab initio Density Matrix Renormalization Group algorithms"**<br/>
+   **Authors**: Garnet Kin-Lic Chan, Anna Keselman, Naoki Nakatani, Zhendong Li, Steven R. White<br/>
+   **Pre-print**: <a href="https://arxiv.org/abs/1605.02611">1605.02611</a><br/>
+   **Notes**: An extensive and readable discussion of DMRG in the matrix product state formalism as applied to Hamiltonians with long-range interactions such as in quantum chemistry. Discusses the structure of matrix product operators (MPO) in particular and gives a novel way to construct compressed MPOs for complicated Hamiltonians.
+
+
 ### Selected Original Literature
 
 * **"Tensor-Train Decomposition"**<br/>
