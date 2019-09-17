@@ -1,5 +1,5 @@
 ### <b>Welcome to the Tensor Network</b>
-
+## <b>Copyright Milan Popich All rights reserved </b>
 <img src="tensor_networks.png" style="float:right; width:40%; margin-left: 40px;"/>
 
 This site is a resource for tensor network algorithms, theory, and software.
