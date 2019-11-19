@@ -97,3 +97,7 @@ functions; (iv) how to specifically select the optimal choice of
 purification schemes for finite-temperature calculations; and (v)
 briefly summarize the local basis optimization technique to treat
 systems with many bosonic degrees of freedom.
+
+---
+
+The content of this page is based on [Time-evolution methods for matrix-product states](https://www.sciencedirect.com/science/article/pii/S0003491619302532?via%3Dihub) by S. Paeckel, T. Köhler, A. Swoboda, S. R. Manmana, U. Schollwöck and C. Hubig and is licensed under the [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
