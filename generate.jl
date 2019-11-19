@@ -61,7 +61,7 @@ end
 # Process MathJax
 # 
 function processMathJax(html::String)
-  mj_re = r"(\@\@.+?\@\@|\$.+?\$|\\begin{equation}.+?\\end{equation}|\\begin{equation\*}.+?\\end{equation\*})"s
+  mj_re = r"(\@\@.+?\@\@|\$.+?\$|\\begin{equation}.+?\\end{equation}|\\begin{equation\*}.+?\\end{equation\*}|\\begin{align}.+?\\end{align})"s
   mjlist = String[]
   res = ""
   pos = 1
