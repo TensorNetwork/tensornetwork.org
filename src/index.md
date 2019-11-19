@@ -30,7 +30,7 @@ learning, and many other fields.
   * [[Solving Linear Equations (DMRG, etc.)|mps/algorithms#linear]]
   * [[Summing MPS/TT Networks|mps/algorithms#summing]]
   * [[Multiplying an MPS/TT by an MPO|mps/algorithms#mpo]]
-  * [[Time Evolution Algorithms|mps/algorithms#tevol]]
+  * [[Time Evolution Algorithms|mps/algorithms/timeevo]]
 - [[TRG Algorithm|trg]]
 
 <b>Computing with Tensor Networks</b>:
