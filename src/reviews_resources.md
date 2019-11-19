@@ -50,6 +50,12 @@
    **Pre-print**: <a href="https://arxiv.org/abs/1605.02611">1605.02611</a><br/>
    **Notes**: An extensive and readable discussion of DMRG in the matrix product state formalism as applied to Hamiltonians with long-range interactions such as in quantum chemistry. Discusses the structure of matrix product operators (MPO) in particular and gives a novel way to construct compressed MPOs for complicated Hamiltonians.
 
+* **"Time-evolution methods for matrix-product states"**<br/>
+  **Author**: Sebastian Paeckel, Thomas Köhler, Andreas Swoboda, Salvatore R. Manmana, Ulrich Schollwöck, Claudius Hubig <br/>
+  **Pre-print**: <a href="https://arxiv.org/abs/1901.05824">1901.05824</a><br/>
+  **Journal**: <a href="https://www.sciencedirect.com/science/article/pii/S0003491619302532">Annals of Physics 411, 167998 (2019) (open access)</a><br/>
+  **Notes**: Explains five current time-evolution methods for matrix-product states in extensive detail and tests them on four relevant problem settings. The content of this review is also the basis of the articles on time-evolution methods on this website.
+
 
 ### Selected Original Literature
 
