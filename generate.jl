@@ -15,7 +15,7 @@ end
 # Process citations
 # 
 function processCitations(html::String)::Tuple{String,Dict{String,Int}}
-  cite_re = r"\\(cite|onlinecite){(.+?)}"
+  cite_re = r"\\(cite|onlinecite){(.+?)}"s
   citenums = Dict{String,Int}()
   res = String("")
   pos = 1
@@ -27,6 +27,7 @@ function processCitations(html::String)::Tuple{String,Dict{String,Int}}
     names = split(convert(String,m.captures[2]),",")
     namenums = Tuple{Int,String,String}[]
     for name in names
+      name = strip(name)
       if haskey(citenums,name)
         num = citenums[name]
       else
