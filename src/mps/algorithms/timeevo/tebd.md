@@ -193,7 +193,7 @@ steps by a factor of 100 when going from TEBD2 to TEBD4.
 As an alternative to such
 higher-order decompositions, one may combine a large-scale Trotter
 decomposition with a small-scale Krylov-based approach to make the
-\emph{commutator} of the Hamiltonian summands $\hat H_\alpha$
+_commutator_ of the Hamiltonian summands $\hat H_\alpha$
 smaller\cite{hashizume18:_dynam_phase_trans_two_dimen}.
 
 The second source of errors is due to the mandatory truncation of the
