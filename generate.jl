@@ -303,7 +303,7 @@ for (root,dirs,files) in walkdir(idir)
       open("_tmp_file.md","w") do tf
         print(tf,mdstring)
       end
-      html = read(`cmark --smart _tmp_file.md`,String)
+      html = read(`cmark --unsafe --smart _tmp_file.md`,String)
       #html = read(`python2.7 -m markdown _tmp_file.md`,String)
 
       html = restoreMathJax(html,mjlist)
