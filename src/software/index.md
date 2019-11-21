@@ -18,7 +18,10 @@
   networks, supporting multiple powerful backends
 
 * <a href="https://github.com/oseledets/TT-Toolbox">TT-Toolbox</a><br/>
-  MATLAB implementation of basic operations with tensors in TT-format
+  MATLAB implementation of basic operations with tensors in TT-format,
+  including TT tensor and TT matrix formats, fast rounding procedures,
+  methods for solutions of linear systems and eigenvalue problems,
+  and the TT-cross method.
 
 * <a href="http://yingjerkao.github.io/uni10/">Uni10</a><br/>
   Universal Tensor Library, an open-source C++ library designed for 
