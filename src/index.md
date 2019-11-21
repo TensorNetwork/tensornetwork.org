@@ -35,7 +35,7 @@ learning, and many other fields.
 
 <b>Computing with Tensor Networks</b>:
 
-- Tensor Software (coming soon)
+- [[Tensor Software|software]]
 - [[Software Benchmarks|benchmarks]]
 
 
