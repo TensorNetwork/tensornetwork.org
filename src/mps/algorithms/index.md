@@ -48,7 +48,7 @@ This capability is useful for studying quantum dynamics
 and thermalization, and directly simulating finite-temperature
 systems.
 
-- [[Overview|mps/algorithms/timeevo/index.md]]
+- [[Overview|mps/algorithms/timeevo]]
 - [[Trotter Gate Time Evolution|mps/algorithms/timeevo/tebd]] (coming soon)
 - [[Time-Step Targeting Method|mps/algorithms/timeevo/local-krylov]] (coming soon)
 - [[Time-Dependent Variational Principle (TDVP)|mps/algorithms/timeevo/tdvp]] (coming soon)
