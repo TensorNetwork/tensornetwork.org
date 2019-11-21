@@ -14,6 +14,8 @@
 #   doi = {10.1103/PhysRevB.90.155136}
 #   }
 #
+# note that multi-byte characters (umlauts, accented letters, long
+# dashes) are not supported and will lead to StringIndexError in getEntry().
 
 mutable struct BTEntry
   ref_num::Int
@@ -66,8 +68,12 @@ function convertToMD(bt::BTEntry)::String
       md *= ", $(bt.year)"
     end
   else
-    if bt.url != ""
-      md *= "[_$(bt.title)_]($(bt.url))"
+    if (bt.url != "" || bt.doi != "")
+      if bt.url != ""
+        md *= "[_$(bt.title)_]($(bt.url))"
+      else
+        md *= "[_$(bt.title)_](https://dx.doi.org/$(bt.doi))"
+      end
     else
       md *= "_$(bt.title)_"
     end

@@ -15,7 +15,7 @@ end
 # Process citations
 # 
 function processCitations(html::String)::Tuple{String,Dict{String,Int}}
-  cite_re = r"\\(cite|onlinecite){(.+?)}"
+  cite_re = r"\\(cite|onlinecite){(.+?)}"s
   citenums = Dict{String,Int}()
   res = String("")
   pos = 1
@@ -27,6 +27,7 @@ function processCitations(html::String)::Tuple{String,Dict{String,Int}}
     names = split(convert(String,m.captures[2]),",")
     namenums = Tuple{Int,String,String}[]
     for name in names
+      name = strip(name)
       if haskey(citenums,name)
         num = citenums[name]
       else
@@ -60,7 +61,7 @@ end
 # Process MathJax
 # 
 function processMathJax(html::String)
-  mj_re = r"(\@\@.+?\@\@|\$.+?\$|\\begin{equation}.+?\\end{equation}|\\begin{equation\*}.+?\\end{equation\*})"s
+  mj_re = r"(\@\@.+?\@\@|\$.+?\$|\\begin{equation}.+?\\end{equation}|\\begin{equation\*}.+?\\end{equation\*}|\\begin{align}.+?\\end{align})"s
   mjlist = String[]
   res = ""
   pos = 1
@@ -303,7 +304,7 @@ for (root,dirs,files) in walkdir(idir)
       open("_tmp_file.md","w") do tf
         print(tf,mdstring)
       end
-      html = read(`cmark --smart _tmp_file.md`,String)
+      html = read(`cmark --unsafe --smart _tmp_file.md`,String)
       #html = read(`python2.7 -m markdown _tmp_file.md`,String)
 
       html = restoreMathJax(html,mjlist)
