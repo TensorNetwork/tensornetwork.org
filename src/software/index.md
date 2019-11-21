@@ -1,5 +1,7 @@
 ## Tensor Software
 
+(Listed in alphabetical order by project name.)
+
 * <a href="https://itensor.org">ITensor</a><br/>
    **Notes:** C++ library for tensor networks where tensor indices
    carry id numbers, allowing automatic contraction of matching tensor
@@ -14,3 +16,12 @@
 * <a href="https://github.com/google/TensorNetwork">TensorNetwork</a><br/>
    **Notes:** python library for easy and efficient contraction of tensor
    networks, supporting multiple powerful backends
+
+* <a href="https://github.com/oseledets/TT-Toolbox">TT-Toolbox</a><br/>
+   **Notes:** MATLAB implementation of basic operations with tensors in TT-format
+
+* <a href="http://yingjerkao.github.io/uni10/">Uni10</a><br/>
+   **Notes:** Universal Tensor Library, an open-source C++ library designed for 
+   the development of tensor network algorithms. Provides a Network class to process 
+   and store the details of the graphical representations of the networks,
+   and supports quantum number block-sparse tensors.
