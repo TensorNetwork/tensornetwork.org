@@ -52,8 +52,9 @@ systems.
 - [[TEBD or Trotter Gate Time Evolution|mps/algorithms/timeevo/tebd]]
 - [[Time-Step Targeting Method|mps/algorithms/timeevo/local-krylov]] (coming soon)
 - [[Time-Dependent Variational Principle (TDVP)|mps/algorithms/timeevo/tdvp]] (coming soon)
-- [[MPO Time Evolution|mps/algorithms/timeevo/mpo]] (coming soon)
+- [[MPO Time Evolution|mps/algorithms/timeevo/mpo]]
 - [[Krylov Time Evolution|mps/algorithms/timeevo/global-krylov]] (coming soon)
+- [[Additional tricks|mps/algorithms/tricks]] (coming soon)
 
 
 
