@@ -1,5 +1,7 @@
 # The time-evolution block-decimation (TEBD)
 
+<!--TOC-->
+
 At its heart, this method relies on a
 Trotter-Suzuki\cite{suzuki76:_gener_trott} decomposition and
 subsequent approximation of the time-evolution operator $\hat
@@ -297,7 +299,7 @@ might also make sense to combine them until a comparatively large bond
 dimension (e.g.  $w \approx 10$) is obtained which reduces the
 overhead associated to many small matrix multiplications.
 
-### Algorithm Pseudocode for the second-order TEBD2 method.
+### Algorithm Pseudocode for the TEBD2
 
 The main input is an analytic expression for the Hamiltonian $\hat H$
 necessary to split it into its constitutent internally-commuting
