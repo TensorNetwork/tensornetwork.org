@@ -183,7 +183,7 @@ Hamiltonian\cite{leviatan17:_quant_matrix_produc_states,
   goto18:_perfor}. While such energy conservation is certainly very
 helpful to obtain long-time hydrodynamic observables such as diffusion
 constants, care has to be taken when using only 1TDVP during the
-calculation as shown in Ref.~\cite{kloss18:_time}. Specifically, one
+calculation as shown in Ref. \onlinecite{kloss18:_time}. Specifically, one
 has to take great care to ensure that the obtained data is completely
 converged in the bond dimension of the state at all times.
 
