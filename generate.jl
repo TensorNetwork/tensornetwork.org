@@ -241,6 +241,10 @@ function generateTOC(input::String,has_refs::Bool)
       output *= m.match
       pos = m.offset+length(m.match)
     end
+    while lev != 2
+      lev -= 1
+      toc_html *= "</ul>"
+    end
     if has_refs 
       toc_html *= "<li><a href=\"#toc_refs\">References</a></li>\n"
     end
