@@ -1,3 +1,10 @@
+For the specific methods, see:
+
+- [[Time-Step Targeting Method|mps/algorithms/timeevo/local-krylov]]
+- [[Time-Dependent Variational Principle (TDVP)|mps/algorithms/timeevo/tdvp]]
+
+---
+
 # MPS-local time-evolution methods
 
 The [[global Krylov method|mps/algorithms/timeevo/global-krylov]] uses
@@ -8,8 +15,8 @@ are typically much more entangled than the actual time-evolved state
 $\ket{\psi(t+\delta)}$. To circumvent this problem, it may be
 desirable to work in the local basis of reduced sites. From a
 practical point of view, this is also motivated by the DMRG
-formulation which _always_ works in local spaces and hence makes
-it very difficult to formulate a global Krylov method. There are two
+formulation which _always_ works in local spaces and hence makes it
+very difficult to formulate a global Krylov method. There are two
 different ways to obtain such a local basis, one being via an attempt
 to directly Lie-Trotter decompose the Hamiltonian into local
 subspaces\cite{feiguin05:_time,
@@ -18,12 +25,10 @@ ronca17:_time_step_target_time_depen}, the other by enforcing a
 constraint that the evolution lies within the MPS
 manifold\cite{haegeman11:_time_depen_variat_princ_quant_lattic,
 haegeman16:_unify}. Both have been used in the literature, but their
-precise derivation requires some work. In the following, we will first
-present a very heuristic understanding of this approach, followed by a
-detailed derivation of the first approach, which leads to the [[local
-Krylov method|mps/algorithms/timeevo/local-krylov]], and subsequently
-the second approach, which results in the [[time-dependent variational
-principle, TDVP||mps/algorithms/timeevo/tdvp]].
+precise derivation requires some work. On this page, we will present a
+very heuristic understanding of the general approach.
+For a detailed description of the first approach, see the [[page on the local Krylov method|mps/algorithms/timeevo/local-krylov]].
+The second approach is review in detail on the [[page on the time-dependent variational principle, TDVP||mps/algorithms/timeevo/tdvp]].
 
 We start with an MPS $|\psi\rangle$, a Hamiltonian $\hat H$ and a site
 $j$. The tensors $\psi^{L}_{j-1} \equiv (M_1, \ldots, M_{j-1})$ and
