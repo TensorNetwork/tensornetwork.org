@@ -28,7 +28,7 @@ haegeman16:_unify}. Both have been used in the literature, but their
 precise derivation requires some work. On this page, we will present a
 very heuristic understanding of the general approach.
 For a detailed description of the first approach, see the [[page on the local Krylov method|mps/algorithms/timeevo/local-krylov]].
-The second approach is review in detail on the [[page on the time-dependent variational principle, TDVP||mps/algorithms/timeevo/tdvp]].
+The second approach is review in detail on the [[page on the time-dependent variational principle, TDVP|mps/algorithms/timeevo/tdvp]].
 
 We start with an MPS $|\psi\rangle$, a Hamiltonian $\hat H$ and a site
 $j$. The tensors $\psi^{L}_{j-1} \equiv (M_1, \ldots, M_{j-1})$ and

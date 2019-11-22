@@ -3,8 +3,8 @@ For detailed descriptions of each method, see:
 - [[Trotter Gate Time Evolution|mps/algorithms/timeevo/tebd]]
 - [[MPO Time Evolution|mps/algorithms/timeevo/mpo]]
 - [[MPS-local methods|mps/algorithms/timeevo/local-methods]]
-  - [[Time-Step Targeting Method|mps/algorithms/timeevo/local-krylov]] (coming soon)
-  - [[Time-Dependent Variational Principle (TDVP)|mps/algorithms/timeevo/tdvp]] (coming soon)
+  - [[Time-Step Targeting Method|mps/algorithms/timeevo/local-krylov]]
+  - [[Time-Dependent Variational Principle (TDVP)|mps/algorithms/timeevo/tdvp]]
 - [[Krylov Time Evolution|mps/algorithms/timeevo/global-krylov]] (coming soon)
 - [[Additional tricks|mps/algorithms/tricks]] (coming soon)
 
