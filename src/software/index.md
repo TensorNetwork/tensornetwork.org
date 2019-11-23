@@ -15,6 +15,10 @@
   C++ library for tensor networks where matching tensor
   indices automatically contract. Also features MPS and MPO algorithms, such as DMRG, and quantum number block-sparse tensors.
 
+* <a href="https://arxiv.org/abs/1402.0939">NCON</a><br/>
+  NCON (Network Contractor) is a MATLAB routine which can be used for computing
+  a broad class of tensor network diagrams in an efficient and convenient way.
+  
 * <a href="https://quimb.readthedocs.io/en/latest/">QUIMB</a><br/>
   python library for contracting tensors and tensor networks,
   with support for matrix product states and algorithms, and advanced
