@@ -145,7 +145,7 @@ function parseBibTex(fname::String)
 
     all_authors = getField(r"author[s]*\W*=\W*{(.+?)}"is,entry)
     if all_authors != ""
-      authors = split(all_authors,"and")
+      authors = split(all_authors," and")
       for a in authors
         a = strip(a)
         rev = r"(\w+?), (.+)"

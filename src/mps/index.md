@@ -6,8 +6,8 @@ The matrix product state (MPS)\cite{Fannes:1992,Klumper:1992,Ostlund:1995,Vidal:
 is a factorization of a [[tensor|tensor]] with N indices
 into a chain-like product of three-index tensors.
 The MPS/TT is one of the best understood tensor networks for which
-many efficient algorithms have been developed, in part because
-because it is a special case of a [[tree tensor network|ttn]]. 
+many efficient algorithms have been developed.
+It is a special case of a [[tree tensor network|ttn]]. 
 
 A matrix product state / tensor train factorization of a tensor $T$ 
 can be expressed in [[tensor diagram notation|diagrams]] as
