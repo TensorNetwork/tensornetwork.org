@@ -1,4 +1,13 @@
-## Tensor Software
+## Graphical Interfaces and Visualization
+
+* <a href="https://www.tensortrace.com">TensorTrace</a><br/>
+  TensorTrace is an application that facilitates the design and 
+  implementation of tensor network algorithms. Among many other features,
+  TensorTrace can automatically determine the optimal contraction sequence and 
+  cost scaling for each network, and generate code (in MATLAB, Python or Julia languages) 
+  for contracting the tensor networks numerically.
+ 
+## Open Source Tensor Software
 
 (Listed in alphabetical order by project name.)
 
@@ -9,7 +18,20 @@
 * <a href="https://quimb.readthedocs.io/en/latest/">QUIMB</a><br/>
   python library for contracting tensors and tensor networks,
   with support for matrix product states and algorithms, and advanced
-  features such as determination of the optimal ordering of tensor contractions.
+  features such as determination of the optimal ordering of tensor contractions.\cite{quimb}
+
+* <a href="https://github.com/tenpy/tenpy">TenPy</a><br/>
+  Tensor Network Python (TeNPy) is a Python library for the simulation of 
+  quantum systems with tensor networks. The philosophy of this library is 
+  to get a new balance of a good readability and usability for new-comers, 
+  and at the same time powerful algorithms and fast development of new 
+  algorithms for experts.\cite{tenpy}
+
+* <a href="http://tensorly.org/">TensorLy</a><br/>
+  A python library offering a high-level API for tensor methods and 
+  deep tensorized neural networks. TensorLy's backend system allows users to 
+  perform computations with NumPy, MXNet, PyTorch, TensorFlow, and CuPy
+  in order to be scalable on both CPU and GPU.\cite{tensorly}
 
 * <a href="https://github.com/google/TensorNetwork">TensorNetwork</a><br/>
   python library for easy and efficient contraction of tensor
@@ -26,3 +48,11 @@
   the development of tensor network algorithms. Provides a Network class to process 
   and store the details of the graphical representations of the networks,
   and supports quantum number block-sparse tensors.
+
+## Closed-Source Tensor Software
+
+* <a href="https://syten.eu">SyTen</a><br/>
+  A symmetry-protected tensor networks toolkit in C++,
+  with a set of standard matrix-product state, binary tree-tensor network states 
+  and infinite projected entangled pair state utilities included.
+
