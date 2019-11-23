@@ -3,9 +3,8 @@
 (Listed in alphabetical order by project name.)
 
 * <a href="https://itensor.org">ITensor</a><br/>
-  C++ library for tensor networks where tensor indices
-  carry id numbers, allowing automatic contraction of matching tensor
-  indices. Also features MPS and MPO algorithms, as well as algorithms
+  C++ library for tensor networks where matching tensor
+  indices automatically contract. Also features MPS and MPO algorithms, as well as algorithms
   such as DMRG. Supports quantum number block-sparse tensors too.
 
 * <a href="https://quimb.readthedocs.io/en/latest/">QUIMB</a><br/>
