@@ -4,8 +4,7 @@
 
 * <a href="https://itensor.org">ITensor</a><br/>
   C++ library for tensor networks where matching tensor
-  indices automatically contract. Also features MPS and MPO algorithms, as well as algorithms
-  such as DMRG. Supports quantum number block-sparse tensors too.
+  indices automatically contract. Also features MPS and MPO algorithms, such as DMRG, and quantum number block-sparse tensors.
 
 * <a href="https://quimb.readthedocs.io/en/latest/">QUIMB</a><br/>
   python library for contracting tensors and tensor networks,
