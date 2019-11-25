@@ -893,3 +893,7 @@ more detailed description of solver used to evaluate the local exponentials, see
     & \quad \textbf{return } \{ R_j \}_{j=2}^{L+1}, \{ M_1, B_j \}_{j=2}^{L} \\
     & \}
 \end{align}
+
+---
+
+The content of this page is based on [Time-evolution methods for matrix-product states](https://www.sciencedirect.com/science/article/pii/S0003491619302532?via%3Dihub) by S. Paeckel, T. Köhler, A. Swoboda, S. R. Manmana, U. Schollwöck and C. Hubig and is licensed under the [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
