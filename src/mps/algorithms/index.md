@@ -53,6 +53,6 @@ systems.
 - [[Time-Step Targeting Method (Local Krylov)|mps/algorithms/timeevo/local-krylov]]
 - [[Time-Dependent Variational Principle (TDVP)|mps/algorithms/timeevo/tdvp]]
 - [[MPO Time Evolution (MPO $W^\mathrm{II}$) |mps/algorithms/timeevo/mpo]]
-- [[Krylov Time Evolution (Global Krylov)|mps/algorithms/timeevo/global-krylov]] (coming soon)
+- [[Krylov Time Evolution (Global Krylov)|mps/algorithms/timeevo/global-krylov]]
 - [[Additional tricks|mps/algorithms/tricks]] (coming soon)
 
