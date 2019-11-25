@@ -54,5 +54,5 @@ systems.
 - [[Time-Dependent Variational Principle (TDVP)|mps/algorithms/timeevo/tdvp]]
 - [[MPO Time Evolution (MPO $W^\mathrm{II}$) |mps/algorithms/timeevo/mpo]]
 - [[Krylov Time Evolution (Global Krylov)|mps/algorithms/timeevo/global-krylov]]
-- [[Additional tricks|mps/algorithms/tricks]]
+- [[Additional tricks|mps/algorithms/timeevo/tricks]]
 
