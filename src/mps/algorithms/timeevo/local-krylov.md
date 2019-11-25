@@ -260,18 +260,16 @@ $\ket{\psi^{\hat \Pi^{\ket{\psi}}_{j}}(t)}$ be the solution of the
 $j$-th problem. An approximation to the overall time-evolved state
 from $t\rightarrow t+\delta$ can then be obtained by sequentially
 solving the initial value problems (setting $\ket{\psi^{\hat
-\Pi^{\ket{\psi}}_{0}}(t)} \equiv \ket{\psi(t)}$) \begin{align}
--\mathrm i \frac{d}{dt} \ket{\psi^{\hat \Pi^{\ket{\psi}}_{j}}(t)} &=
-\hat{H}^{\hat \Pi^{\ket{\psi}}_{j}}\ket{\psi^{\hat
-\Pi^{\ket{\psi}}_{j}}(t)} \nonumber \\ \textrm{and} \quad
-\ket{\psi^{\hat \Pi^{\ket{\psi}}_{j}}(t)} & = \ket{\psi^{\hat
-\Pi^{\ket{\psi}}_{j-1}}(t+\delta)}
-\label{eq:lie_trotter_approximation} \end{align} and identifying
-$\ket{\psi(t+\delta)} \equiv \ket{\psi^{\hat
-\Pi^{\ket{\psi}}_{L}}(t+\delta)}$ with the approximated time evolved
-state. Comparing the formal Taylor expansions of the exactly
-integrated state $\ket{\psi(t+\delta)}_{\mathrm{exact}}$ with the
-approximation one readily finds
+\Pi^{\ket{\psi}}_{0}}(t)} \equiv \ket{\psi(t)}$)
+
+\begin{align}
+-\mathrm i \frac{d}{dt} \ket{\psi^{\hat \Pi^{\ket{\psi}}_{j}}(t)} &= \hat{H}^{\hat \Pi^{\ket{\psi}}_{j}}\ket{\psi^{\hat \Pi^{\ket{\psi}}_{j}}(t)} \nonumber \\
+\textrm{and} \quad \ket{\psi^{\hat \Pi^{\ket{\psi}}_{j}}(t)} & = \ket{\psi^{\hat \Pi^{\ket{\psi}}_{j-1}}(t+\delta)} \label{eq:lie_trotter_approximation}
+\end{align}
+
+and identifying $\ket{\psi(t+\delta)} \equiv \ket{\psi^{\hat \Pi^{\ket{\psi}}_{L}}(t+\delta)}$ with
+the approximated time evolved state. Comparing the formal Taylor expansions of the exactly
+integrated state $\ket{\psi(t+\delta)}_{\mathrm{exact}}$ with the approximation one readily finds
 
 \begin{align}
         \ket{\psi(t+\delta)}_{\mathrm{exact}}
@@ -534,8 +532,7 @@ to the best of our knowledge there is no mathematical justification
 and we can only give the physical motivation that for small time steps
 $\delta$ the time-evolved state is expected to be relatively close to
 the unevolved state (deviation $\propto L\delta^2$ as follows from the
-consideration in \cref{sec:local-krylov:errors}).
-
+consideration below.
 
 Instead of mapping onto the space of a single site, in practice we map
 onto the space of two sites. The two-site local TDSE is solved using
@@ -586,7 +583,7 @@ Finally, there is an error due to the sequential solution of the local
 TDSE as resulting from the Lie-Trotter decomposition. This error _can_
 be quantified, but doing so requires some additional work which will
 follow now: We continue from the Taylor expansion
-\cref{eq:local-krylov:taylor-comparison}. We emphasize that the action
+$\eqref{eq:local-krylov:taylor-comparison}$. We emphasize that the action
 of the commutators
 $\left[\hat{H}^{\hat \Pi^{\ket{\psi}}_{i}}, \hat{H}^{\hat \Pi^{\ket{\psi}}_{j}} \right]\ket{\psi(t_{0})}$
 need to be evaluated with respect to the iteration the commutators are
@@ -661,14 +658,13 @@ contracted MPS-MPO-MPS-networks $L_j/R_j$)
 with the transfer tensors $E_{j} = \bar{M}_{j} W_{j}
 M_{j}$. We also need transfer tensors with the target state which we define by
 $E^{\phi}_{j} = \bar{M}^{\phi}_{j} W_{j} M_{j} $. Finally, there will be
-\textit{open} bonds at sites $i$ and $j$ that correspond to the contractions originating from the
+_open_ bonds at sites $i$ and $j$ that correspond to the contractions originating from the
 ‘brace’-contractions in the projectors $\hat{P}^{L, \ket{\psi}}_{i}$ and
 $\hat{P}^{R,\ket{\psi}}_{i}$ as well as $\hat{P}^{L,\ket{\psi}}_{j+1}$ and
 $\hat{P}^{R,\ket{\psi}}_{j+1}$, and we will label these bonds explicitly. Considering for instance
 the first summand of the commutator at $i=2,j=3$, that is $\braket{\phi| \hat{H}^{\hat
-\Pi^{\ket{\psi}}_{2}}\hat{H}^{\hat \Pi^{\ket{\psi}}_{3}} |\psi^{\hat \Pi^{\ket{\psi}}_{3}}(t)}$
-(c.f. \cref{fig:local-krylov:projected_commutator}) the left part of the contractions can be written
-as
+\Pi^{\ket{\psi}}_{2}}\hat{H}^{\hat \Pi^{\ket{\psi}}_{3}} |\psi^{\hat \Pi^{\ket{\psi}}_{3}}(t)}$,
+the left part of the contractions can be written as
 
 \begin{align}
 	\sum_{m_{2},\bar{m}_{2}} \left(L_{1} E_{2} \right)_{\bar{m}_2} \otimes \left(L_{1} E^{\phi}_{2} \right)_{m_{2}} \delta_{\bar{m}_{2},m_{2}} 
