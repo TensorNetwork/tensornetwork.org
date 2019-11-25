@@ -206,10 +206,12 @@ First, let us define some common helper functions. These are identical
 to those used in standard DMRG ground-state search algorithms. In
 addition, we need a local exponential Lanczos solver. For a more
 detailed description of solver used to evaluate the local
-exponentials, see [[the page on the global Krylov
-method|mps/algorithms/timeevo/global-krylov]]. 1TDVP and 2TDVP then
-only differ in which \texttt{SWEEP-LEFT} and \texttt{SWEEP-RIGHT}
-functions are called from within the \texttt{TIMESTEP} function.
+exponentials, see
+[[the page on the global Krylov method|mps/algorithms/timeevo/global-krylov]]. 1TDVP
+and 2TDVP then only differ in which `SWEEP-LEFT` and `SWEEP-RIGHT`
+functions are called from within the `TIMESTEP` function.
+[NB: The `CONTRACT-LEFT` and `CONTRACT-RIGHT` functions defined here are identical to those on the [[local Krylov|mps/algorithms/timeevo/local-krylov]]
+page. Once page includes are available, merge them]
 
 \begin{align}
   & \texttt{CONTRACT-LEFT}(L_{j-1}, W_j, A_j) \; \{ \\
