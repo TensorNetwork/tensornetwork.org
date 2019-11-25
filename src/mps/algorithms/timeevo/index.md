@@ -6,7 +6,7 @@ For detailed descriptions of each method, see:
   - [[Time-Step Targeting Method (Local Krylov)|mps/algorithms/timeevo/local-krylov]]
   - [[Time-Dependent Variational Principle (TDVP)|mps/algorithms/timeevo/tdvp]]
 - [[Krylov Time Evolution (Global Krlyov)|mps/algorithms/timeevo/global-krylov]]
-- [[Additional tricks|mps/algorithms/tricks]]
+- [[Additional tricks|mps/algorithms/timeevo/tricks]]
 
 ---
 
