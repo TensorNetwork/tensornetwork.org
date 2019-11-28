@@ -49,11 +49,10 @@ and thermalization, and directly simulating finite-temperature
 systems.
 
 - [[Overview|mps/algorithms/timeevo]]
-- [[TEBD or Trotter Gate Time Evolution|mps/algorithms/timeevo/tebd]]
-- [[Time-Step Targeting Method|mps/algorithms/timeevo/local-krylov]] (coming soon)
-- [[Time-Dependent Variational Principle (TDVP)|mps/algorithms/timeevo/tdvp]] (coming soon)
-- [[MPO Time Evolution|mps/algorithms/timeevo/mpo]] (coming soon)
-- [[Krylov Time Evolution|mps/algorithms/timeevo/global-krylov]] (coming soon)
-
-
-
+- [[Trotter Gate Time Evolution (TEBD)|mps/algorithms/timeevo/tebd]]
+- [[MPO Time Evolution (MPO $W^\mathrm{II}$)|mps/algorithms/timeevo/mpo]]
+- [[MPS-local methods|mps/algorithms/timeevo/local-methods]]
+  - [[Time-Step Targeting Method (Local Krylov)|mps/algorithms/timeevo/local-krylov]]
+  - [[Time-Dependent Variational Principle (TDVP)|mps/algorithms/timeevo/tdvp]]
+- [[Krylov Time Evolution (Global Krlyov)|mps/algorithms/timeevo/global-krylov]]
+- [[Additional tricks|mps/algorithms/timeevo/tricks]]
