@@ -268,8 +268,7 @@ Once all of the $U$ tensors are obtained by repeating the steps above, the last 
 
 ![medium](first_tensor.png)
 
-As the curtain falls on this algorithmic drama, the characters can now join hands and
-take a bow. The final compressed version of the original MPS/TT is:
+Assembling all of the pieces, the first tensor above together with the $U_j$ tensors computed above, the final compressed version of the original MPS/TT is:
 
 ![medium](compressed_mpstt.png)
 
