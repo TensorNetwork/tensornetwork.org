@@ -268,7 +268,7 @@ Once all of the $U$ tensors are obtained by repeating the steps above, the last 
 
 ![medium](first_tensor.png)
 
-Assembling all of the pieces, the first tensor above together with the $U_j$ tensors computed above, the final compressed version of the original MPS/TT is:
+Assembling all of the pieces---the first tensor $A_1$ together with the $U_j$ tensors computed above---the final compressed version of the original MPS/TT is:
 
 ![medium](compressed_mpstt.png)
 
