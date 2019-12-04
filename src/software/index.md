@@ -53,7 +53,7 @@
   methods for solutions of linear systems and eigenvalue problems,
   and the TT-cross method.
   
-* <a href="https://libxerus.org">Xerus</a>
+* <a href="https://libxerus.org">Xerus</a><br/>
   The xerus library is a general purpose library for numerical 
   calculations with higher order tensors, Tensor-Train 
   Decompositions / Matrix Product States and general Tensor Networks. 
