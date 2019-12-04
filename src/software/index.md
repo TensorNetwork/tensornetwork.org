@@ -52,6 +52,13 @@
   including TT tensor and TT matrix formats, fast rounding procedures,
   methods for solutions of linear systems and eigenvalue problems,
   and the TT-cross method.
+  
+* <a href="https://libxerus.org">Xerus</a>
+  The xerus library is a general purpose library for numerical 
+  calculations with higher order tensors, Tensor-Train 
+  Decompositions / Matrix Product States and general Tensor Networks. 
+  The focus of development was the simple usability and adaptibility to any 
+  setting that requires higher order tensors or decompositions thereof.
 
 * <a href="http://yingjerkao.github.io/uni10/">Uni10</a><br/>
   Universal Tensor Library, an open-source C++ library designed for 
