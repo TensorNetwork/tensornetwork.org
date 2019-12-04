@@ -11,6 +11,14 @@
 
 (Listed in alphabetical order by project name.)
 
+* [http://solomon2.web.engr.illinois.edu/ctf/](Cyclops Tensor Framework)<br/>
+  This library provides automatic parallelization of operations on multidimensional 
+  (sparse) arrays. An array with k dimensions is represented by a tensor of order k. 
+  By default, the tensor elements are floating point numbers and tensor operations are 
+  combinations of products and sums. However, a user can define any statically-sized 
+  type and elementwise operations. CTF supports general tensor sparsity, so it is 
+  possible to define graph algorithms with the use of sparse adjacency matrices
+
 * <a href="https://itensor.org">ITensor</a><br/>
   C++ library for tensor networks where matching tensor
   indices automatically contract. Also features MPS and MPO algorithms, such as DMRG, and quantum number block-sparse tensors.
