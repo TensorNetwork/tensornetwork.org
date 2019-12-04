@@ -11,7 +11,7 @@
 
 (Listed in alphabetical order by project name.)
 
-* [http://solomon2.web.engr.illinois.edu/ctf/](Cyclops Tensor Framework)<br/>
+* <a href="http://solomon2.web.engr.illinois.edu/ctf/">Cyclops Tensor Framework</a><br/>
   This library provides automatic parallelization of operations on multidimensional 
   (sparse) arrays. An array with k dimensions is represented by a tensor of order k. 
   By default, the tensor elements are floating point numbers and tensor operations are 
