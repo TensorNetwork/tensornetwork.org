@@ -54,6 +54,13 @@
   including dense, sparse, and symmetric tensors as well as specially 
   structured tensors, such as Tucker format,
   and others. Tensors can be manipulated using MATLAB's object-oriented features.
+   
+* <a href="https://github.com/jemisjoky/TorchMPS">TorchMPS</a><br/>
+  TorchMPS is a framework for working with matrix product state (also known 
+  as MPS or tensor train) models within Pytorch. Our MPS models are written as 
+  Pytorch Modules, and can simply be viewed as differentiable black boxes 
+  that are interchangeable with standard neural network layers. However, 
+  the rich structure of MPS's allows for more interesting behavior...
 
 * <a href="https://github.com/oseledets/TT-Toolbox">TT-Toolbox</a><br/>
   MATLAB implementation of basic operations with tensors in TT-format,
