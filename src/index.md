@@ -38,6 +38,11 @@ learning, and many other fields.
 - [[Tensor Software|software]]
 - [[Software Benchmarks|benchmarks]]
 
+<b>Applications of Tensor Networks</b>:
+
+- [[Quantum Physics|quantum_phys]]
+
+
 
 <!--
 ![medium](tensor_networks.png)
