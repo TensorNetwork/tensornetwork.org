@@ -40,8 +40,8 @@ i \frac{\partial \Psi(\mathbf{r},t)}{\partial t}
 ### Stationary Solutions and Time-Independent Equation
 
 Of the many possible solutions of the Schrodinger equation,
-a special set of solutions are those known as \emph{stationary states}
-or \emph{energy eigenstates}.
+a special set of solutions are those known as *stationary states*
+or *energy eigenstates*.
 These are solutions of the form
 \begin{equation}
 \Psi(\mathbf{r},t) = \psi(\mathbf{r}) e^{-i E t}
@@ -50,7 +50,7 @@ where $E$ is a constant interpreted as the energy
 of the quantum system.
 
 For solutions of this form, the spatially-dependent part of the
-solution $\psi(\mathbf{r})$ is determined by the solution of the following eigenvalue equation, knpwn as the \emph{time-independent Schrodinger equation}:
+solution $\psi(\mathbf{r})$ is determined by the solution of the following eigenvalue equation, knpwn as the *time-independent Schrodinger equation*:
 \begin{equation}
 \hat{H} \psi(\mathbf{r}) = E \psi(\mathbf{r}) \ .
 \end{equation}
