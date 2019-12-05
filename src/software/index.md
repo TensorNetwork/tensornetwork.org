@@ -11,7 +11,7 @@
 
 (Listed in alphabetical order by project name.)
 
-* <a href="http://solomon2.web.engr.illinois.edu/ctf/">Cyclops Tensor Framework</a><br/>
+* <a href="http://solomon2.web.engr.illinois.edu/ctf/">Cyclops Tensor Framework</a> (C++)<br/>
   This library provides automatic parallelization of operations on multidimensional 
   (sparse) arrays. An array with k dimensions is represented by a tensor of order k. 
   By default, the tensor elements are floating point numbers and tensor operations are 
@@ -19,18 +19,23 @@
   type and elementwise operations. CTF supports general tensor sparsity, so it is 
   possible to define graph algorithms with the use of sparse adjacency matrices
 
-* <a href="https://itensor.org">ITensor</a><br/>
+* <a href="https://itensor.org">ITensor</a> (C++,Julia)<br/>
   C++ library for tensor networks where matching tensor
   indices automatically contract. Also features MPS and MPO algorithms, such as DMRG, and quantum number block-sparse tensors.
 
-* <a href="https://arxiv.org/abs/1402.0939">NCON</a><br/>
+* <a href="https://arxiv.org/abs/1402.0939">NCON</a> (MATLAB)<br/>
   NCON (Network Contractor) is a MATLAB routine which can be used for computing
   a broad class of tensor network diagrams in an efficient and convenient way.
   
-* <a href="https://quimb.readthedocs.io/en/latest/">QUIMB</a><br/>
+* <a href="https://quimb.readthedocs.io/en/latest/">QUIMB</a> (Python)<br/>
   python library for contracting tensors and tensor networks,
   with support for matrix product states and algorithms, and advanced
   features such as determination of the optimal ordering of tensor contractions.\cite{quimb}
+  
+* <a href="https://github.com/PGelss/scikit_tt">Scikit-TT</a> (Python)<br/>
+  Scikit-TT is a Python library for applying the tensor-train (TT) format 
+  to various numerical problems in order to reduce the memory consumption and computational
+  cost compared to classical tensor approaches significantly.
 
 * <a href="https://github.com/tenpy/tenpy">TenPy</a><br/>
   Tensor Network Python (TeNPy) is a Python library for the simulation of 
