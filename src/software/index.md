@@ -7,7 +7,7 @@
   cost scaling for each network, and generate code (in MATLAB, Python or Julia languages) 
   for contracting the tensor networks numerically.
  
-## Open Source Tensor Software
+## Open Source Tensor Network Software
 
 (Listed in alphabetical order by project name.)
 
