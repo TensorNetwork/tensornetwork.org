@@ -16,7 +16,7 @@ the Born rule, or 2-norm probability formalism.)
 The Schrodinger equation is
 
 \begin{equation}
-i \frac{\partial \Psi}\{\partial t} = \hat{H} \Psi
+i \frac{\partial \Psi}{\partial t} = \hat{H} \Psi
 \end{equation}
 
 where $\hat{H}$ is a linear operator known as the 
