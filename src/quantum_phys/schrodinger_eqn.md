@@ -34,7 +34,7 @@ $V(x)$. For this case, the Schrodinger equation takes
 the form:
 
 \begin{equation}
-i \frac{\partial \Psi(x,t)}\{\partial t} 
+i \frac{\partial \Psi(x,t)}{\partial t} 
 = \Big[\frac{-1}{2m}\frac{\partial^2}{\partial x^2} + V(x)\Big] \Psi(x,t)
 \end{equation}
 
