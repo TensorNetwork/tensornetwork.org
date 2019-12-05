@@ -17,7 +17,7 @@
   possible to define graph algorithms with the use of sparse adjacency matrices
 
 * <a href="https://itensor.org">ITensor</a> (C++, Julia)<br/>
-  C++ library for tensor networks where matching tensor
+  ITensor is a library for tensor networks where tensor indices carry extra information and matching tensor
   indices automatically contract. Also features MPS and MPO algorithms, such as DMRG, and quantum number block-sparse tensors.
 
 * <a href="https://arxiv.org/abs/1402.0939">NCON</a> (MATLAB)<br/>
