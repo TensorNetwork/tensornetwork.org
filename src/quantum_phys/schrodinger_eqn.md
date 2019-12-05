@@ -25,17 +25,16 @@ differential operator in terms of the spatial coordinates
 of a set of quantum particles. Here units are chosen
 such that $\hbar=1$.
 
-### One-dimensional Schrodinger Equation
+### Single-particle Schrodinger Equation
 
 Arguably the simplest example of the Schrodinger equation
 is the case of a single quantum particle moving in a 
-one-dimensional space, in the presence of a potential
-$V(x)$. For this case, the Schrodinger equation takes
-the form:
+in the presence of a potential $V(\mathbf{r})$. 
+For this case, the Schrodinger equation takes the form:
 
 \begin{equation}
-i \frac{\partial \Psi(x,t)}{\partial t} 
-= \Big[\frac{-1}{2m}\frac{\partial^2}{\partial x^2} + V(x)\Big] \Psi(x,t)
+i \frac{\partial \Psi(\mathbf{r},t)}{\partial t} 
+= \Big[\frac{-1}{2m}\nabla^2 + V(\mathbf{r})\Big] \Psi(\mathbf{r},t)
 \end{equation}
 
 ### Stationary Solutions and Time-Independent Equation
