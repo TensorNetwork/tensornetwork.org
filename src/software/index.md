@@ -13,10 +13,7 @@
 
 * <a href="http://solomon2.web.engr.illinois.edu/ctf/">Cyclops Tensor Framework</a> (C++)<br/>
   This library provides automatic parallelization of operations on multidimensional 
-  (sparse) arrays. An array with k dimensions is represented by a tensor of order k. 
-  By default, the tensor elements are floating point numbers and tensor operations are 
-  combinations of products and sums. However, a user can define any statically-sized 
-  type and elementwise operations. CTF supports general tensor sparsity, so it is 
+  (sparse) arrays. Cyclops supports general tensor sparsity, so it is 
   possible to define graph algorithms with the use of sparse adjacency matrices
 
 * <a href="https://itensor.org">ITensor</a> (C++, Julia)<br/>
