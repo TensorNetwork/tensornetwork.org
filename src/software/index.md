@@ -79,7 +79,7 @@
   and store the details of the graphical representations of the networks,
   and supports quantum number block-sparse tensors.
 
-* <a href="https://libxerus.org">Xerus</a> (Python)<br/>
+* <a href="https://libxerus.org">Xerus</a> (C++)<br/>
   The Xerus library is a general purpose library for numerical 
   calculations with higher order tensors, Tensor-Train 
   Decompositions / Matrix Product States and general Tensor Networks. 
