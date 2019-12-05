@@ -16,5 +16,5 @@ the physics tensor network literature.
 
 ### Fundamentals of Quantum Mechanics
 
-- [[The Schrodinger Equation|schrodinger_eqn]]
-- [[Dirac Bra-ket Notation|braket]]
+- [[The Schrodinger Equation|quantum_phys/schrodinger_eqn]]
+- [[Dirac Bra-ket Notation|quantum_phys/braket]]
