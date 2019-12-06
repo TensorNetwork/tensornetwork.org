@@ -5,7 +5,7 @@ of quantum mechanics. It is a partial
 differential equation which determines the
 of the quantum wavefunction $\Psi$ as a function of time.
 The wavefunction parameterizes the probability density
-of observing a certain (classical) configuration of
+of observing a certain configuration of
 a quantum system in the sense that the 
 probability density is the square magnitude of 
 the wavefunction. This correspondence is known as
