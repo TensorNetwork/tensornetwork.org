@@ -8,8 +8,8 @@ The wavefunction parameterizes the probability density
 of observing a certain (classical) configuration of
 a quantum system in the sense that the 
 probability density is the square magnitude of 
-the wavefunction. (This correspondence is known as
-the Born rule, or 2-norm probability formalism.)
+the wavefunction. This correspondence is known as
+the Born rule, or 2-norm probability formalism.
 
 ### General Form of the Schrodinger Equation
 
