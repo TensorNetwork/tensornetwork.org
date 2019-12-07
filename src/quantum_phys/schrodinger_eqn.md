@@ -97,6 +97,8 @@ applying it to identical particles, such as electrons.
 If the solution is required to be symmetric under exchange of
 particle labels, the particles are known as bosons, and if 
 antisymmetric, the particles are known as fermions.
+(Electrons and protons are fermions, whereas certain isotopes of 
+neutral atoms are bosons when approximated as a single particle.)
 
 The most common form of the many-body Schrodinger equation
 is:
