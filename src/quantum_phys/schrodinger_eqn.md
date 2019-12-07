@@ -1,4 +1,4 @@
-## The Schrodinger Equation of Quantum Mechanics
+# The Schrodinger Equation of Quantum Mechanics
 
 The Schrodinger equation is the basic defining equation 
 of quantum mechanics. It is a partial
@@ -11,7 +11,7 @@ probability density is the square magnitude of
 the wavefunction. This correspondence is known as
 the Born rule, or 2-norm probability formalism.
 
-### General Form of the Schrodinger Equation
+## General Form of the Schrodinger Equation
 
 The Schrodinger equation is
 
@@ -25,7 +25,7 @@ differential operator in terms of the spatial coordinates
 of a set of quantum particles. Here and in what follows,
 the units are chosen such that $\hbar=1$.
 
-### Single-particle Schrodinger Equation
+## Single-particle Schrodinger Equation
 
 Arguably the simplest example of the Schrodinger equation
 is the case of a single quantum particle moving in a 
@@ -41,7 +41,7 @@ Having determined the wavefunction $\Psi(\mathbf{r},t)$,
 the probability to find the particle at the position $\mathbf{r}$
 is given by $p(\mathbf{r},t) = |\Psi(\mathbf{r},t)|^2$.
 
-### Stationary Solutions and Time-Independent Equation
+## Stationary Solutions and Time-Independent Equation
 
 Of the many possible solutions of the Schrodinger equation,
 a special set of solutions are those known as *stationary states*
@@ -64,9 +64,5 @@ solution $\psi(\mathbf{r})$ is determined by the solution of the following eigen
 Thus the set of eigenvectors and eigenvalues 
 of the Hamiltonian operator $\hat{H}$ 
 determines the set of such solutions.
-
-
-
-
 
 
