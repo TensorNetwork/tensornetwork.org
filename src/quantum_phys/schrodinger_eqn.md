@@ -92,8 +92,8 @@ p(\{\mathbf{r}\},t)=|\Psi(\{\mathbf{r}\},t)|^2 \ .
 \end{equation}
 
 Additional symmetry constraints on the solution $\Psi$ are
-also required to specify the problem correctly when
-applying it to identical particles, such as electrons.
+also required to obtain correct results for a system
+of identical particles, such as electrons.
 If the solution is required to be symmetric under exchange of
 particle labels, the particles are known as bosons, and if 
 antisymmetric, the particles are known as fermions.
