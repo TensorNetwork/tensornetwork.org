@@ -57,7 +57,7 @@ probability distribution
 $p(\mathbf{r})=|\psi(\mathbf{r}) e^{-i E t}|^2 = |\psi(\mathbf{r})|^2$.
 
 For solutions of this form, the spatially-dependent part of the
-solution $\psi(\mathbf{r})$ is determined by the solution of the following eigenvalue equation, knpwn as the *time-independent Schrodinger equation*:
+solution $\psi(\mathbf{r})$ is determined by the solution of the following eigenvalue equation, known as the *time-independent Schrodinger equation*:
 \begin{equation}
 \hat{H} \psi(\mathbf{r}) = E \psi(\mathbf{r}) \ .
 \end{equation}
