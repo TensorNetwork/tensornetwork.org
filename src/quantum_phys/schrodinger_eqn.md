@@ -88,7 +88,7 @@ The wavefunction can be interpreted as parameterizing the probability
 density of finding the particles at the positions $\{\mathbf{r}\}$
 at time $t$ through the relation:
 \begin{equation}
-p((\{\mathbf{r}\},t)=|\Psi(\{\mathbf{r}\},t)|^2 \ .
+p(\{\mathbf{r}\},t)=|\Psi(\{\mathbf{r}\},t)|^2 \ .
 \end{equation}
 
 Additional symmetry constraints on the solution $\Psi$ are
