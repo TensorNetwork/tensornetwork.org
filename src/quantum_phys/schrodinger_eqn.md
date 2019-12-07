@@ -1,8 +1,8 @@
 # The Schrodinger Equation of Quantum Mechanics
 
 The Schrodinger equation is the basic defining equation 
-of quantum mechanics. It is a partial
-differential equation which determines the
+of non-relativistic quantum mechanics.
+It is a partial differential equation which determines the
 of the quantum wavefunction $\Psi$ as a function of time.
 The wavefunction parameterizes the probability density
 of observing a certain configuration of
@@ -65,4 +65,24 @@ Thus the set of eigenvectors and eigenvalues
 of the Hamiltonian operator $\hat{H}$ 
 determines the set of such solutions.
 
+## Many-Body Schrodinger Equation
 
+In terms of modern research and applications
+the most important case of the Schrodinger equation
+is when it describes many interacting quantum particles. 
+The particles could be electrons and protons, as in
+chemistry or materials science, or whole atoms
+in atomic gas systems or astrophysics.
+The many-body setting is also where <b>high-order tensors</b>
+naturally arise, as we will see below.
+
+The most common form of the many-body Schrodinger equation
+is:
+\begin{equation}
+i\frac{\partial}{\partial t} \Psi(\{\mathbf{r}\},t)
+= \Big[ \sum_{j=1}^N \left( -\frac{1}{2 m_j} \nabla^2 + v(\mathbf{r}_j) \right)
+   + \frac{1}{2} \sum_{i=1}^N \sum_{j=1}^N u(\mathbf{r}_i,\mathbf{r}_j)
+  \Big] \Psi(\{\mathbf{r}\},t)
+\end{equation}
+where $m_j$ is the mass of particle number $j$ and 
+$\{\mathbf{r}\} = (\mathbf{r}_1,\mathbf{r}_2,\ldots,\mathbf{r}_N)$.
