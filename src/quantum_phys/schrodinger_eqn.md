@@ -76,6 +76,28 @@ in atomic gas systems or astrophysics.
 The many-body setting is also where <b>high-order tensors</b>
 naturally arise, as we will see below.
 
+The solution to the many-body Schrodinger equation is 
+the many-body wavefunction
+\begin{equation}
+\Psi(\{\mathbf{r}\},t)=
+\Psi(\mathbf{r}_1,\mathbf{r}_2,\mathbf{r}_3,\ldots,\mathbf{r}_N,t)
+\end{equation}
+where $N$ is the number of particles and $\mathbf{r}_j$ is the
+location of particle $j$.
+The wavefunction can be interpreted as parameterizing the probability
+density of finding the particles at the positions $\{\mathbf{r}\}$
+at time $t$ through the relation:
+\begin{equation}
+p((\{\mathbf{r}\},t)=|\Psi(\{\mathbf{r}\},t)|^2 \ .
+\end{equation}
+
+Additional symmetry constraints on the solution $\Psi$ are
+also required to specify the problem correctly when
+applying it to identical particles, such as electrons.
+If the solution is required to be symmetric under exchange of
+particle labels, the particles are known as bosons, and if 
+antisymmetric, the particles are known as fermions.
+
 The most common form of the many-body Schrodinger equation
 is:
 \begin{equation}
@@ -84,5 +106,13 @@ i\frac{\partial}{\partial t} \Psi(\{\mathbf{r}\},t)
    + \frac{1}{2} \sum_{i=1}^N \sum_{j=1}^N u(\mathbf{r}_i,\mathbf{r}_j)
   \Big] \Psi(\{\mathbf{r}\},t)
 \end{equation}
-where $m_j$ is the mass of particle number $j$ and 
-$\{\mathbf{r}\} = (\mathbf{r}_1,\mathbf{r}_2,\ldots,\mathbf{r}_N)$.
+where $m_j$ is the mass of particle number $j$.
+The operator in square brackets on the right-hand side of the equation
+is the many-body Hamiltonian $\hat{H}$.
+
+The first term in the Hamiltonian, involving a single sum over $j$, is
+known as the single-particle or non-interacting part of the Hamiltonian.
+The second term involving a double sum is the 2-particle or interaction
+term.
+
+
