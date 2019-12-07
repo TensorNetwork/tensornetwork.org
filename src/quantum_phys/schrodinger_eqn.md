@@ -73,7 +73,7 @@ is when it describes many interacting quantum particles.
 The particles could be electrons and protons, as in
 chemistry or materials science, or whole atoms
 in atomic gas systems or astrophysics.
-The many-body setting is also where <b>high-order tensors</b>
+The many-body setting is where <b>high-order tensors</b>
 naturally arise, as we will see below.
 
 The solution to the many-body Schrodinger equation is 
