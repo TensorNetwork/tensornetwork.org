@@ -83,10 +83,22 @@
   The focus of development was the simple usability and adaptibility to any 
   setting that requires higher order tensors or decompositions thereof.
 
+
+  
+## Low-Level Tensor Software and Tensor Backends
+
+* <a href="https://developer.nvidia.com/cutensor">CuTensor</a> (C)<br/>
+  CuTensor is a library for high-performance contraction of arbitrary tensors on NVIDIA graphics processing units (GPUs). It is built on top of hardware-optimized, permutation-free contraction algorithms and can achieve very high performance.
+  
+* <a href="https://github.com/springer13/hptt">HPTT</a> (C/C++)<br/>
+  High-performance tensor transpose (HPTT) is a library for permuting (transposing) tensor data including summing two tensors which may have a different ordering of indices. Performance is achieved by hardware and cache-friendly algorithms as well as multi-threading based on OpenMP.
+  
+* <a href="https://github.com/devinamatthews/tblis">TBLIS</a> (C/C++)<br/>
+  TBLIS is a contraction library for arbitrary (real-valued) tensors which uses a sophisticated permutation-free algorithm, avoiding the permutation overhead that would be incurred by a more naive permute and matrix-multiply algorithm.
+
 ## Closed-Source Tensor Software
 
 * <a href="https://syten.eu">SyTen</a><br/>
   A symmetry-protected tensor networks toolkit in C++,
   with a set of standard matrix-product state, binary tree-tensor network states 
   and infinite projected entangled pair state utilities included.
-
