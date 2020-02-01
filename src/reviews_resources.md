@@ -38,6 +38,11 @@
   <a href="https://itensor.org/miles/BrazilLectures/TNAndApplications03.pdf" target="_blank">Lecture 3</a> &mdash; Gauges or canonical forms of MPS; matrix product operators; DMRG algorithm.<br/>
   <a href="https://itensor.org/miles/BrazilLectures/TNAndApplications04.pdf" target="_blank">Lecture 4</a> &mdash; Tensor networks; scaling of entanglement for critical and 2D systems; quantum chemistry; finite temperature systems. <br/>
   <a href="https://itensor.org/miles/BrazilLectures/TNAndApplications05.pdf" target="_blank">Lecture 5</a> &mdash; Introduction to machine learning; selected uses of tensor networks in machine learning.<br/>
+
+* **"Two-Dimensional Tensor Networks and Contraction Algorithms"**<br/>
+   **Authors**: Shi-Ju Ran, Emanuele Tirrito, Cheng Peng, Xi Chen, Luca Tagliacozzo, Gang Su, Maciej Lewenstein<br/>
+   **Link**: <a href="https://link.springer.com/chapter/10.1007/978-3-030-34489-4_3"> In: Tensor Network Contractions, Lecture Notes in Physics, vol 964. Springer</a><br/>
+   **Notes**: An open-access book reviewing basics of tensor networks in diagram notation, then introducing advanced techniques for tasks such as contracting two-dimensional tensor networks.
  
 * **"The density-matrix renormalization group in the age of matrix product states"**<br/>
    **Author**: Ulrich Schollwoeck <br/>
