@@ -290,17 +290,17 @@ for (root,dirs,files) in walkdir(idir)
       btfile = curri*"/"*base*".bib"
       has_refs = isfile(btfile)
 
-      if has_refs
-        if mtime(ofname) > mtime(ifname) && mtime(ofname) > mtime(btfile)
-          println("Skipping $(ifname), $(btfile), they are older than $(ofname).")
-          continue
-        end
-      else
-        if mtime(ofname) > mtime(ifname)
-          println("Skipping $(ifname), it is older than $(ofname).")
-          continue
-        end
-      end
+      #if has_refs
+      #  if mtime(ofname) > mtime(ifname) && mtime(ofname) > mtime(btfile)
+      #    println("Skipping $(ifname), $(btfile), they are older than $(ofname).")
+      #    continue
+      #  end
+      #else
+      #  if mtime(ofname) > mtime(ifname)
+      #    println("Skipping $(ifname), it is older than $(ofname).")
+      #    continue
+      #  end
+      #end
       mdstring = generateTOC(mdstring,has_refs)
       (mdstring,mjlist) = processMathJax(mdstring)
       mdstring = processWikiLinks(mdstring,ifname)
