@@ -41,6 +41,12 @@
   and at the same time powerful algorithms and fast development of new 
   algorithms for experts.\cite{tenpy}
 
+* <a href="https://www.tensorlab.net">TensorLab</a> (MATLAB)<br/>
+  Tensorlab is a MATLAB toolbox for rapid prototyping of tensor
+  decompositions with structured factors. By mixing different types
+  of decompositions and factor structures, a vast amount of factorizations
+  can be computed.
+
 * <a href="http://tensorly.org/">TensorLy</a> (Python)<br/>
   A python library offering a high-level API for tensor methods and 
   deep tensorized neural networks. TensorLy's backend system allows users to 
