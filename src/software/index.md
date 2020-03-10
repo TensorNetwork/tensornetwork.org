@@ -34,6 +34,12 @@
   to various numerical problems in order to reduce the memory consumption and computational
   cost compared to classical tensor approaches significantly.
 
+* <a href="http://tensor-compiler.org">taco</a> (C/C++) <br/>
+  taco is a library for compiling dense and sparse linear and tensor algebra expressions. 
+  The expressions can range from simple kernels like SpMV to more complex kernels 
+  like MTTKRP, where the operands can be dense, sparse, or a mix of dense and sparse. 
+  taco automatically generates efficient compute kernels (loops) to evaluate these expressions.
+
 * <a href="https://github.com/tenpy/tenpy">TenPy</a> (Python)<br/>
   Tensor Network Python (TeNPy) is a Python library for the simulation of 
   quantum systems with tensor networks. The philosophy of this library is 
