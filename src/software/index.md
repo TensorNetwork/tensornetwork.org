@@ -7,7 +7,7 @@
   cost scaling for each network, and generate code (in MATLAB, Python or Julia languages) 
   for contracting the tensor networks numerically.
  
-## Open Source Tensor Network Software
+## Open Source, High-Level Tensor Software
 
 (Listed in alphabetical order by project name.)
 
@@ -33,12 +33,6 @@
   Scikit-TT is a Python library for applying the tensor-train (TT) format 
   to various numerical problems in order to reduce the memory consumption and computational
   cost compared to classical tensor approaches significantly.
-
-* <a href="http://tensor-compiler.org">taco</a> (C/C++) <br/>
-  taco is a library for compiling dense and sparse linear and tensor algebra expressions. 
-  The expressions can range from simple kernels like SpMV to more complex kernels 
-  like MTTKRP, where the operands can be dense, sparse, or a mix of dense and sparse. 
-  taco automatically generates efficient compute kernels (loops) to evaluate these expressions.
 
 * <a href="https://github.com/tenpy/tenpy">TenPy</a> (Python)<br/>
   Tensor Network Python (TeNPy) is a Python library for the simulation of 
@@ -104,14 +98,24 @@
   setting that requires higher order tensors or decompositions thereof.
 
 
-  
-## Low-Level Tensor Software and Tensor Backends
+## High-Performance, Lower-Level Tensor Software and Tensor Backends
 
 * <a href="https://developer.nvidia.com/cutensor">CuTensor</a> (C)<br/>
   CuTensor is a library for high-performance contraction of arbitrary tensors on NVIDIA graphics processing units (GPUs). It is built on top of hardware-optimized, permutation-free contraction algorithms and can achieve very high performance.
+
+* <a href="http://solomon2.web.engr.illinois.edu/ctf/">Cyclops Tensor Framework</a> (C++)<br/>
+  This library provides automatic parallelization of operations on multidimensional 
+  (sparse) arrays. Cyclops supports general tensor sparsity, so it is 
+  possible to define graph algorithms with the use of sparse adjacency matrices
   
 * <a href="https://github.com/springer13/hptt">HPTT</a> (C/C++)<br/>
   High-performance tensor transpose (HPTT) is a library for permuting (transposing) tensor data including summing two tensors which may have a different ordering of indices. Performance is achieved by hardware and cache-friendly algorithms as well as multi-threading based on OpenMP.
+
+* <a href="http://tensor-compiler.org">taco</a> (C/C++) <br/>
+  taco is a library for compiling dense and sparse linear and tensor algebra expressions. 
+  The expressions can range from simple kernels like SpMV to more complex kernels 
+  like MTTKRP, where the operands can be dense, sparse, or a mix of dense and sparse. 
+  taco automatically generates efficient compute kernels (loops) to evaluate these expressions.
   
 * <a href="https://github.com/devinamatthews/tblis">TBLIS</a> (C/C++)<br/>
   TBLIS is a contraction library for arbitrary (real-valued) tensors which uses a sophisticated permutation-free algorithm, avoiding the permutation overhead that would be incurred by a more naive permute and matrix-multiply algorithm.
