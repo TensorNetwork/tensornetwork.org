@@ -63,6 +63,14 @@
   structured tensors, such as Tucker format,
   and others. Tensors can be manipulated using MATLAB's object-oriented features.
    
+* <a href="https://github.com/ValeevGroup/tiledarray">TiledArray</a> (C++)<br/>
+  TiledArray is a massively-parallel, block-sparse tensor framework written in C++.
+  It is a scalable, block-sparse tensor framework for rapid composition of high-performance 
+  tensor arithmetic, appearing for example in many-body quantum mechanics. It allows 
+  users to compose tensor expressions of arbitrary complexity in native C++ code that 
+  closely resembles the standard mathematical notation. The framework is designed to 
+  scale from a single multicore computer to a massive distributed-memory multiprocessor.
+
 * <a href="https://github.com/jemisjoky/TorchMPS">TorchMPS</a> (Python)<br/>
   TorchMPS is a framework for working with matrix product state (also known 
   as MPS or tensor train) models within Pytorch. Our MPS models are written as 
