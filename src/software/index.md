@@ -16,6 +16,11 @@
   (sparse) arrays. Cyclops supports general tensor sparsity, so it is 
   possible to define graph algorithms with the use of sparse adjacency matrices
 
+* <a href="https://github.com/romeric/Fastor">Fastor</a> (C++)<br/>
+  Fastor is a stack-based high performance tensor (multi-dimensional array) library written 
+  in modern C++ [C++11/14/17] with powerful in-built tensor algebraic functionalities 
+  (tensor contraction, permutation, reductions, special tensor groups etc). 
+
 * <a href="https://itensor.org">ITensor</a> (C++, Julia)<br/>
   ITensor is a library for tensor networks where tensor indices carry extra information and matching tensor
   indices automatically contract. Also features MPS and MPO algorithms, such as DMRG, and quantum number block-sparse tensors.
