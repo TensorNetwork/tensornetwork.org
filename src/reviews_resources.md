@@ -14,7 +14,7 @@
    **Author**: Roman Orus <br/>
    **Pre-print**: <a href="https://arxiv.org/abs/1306.2164">1306.2164</a><br/>
    **Journal**: <a href="https://doi.org/10.1016/j.aop.2014.06.013">Annals of Physics 349 (2014) 117-158</a><br/>
-   **Notes**: Friendly introduction to tensor networks for readers with a quantum physics background. Gives some overviews of basics of tensor network algorithms as well as more detailed descriptions of aalgorithms for one- and two-dimensional quantum systems.
+   **Notes**: Friendly introduction to tensor networks for readers with a quantum physics background. Gives some overviews of basics of tensor network algorithms as well as more detailed descriptions of algorithms for one- and two-dimensional quantum systems.
 
 * **"Tensor Networks for Big Data Analytics and Large-Scale Optimization Problems"**<br/>
    **Author**: Andrzej Cichocki <br/>
