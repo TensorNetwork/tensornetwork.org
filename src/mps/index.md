@@ -82,7 +82,7 @@ it represents a massive compression from a set of parameters growing
 exponentially with $N$, to a set of parameters growing just linearly with $N$.
 
 It is possible to reduce the number of parameters even further, without
-loss of expressive power, by exploiting the redundancy inherit in the MPS/TT network. 
+loss of expressive power, by exploiting the redundancy inherent in the MPS/TT network. 
 For more information about this redundancy, see the section on MPS/TT gauges
 below.
 
