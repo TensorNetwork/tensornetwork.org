@@ -58,6 +58,13 @@
   perform computations with NumPy, MXNet, PyTorch, TensorFlow, and CuPy
   in order to be scalable on both CPU and GPU.\cite{tensorly}
 
+* <a href="">TensorOperations</a> (Julia) <br/>
+  Julia package for tensor contractions and related operations.
+  Offers fast tensor operations using a convenient Einstein index notation,
+  as well as optimizing pairwise contraction order, the "ncon" function
+  for contracting groups of tensors or tensor networks, GPU support,
+  and other features.
+
 * <a href="https://github.com/google/TensorNetwork">TensorNetwork</a> (Python)<br/>
   python library for easy and efficient contraction of tensor
   networks, supporting multiple powerful backends
