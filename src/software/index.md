@@ -58,7 +58,7 @@
   perform computations with NumPy, MXNet, PyTorch, TensorFlow, and CuPy
   in order to be scalable on both CPU and GPU.\cite{tensorly}
 
-* <a href="">TensorOperations</a> (Julia) <br/>
+* <a href="https://jutho.github.io/TensorOperations.jl/stable/">TensorOperations</a> (Julia) <br/>
   Julia package for tensor contractions and related operations.
   Offers fast tensor operations using a convenient Einstein index notation,
   as well as optimizing pairwise contraction order, the "ncon" function
