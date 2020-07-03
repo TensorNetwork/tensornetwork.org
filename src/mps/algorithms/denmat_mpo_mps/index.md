@@ -123,6 +123,9 @@ we seek is:
 
 As a bonus, the resulting MPS has the property of being in the [[right orthogonal gauge|mps#gauges]].
 
+## Implementations in Code
+
+* This algorithm is implemented in the [C++ version of the ITensor Library](https://itensor.org/docs?vers=cppv3) through the applyMPO(MPO,MPS,{"Method=","DensityMatrix"}) function and in the [Julia version of ITensor](https://itensor.org/docs.cgi?vers=julia) through the contract(::MPO,::MPS;method="densitymatrix") function. The implementation source code can be found at these links: [C++ implementation](https://github.com/ITensor/ITensor/blob/v3/itensor/mps/mpoalgs.cc) and [Julia implementation](https://github.com/ITensor/ITensors.jl/blob/master/src/mps/mpo.jl)
 
 ## Acknowledgements
 
