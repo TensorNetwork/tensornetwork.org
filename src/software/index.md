@@ -7,7 +7,7 @@
   cost scaling for each network, and generate code (in MATLAB, Python or Julia languages) 
   for contracting the tensor networks numerically.
  
-## Open Source, High-Level Tensor Software
+## High-Level Tensor Software
 
 (Listed in alphabetical order by project name.)
 
@@ -38,6 +38,14 @@
   Scikit-TT is a Python library for applying the tensor-train (TT) format 
   to various numerical problems in order to reduce the memory consumption and computational
   cost compared to classical tensor approaches significantly.
+
+* <a href="https://susmost.com">SuSMoST</a><br/>
+  SuSMoST (Surface Science Modelling and Simulation Toolkit) is meant to build and study classical lattice models of adsorption, such as Langmuir, Ising, Potts, or hard-core models. SuSMoST automatically builds a tensor network representation of a lattice model from samples of adsorption complexes. Several versions of the [[TRG|trg]] algorithm are implemented in SuSMoST. They can be used to compute the partition function and its derivatives for simulated lattice models.
+
+* <a href="https://syten.eu">SyTen</a><br/> (C++)
+  A symmetry-protected tensor networks toolkit in C++,
+  with a set of standard matrix-product state, binary tree-tensor network states 
+  and infinite projected entangled pair state utilities included.
 
 * <a href="https://github.com/tenpy/tenpy">TenPy</a> (Python)<br/>
   Tensor Network Python (TeNPy) is a Python library for the simulation of 
@@ -132,12 +140,3 @@
 * <a href="https://github.com/devinamatthews/tblis">TBLIS</a> (C/C++)<br/>
   TBLIS is a contraction library for arbitrary (real-valued) tensors which uses a sophisticated permutation-free algorithm, avoiding the permutation overhead that would be incurred by a more naive permute and matrix-multiply algorithm.
 
-## Closed-Source Tensor Software
-
-* <a href="https://syten.eu">SyTen</a><br/>
-  A symmetry-protected tensor networks toolkit in C++,
-  with a set of standard matrix-product state, binary tree-tensor network states 
-  and infinite projected entangled pair state utilities included.
-
-* <a href="https://susmost.com">SuSMoST</a><br/>
-  SuSMoST (Surface Science Modelling and Simulation Toolkit) is meant to build and study classical lattice models of adsorption, such as Langmuir, Ising, Potts, or hard-core models. SuSMoST automatically builds a tensor network representation of a lattice model from samples of adsorption complexes. Several versions of the [[TRG|trg]] algorithm are implemented in SuSMoST. They can be used to compute the partition function and its derivatives for simulated lattice models.
