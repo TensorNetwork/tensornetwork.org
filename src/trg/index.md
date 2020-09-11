@@ -1,8 +1,8 @@
-# TRG Algorithm
+# Tensor Renormalization Group Algorithm
 
 <!--TOC-->
 
-The TRG algorithm, which stands for _tensor renormalization group_
+The _tensor renormalization group_ or TRG algorithm
 is a strategy for evaluating a fully contracted network of tensors
 by decimating the network in a heirarchical fashion.\cite{Levin} 
 The strategy is to factorize each tensor in the network using a truncated
