@@ -140,7 +140,4 @@
   and infinite projected entangled pair state utilities included.
 
 * <a href="https://susmost.com">SuSMoST</a><br/>
-  SuSMoST (Surface Science Modelling and Simulation Toolkit) is meant to build and study classical lattice models of adsorption, such as
-  Langmuir, Ising, Potts, or hard-core models. SuSMoST automatically builds tensork network representation of a lattice model from samples of 
-  adsorption complexes. Several versions of the TRG algorithm are implemented in SuSMoST. They can be used to compute the partition function
-  and its derivatives for simulated lattice models.
+  SuSMoST (Surface Science Modelling and Simulation Toolkit) is meant to build and study classical lattice models of adsorption, such as Langmuir, Ising, Potts, or hard-core models. SuSMoST automatically builds a tensor network representation of a lattice model from samples of adsorption complexes. Several versions of the [[TRG|trg]] algorithm are implemented in SuSMoST. They can be used to compute the partition function and its derivatives for simulated lattice models.
