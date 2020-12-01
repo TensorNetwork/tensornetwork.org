@@ -29,6 +29,11 @@
 
 ### Technical Introductions or Review Articles
 
+* **"Matrix Product States and Projected Entangled Pair States: Concepts, Symmetries, and Theorems"**<br/>
+   **Authors**: J. Ignacio Cira, David Perez-Garcia, Norbert Schuch, Frank Verstraete<br/>
+   **Pre-print**: <a href="https://arxiv.org/abs/2011.12127">2011.12127</a><br/>
+   **Notes**: An authoritative introduction to tensor networks from a quantum physics perspective with a rigorous discussion of concepts such as scaling of entanglement, symmetries and group theoretic properties, parent Hamiltonians, and canonical forms of tensor networks.
+
 * **"Tensor Networks and Applications"**<br/>
   **Author:** Miles Stoudenmire<br/>
   **Description:** This is a one-week course, mainly on matrix product state (MPS) tensor networks, aimed at graduate students familiar with many-body quantum mechanics. <br/>
