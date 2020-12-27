@@ -75,7 +75,7 @@ However, if we allow complex intermediate steps $\delta_1$ and
 $\delta_2$, we can solve
 
 \begin{equation}
-  \hat U^\prime(\delta_1) \hat U^\prime(\delta_2) = \mathbf{\hat 1} - \mathrm{i} \delta \hat H - \frac{\delta}{2} \hat H^2
+  \hat U^\prime(\delta_1) \hat U^\prime(\delta_2) = \mathbf{\hat 1} - \mathrm{i} \delta \hat H - \frac{\delta^2}{2} \hat H^2
 \end{equation}
 
 for $\delta_1$ and $\delta_2$ by expanding the left-hand side:
@@ -84,7 +84,7 @@ for $\delta_1$ and $\delta_2$ by expanding the left-hand side:
   & \quad \hat U^\prime(\delta_1) \hat U^\prime(\delta_2) \\
 = & \quad \left( \mathbf{\hat 1} - \mathrm{i} \delta_1 \hat H \right) \left( \mathbf{\hat 1} - \mathrm{i} \delta_2 \hat H \right) \\
 = & \quad \mathbf{\hat 1} - \mathrm{i} ( \delta_1 + \delta_2 ) \hat H - \delta_1 \delta_2 \hat H^2 \\
-\Rightarrow & \quad \delta_1 + \delta_2 = \delta \quad \land \quad \delta_1 \delta_2 = \frac{\delta}{2}\;.
+\Rightarrow & \quad \delta_1 + \delta_2 = \delta \quad \land \quad \delta_1 \delta_2 = \frac{\delta^2}{2}\;.
 \end{align}
 
 Two solutions are possible, one of them is
