@@ -82,6 +82,13 @@
   including dense, sparse, and symmetric tensors as well as specially 
   structured tensors, such as Tucker format,
   and others. Tensors can be manipulated using MATLAB's object-oriented features.
+
+* <a href="https://github.com/lanaperisa/TensorToolbox.jl">TensorToolbox.jl</a> (Julia)<br/>
+  Julia package for tensors. Includes functionality for dense tensors, and tensors in the Tucker,
+  Kruskal (CP), Hierarchical Tucker, and Tensor Train formats.
+  Follows the functionality of MATLAB Tensor toolbox and Hierarchical Tucker Toolbox.
+  Additionally, it contains algorithms from the paper Recompression of Hadamard Products of 
+  Tensors in Tucker Format by D. Kressner and L. Periša.
    
 * <a href="https://github.com/ValeevGroup/tiledarray">TiledArray</a> (C++)<br/>
   TiledArray is a massively-parallel, block-sparse tensor framework written in C++.
