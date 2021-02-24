@@ -111,7 +111,7 @@
   methods for solutions of linear systems and eigenvalue problems,
   and the TT-cross method.
   
-* <a href="http://yingjerkao.github.io/uni10/">Uni10</a> (C++)<br/>
+* <a href="https://gitlab.com/uni10/uni10/">Uni10</a> (C++)<br/>
   Universal Tensor Library, an open-source C++ library designed for 
   the development of tensor network algorithms. Provides a Network class to process 
   and store the details of the graphical representations of the networks,
