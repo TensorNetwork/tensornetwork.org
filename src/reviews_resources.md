@@ -17,7 +17,7 @@
    **Notes**: Friendly introduction to tensor networks for readers with a quantum physics background. Gives some overviews of basics of tensor network algorithms as well as more detailed descriptions of algorithms for one- and two-dimensional quantum systems.
 
 
-* **"Matrix product states, DMRG, and tensor networks"**
+* **"Matrix product states, DMRG, and tensor networks"** <br/>
   **Author**: Garnet Chan <br/>
   **<a href="https://www.youtube.com/watch?v=Q8bFmV6tHBs">Video Link 1</a>** <br/>
   **<a href="https://www.youtube.com/watch?v=s37tvvrjlto">Video Link 2</a>** <br/>
