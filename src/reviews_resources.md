@@ -29,6 +29,12 @@
 
 ### Technical Introductions or Review Articles
 
+* **"Efficient Numerical Simulations Using Matrix-Product States"**<br/>
+   **Authors**: Frank Pollmann<br/>
+   <a href="http://quantumtensor.pks.mpg.de/wp-content/uploads/2016/06/notes_1.pdf">Link to Notes</a><br/>
+   **Notes**: An introduction to matrix product state methods in physics building up to Trotter gate (TEBD) algorithms for time evolution and the infinite DMRG algorithm.
+
+
 * **"Matrix Product States and Projected Entangled Pair States: Concepts, Symmetries, and Theorems"**<br/>
    **Authors**: J. Ignacio Cira, David Perez-Garcia, Norbert Schuch, Frank Verstraete<br/>
    **Pre-print**: <a href="https://arxiv.org/abs/2011.12127">2011.12127</a><br/>
