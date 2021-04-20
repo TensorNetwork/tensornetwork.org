@@ -7,7 +7,7 @@
    **Notes:** Extensive introductory tutorials about tensor networks
    including working sample codes in MATLAB, python, and Julia.
 
-### Introductory Review Articles
+### Introductory Reviews
 
 * **"A Practical Introduction to Tensor Networks: Matrix Product States and 
    Projected Entangled Pair States"**<br/>
@@ -15,6 +15,15 @@
    **Pre-print**: <a href="https://arxiv.org/abs/1306.2164">1306.2164</a><br/>
    **Journal**: <a href="https://doi.org/10.1016/j.aop.2014.06.013">Annals of Physics 349 (2014) 117-158</a><br/>
    **Notes**: Friendly introduction to tensor networks for readers with a quantum physics background. Gives some overviews of basics of tensor network algorithms as well as more detailed descriptions of algorithms for one- and two-dimensional quantum systems.
+
+
+* **"Matrix product states, DMRG, and tensor networks"**
+  **Author**: Garnet Chan <br/>
+  **<a href="https://www.youtube.com/watch?v=Q8bFmV6tHBs">Video Link 1</a>** <br/>
+  **<a href="https://www.youtube.com/watch?v=s37tvvrjlto">Video Link 2</a>** <br/>
+  **Notes**: Accessible and gradual lectures introducing core tensor network concepts
+  and algorithms in physics and chemistry.
+
 
 * **"Tensor Networks for Big Data Analytics and Large-Scale Optimization Problems"**<br/>
    **Author**: Andrzej Cichocki <br/>
