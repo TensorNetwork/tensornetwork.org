@@ -51,11 +51,9 @@ As well as tensor contractions:
 
 ![large](tensor_contractions.png)
 
-In the first example above, the names of the indices are
+In some examples above, the names of the indices are
 notated on the diagram. But the other examples emphasize that this
-is optional. (Technically the second example is ambiguous about
-which index is $i$ and which is $k$, but in practice this ambiguity
-is rarely a problem, or when it is, the labels can be notated.)
+is optional.
 
 ## Identity Matrices
 
