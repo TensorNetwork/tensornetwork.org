@@ -91,6 +91,15 @@ Tensor diagram notation has many benefits compared to other notations:
   unpaired lines. For example, a tensor network with all lines joined, no
   matter how complicated, must result in a scalar.
 
+## Advanced, Extended, or Optional Diagram Notations
+
+- Notating contravariant versus covariant ("up and down") indices can be accomplished by putting ingoing or outgoing arrows onto index lines
+
+- Special kinds of tensors can be designated using shapes or decorations. For example, isometric tensors are often drawn as triangles in the physics literature, and unitary tensors as rectangles. Diagonal tensors can be notated by having a diagonal line slashing through the middle of the shape.
+
+- Hyper-edges or multiple indices which are "locked" together can be notated by introducing "Kronecker delta" or "spider" tensors, often notated by small black dots. These tensors can have an arbitrary number of indices, and have only diagonal element all equal to one.
+
+
 ## Other Resources
 
 The diagram notation used in the tensor network literature is relatively 
