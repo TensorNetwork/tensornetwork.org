@@ -45,11 +45,11 @@ Let us look at some example diagrams for familiar low-order tensors:
 
 And some examples of matrix-like contractions:
 
-![medium](sample_contractions.png)
+![large](sample_contractions.png)
 
 As well as tensor contractions:
 
-![medium](tensor_contractions.png)
+![large](tensor_contractions.png)
 
 In the first example above, the names of the indices are
 notated on the diagram. But the other examples emphasize that this
