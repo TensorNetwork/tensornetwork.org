@@ -2,7 +2,7 @@
 
 <!--TOC-->
 
-The density matrix renormalization group (DMRG)\cite{White:1992,White:1993den,Schollwoeck:2005}
+The density matrix renormalization group (DMRG)\cite{White:1992,White:1993den,Schollwoeck:2005,Schollwoeck:2011}
 is an adaptive algorithm for optimizing a [[matrix product state (MPS)|mps]] (or tensor train) 
 tensor network, such that after optimization, the MPS is approximately the dominant 
 eigenvector of a large matrix $H$.
