@@ -149,4 +149,4 @@
 
 ## Other Resources
 
-* Review article "The landscape of software for tensor computations" by Psarras et al.\cite{psarras2021landscape} surveying and loosely classifying existing tensor software.
+* Review article ["The landscape of software for tensor computations"](https://arxiv.org/abs/2103.13756) by Psarras et al.\cite{psarras2021landscape} surveying and partially classifying existing tensor software.
