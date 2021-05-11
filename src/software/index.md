@@ -147,3 +147,6 @@
 * <a href="https://github.com/devinamatthews/tblis">TBLIS</a> (C/C++)<br/>
   TBLIS is a contraction library for arbitrary (real-valued) tensors which uses a sophisticated permutation-free algorithm, avoiding the permutation overhead that would be incurred by a more naive permute and matrix-multiply algorithm.
 
+## Other Resources
+
+* Review article "The landscape of software for tensor computations" by Psarras et al.\cite{psarras2021landscape} surveying and loosely classifying existing tensor software.
