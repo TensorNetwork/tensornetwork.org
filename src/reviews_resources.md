@@ -93,8 +93,7 @@
 * **"Tensor Decompositions and Applications"**<br/>
   **Author:** T. G. Kolda, B. W. Bader<br/>
   **Journal**: <a href="https://doi.org/10.1137/090752286">SIAM Review, 51(3), 455-500 (2009)</a><br/>
-  **Notes**: Very readable article introducing the idea of the [[tensor-train decomposition|mps]] 
-  into the mathematics literature.
+  **Notes**: Great article introducing tensor basics and tensor decompositions.
   
 * **"Matrix Product State Representations"**<br/>
   **Authors:** D. Perez-Garcia, F. Verstraete, M.M. Wolf, J.I. Cirac<br/>
