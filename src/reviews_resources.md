@@ -92,7 +92,7 @@
   
 * **"Tensor Decompositions and Applications"**<br/>
   **Author:** T. G. Kolda, B. W. Bader<br/>
-  **Journal**: <a href="https://doi.org/10.1137/090752286">SIAM Review, 51(3), 455-500 (2009)</a><br/>
+  **Journal**: <a href="https://doi.org/10.1137/07070111X">SIAM Review, 51(3), 455-500 (2009)</a><br/>
   **Notes**: Great article introducing tensor basics and tensor decompositions.
   
 * **"Matrix Product State Representations"**<br/>
