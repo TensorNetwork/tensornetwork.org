@@ -21,7 +21,7 @@
   in modern C++ [C++11/14/17] with powerful in-built tensor algebraic functionalities 
   (tensor contraction, permutation, reductions, special tensor groups etc). 
 
-* <a href="https://itensor.org">ITensor</a> (C++, Julia)<br/>
+* <a href="https://itensor.org">ITensor</a> (Julia, C++)<br/>
   ITensor is a library for tensor networks where tensor indices carry extra information and matching tensor
   indices automatically contract. Also features MPS and MPO algorithms, such as DMRG, and quantum number block-sparse tensors.
 
@@ -42,13 +42,17 @@
 * <a href="https://susmost.com">SuSMoST</a><br/>
   SuSMoST (Surface Science Modelling and Simulation Toolkit) is meant to build and study classical lattice models of adsorption, such as Langmuir, Ising, Potts, or hard-core models. SuSMoST automatically builds a tensor network representation of a lattice model from samples of adsorption complexes. Several versions of the [[TRG|trg]] algorithm are implemented in SuSMoST. They can be used to compute the partition function and its derivatives for simulated lattice models.
 
-* <a href="https://syten.eu">SyTen</a><br/> (C++)
+* <a href="https://syten.eu">SyTen</a> (C++) <br/>
   A symmetry-protected tensor networks toolkit in C++,
   with a set of standard matrix-product state, binary tree-tensor network states 
   and infinite projected entangled pair state utilities included.
 
 * <a href="https://github.com/issp-center-dev/TeNeS">TeNeS</a> (C++)<br/>
-  TeNeS is a program package for calculating many-body quantum states on two-dimensional lattices based on iTPS (iPEPS). It can treat various spin and boson Hamiltonians through comprehensive input parameters, while we need a simple input format for predefined lattices and models. Furthermore, it supports MPI/OpenMP hybrid parallelization for supercomputers.
+  TeNeS is a package for calculating many-body quantum states on two-dimensional lattices based on iTPS (iPEPS). It can treat various spin and boson Hamiltonians through comprehensive input parameters, while we need a simple input format for predefined lattices and models. Furthermore, it supports MPI/OpenMP hybrid parallelization for supercomputers.
+
+* <a href="https://github.com/Jutho/TensorKit.jl">TensorKit</a> (Julia)<br/>
+  A Julia package for large-scale tensor computations, with a hint of category theory.
+  TensorKit.jl aims to be a generic package for working with tensors as they appear throughout the physical sciences. Currently, most effort is oriented towards tensors as they appear in the context of quantum many body physics and in particular the field of tensor networks. Such tensors often have large dimensions and take on a specific structure when symmetries are present. To deal with generic symmetries, we employ notations and concepts from category theory all the way down to the definition of a tensor. At the same time, TensorKit.jl focusses on computational efficiency and performance.
 
 * <a href="https://github.com/tenpy/tenpy">TenPy</a> (Python)<br/>
   Tensor Network Python (TeNPy) is a Python library for the simulation of 
