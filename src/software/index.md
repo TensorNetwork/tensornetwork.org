@@ -47,6 +47,9 @@
   with a set of standard matrix-product state, binary tree-tensor network states 
   and infinite projected entangled pair state utilities included.
 
+* <a href="https://github.com/issp-center-dev/TeNeS">TeNeS</a> (C++)<br/>
+  TeNeS is a program package for calculating many-body quantum states on two-dimensional lattices based on iTPS (iPEPS). It can treat various spin and boson Hamiltonians through comprehensive input parameters, while we need a simple input format for predefined lattices and models. Furthermore, it supports MPI/OpenMP hybrid parallelization for supercomputers.
+
 * <a href="https://github.com/tenpy/tenpy">TenPy</a> (Python)<br/>
   Tensor Network Python (TeNPy) is a Python library for the simulation of 
   quantum systems with tensor networks. The philosophy of this library is 
