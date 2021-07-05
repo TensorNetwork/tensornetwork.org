@@ -117,6 +117,12 @@
   **Notes:** Readable article with many details about [[MERA|mera]] tensor networks
   including strategies for optimizing them.
 
+* **"Algorithms for Tensor Network Renormalization"**<br/>
+  **Authors:** G. Evenbly<br/>
+  **Pre-print:** <a href="https://arxiv.org/abs/1509.07484">1509.07484</a><br/>
+  **Journal**: <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.95.045117">Phys. Rev. B 95, 045117</a><br/>
+  **Notes:** Tutorial article with details about optimization steps for isometric tensors and steps of the tensor network renormalization (TNR) algorithm.
+
 * **"Finite automata for caching in matrix product algorithms"**<br/>
   **Authors:** Gregory M. Crosswhite, Dave Bacon<br/>
   **Pre-print:** <a href="https://arxiv.org/abs/0708.1221">0708.1221</a><br/>
