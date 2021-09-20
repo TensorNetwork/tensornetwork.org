@@ -41,14 +41,5 @@ learning, and many other fields.
 <b>Applications of Tensor Networks</b>:
 
 - [[Quantum Physics|quantum_phys]]
+- [[Probability and Statistics|statistics]]
 
-
-
-<!--
-![medium](tensor_networks.png)
-Sections:
-- [[Fundamentals|fundamentals]]
-- [[Physics|physics]]
-- [[Mathematics|mathematics]]
-- [[Software|software]]
--->
