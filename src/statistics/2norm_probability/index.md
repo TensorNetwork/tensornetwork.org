@@ -133,13 +133,13 @@ Though both the standard (1-norm) and 2-norm probability formalisms may seem lik
 two different choices, or the 2-norm formalism slightly more cumbersome perhaps,
 there are intriguing tradeoffs that result from choosing one versus the other.
 
-Advantages of the 2-norm probability formalism:
+_Advantages of the 2-norm probability formalism_:
 * Conserved under unitary transformations (versus only stochastic transformations for 1-norm). Unitary transformations can be convenient for both analytical and numerical computations. For example, unitaries naturally arise from matrix factorizations like SVD and QR.
 * Parameters can be negative or even complex valued. This can offer flexibility for numerical computations. In contrast, the requirement of positivity for standard, 1-norm probabilities can be a serious numerical difficulty.
 * Because marginal probabilities are computing by squaring and contracting, or tracing, part of a tensor or tensor network, and because of the relationship to the unitary group, certain tensor networks such as [[matrix product states|mps]] can be brought into "canonical forms" where many of the tensors cancel out of certain computations.
 * Densities (2-norm analogues of marginals) contain off-diagonal elements which encode information about correlations with marginalized variables.
 
-Drawbacks of the 2-norm probability formalism:
+_Drawbacks of the 2-norm probability formalism_:
 * Because tensors occur twice in computations of probabilities or marginals, there can be a higher computational cost for computing certain quantities compared to standard, 1-norm probability.
 * Certain quantities like individual elements of densities can be hard to interpret. Extra quantities and concepts can occur which may not be welcome or necessary for many purposes.
 
