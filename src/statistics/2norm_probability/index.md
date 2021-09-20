@@ -18,14 +18,14 @@ we will just use the term "distribution".)
 ### Basic Formalism
 
 Consider a random variable $s$ taking one of $d$ values, that is
-$s=1,2,...,d$. To parameterize the probabilties of each of these outcomes, one associates
+$s=1,2,...,d$. To parameterize the probabilities of each of these outcomes, one associates
 numbers $\psi^s$ called *amplitudes* which can be positive, negative, or even complex.
 
 The only requirement of these amplitudes is that their squared magnitudes sum to one:
 @@
 \sum_{s=1}^d |\psi^s|^2 = 1
 @@
-Viewed as a vector $\vec{\psi}$, the amplitudes have unit norm under the 2-norm.
+Viewed as a vector $\vec{\psi}$, the amplitudes have unit norm under the Euclidean or 2-norm:
 
 ![medium](amp_vector.png)
 
@@ -135,7 +135,8 @@ there are intriguing tradeoffs that result from choosing one versus the other.
 
 _Advantages of the 2-norm probability formalism_:
 * Conserved under unitary transformations (versus only stochastic transformations for 1-norm). Unitary transformations can be convenient for both analytical and numerical computations. For example, unitaries naturally arise from matrix factorizations like SVD and QR.
-* Parameters can be negative or even complex valued. This can offer flexibility for numerical computations. In contrast, the requirement of positivity for standard, 1-norm probabilities can be a serious numerical difficulty.
+* Geometrically, the set of vectors which are admissible 2-norm amplitudes form a smooth sphere, versus in standard probability theory where normalized vectors form a multi-dimensional diamond which has flat sides and sharp corners.
+* Amplitude parameters can be negative or even complex valued. This can offer flexibility for numerical computations. In contrast, the requirement of positivity for standard, 1-norm probabilities can be a serious numerical difficulty.
 * Because marginal probabilities are computing by squaring and contracting, or tracing, part of a tensor or tensor network, and because of the relationship to the unitary group, certain tensor networks such as [[matrix product states|mps]] can be brought into "canonical forms" where many of the tensors cancel out of certain computations.
 * Densities (2-norm analogues of marginals) contain off-diagonal elements which encode information about correlations with marginalized variables.
 
