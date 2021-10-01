@@ -28,7 +28,7 @@ additional time-step error of this integrator.
 
 We begin by looking at the Lie-Trotter decomposition of the time-dependent Schrödinger equation 
 \begin{align} 
-i\frac{d}{dt}\ket{\psi} &= \hat{H}\ket{\psi} \equiv
+-i\frac{d}{dt}\ket{\psi} &= \hat{H}\ket{\psi} \equiv
 \sum_{\nu}\hat{H}_{\nu}\ket{\psi}\; .  
 \end{align} 
 The goal is to find a decomposition scheme $\hat H = \sum_{\nu} \hat H_{\nu}$ such that we
