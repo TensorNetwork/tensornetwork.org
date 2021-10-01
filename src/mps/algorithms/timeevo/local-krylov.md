@@ -26,11 +26,12 @@ particular, the error analysis presented here is also valid for the
 Runge-Kutta integrator, though one of course also has to include the
 additional time-step error of this integrator.
 
-We begin by looking at the Lie-Trotter decomposition of the
-time-dependent Schrödinger equation \begin{align} -\mathrm
+We begin by looking at the Lie-Trotter decomposition of the time-dependent Schrödinger equation 
+\begin{align} 
 i\frac{d}{dt}\ket{\psi} &= \hat{H}\ket{\psi} \equiv
-\sum_{\nu}\hat{H}_{\nu}\ket{\psi}\; .  \end{align} The goal is to find
-a decomposition scheme $\hat H = \sum_{\nu} \hat H_{\nu}$ such that we
+\sum_{\nu}\hat{H}_{\nu}\ket{\psi}\; .  
+\end{align} 
+The goal is to find a decomposition scheme $\hat H = \sum_{\nu} \hat H_{\nu}$ such that we
 can integrate each summand separately by taking advantage of the MPS
 representation of the state vector $\ket{\psi}$. Therefore we define
 orthogonal projectors $\hat{P}^{L,\ket{\psi}}_{j}$ and
