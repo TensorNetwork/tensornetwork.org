@@ -14,6 +14,7 @@ learning, and many other fields.
 
 - [[Tensor Diagram Notation|diagrams]]
 - [[Review Articles & Learning Resources|reviews_resources]]
+- [[Symmetries in Tensor Networks|symmetries]]
 
 <b>Types of Tensor Networks</b>:
 
