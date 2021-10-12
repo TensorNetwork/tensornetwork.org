@@ -26,9 +26,9 @@ loss of generality. Thus many of the elements of the tensor can be assumed to be
 and then are not stored in memory or explicitly used in computations, leading to significant
 gains in performance.
 
-For tensor networks which are symmetric undert non-Abelian groups such as $SU(2)$, 
+For tensor networks which are symmetric under non-Abelian groups such as $SU(2)$, 
 the consequences are similar but the internal structure of the tensors in the network can 
-be constrained to a much greater degree, yielding much larger (lossless) compression 
+be constrained to a greater degree, yielding much larger (lossless) compression 
 compared to the Abelian case. However, the non-Abelian case is much more technical to
 implement, so that some authors have published detailed discussions of the implementation
 of $SU(2)$ symmetries in code.\cite{Schmoll:2020,SinghSU2,Fledderjohann:2011}
