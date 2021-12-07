@@ -69,11 +69,15 @@ the TDSE, we obtain
 While an exact solution is still not possible, we can approximate it
 by solving each term individually and sequentially, i.e., solve $L$
 forward-evolving equations of the form
+
 \begin{align}
-  \frac{\partial}{\partial t}|\psi\rangle &= - \mathrm{i} \hat P_{j-1}^{L,\ket{\psi}} \otimes \mathbf{\hat 1}^{\vphantom{L\ket{\psi}}}_j \otimes \hat P_{j+1}^{R,\ket{\psi}} \hat H |\psi\rangle\label{eq:tdvp:fw}
-  \intertext{and $L-1$ backward-evolving equations of the form}
+  \frac{\partial}{\partial t}|\psi\rangle &= - \mathrm{i} \hat P_{j-1}^{L,\ket{\psi}} \otimes \mathbf{\hat 1}^{\vphantom{L\ket{\psi}}}_j \otimes \hat P_{j+1}^{R,\ket{\psi}} \hat H |\psi\rangle \label{eq:tdvp:fw}
+\end{align}
+and $L-1$ backward-evolving equations of the form
+\begin{align}
   \frac{\partial}{\partial t}|\psi\rangle &= + \mathrm{i} \hat P_{j}^{L,\ket{\psi}} \otimes \hat P_{j+1}^{R,\ket{\psi}} \hat H |\psi\rangle \;.\label{eq:tdvp:bw}
 \end{align}
+
 We then multiply each individual equation above by the single-site map
 $\bar{\psi}^L_{j-1} \otimes \bar{\psi}^R_{j+1}$ or the
 center-bond map $\bar{\psi}^L_{j} \otimes \bar{\psi}^R_{j+1}$,
