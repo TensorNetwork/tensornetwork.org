@@ -23,7 +23,7 @@ Please help to expand this list by submitting a pull request to the [tensornetwo
 - [Supervised Learning with Tensor Networks](https://proceedings.neurips.cc/paper/2016/file/5314b9674c86e3f9d1ba25ef9bb32895-Paper.pdf), E.M. Stoudenmire and David J. Schwab, Advances in Neural Information Processing Systems **29** (2016) \cite{NIPS2016_5314b967} <br/>
   _Proposes the use of tensor networks for supervised machine learning, emphasizing connections to the quantum physics literature including related algorithms for optimization. State of the art results are demonstrated for the MNIST handwriting dataset._
 
-- [From probabilistic graphical models to generalized tensor networks for supervised learning](https://arxiv.org/abs/1806.05964), Ivan Glasser, Nicola Pancotti, J. Ignacio Cirac, arxiv:1806.05964
+- [From probabilistic graphical models to generalized tensor networks for supervised learning](https://arxiv.org/abs/1806.05964), Ivan Glasser, Nicola Pancotti, J. Ignacio Cirac, arxiv:1806.05964 <br/>
   _Explores connections between tensor networks and graphical models. Proposes "generalized tensor network" architectures for machine learning, and explores learning of local feature maps._
 
 ### Unsupervised Learning
