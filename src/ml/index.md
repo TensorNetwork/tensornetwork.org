@@ -10,7 +10,10 @@ for tensor network machine learning is deploying and even training such models
 on quantum hardware.
 
 
-## Notable Works on Tensor Networks for Machine Learning
+## Selected Works on Tensor Networks for Machine Learning
+
+Influential or ground breaking works on theory, algorithms, or applications of tensor networks for machine learning.
+Please help to expand this list by submitting a pull request to the [tensornetwork.org](https://github.com/tensornetwork/tensornetwork.org) Github repository.
 
 ### Supervised Learning
 
@@ -33,10 +36,19 @@ on quantum hardware.
   _Explores the idea of representing a sequence of conditional probabilities as separate tensor networks to learn a full, or joint probability distribution._
 
 
+### Compression of Machine Learning Architectures 
+
+- [Tensorizing Neural Networks](), A. Novikov, D. Podoprikhin, A. Osokin, D. Vetrov, Advances in Neural Information Processing Systems **28** (2015) \cite{Tensorizing} <br/>
+  _Proposes the use of "quantized" tensor train matrix (matrix product operator) decompositions to achieve a massive compression of weights of a neural network layer with only a small impact to performance._
+
+
+
 ### Mathematical or Theoretical Works
 
 - [Expressive power of tensor-network factorizations for probabilistic modeling](https://papers.nips.cc/paper/2019/hash/b86e8d03fe992d1b0e19656875ee557c-Abstract.html), Ivan Glasser, Ryan Sweke, Nicola Pancotti, Jens Eisert, Ignacio Cirac, Advances in Neural Information Processing Systems **32** (2019) \cite{NEURIPS2019_b86e8d03} <br/>
   _Rigorously explores and compares the expressive power of various tensor network formats, parameterizations, and formalisms for using them to model complicated functions._
+
+- [Lower and Upper Bounds on the VC-Dimension of Tensor Network Models](https://arxiv.org/abs/2106.11827), Behnoush Khavari and Guillaume Rabusseau, arxiv:2106.11827  \cite{khavari2021lower}
 
 ### Language Modeling
 
