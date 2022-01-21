@@ -21,6 +21,14 @@
   in modern C++ [C++11/14/17] with powerful in-built tensor algebraic functionalities 
   (tensor contraction, permutation, reductions, special tensor groups etc). 
 
+* <a href="https://github.com/yhtang/FunFact">FunFact</a> (Python)<br/>
+  FunFact enables flexible and concise expressions of tensor algebra through a hybrid
+  NumPy/Einstein notation-based syntax. A particular emphasis is on automating the design
+  of matrix and tensor factorization models. It’s areas of applications include quantum
+  circuit synthesis, tensor decomposition, and neural network compression. FunFact is
+  GPU-ready and easily parallizable thanks to the modern linear algebra backends such as
+  JAX/TensorFlow and PyTorch that it builds on top of.
+
 * <a href="https://itensor.org">ITensor</a> (Julia, C++)<br/>
   ITensor is a library for tensor networks where tensor indices carry extra information and matching tensor
   indices automatically contract. Also features MPS and MPO algorithms, such as DMRG, and quantum number block-sparse tensors.
