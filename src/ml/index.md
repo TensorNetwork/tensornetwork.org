@@ -45,10 +45,13 @@ Please help to expand this list by submitting a pull request to the [tensornetwo
 
 ### Mathematical or Theoretical Works
 
+- [Probabilistic Graphical Models and Tensor Networks: A Hybrid Framework](https://arxiv.org/abs/2106.15666), Jacob Miller, Geoffrey Roeder, Tai-Danae Bradley, arxiv:2106.15666  \cite{}
+
+- [Lower and Upper Bounds on the VC-Dimension of Tensor Network Models](https://arxiv.org/abs/2106.11827), Behnoush Khavari and Guillaume Rabusseau, arxiv:2106.11827  \cite{khavari2021lower}
+
 - [Expressive power of tensor-network factorizations for probabilistic modeling](https://papers.nips.cc/paper/2019/hash/b86e8d03fe992d1b0e19656875ee557c-Abstract.html), Ivan Glasser, Ryan Sweke, Nicola Pancotti, Jens Eisert, Ignacio Cirac, Advances in Neural Information Processing Systems **32** (2019) \cite{NEURIPS2019_b86e8d03} <br/>
   _Rigorously explores and compares the expressive power of various tensor network formats, parameterizations, and formalisms for using them to model complicated functions._
 
-- [Lower and Upper Bounds on the VC-Dimension of Tensor Network Models](https://arxiv.org/abs/2106.11827), Behnoush Khavari and Guillaume Rabusseau, arxiv:2106.11827  \cite{khavari2021lower}
 
 ### Language Modeling
 
