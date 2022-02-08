@@ -31,8 +31,6 @@ Works are listed in reverse chronological order within each section.
 
 ### Unsupervised Learning
 
-- [A block-sparse Tensor Train Format for sample-efficient high-dimensional Polynomial Regression](https://arxiv.org/abs/2104.14255), Michael Götte, Reinhold Schneider, Philipp Trunschke, arxiv:2104.14255 \cite{Gotte_BS_TT}
-
 - [Tensor networks for unsupervised machine learning](https://arxiv.org/abs/2106.12974), Jing Liu, Sujie Li, Jiang Zhang, Pan Zhang, arxiv:2106.12974 <br/>
   _Explores the idea of representing a sequence of conditional probabilities as separate tensor networks to learn a full, or joint probability distribution._
 
@@ -49,6 +47,8 @@ Works are listed in reverse chronological order within each section.
 
 
 ### Mathematical or Theoretical Works
+
+- [A block-sparse Tensor Train Format for sample-efficient high-dimensional Polynomial Regression](https://arxiv.org/abs/2104.14255), Michael Goette, Reinhold Schneider, Philipp Trunschke, arxiv:2104.14255 \cite{Gotte_BS_TT}
 
 - [Probabilistic Graphical Models and Tensor Networks: A Hybrid Framework](https://arxiv.org/abs/2106.15666), Jacob Miller, Geoffrey Roeder, Tai-Danae Bradley, arxiv:2106.15666  \cite{Miller_Prob}
 
