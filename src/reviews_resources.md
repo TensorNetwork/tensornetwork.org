@@ -17,13 +17,13 @@
    **Notes**: Friendly introduction to tensor networks for readers with a quantum physics background. Gives some overviews of basics of tensor network algorithms as well as more detailed descriptions of algorithms for one- and two-dimensional quantum systems.
 
 
+
 * **"Matrix product states, DMRG, and tensor networks"** <br/>
   **Author**: Garnet Chan <br/>
   **<a href="https://www.youtube.com/watch?v=Q8bFmV6tHBs">Video Link 1</a>** <br/>
   **<a href="https://www.youtube.com/watch?v=s37tvvrjlto">Video Link 2</a>** <br/>
   **Notes**: Accessible and gradual lectures introducing core tensor network concepts
   and algorithms in physics and chemistry.
-
 
 * **"Tensor Networks for Big Data Analytics and Large-Scale Optimization Problems"**<br/>
    **Author**: Andrzej Cichocki <br/>
@@ -37,6 +37,11 @@
    **Notes**: For those with a quantum information background, this is a very friendly and readable introduction to tensor networks and tensor diagram notation.
 
 ### Technical Introductions or Review Articles
+
+* **"A Practical Guide to the Numerical Implementation of Tensor Networks I: Contractions, Decompositions and Gauge Freedom"**<br/>
+   **Author**: Glen Evenbly <br/>
+   **Pre-print**: <a href="https://arxiv.org/abs/2202.02138">2202.02138</a><br/>
+   **Notes**: Presents an overview of the key ideas and skills necessary to begin implementing tensor network methods numerically, which is intended to facilitate the practical application of tensor network methods for researchers that are already versed with their theoretical foundations. These skills include an introduction to the contraction of tensor networks, to optimal tensor decompositions, and to the manipulation of gauge degrees of freedom in tensor networks. 
 
 * **"Efficient Numerical Simulations Using Matrix-Product States"**<br/>
    **Authors**: Frank Pollmann<br/>
