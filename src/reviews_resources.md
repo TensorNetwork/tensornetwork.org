@@ -16,6 +16,11 @@
    **Journal**: <a href="https://doi.org/10.1016/j.aop.2014.06.013">Annals of Physics 349 (2014) 117-158</a><br/>
    **Notes**: Friendly introduction to tensor networks for readers with a quantum physics background. Gives some overviews of basics of tensor network algorithms as well as more detailed descriptions of algorithms for one- and two-dimensional quantum systems.
 
+* **"Tensor networks for complex quantum systems"**<br/>
+   **Author**: Roman Orus <br/>
+   **Pre-print**: <a href="https://arxiv.org/abs/1812.04011">1812.04011</a><br/>
+   **Journal**: <a href="https://www.nature.com/articles/s42254-019-0086-7">Nature Reviews Physics volume 1, pages 538–550 (2019)</a><br/>
+   **Notes**: Accessible review of tensor networks, focusing on more recent developments and the growing role of tensor networks in other areas beyond their origin in condensed matter quantum physics.
 
 
 * **"Matrix product states, DMRG, and tensor networks"** <br/>
