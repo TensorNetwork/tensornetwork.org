@@ -38,6 +38,16 @@ Works are listed in reverse chronological order within each section.
 
 - [Unsupervised Generative Modeling Using Matrix Product States](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.8.031012), Zhao-Yu Han, Jun Wang, Heng Fan, Lei Wang, and Pan Zhang, Phys. Rev. X 8, 031012 (2018). \cite{PhysRevX.8.031012}
 
+### Optimization Methods (Gradient Free)
+
+- [Deterministic Tensor Network Classifiers](https://arxiv.org/abs/2205.09768), L. Wright, F. Barratt, J. Dborin, V. Wimalaweera, B. Coyle, A. G. Green, arxiv:2205.09768 (2022)
+
+- [Data compression for quantum machine learning](https://arxiv.org/abs/2204.11170), Rohit Dilip, Yu-Jie Liu, Adam Smith, Frank Pollmann, arxiv:2204.11170 (2022)
+
+- [Generative modeling via tensor train sketching](https://arxiv.org/abs/2202.11788), Y. Hur, J. G. Hoskins, M. Lindsey, E.M. Stoudenmire, Y. Khoo, arxiv:2202.11788 (2022)
+
+- [Modeling sequences with quantum states: a look under the hood](https://iopscience.iop.org/article/10.1088/2632-2153/ab8731), Tai-Danae Bradley, E M Stoudenmire, and John Terilla, _Machine Learning: Science and Technology_, **1** 035008 (2020) \cite{Bradley_2020}
+
 
 ### Compression of Machine Learning Architectures 
 
