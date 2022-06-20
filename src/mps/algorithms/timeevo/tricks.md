@@ -96,10 +96,16 @@ Two solutions are possible, one of them is
 Choosing these values for $\delta_{1,2}$ then results in a third-order
 error per time step and a second-order error overall. This choice of
 time steps is suggested in particular in combination with the MPO
-\wiii method to obtain a better error per time step. The cost of the
+$\W^{II}$ method to obtain a better error per time step. The cost of the
 method only grows linearly with the number of evolution operators and,
 e.g., four operators $\hat U^\prime(\delta_{1,2,3,4})$ are required
-for a third-order error \cite{zaletel15:_time}.
+for a third-order error \cite{zaletel15:_time}. Four steps for the third-order approximation have an algebraic form
+
+\begin{align}
+  \delta_1 = \frac{1}{4}\left( -\frac{1+i}{\sqrt{3}}+1-i \right)\delta \quad \land \quad \delta_2 = i\delta_1 \quad \land \quad \delta_3 = -i \bar \delta_1 \quad \land \quad \delta_4 = \bar \delta_1,
+\end{align}
+
+a fourth-order approximation requires 7 steps\cite{bidzh17}. 
 
 The drawback is the loss of unitarity at each individual time step
 which may be disadvantageous. Furthermore, if the time evolution is
