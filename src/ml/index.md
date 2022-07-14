@@ -31,6 +31,12 @@ Works are listed in reverse chronological order within each section.
 
 ### Unsupervised Learning
 
+- [Quantum state tomography with tensor train cross approximation](https://arxiv.org/abs/2207.06397), Alexander Lidiak, Casey Jameson, Zhen Qin, Gongguo Tang, Michael B. Wakin, Zhihui Zhu, Zhexuan Gong, arxiv:2207.06397 <br/>
+  _Learning a quantum wavefunction from samples taken in different bases using the tensor train cross approximation algorithm_
+
+- [Learning Feynman Diagrams with Tensor Trains](https://arxiv.org/abs/2207.06135), Yuriel Nunez-Fernandez, Matthieu Jeannin, Philipp T. Dumitrescu, Thomas Kloss, Jason Kaye, Olivier Parcollet, Xavier Waintal, arxiv:2207.06135 <br/>
+  _Learning of complicated functions occurring in series expansion methods (perturbation theory) used in quantum physics. After "actively" learning these high-dimensional functions using the cross approximation, they can be integrated very efficiently._
+
 - [Tensor networks for unsupervised machine learning](https://arxiv.org/abs/2106.12974), Jing Liu, Sujie Li, Jiang Zhang, Pan Zhang, arxiv:2106.12974 <br/>
   _Explores the idea of representing a sequence of conditional probabilities as separate tensor networks to learn a full, or joint probability distribution._
 
@@ -47,6 +53,19 @@ Works are listed in reverse chronological order within each section.
 - [Generative modeling via tensor train sketching](https://arxiv.org/abs/2202.11788), Y. Hur, J. G. Hoskins, M. Lindsey, E.M. Stoudenmire, Y. Khoo, arxiv:2202.11788 (2022)
 
 - [Modeling sequences with quantum states: a look under the hood](https://iopscience.iop.org/article/10.1088/2632-2153/ab8731), Tai-Danae Bradley, E M Stoudenmire, and John Terilla, _Machine Learning: Science and Technology_, **1** 035008 (2020) \cite{Bradley_2020}
+
+
+### Implementation on Quantum Computers (Quantum Machine Learning)
+
+- [Deterministic Tensor Network Classifiers](https://arxiv.org/abs/2205.09768), L. Wright, F. Barratt, J. Dborin, V. Wimalaweera, B. Coyle, A. G. Green, arxiv:2205.09768
+
+- [Data compression for quantum machine learning](https://arxiv.org/abs/2204.11170), Rohit Dilip, Yu-Jie Liu, Adam Smith, Frank Pollmann, arxiv:2204.11170
+
+- [Matrix Product State Pre-Training for Quantum Machine Learning](https://arxiv.org/abs/2106.05742), James Dborin, Fergus Barratt, Vinul Wimalaweera, Lewis Wright, Andrew G. Green, arxiv:2106.05742
+
+- [Hierarchical quantum classifiers](https://arxiv.org/abs/1804.03680), Edward Grant, Marcello Benedetti, Shuxiang Cao, Andrew Hallam, Joshua Lockhart, Vid Stojevic, Andrew G. Green, Simone Severini, arxiv:1804.03680
+
+- [Towards Quantum Machine Learning with Tensor Networks](https://arxiv.org/abs/1803.11537), William Huggins, Piyush Patel, K. Birgitta Whaley, E. Miles Stoudenmire, arxiv:1803.11537
 
 
 ### Compression of Neural Networks
