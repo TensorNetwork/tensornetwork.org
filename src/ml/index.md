@@ -46,9 +46,14 @@ Works are listed in reverse chronological order within each section.
 
 ### Optimization Methods (Gradient Free)
 
-- [Generative modeling via tensor train sketching](https://arxiv.org/abs/2202.11788), Y. Hur, J. G. Hoskins, M. Lindsey, E.M. Stoudenmire, Y. Khoo, arxiv:2202.11788 (2022)
+- [Distributive Pre-training of Generative Modeling Using Matrix Product States](https://tensorworkshop.github.io/NeurIPS2021/accepted_papers/MPS_MNIST.pdf), Sheng-Hsuan Lin, Olivier Kuijpers, Sebastian Peterhansl, Frank Pollmann <br/>
+  _Summation of MPS representations of data as a pre-training or initialization technique_
 
-- [Modeling sequences with quantum states: a look under the hood](https://iopscience.iop.org/article/10.1088/2632-2153/ab8731), Tai-Danae Bradley, E M Stoudenmire, and John Terilla, _Machine Learning: Science and Technology_, **1** 035008 (2020) \cite{Bradley_2020}
+- [Generative modeling via tensor train sketching](https://arxiv.org/abs/2202.11788), Y. Hur, J. G. Hoskins, M. Lindsey, E.M. Stoudenmire, Y. Khoo, arxiv:2202.11788 (2022) <br/>
+  _Deterministic algorithm for learning of probability distributions and other functions based on sequential, sketched matrix factorizations_
+
+- [Modeling sequences with quantum states: a look under the hood](https://iopscience.iop.org/article/10.1088/2632-2153/ab8731), Tai-Danae Bradley, E M Stoudenmire, and John Terilla, _Machine Learning: Science and Technology_, **1** 035008 (2020) \cite{Bradley_2020} <br/>
+  _Deterministic algorithm for learning "Born rule" distributions based on forming and diagonalizing density matrices_
 
 
 ### Implementation on Quantum Computers (Quantum Machine Learning)
