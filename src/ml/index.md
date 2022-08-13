@@ -37,6 +37,8 @@ Works are listed in reverse chronological order within each section.
 - [Learning Feynman Diagrams with Tensor Trains](https://arxiv.org/abs/2207.06135), Yuriel Nunez-Fernandez, Matthieu Jeannin, Philipp T. Dumitrescu, Thomas Kloss, Jason Kaye, Olivier Parcollet, Xavier Waintal, arxiv:2207.06135 <br/>
   _Learning of complicated functions occurring in series expansion methods (perturbation theory) used in quantum physics. After "actively" learning these high-dimensional functions using the cross approximation, they can be integrated very efficiently._
 
+- [Generative modeling with projected entangled-pair states](https://arxiv.org/abs/2202.08177), Tom Vieijra, Laurens Vanderstraeten, Frank Verstraete, arxiv:2202.08177
+
 - [Tensor networks for unsupervised machine learning](https://arxiv.org/abs/2106.12974), Jing Liu, Sujie Li, Jiang Zhang, Pan Zhang, arxiv:2106.12974 <br/>
   _Explores the idea of representing a sequence of conditional probabilities as separate tensor networks to learn a full, or joint probability distribution._
 
