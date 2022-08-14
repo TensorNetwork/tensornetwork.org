@@ -78,7 +78,9 @@ Tensor diagram notation has many benefits compared to other notations:
   can be expressed simply without extra notation.
 
   * Placing tensors next to each other denotes a tensor/outer product.
+    ![medium](outer_product.png)
   * Connecting two index lines of the same tensor corresponds to a trace.
+    ![medium](trace.png)
   * Connecting index lines of different tensors denotes a tensor contraction.
 
 - Names of indices and tensors can often be omitted. This saves
