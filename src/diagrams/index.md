@@ -1,6 +1,6 @@
 # Tensor Diagram Notation
 
-Tensor diagram notation\cite{Penrose:1971} is a simple, yet powerful
+Tensor diagram notation\cite{Penrose:1971,Math3ma} is a simple, yet powerful
 graphical notation for networks of contracted tensors.
 
 A tensor contraction of the form $\sum_j M_{ij} N_{jkl}$ can be notated 
