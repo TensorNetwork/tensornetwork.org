@@ -16,8 +16,8 @@ the Einstein summation convention for notating tensor contractions.
 
 There are two hard-and-fast rules of tensor diagrams:
 
-1. Tensors are notated by solid shapes, and tensor indices
-   are notated by lines emanating from these shapes.
+1. Tensors are notated by shapes (usually filled or shaded), 
+   and tensor indices are notated by lines emanating from these shapes.
 
 2. Connecting two index lines implies a contraction, or summation
    over the connected indices.
