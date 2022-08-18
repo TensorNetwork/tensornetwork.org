@@ -44,6 +44,9 @@ Works are listed in reverse chronological order within each section.
 
 - [Tree tensor networks for generative modeling](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.99.155131), Song Cheng, Lei Wang, Tao Xiang, and Pan Zhang. Phys. Rev. B 99, 155131 (2019). \cite{PhysRevB.99.155131}
 
+- [Learning relevant features of data with multi-scale tensor networks](https://iopscience.iop.org/article/10.1088/2058-9565/aaba1a/meta), E.M. Stoudenmire, Quant. Sci. Tech. 3, 034003 (2018). [arxiv:1801.00315] \cite{MultiScale} <br/>
+  _Uses a recursive tree tensor network algorithm to determine a reduced set of features from data_
+
 - [Unsupervised Generative Modeling Using Matrix Product States](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.8.031012), Zhao-Yu Han, Jun Wang, Heng Fan, Lei Wang, and Pan Zhang, Phys. Rev. X 8, 031012 (2018). \cite{PhysRevX.8.031012}
 
 ### Optimization Methods (Gradient Free)
