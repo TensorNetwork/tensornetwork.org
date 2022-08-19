@@ -19,6 +19,9 @@ Works are listed in reverse chronological order within each section.
 
 ### Supervised Learning
 
+- [Interaction Decompositions for Tensor Network Regression](https://arxiv.org/abs/2208.06029), Ian Convy, K. Birgitta Whaley, arxiv:2208.06029 <br/>
+  _Analyzes the contributions of polynomial terms of various degrees to the supervised learning performance of tensor network architectures._
+
 - [From probabilistic graphical models to generalized tensor networks for supervised learning](https://arxiv.org/abs/1806.05964), Ivan Glasser, Nicola Pancotti, J. Ignacio Cirac, arxiv:1806.05964 <br/>
   _Explores connections between tensor networks and graphical models. Proposes "generalized tensor network" architectures for machine learning, and explores learning of local feature maps._
 
