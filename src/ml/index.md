@@ -52,16 +52,12 @@ Works are listed in reverse chronological order within each section.
 
 - [Unsupervised Generative Modeling Using Matrix Product States](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.8.031012), Zhao-Yu Han, Jun Wang, Heng Fan, Lei Wang, and Pan Zhang, Phys. Rev. X 8, 031012 (2018). \cite{PhysRevX.8.031012}
 
-### Optimization Methods (Gradient Free)
+### Reinforcement Learning
 
-- [Distributive Pre-training of Generative Modeling Using Matrix Product States](https://tensorworkshop.github.io/NeurIPS2021/accepted_papers/MPS_MNIST.pdf), Sheng-Hsuan Lin, Olivier Kuijpers, Sebastian Peterhansl, Frank Pollmann <br/>
-  _Summation of MPS representations of data as a pre-training or initialization technique_
+- [Learning Generative Models for Active Inference using Tensor Networks](https://arxiv.org/abs/2208.08713), Samuel T. Wauthier, Bram Vanhecke, Tim Verbelen, Bart Dhoedt, arxiv:2208.08713
 
-- [Generative modeling via tensor train sketching](https://arxiv.org/abs/2202.11788), Y. Hur, J. G. Hoskins, M. Lindsey, E.M. Stoudenmire, Y. Khoo, arxiv:2202.11788 (2022) <br/>
-  _Deterministic algorithm for learning of probability distributions and other functions based on sequential, sketched matrix factorizations_
-
-- [Modeling sequences with quantum states: a look under the hood](https://iopscience.iop.org/article/10.1088/2632-2153/ab8731), Tai-Danae Bradley, E M Stoudenmire, and John Terilla, _Machine Learning: Science and Technology_, **1** 035008 (2020) \cite{Bradley_2020} <br/>
-  _Deterministic algorithm for learning "Born rule" distributions based on forming and diagonalizing density matrices_
+- [Self-Correcting Quantum Many-Body Control using Reinforcement Learning with Tensor Networks](https://arxiv.org/abs/2201.11790), Friederike Metz, Marin Bukov, arxiv:2201.11790
+  _Takes advantage of the ability of tensor networks to represent quantum many-body wavefunctions to parameterize a reinforcement learning architecture for control of quantum systems._
 
 
 ### Implementation on Quantum Computers (Quantum Machine Learning)
@@ -75,6 +71,19 @@ Works are listed in reverse chronological order within each section.
 - [Hierarchical quantum classifiers](https://arxiv.org/abs/1804.03680), Edward Grant, Marcello Benedetti, Shuxiang Cao, Andrew Hallam, Joshua Lockhart, Vid Stojevic, Andrew G. Green, Simone Severini, arxiv:1804.03680
 
 - [Towards Quantum Machine Learning with Tensor Networks](https://arxiv.org/abs/1803.11537), William Huggins, Piyush Patel, K. Birgitta Whaley, E. Miles Stoudenmire, arxiv:1803.11537
+
+
+### Optimization Methods (Gradient Free)
+
+- [Distributive Pre-training of Generative Modeling Using Matrix Product States](https://tensorworkshop.github.io/NeurIPS2021/accepted_papers/MPS_MNIST.pdf), Sheng-Hsuan Lin, Olivier Kuijpers, Sebastian Peterhansl, Frank Pollmann <br/>
+  _Summation of MPS representations of data as a pre-training or initialization technique_
+
+- [Generative modeling via tensor train sketching](https://arxiv.org/abs/2202.11788), Y. Hur, J. G. Hoskins, M. Lindsey, E.M. Stoudenmire, Y. Khoo, arxiv:2202.11788 (2022) <br/>
+  _Deterministic algorithm for learning of probability distributions and other functions based on sequential, sketched matrix factorizations_
+
+- [Modeling sequences with quantum states: a look under the hood](https://iopscience.iop.org/article/10.1088/2632-2153/ab8731), Tai-Danae Bradley, E M Stoudenmire, and John Terilla, _Machine Learning: Science and Technology_, **1** 035008 (2020) \cite{Bradley_2020} <br/>
+  _Deterministic algorithm for learning "Born rule" distributions based on forming and diagonalizing density matrices_
+
 
 
 ### Compression of Neural Networks
