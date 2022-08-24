@@ -4,6 +4,10 @@
 
 This site is a resource for tensor network algorithms, theory, and software.
 
+The entire site is editable - just clone the source, edit the Markdown content,
+and send a pull request on Github.
+Please click the Contribute tab above for more information.
+
 Tensor networks are factorizations of very large tensors
 into networks of smaller tensors, 
 with applications in applied mathematics, chemistry, physics, machine
