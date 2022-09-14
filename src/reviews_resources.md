@@ -94,6 +94,11 @@
 
 ### Selected Original Literature
 
+* **"O(d log(n))-Quantics Approximation of Nd tensors in High-Dimensional Numerical Modeling"**<br/>
+  **Author:** Boris N. Khoromskij<br/>
+  **Journal**: <a href="https://doi.org/10.1007/s00365-011-9131-1">Constr Approx 34, 257–280 (2011)</a><br/>
+  **Notes**: Introduces the quantics, or quantized tensor train (QTT) format for representing functions as [[tensor trains or matrix product states|mps]].
+
 * **"Tensor-Train Decomposition"**<br/>
   **Author:** Ivan Oseledets<br/>
   **Journal**: <a href="https://doi.org/10.1137/090752286">SIAM J. Sci. Comput., 33(5), 2295 (2011)</a><br/>
