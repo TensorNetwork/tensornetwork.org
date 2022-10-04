@@ -104,11 +104,17 @@
   **Journal**: <a href="https://doi.org/10.1137/090752286">SIAM J. Sci. Comput., 33(5), 2295 (2011)</a><br/>
   **Notes**: Very readable article introducing the idea of the [[tensor-train decomposition|mps]] 
   into the mathematics literature.
+
+* **"Matrix Product Operator Representations"**<br/>
+  **Authors:** B. Pirvu and V. Murg and J.I. Cirac and F. Verstraete<br/>
+  **Pre-print**: <a href="https://arxiv.org/abs/0804.3976">arXiv:0804.3976</a><br/>
+  **Journal**: New J. Phys. 12 025012 (2010)<br/>
+  **Notes**: Discusses various exact or controlled constructions of MPOs and PEPS, including long-range correlations or interactions.
   
 * **"Tensor Decompositions and Applications"**<br/>
   **Author:** T. G. Kolda, B. W. Bader<br/>
   **Journal**: <a href="https://doi.org/10.1137/07070111X">SIAM Review, 51(3), 455-500 (2009)</a><br/>
-  **Notes**: Great article introducing tensor basics and tensor decompositions.
+  **Notes**: Review article introducing tensor basics and tensor decompositions.
   
 * **"Matrix Product State Representations"**<br/>
   **Authors:** D. Perez-Garcia, F. Verstraete, M.M. Wolf, J.I. Cirac<br/>
