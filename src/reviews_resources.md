@@ -158,3 +158,9 @@
   **Journal**: <a href="https://doi.org/10.1088/1742-5468/2007/10/p10014">J. Stat. Mech.: Theory and Experiment 10, P10014 (2007)</a><br/>
   **Notes:** Describes the "calculus" of matrix product states, the structure of matrix product states and opearators, and how the DMRG algorithm can be formulated in terms of tensor networks.
 
+* **"Thermodynamic Limit of Density Matrix Renormalization"**<br/>
+  **Authors:** Stellan Ostlund and Stefan Rommer<br/>
+  **Pre-print:** <a href="https://arxiv.org/abs/cond-mat/9503107">cond-mat/9503107</a><br/>
+  **Journal**: <a href=""https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.75.3537>Phys. Rev. Lett. 75, 3537 (1995)</a><br/>
+  **Notes:** Explains how the format of the wavefunction found by the density matrix renormalization group (DMRG) algorithm can be understood as a matrix product state (MPS) tensor network.
+
