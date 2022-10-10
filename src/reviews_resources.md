@@ -161,6 +161,6 @@
 * **"Thermodynamic Limit of Density Matrix Renormalization"**<br/>
   **Authors:** Stellan Ostlund and Stefan Rommer<br/>
   **Pre-print:** <a href="https://arxiv.org/abs/cond-mat/9503107">cond-mat/9503107</a><br/>
-  **Journal**: <a href=""https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.75.3537>Phys. Rev. Lett. 75, 3537 (1995)</a><br/>
+  **Journal**: <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.75.3537">Phys. Rev. Lett. 75, 3537 (1995)</a><br/>
   **Notes:** Explains how the format of the wavefunction found by the density matrix renormalization group (DMRG) algorithm can be understood as a matrix product state (MPS) tensor network.
 
