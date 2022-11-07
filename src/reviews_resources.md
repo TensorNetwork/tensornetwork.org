@@ -158,6 +158,18 @@
   **Journal**: <a href="https://doi.org/10.1088/1742-5468/2007/10/p10014">J. Stat. Mech.: Theory and Experiment 10, P10014 (2007)</a><br/>
   **Notes:** Describes the "calculus" of matrix product states, the structure of matrix product states and opearators, and how the DMRG algorithm can be formulated in terms of tensor networks.
 
+* **"Classical Simulation of Infinite-Size Quantum Lattice Systems in One Spatial Dimension"**<br/>
+  **Authors:** Guifre Vidal<br/>
+  **Pre-print:** <a href="https://arxiv.org/abs/cond-mat/0605597">cond-mat/0605597</a><br/>
+  **Journal**: <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.98.070201">Phys. Rev. Lett. 98, 070201 (2007)</a><br/>
+  **Notes:** Extends the TEBD algorithm to infinite (translationally-invariant) systems.
+
+* **"Efficient Classical Simulation of Slightly Entangled Quantum Computations"**<br/>
+  **Authors:** Guifre Vidal<br/>
+  **Pre-print:** <a href="https://arxiv.org/abs/quant-ph/0301063">quant-ph/0301063</a><br/>
+  **Journal**: <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.91.147902">Phys. Rev. Lett. 91, 147902 (2003)</a><br/>
+  **Notes:** Proposes the "time-evolving block decimation" (TEBD) algorithm for applying a quantum circuit to a matrix product state tensor network, allowing a wide class of circuits to be classically simulated.
+
 * **"Thermodynamic Limit of Density Matrix Renormalization"**<br/>
   **Authors:** Stellan Ostlund and Stefan Rommer<br/>
   **Pre-print:** <a href="https://arxiv.org/abs/cond-mat/9503107">cond-mat/9503107</a><br/>
