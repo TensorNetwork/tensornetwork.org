@@ -53,6 +53,12 @@
    <a href="http://quantumtensor.pks.mpg.de/wp-content/uploads/2016/06/notes_1.pdf">Link to Notes</a><br/>
    **Notes**: An introduction to matrix product state methods in physics building up to Trotter gate (TEBD) algorithms for time evolution and the infinite DMRG algorithm.
 
+* **"Tangent-space methods for uniform matrix product states"**<br/>
+   **Authors**: Laurens Vanderstraeten, Jutho Haegeman, Frank Verstraete<br/>
+   **Pre-print**: <a href="https://arxiv.org/abs/1810.07006">1810.07006</a><br/>
+   **Journal Article**: <a href="https://scipost.org/10.21468/SciPostPhysLectNotes.7">SciPost Phys. Lect. Notes 7 (2019)</a><br/>
+   **Notes**: Overview of the concept of tangent spaces to MPS, methods for optimizing uniform (infinite) MPS, and finding excited states (sub-dominant eigenvectors) using tangent space methods.
+
 
 * **"Matrix Product States and Projected Entangled Pair States: Concepts, Symmetries, and Theorems"**<br/>
    **Authors**: J. Ignacio Cira, David Perez-Garcia, Norbert Schuch, Frank Verstraete<br/>
@@ -143,6 +149,12 @@
   **Pre-print:** <a href="https://arxiv.org/abs/1509.07484">1509.07484</a><br/>
   **Journal**: <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.95.045117">Phys. Rev. B 95, 045117</a><br/>
   **Notes:** Tutorial article with details about optimization steps for isometric tensors and steps of the tensor network renormalization (TNR) algorithm.
+
+* **"Tensor Network States and Geometry"**<br/>
+  **Authors:** G. Evenbly, G. Vidal<br/>
+  **Pre-print:** <a href="https://arxiv.org/abs/1106.1082">1106.1082</a><br/>
+  **Journal**: <a href="https://doi.org/10.1007/s10955-011-0237-4">J Stat Phys (2011) 145:891-918</a><br/>
+  **Notes:** Discusses scaling of entanglement in different families of tensor networks and how it relates to their emergent, or holographic, geometries. Contains useful facts about how entanglement scales for various classes of quantum states in different spatial dimensions.
 
 * **"Finite automata for caching in matrix product algorithms"**<br/>
   **Authors:** Gregory M. Crosswhite, Dave Bacon<br/>
