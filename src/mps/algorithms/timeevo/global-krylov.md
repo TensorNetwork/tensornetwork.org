@@ -156,7 +156,7 @@ $10$.
 
 ## Algorithm
 
-The main input of the Krylvo method are the Hamiltonian $\hat H$, the
+The main input of the Krylov method are the Hamiltonian $\hat H$, the
 initial state $\ket{\psi(0)}$ and the (possibly complex) time
 step. Additionally, a procedure `APPLY-ORTHONORMALIZE` is needed,
 which in turn requires the operator-state product and the
