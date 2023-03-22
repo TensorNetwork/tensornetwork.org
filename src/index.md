@@ -49,6 +49,7 @@ learning, and many other fields.
 - [[Machine Learning|ml]]
 - [[Probability and Statistics|statistics]]
 - [[Quantum Physics|quantum_phys]]
+- [[Out-of-equilibrium Statistical Physics|stat_phys]]
 
 
 <br/>
