@@ -28,7 +28,7 @@ Notice two slight differences with respect to how matrix product states are typi
 
 * Matrices $W$ and $V$, which are really a row and a column vector, respectively, are fixed and do not depend on the variables $\{n\}$.
 
-* The matrix product $(2)$ directly represents a probability distribution, whereas when working with quantum systems one tipically uses a matrix product to parametrize a wavefunction.
+* The matrix product $(2)$ directly represents a probability distribution, whereas when working with quantum systems one typically uses a matrix product to parametrize a wavefunction.
 
 Other models in the family of one-dimensional exclusion processes have been addressed via a matrix product ansatz followed by approximate diagonalization techniques like the [[density matrix renormalization group|mps/algorithms/dmrg]].
 

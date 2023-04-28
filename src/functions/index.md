@@ -31,7 +31,7 @@ functions $f(x)$ such as functions which are smooth or have periodic or self-sim
 For example, both the functions $f(x) = e^{i k x}$ and $f(x) = \delta(x-k)$
 give MPS/TT ranks of exactly one (Kronecker product of vectors).
 
-The idea of using tensor train (TT) this way is known as the "quantics tensor train" (QTT) representation of a function.
+The idea of using tensor train (TT) this way is known as the "quantics tensor train" (QTT) (or "quantized tensor train") representation of a function.
 It can be straightforwardly generalized to two-dimensional, three-dimensional, or higher-dimensional functions
 by using a tensor train with two, three, or more open indices on each tensor. 
 
