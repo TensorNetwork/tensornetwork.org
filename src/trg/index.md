@@ -187,5 +187,5 @@ Extensions of the basic TRG algorithm include:
    and can be used to generate MERA tensor networks*:
 
   Evenbly and Vidal, "Tensor Network Renormalization"
-  [PRL 115, 180405](http://dx.doi.org/10.1103/PhysRevB.80.155131) (2015) arxiv:1412.0732
+  [PRL 115, 180405](http://dx.doi.org/10.1103/PhysRevLett.115.180405) (2015) arxiv:1412.0732
 
