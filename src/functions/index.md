@@ -7,23 +7,23 @@ Consider a one-dimensional function $f(x)$ with $0 \leq x < 1$.
 The variable $x$ can be expressed to high precision
 as a *binary fraction*
 \begin{equation}
-x = 0.b_1b_2\cdots b_n = b_1/2 + b_2/2^2 + \ldots + b_n/2^n \ .
+x = 0.x_1x_2\cdots x_n = x_1/2 + x_2/2^2 + \ldots + x_n/2^n \ .
 \end{equation}
-described by bits $b_i = 0,1$. (For example, $1/3 \approx 0.010101$.)
+described by bits $x_i = 0,1$. (For example, $1/3 \approx 0.010101$.)
 This way of writing numbers is similar to the to the binary representation of integers, but with the numbers stepping through
 a finely-spaced grid of spacing $1/2^n$ instead of steps of size 1.
 
 Next we can write the values the function $f(x)$ takes on this grid as
-$f(x) = f(0.b_1b_2\cdots b_n) = F^{b_1 b_2 \cdots b_n}$ so that the values of $f(x)$ have been repackaged into an $n$-index tensor $F$.
+$f(x) = f(0.x_1x_2\cdots x_n) = F^{x_1 x_2 \cdots x_n}$ so that the values of $f(x)$ have been repackaged into an $n$-index tensor $F$.
 
 The last move is to approximate of $F$ as a tensor network, such as a [[matrix product state / tensor train|mps]]
 network:
 \begin{equation}
-F^{b_1 b_2 \cdots b_n} = \sum_{\{\mathbf{\alpha}\}} A^{b_1}_{\alpha_1}
-A^{b_2}_{\alpha_1 \alpha_2}
-A^{b_3}_{\alpha_2 \alpha_3}
+F^{x_1 x_2 \cdots x_n} = \sum_{\{\mathbf{\alpha}\}} A^{x_1}_{\alpha_1}
+A^{x_2}_{\alpha_1 \alpha_2}
+A^{x_3}_{\alpha_2 \alpha_3}
 \cdots
-A^{b_n}_{\alpha_{n-1}}
+A^{x_n}_{\alpha_{n-1}}
 \end{equation}
 
 Tensor networks of this class turn out to have very low rank (or bond dimension) for a wide class of 
@@ -31,9 +31,33 @@ functions $f(x)$ such as functions which are smooth or have periodic or self-sim
 For example, both the functions $f(x) = e^{i k x}$ and $f(x) = \delta(x-k)$
 give MPS/TT ranks of exactly one (Kronecker product of vectors).
 
-The idea of using tensor train (TT) this way is known as the "quantics tensor train" (QTT) (or "quantized tensor train") representation of a function.
+The idea of using tensor train (TT) this way is known as the "quantics tensor train" (QTT) (or "quantized tensor train") representation of a function \cite{KhoromskijOseledets2010, latorre2005image, khoromskij2011d, khoromskij2014tensor}.
 It can be straightforwardly generalized to two-dimensional, three-dimensional, or higher-dimensional functions
 by using a tensor train with two, three, or more open indices on each tensor. 
+
+### Motivating Examples
+
+An exponential function $f(x) = e^{a x}$ can be represented by a tensor network of rank 1 ("product state"). This holds whether $a$ is real or complex. The construction is as follows:
+\begin{align}
+e^{a x} = e^{a (x_1/2 + x_2/2^2 + \ldots + x_n/2^n)} = e^{a/2 x_1} e^{a/2^2 x_2} e^{a/2^4 x_3} \cdots e^{a/2^n x_n}
+\end{align}
+Then because this is now a rank-1 tensor, it can be represented by a tensor network of rank 1 (e.g. MPS/TT with ranks or bond dimensions of size 1), where one sets the elements of each tensor as $A^{x_j} = e^{a/2^j x_j}$.
+
+This form of an exponential function means that $\cos(a x)$ or $\sin(a x)$ are exactly rank-2 MPS/TT, since the sum of two MPS with ranks $r_1$ and $r_2$ gives a new MPS whose rank is at most $r_1+r_2$.
+
+### Application Areas
+
+The QTT representation can be used to represent solutions of a wide range of differential equations \cite{khoromskij2014tensor}.
+
+For example, QTT representation has been used to represent velocity fields of fluids in numerical algorithms for solving
+the Navier-Stokes partial differential equation \cite{gourianov2022quantum,kiffner2023tensor}, with a similar approach used to solve the Vlasov-Poisson equations for plasma physics \cite{Ye2022}.
+
+Green's functions of quantum many-body systems can also be compactly described by the QTT representation \cite{Shinaoka2023Multiscale,ritter2023quantics}, and
+used to efficiently solve the Dyson and Bethe-Salpeter equations \cite{Shinaoka2023Multiscale}.
+
+Images can also be compressed in the QTT format \cite{latorre2005image} and used for machine learning with tensor networks on classical and quantum computers \cite{DilipData2022}.
+
+
 
 ### References and Review Articles
 
