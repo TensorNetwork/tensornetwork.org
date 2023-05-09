@@ -56,6 +56,11 @@ used to efficiently solve the Dyson and Bethe-Salpeter equations \cite{Shinaoka2
 
 Images can also be compressed in the QTT format \cite{latorre2005image} and used for machine learning with tensor networks on classical and quantum computers \cite{DilipData2022}.
 
+### Rigorous Results
+
+For the case of one-dimensional (univariate) functions, the QTT representation has been shown to achieve optimal approximation order for functions in Sobolev or Besov spaces of any smoothness order.\cite{Ali_Approximation_1_2} On the other hand, the QTT representation is itself not embedded into any Besov space.
+
+Any univariate polynomial of degree $p$ can be represented by a QTT of rank at most $1+p$.\cite{Ali_Approximation_1_2}
 
 
 ### References and Review Articles
