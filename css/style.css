@@ -1,3 +1,6 @@
+.katex-display {
+    overflow-x: auto;
+}
 
 ul
     {
