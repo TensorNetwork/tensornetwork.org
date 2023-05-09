@@ -27,23 +27,22 @@ A^{x_n}_{\alpha_{n-1}}
 \end{equation}
 
 Tensor networks of this class turn out to have very low rank (or bond dimension) for a wide class of 
-functions $f(x)$ such as functions which are smooth or have periodic or self-similar structure.
+functions $f(x)$ such as functions which are smooth, have self-similar structure, or a finite number of sharp features.
 For example, both the functions $f(x) = e^{i k x}$ and $f(x) = \delta(x-k)$
-give MPS/TT ranks of exactly one (Kronecker product of vectors).
+give MPS/TT ranks of exactly one. (Equal to an outer product of vectors or a product state.)
 
-The idea of using tensor train (TT) this way is known as the "quantics tensor train" (QTT) (or "quantized tensor train") representation of a function \cite{KhoromskijOseledets2010, latorre2005image, khoromskij2011d, khoromskij2014tensor}.
-It can be straightforwardly generalized to two-dimensional, three-dimensional, or higher-dimensional functions
-by using a tensor train with two, three, or more open indices on each tensor. 
+The idea of using a tensor train (TT) this way is known as the "quantics tensor train" (QTT) (or "quantized tensor train") representation of a function \cite{KhoromskijOseledets2010, latorre2005image, khoromskij2011d, khoromskij2014tensor}.
+It can be straightforwardly generalized to two-dimensional, three-dimensional, or higher-dimensional functions by using a tensor train with two, three, or more open indices on each tensor. 
 
 ### Motivating Examples
 
-An exponential function $f(x) = e^{a x}$ can be represented by a tensor network of rank 1 ("product state"). This holds whether $a$ is real or complex. The construction is as follows:
+An exponential function $f(x) = e^{a x}$ can be represented by a tensor network of rank 1 (or "product state"). This holds whether $a$ is real or complex. The construction is as follows:
 \begin{align}
-e^{a x} = e^{a (x_1/2 + x_2/2^2 + \ldots + x_n/2^n)} = e^{a/2 x_1} e^{a/2^2 x_2} e^{a/2^4 x_3} \cdots e^{a/2^n x_n}
+e^{a x} = e^{a (x_1/2 + x_2/2^2 + \ldots + x_n/2^n)} = (e^{a/2})^{x_1}\ \  (e^{a/2^2})^{x_2}\ \ (e^{a/2^3})^{x_3} \cdots (e^{a/2^n})^{x_n}
 \end{align}
-Then because this is now a rank-1 tensor, it can be represented by a tensor network of rank 1 (e.g. MPS/TT with ranks or bond dimensions of size 1), where one sets the elements of each tensor as $A^{x_j} = e^{a/2^j x_j}$.
+Then because this is now a rank-1 tensor, it can be represented by a tensor network of rank 1 (e.g. MPS/TT with ranks or bond dimensions of size 1), where one sets the elements of each tensor as $A^{x_j} = (e^{a/2^j})^{x_j}$.
 
-This form of an exponential function means that $\cos(a x)$ or $\sin(a x)$ are exactly rank-2 MPS/TT, since the sum of two MPS with ranks $r_1$ and $r_2$ gives a new MPS whose rank is at most $r_1+r_2$.
+The above result for an exponential function implies that $\cos(a x)$ or $\sin(a x)$ are exactly MPS/TT of rank 2, since the sum of two MPS with ranks $r_1$ and $r_2$ gives a new MPS whose rank is at most $r_1+r_2$.
 
 ### Application Areas
 
