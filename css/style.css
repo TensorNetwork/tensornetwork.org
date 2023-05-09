@@ -1,6 +1,10 @@
+/* Make KaTeX displaymath equations left-right scrollable */
 .katex-display {
     overflow-x: auto;
 }
+
+/* Turn off equation numbering in KaTeX */
+.eqn-num { display: none !important; }
 
 ul
     {
