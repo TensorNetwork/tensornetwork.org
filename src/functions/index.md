@@ -58,10 +58,11 @@ Images can also be compressed in the QTT format \cite{latorre2005image} and used
 
 ### Rigorous Results
 
-For the case of one-dimensional (univariate) functions, the QTT representation has been shown to achieve optimal approximation order for functions in Sobolev or Besov spaces of any smoothness order.\cite{Ali_Approximation_1_2} On the other hand, the QTT representation is itself not embedded into any Besov space.
+For the case of one-dimensional (univariate) functions, the tensor network or QTT representation has been shown to achieve optimal approximation order for functions in spaces of smooth functions (Sobolev or Besov spaces) of any smoothness order.\cite{Ali_Approximation_1_2} On the other hand, the QTT representation is itself not embedded into (space of all QTT lies outside of) any classical smoothness space.
+
+Similar results can be proved for multivariate functions, with further considerations regarding whether the function is isotropic, anisotropic, or mixed smoothness spaces. Many types of classical smoothness spaces can be continuously embedded into the QTT representation, while the QTT approximation classes are themselves not embedded into any classical smoothness space.\cite{Ali_Approximation_3}
 
 Any univariate polynomial of degree $p$ can be represented by a QTT of rank at most $(1+p)$.\cite{Ali_Approximation_1_2}
-
 
 ### References and Review Articles
 
