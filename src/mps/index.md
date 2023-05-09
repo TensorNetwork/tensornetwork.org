@@ -187,7 +187,7 @@ B^{s_6}_{\beta_5}
 
 ![medium](TW_MPSTT.png)
 
-The strategy to efficiently compute $\iprod{T}{W}$ is to contract $A^{s_1}$ with 
+The strategy to efficiently compute $\langle T,W \rangle$ is to contract $A^{s_1}$ with 
 $B^{s_1}$ over the $s_1$ index, forming a tensor $E^{\alpha_1}_{\beta_1}$. 
 Then this tensor $E$ is contracted with $A^{s_2}$ and $B^{s_2}$ to form 
 another intermediate tensor $E^{\alpha_2}_{\beta_2}$, etc. 
@@ -206,7 +206,7 @@ N m^3\,d
 where $m$ is the bond dimension or rank of the MPS/TT networks and $d$ is the dimension
 of the external indices. In contrast, if one worked with the full $T$ 
 and $W$ tensors and did not use the MPS/TT form the cost of
-calculating $\iprod{T}{W}$ would be $d^N$.
+calculating $\langle T,W \rangle$ would be $d^N$.
 
 <a name="compression"></a>
 ### Compression / Rounding \cite{McCulloch:2007,Oseledets:2011}
