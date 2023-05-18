@@ -24,9 +24,9 @@ the fact that they can be recast as the contraction of a lattice of small tensor
 A classic example of such a sum is the "partition function" $Z$ of the classical Ising
 model at temperature T, defined to be
 
-\[
+\begin{align}
 Z = \sum_{\sigma_1 \sigma_2 \sigma_3 \ldots} e^{-E(\sigma_1,\sigma_2,\sigma_3,\ldots)/T}
-\]
+\end{align}
 
 where each Ising "spin" $\sigma$ is just a variable taking the values $\sigma = +1, -1$ and the energy
 $E(\sigma_1,\sigma_2,\sigma_3,\ldots)$ is the sum of products $\sigma_i \sigma_j$ of 
@@ -40,23 +40,23 @@ at which this Ising system develops an interesting hidden scale invariance.
 In one dimension, spins only have two neighbors since they are arranged along a chain.
 For a finite-size system of N Ising spins, the usual convention is to use periodic boundary conditions 
 meaning that the Nth spin connects back to the first around a circle:
-$$
+\\[
 E(\sigma_1,\sigma_2,\sigma_3,\ldots,\sigma_N) 
  = \sigma_1 \sigma_2 + \sigma_2 \sigma_3 + \sigma_3 \sigma_4 + \ldots + \sigma_N \sigma_1 \:.
-$$
+\\]
 
 The classic "transfer matrix" trick for computing $Z$ goes as follows:
-$$
+\\[
 Z = \sum_{\{\sigma\}} \exp \left(\frac{-1}{T} \sum_n \sigma_n \sigma_{n+1}\right)
  = \sum_{\{\sigma\}} \prod_{n} e^{-(\sigma_n \sigma_{n+1})/ T}
  = \text{Tr} \left(M^N \right)
-$$
+\\]
 
 where $\text{Tr}$ means "trace" and the transfer matrix $M$ is a 2x2 matrix with elements
 
-$$
+\\[
 M_{\sigma^{\\!} \sigma^\prime} = e^{-(\sigma^{\\!} \sigma^\prime)/T} \ .
-$$
+\\]
 
 Pictorially, we can view $\text{Tr}\left(M^N\right)$ as a chain of tensor contractions around a
 circle:
@@ -74,9 +74,9 @@ $Z = \lambda_1^N + \lambda_2^N$ by the basis invariance of the trace operation.
 
 Now let us consider the main problem of interest. For two dimensions, the energy function
 can be written as
-$$
+\begin{equation}
 E(\sigma_1, \sigma_2, \ldots) = \sum_{\langle i j \rangle} \sigma_i \sigma_j
-$$
+\end{equation}
 where the notation $\langle i j \rangle$ means the sum only includes $i,j$ which are
 neighboring sites. It helps to visualize the system:
 
@@ -90,9 +90,9 @@ The total energy $E$ of each configuration is the sum of all of these local ener
 Interestingly, it is again possible to rewrite the partition function sum
 $Z$ as a network of contracted tensors. Define the tensor $A^{\sigma_t \sigma_r \sigma_b \sigma_l}$
 to be 
-$$
+\begin{equation}
 A^{\sigma_t \sigma_r \sigma_b \sigma_l} = e^{-(\sigma_t \sigma_r + \sigma_r \sigma_b + \sigma_b \sigma_l + \sigma_l \sigma_t)/T}
-$$
+\end{equation}
 
 ![medium](TRG_Atensor.png)
 
