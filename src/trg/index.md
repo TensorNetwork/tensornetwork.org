@@ -24,9 +24,9 @@ the fact that they can be recast as the contraction of a lattice of small tensor
 A classic example of such a sum is the "partition function" $Z$ of the classical Ising
 model at temperature T, defined to be
 
-$$
+\[
 Z = \sum_{\sigma_1 \sigma_2 \sigma_3 \ldots} e^{-E(\sigma_1,\sigma_2,\sigma_3,\ldots)/T}
-$$
+\]
 
 where each Ising "spin" $\sigma$ is just a variable taking the values $\sigma = +1, -1$ and the energy
 $E(\sigma_1,\sigma_2,\sigma_3,\ldots)$ is the sum of products $\sigma_i \sigma_j$ of 
