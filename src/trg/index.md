@@ -40,23 +40,23 @@ at which this Ising system develops an interesting hidden scale invariance.
 In one dimension, spins only have two neighbors since they are arranged along a chain.
 For a finite-size system of N Ising spins, the usual convention is to use periodic boundary conditions 
 meaning that the Nth spin connects back to the first around a circle:
-@@
+$$
 E(\sigma_1,\sigma_2,\sigma_3,\ldots,\sigma_N) 
  = \sigma_1 \sigma_2 + \sigma_2 \sigma_3 + \sigma_3 \sigma_4 + \ldots + \sigma_N \sigma_1 \:.
-@@
+$$
 
 The classic "transfer matrix" trick for computing $Z$ goes as follows:
-@@
+$$
 Z = \sum_{\{\sigma\}} \exp \left(\frac{-1}{T} \sum_n \sigma_n \sigma_{n+1}\right)
  = \sum_{\{\sigma\}} \prod_{n} e^{-(\sigma_n \sigma_{n+1})/ T}
  = \text{Tr} \left(M^N \right)
-@@
+$$
 
 where $\text{Tr}$ means "trace" and the transfer matrix $M$ is a 2x2 matrix with elements
 
-@@
+$$
 M_{\sigma^{\\!} \sigma^\prime} = e^{-(\sigma^{\\!} \sigma^\prime)/T} \ .
-@@
+$$
 
 Pictorially, we can view $\text{Tr}\left(M^N\right)$ as a chain of tensor contractions around a
 circle:
