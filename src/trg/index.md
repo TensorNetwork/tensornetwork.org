@@ -74,9 +74,9 @@ $Z = \lambda_1^N + \lambda_2^N$ by the basis invariance of the trace operation.
 
 Now let us consider the main problem of interest. For two dimensions, the energy function
 can be written as
-@@
+$$
 E(\sigma_1, \sigma_2, \ldots) = \sum_{\langle i j \rangle} \sigma_i \sigma_j
-@@
+$$
 where the notation $\langle i j \rangle$ means the sum only includes $i,j$ which are
 neighboring sites. It helps to visualize the system:
 
@@ -90,9 +90,9 @@ The total energy $E$ of each configuration is the sum of all of these local ener
 Interestingly, it is again possible to rewrite the partition function sum
 $Z$ as a network of contracted tensors. Define the tensor $A^{\sigma_t \sigma_r \sigma_b \sigma_l}$
 to be 
-@@
+$$
 A^{\sigma_t \sigma_r \sigma_b \sigma_l} = e^{-(\sigma_t \sigma_r + \sigma_r \sigma_b + \sigma_b \sigma_l + \sigma_l \sigma_t)/T}
-@@
+$$
 
 ![medium](TRG_Atensor.png)
 

@@ -52,9 +52,9 @@ Given a vector space $V$, one can consider the set of linear functions
 on $V$. This set is denoted $V^*$. By a linear function, what is meant 
 is a function $f \in V^*$ such that
 
-@@
+$$
 f(\alpha \mathbf{v} + \beta \mathbf{w}) = \alpha f(\mathbf{v}) + \beta f(\mathbf{w})
-@@
+$$
 
 for any $\mathbf{v}, \mathbf{w} \in V$ and scalars $\alpha, \beta$.
 
@@ -74,11 +74,11 @@ Such a tensor is said to be of type $(r,s)$.
 
 For example, a tensor of type $(1,1)$ is a function $T$ such that
 
-@@
+$$
 T(\alpha f + \beta g, \gamma v + \delta w)
 = 
 \alpha \gamma T(f,v) + \beta \gamma T(g,v) + \alpha \delta T(f,w) + \beta \delta T(g,w)
-@@
+$$
 
 Say that the vector spaces $V$ (and therefore $V^*$) are two-dimensional. Take
 $\{e^1, e^2\}$ to be a basis of $V$ and $\{e_1, e_2\}$ a basis of $V^*$. Then 
