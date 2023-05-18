@@ -22,17 +22,17 @@ $s=1,2,...,d$. To parameterize the probabilities of each of these outcomes, one 
 numbers $\psi^s$ called *amplitudes* which can be positive, negative, or even complex.
 
 The only requirement of these amplitudes is that their squared magnitudes sum to one:
-$$
+\begin{equation}
 \sum_{s=1}^d |\psi^s|^2 = 1
-$$
+\end{equation}
 Viewed as a vector $\vec{\psi}$, the amplitudes have unit norm under the Euclidean or 2-norm:
 
 ![medium](amp_vector.png)
 
 From the amplitudes, one defines the probability of observing an outcome $j$ as
-$$
+\begin{equation}
 p^s = |\psi^s|^2
-$$
+\end{equation}
 
 ![medium](prob_from_amp.png)
 
@@ -68,9 +68,9 @@ $p^{s_1 s_2} = |\psi^{s_1 s_2}|^2$.
 Thus, following standard probability theory, the 
 marginal probabilities $p^{s_1}$---that is, the probabilities of observing outcomes $s_1$
 without observing $s_2$---are given by summing over $s_2$:
-$$
+\begin{equation}
 p^{s_1} = \sum_{s_2} p^{s_1 s_2} = \sum_{s_2} |\psi^{s_1 s_2}|^2 = \sum_{s_2} \psi^{s_1 s_2} \psi^\dagger_{s_2 s_1}
-$$
+\end{equation}
 
 ![medium](marginal_2var.png)
 
@@ -78,9 +78,9 @@ In the last expression above, $p^{s_1}$ is suggestively written as the diagonal 
 a matrix formed by multiplying the $d\times d$ matrices $\psi$ and $\psi^\dagger$ together.
 It turns out to be interesting to extend $p^{s_1}$ into an entire matrix by including 
 the off-diagonal elements too, where this matrix
-$$
+\begin{equation}
 \rho_{1\, s_1}^{s'_1} = \sum_{s_2} \psi^{s^\prime_1 s_2} \psi^{\dagger}_{s_2 s_1}
-$$
+\end{equation}
 is known as the "reduced density matrix" for $s_1$ or just the "reduced density" over $s_1$. 
 
 ![medium](density_2var.png)
@@ -117,9 +117,9 @@ probabilities.
 
 Consider two densities $\rho_A$ and $\rho_B$. Another valid density can be formed by taking
 positive numbers $\alpha_1, \alpha_2$ such that $\alpha_1 + \alpha_2 = 1$. Then 
-$$
+\begin{equation}
 \rho_C = \alpha_1 \rho_A + \alpha_2 \rho_B
-$$
+\end{equation}
 is another valid density. It has the interpretation of a mixture of distributions, where
 the outcome is described by the distribution $\rho_A$ with probability $\alpha_1$, or
 by the distribution $\rho_B$ with probability $\alpha_2$.
