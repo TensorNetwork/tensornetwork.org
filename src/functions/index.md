@@ -34,6 +34,8 @@ give MPS/TT ranks of exactly one. (Equal to an outer product of vectors or a pro
 The idea of using a tensor train (TT) this way is known as the "quantics tensor train" (QTT) (or "quantized tensor train") representation of a function \cite{KhoromskijOseledets2010, latorre2005image, khoromskij2011d, khoromskij2014tensor}.
 It can be straightforwardly generalized to two-dimensional, three-dimensional, or higher-dimensional functions by using a tensor train with two, three, or more open indices on each tensor. 
 
+In quantum physics and quantum computing, this idea is known as the "amplitude encoding" of a function into a quantum register. 
+
 ### Motivating Examples
 
 An exponential function $f(x) = e^{a x}$ can be represented by a tensor network of rank 1 (or "product state"). This holds whether $a$ is real or complex. The construction is as follows:
