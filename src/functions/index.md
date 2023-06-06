@@ -32,9 +32,9 @@ For example, both the functions $f(x) = e^{i k x}$ and $f(x) = \delta(x-k)$
 give MPS/TT ranks of exactly one. (Equal to an outer product of vectors or a product state.)
 
 The idea of using a tensor train (TT) this way is known as the "quantics tensor train" (QTT) (or "quantized tensor train") representation of a function \cite{KhoromskijOseledets2010, latorre2005image, khoromskij2011d, khoromskij2014tensor}.
-It can be straightforwardly generalized to two-dimensional, three-dimensional, or higher-dimensional functions by using a tensor train with two, three, or more open indices on each tensor. 
+It can be straightforwardly generalized to two-dimensional, three-dimensional, or higher-dimensional functions by using a tensor train with two, three, or more open indices on each tensor. For dimensions higher than three, however, other tensor decompositions such as tree tensor networks may be more appropriate.
 
-In quantum physics and quantum computing, this idea is known as the "amplitude encoding" of a function into a quantum register. 
+In quantum physics and quantum computing, an essentially equivalent idea is known as the "amplitude encoding" of a function into a quantum register. In this context, it becomes an efficient tensor network method when the quantum entanglement (closely tied to tensor network rank) is moderate or low.
 
 ### Motivating Examples
 
