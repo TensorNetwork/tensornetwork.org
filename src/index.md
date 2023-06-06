@@ -45,7 +45,7 @@ learning, and many other fields.
 
 <b>Applications of Tensor Networks</b>:
 
-- [[Representing Continuous Functions|functions]]
+- [[Functions of Continuous Variables (Quantum Inspired)|functions]]
 - [[Machine Learning|ml]]
 - [[Probability and Statistics|statistics]]
 - [[Quantum Physics|quantum_phys]]

@@ -1,5 +1,5 @@
 
-## Representation of Continuous Functions
+## Functions of Continuous Variables (Quantum Inspired)
 
 ### Introduction
 
