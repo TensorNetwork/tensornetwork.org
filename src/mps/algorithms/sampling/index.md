@@ -76,7 +76,7 @@ Note how the diagram above is the same as the diagram for $p(s_1)$, just for an 
 
 After obtaining $p(s_2|\hat{s}_1)$, one randomly samples a value $\hat{s}_2$ from it, then proceeds to compute $p(s_3|\hat{s}_2 \hat{s}_1)$ and so on, using an identical sequence of diagrams as shown above.
 
-One a full pass of the algorithm completes, a specific sample $(\hat{s}_1, \hat{s}_2, \hat{s}_3, \ldots, \hat{s}_N)$ of the indices has been obtained. To obtain another sample, one simply starts the algorithm over from the beginning with the original MPS.
+Once a full pass of the algorithm completes, a specific sample $(\hat{s}_1, \hat{s}_2, \hat{s}_3, \ldots, \hat{s}_N)$ of the indices has been obtained. To obtain another sample, one simply starts the algorithm over from the beginning with the original MPS.
 
 
 
