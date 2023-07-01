@@ -89,3 +89,9 @@ Notable properties of the above algorithm are:
 * If the MPS is in the right-orthogonal gauge, samples can be computed with a cost scaling as $\chi^2$. (However, bringing an arbitrary MPS into right-orthogonal gauge has a cost scaling as $\chi^3$.)
 
 
+## Applications and Extensions
+
+The MPS perfect sampling algorithm forms the update step of the minimally entangled typical thermal state (METTS) algorithm for sampling pure states whose average gives thermal expected values of a quantum system at a temperature $T$.\cite{METTS_Algorithm} The proposed next state after this step is always accepted (i.e. METTS does not do any "rejection" sampling). Although the MPS sampling algorithm is "perfect", the overall METTS algorithm is based on a Markov chain so does not perform perfect sampling.
+
+A deterministic version of the (two-norm) MPS sampling algorithm, which greedily selects the index values with the highest probabilities at each step, has been proposed in the context of simulating the QAOA quantum algorithm.\cite{Sreedhar_QAOA}This algorithm is not always guaranteed to give the sample with the highest probability.
+
