@@ -9,6 +9,7 @@ for [[MPS/TT tensor networks|mps]].
 - [[Retrieving a Single MPS/TT Component|mps/index#component]]
 - [[Inner Product of Two MPS/TT|mps/index#innerprod]]
 - [[Compression of MPS/TT|mps/index#compression]] (Using Density Matrix Algorithm)
+- [[Sampling from MPS/TT|mps/algorithms/sampling]]
 
 <a name="linear"></a>
 ## Solving Linear Equations
