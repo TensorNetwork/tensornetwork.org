@@ -1,6 +1,6 @@
 # Sampling from an MPS / TT
 
-There is an efficient, direct sampling algorithm that can be used to sample
+There is an efficient, direct sampling algorithm (or "perfect sampling" algorithm) that can be used to sample
 from any probability distribution that can be represented as an MPS/TT network.\cite{METTS_Algorithms,Perfect_Sampling}
 This sampling algorithm can be used within the standard (or "one-norm") probability formalism
 or in the two-norm (or "Born rule") probability formalism.
