@@ -19,6 +19,9 @@ Works are listed in reverse chronological order within each section.
 
 ### Supervised Learning
 
+- [Machine learning with tree tensor networks, CP rank constraints, and tensor dropout](https://arxiv.org/abs/2305.19440), Hao Chen, Thomas Barthel, arxiv:2305.19440 <br/>
+  _Uses tree tensor networks with a low-rank (low CP rank) representation of the individual tensos, plus other techniques such as dropout, to find supervised learning results with reduced computational cost and better generalization, on par with state-of-art._
+
 - [Interaction Decompositions for Tensor Network Regression](https://arxiv.org/abs/2208.06029), Ian Convy, K. Birgitta Whaley, arxiv:2208.06029 <br/>
   _Analyzes the contributions of polynomial terms of various degrees to the supervised learning performance of tensor network architectures._
 
