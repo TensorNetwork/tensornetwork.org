@@ -85,8 +85,8 @@ Once a full pass of the algorithm completes, a specific sample $(\hat{s}_1, \hat
 Notable properties of the above algorithm are:
 
 * The algorithm is a direct, memoryless, or "perfect" sampling algorithm. It does not rely on a Markov chain so each sample is a true or direct draw from the probability distribution. Therefore it does not suffer from ergodicity issues or autocorrelation effects. To see this property, it is enough to observe that for each new sample the algorithm starts over from the beginning and does not use any information about previous samples.
-* For external dimension $d$ and internal (bond) dimension or rank $\chi$ the algorithm scales as $d \chi^3$.
-* If the MPS is in the right-orthogonal gauge, samples can be computed with a cost scaling as $\chi^2$. (However, bringing an arbitrary MPS into right-orthogonal gauge has a cost scaling as $\chi^3$.)
+* For external dimension $d$ and internal (bond) dimension or rank $\chi$ the algorithm scales as $N d \chi^3$.
+* If the MPS is in the right-orthogonal gauge, samples can be computed with a cost scaling as $\chi^2$. (However, bringing an arbitrary MPS into right-orthogonal gauge has a cost scaling as $\chi^3$.) When computing many samples, it can therefore be a good strategy to bring the MPS into right-orthogonal gauge before sampling.
 
 
 ## Applications and Extensions
