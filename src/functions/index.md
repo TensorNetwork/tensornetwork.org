@@ -56,7 +56,7 @@ the Navier-Stokes partial differential equation \cite{gourianov2022quantum,kiffn
 Green's functions of quantum many-body systems can also be compactly described by the QTT representation \cite{Shinaoka2023Multiscale,ritter2023quantics}, and
 used to efficiently solve the Dyson and Bethe-Salpeter equations \cite{Shinaoka2023Multiscale}.
 
-Images can also be compressed in the QTT format \cite{latorre2005image} and used for machine learning with tensor networks on classical and quantum computers \cite{DilipData2022}.
+Images can also be compressed in the QTT format \cite{latorre2005image} and used for machine learning with tensor networks on classical and quantum computers \cite{DilipData2022,Wright2022Deterministic}.
 
 ### Rigorous Results
 
