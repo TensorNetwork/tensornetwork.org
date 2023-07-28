@@ -41,12 +41,17 @@
    **Journal**: <a href="https://doi.org/10.1088/1751-8121/aa6dc3">J. Phys. A: Math. Theor. 50 223001 (2017)</a><br/>
    **Notes**: For those with a quantum information background, this is a very friendly and readable introduction to tensor networks and tensor diagram notation.
 
-### Technical Introductions or Review Articles
+### More Technical Review Articles, Books, etc.
 
 * **"A Practical Guide to the Numerical Implementation of Tensor Networks I: Contractions, Decompositions and Gauge Freedom"**<br/>
    **Author**: Glen Evenbly <br/>
    **Pre-print**: <a href="https://arxiv.org/abs/2202.02138">2202.02138</a><br/>
    **Notes**: Presents an overview of the key ideas and skills necessary to begin implementing tensor network methods numerically, which is intended to facilitate the practical application of tensor network methods for researchers that are already versed with their theoretical foundations. These skills include an introduction to the contraction of tensor networks, to optimal tensor decompositions, and to the manipulation of gauge degrees of freedom in tensor networks. 
+
+* <a href="https://link.springer.com/book/10.1007/978-3-030-34489-4">**"Tensor Network Contractions: Methods and Applications to Quantum Many-Body Systems"**</a><br/>
+   **Authors**: Shi-Ju Ran, Emanuele Tirrito, Cheng Peng, Xi Chen, Luca Tagliacozzo, Gang Su, Maciej Lewenstein<br/>
+   **Link**: <a href="https://link.springer.com/book/10.1007/978-3-030-34489-4"> Springer Lecture Notes in Physics, Open Access Book</a><br/>
+   **Notes**: An open-access book reviewing basics of tensor networks in diagram notation, then introducing advanced techniques for tasks such as contracting two-dimensional tensor networks.
 
 * **"Efficient Numerical Simulations Using Matrix-Product States"**<br/>
    **Authors**: Frank Pollmann<br/>
@@ -75,10 +80,6 @@
   <a href="https://itensor.org/miles/BrazilLectures/TNAndApplications04.pdf" target="_blank">Lecture 4</a> &mdash; Tensor networks; scaling of entanglement for critical and 2D systems; quantum chemistry; finite temperature systems. <br/>
   <a href="https://itensor.org/miles/BrazilLectures/TNAndApplications05.pdf" target="_blank">Lecture 5</a> &mdash; Introduction to machine learning; selected uses of tensor networks in machine learning.<br/>
 
-* **"Two-Dimensional Tensor Networks and Contraction Algorithms"**<br/>
-   **Authors**: Shi-Ju Ran, Emanuele Tirrito, Cheng Peng, Xi Chen, Luca Tagliacozzo, Gang Su, Maciej Lewenstein<br/>
-   **Link**: <a href="https://link.springer.com/chapter/10.1007/978-3-030-34489-4_3"> In: Tensor Network Contractions, Lecture Notes in Physics, vol 964. Springer</a><br/>
-   **Notes**: An open-access book reviewing basics of tensor networks in diagram notation, then introducing advanced techniques for tasks such as contracting two-dimensional tensor networks.
  
 * **"The density-matrix renormalization group in the age of matrix product states"**<br/>
    **Author**: Ulrich Schollwoeck <br/>
