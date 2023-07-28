@@ -70,6 +70,13 @@
    **Pre-print**: <a href="https://arxiv.org/abs/2011.12127">2011.12127</a><br/>
    **Notes**: An authoritative introduction to tensor networks from a quantum physics perspective with a rigorous discussion of concepts such as scaling of entanglement, symmetries and group theoretic properties, parent Hamiltonians, and canonical forms of tensor networks.
 
+ 
+* **"The density-matrix renormalization group in the age of matrix product states"**<br/>
+   **Author**: Ulrich Schollwoeck <br/>
+   **Pre-print**: <a href="https://arxiv.org/abs/1008.3477">1008.3477</a><br/>
+   **Journal**: <a href="https://doi.org/10.1016/j.aop.2010.09.012">Annals of Physics 326, 96 (2011)</a><br/>
+   **Notes**: A nearly comprehensive, and very detailed explanation of matrix product state and DMRG methods as of 2011. This article could serve as a very good introduction for those familiar with quantum mechanics and who are willing to work carefully through the many helpful steps and details offered.
+
 * **"Tensor Networks and Applications"**<br/>
   **Author:** Miles Stoudenmire<br/>
   **Description:** This is a one-week course, mainly on matrix product state (MPS) tensor networks, aimed at graduate students familiar with many-body quantum mechanics. <br/>
@@ -80,12 +87,6 @@
   <a href="https://itensor.org/miles/BrazilLectures/TNAndApplications04.pdf" target="_blank">Lecture 4</a> &mdash; Tensor networks; scaling of entanglement for critical and 2D systems; quantum chemistry; finite temperature systems. <br/>
   <a href="https://itensor.org/miles/BrazilLectures/TNAndApplications05.pdf" target="_blank">Lecture 5</a> &mdash; Introduction to machine learning; selected uses of tensor networks in machine learning.<br/>
 
- 
-* **"The density-matrix renormalization group in the age of matrix product states"**<br/>
-   **Author**: Ulrich Schollwoeck <br/>
-   **Pre-print**: <a href="https://arxiv.org/abs/1008.3477">1008.3477</a><br/>
-   **Journal**: <a href="https://doi.org/10.1016/j.aop.2010.09.012">Annals of Physics 326, 96 (2011)</a><br/>
-   **Notes**: A nearly comprehensive, and very detailed explanation of matrix product state and DMRG methods as of 2011. This article could serve as a very good introduction for those familiar with quantum mechanics and who are willing to work carefully through the many helpful steps and details offered.
 
 * **"Matrix Product Operators, Matrix Product States, and ab initio Density Matrix Renormalization Group algorithms"**<br/>
    **Authors**: Garnet Kin-Lic Chan, Anna Keselman, Naoki Nakatani, Zhendong Li, Steven R. White<br/>
