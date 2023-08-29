@@ -57,8 +57,9 @@ in later steps of the algorithm:
 ![medium](trace_steps.png)
 
 To compute these overlap tensors efficiently, one contracts the previous
-$L_j$ with the next MPS, MPO, then conjugate MPO and MPS tensors one 
-at a time (not shown).
+$L_j$ with the next MPS and MPO tensors, and their Hermitian conjugates one 
+at a time (not shown). The optimal sequence of contraction can depend on 
+whether the MPS bond dimension is bigger than the MPO bond dimension or not.
 
 Having computed the partial overlap tensors $L_j$, one can
 now compute the reduced density matrix for the last visible
