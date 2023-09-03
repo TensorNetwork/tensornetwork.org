@@ -7,7 +7,7 @@
    **Notes:** Extensive introductory tutorials about tensor networks
    including working sample codes in MATLAB, python, and Julia.
 
-### Introductory Reviews
+### Introductory Reviews and Lectures
 
 * **"A Practical Introduction to Tensor Networks: Matrix Product States and 
    Projected Entangled Pair States"**<br/>
@@ -22,6 +22,10 @@
    **Journal**: <a href="https://www.nature.com/articles/s42254-019-0086-7">Nature Reviews Physics volume 1, pages 538–550 (2019)</a><br/>
    **Notes**: Accessible review of tensor networks, focusing on more recent developments and the growing role of tensor networks in other areas beyond their origin in condensed matter quantum physics.
 
+* **"Lectures on Matrix Product States and Density Matrix Renormalization Group (DMRG)"** <br/>
+  **Author**: Ulrich Schollwoeck <br/>
+  **<a href="https://www.theorie.physik.uni-muenchen.de/activities/schools/archiv/asc_school_17/video_schollwoeck/index.html">Link to Videos</a>** <br/>
+  **Notes**: Accessible, introductory lectures on matrix product states and associated concepts (SVD, area law of entanglement) and the DMRG algorithm.
 
 * **"Matrix product states, DMRG, and tensor networks"** <br/>
   **Author**: Garnet Chan <br/>
@@ -42,6 +46,12 @@
    **Notes**: For those with a quantum information background, this is a very friendly and readable introduction to tensor networks and tensor diagram notation.
 
 ### More Technical Review Articles, Books, etc.
+
+* **"The density-matrix renormalization group in the age of matrix product states"**<br/>
+   **Author**: Ulrich Schollwoeck <br/>
+   **Pre-print**: <a href="https://arxiv.org/abs/1008.3477">1008.3477</a><br/>
+   **Journal**: <a href="https://doi.org/10.1016/j.aop.2010.09.012">Annals of Physics 326, 96 (2011)</a><br/>
+   **Notes**: A nearly comprehensive, and very detailed explanation of matrix product state and DMRG methods as of 2011. This article could serve as a very good introduction for those familiar with quantum mechanics and who are willing to work carefully through the many helpful steps and details offered.
 
 * **"A Practical Guide to the Numerical Implementation of Tensor Networks I: Contractions, Decompositions and Gauge Freedom"**<br/>
    **Author**: Glen Evenbly <br/>
@@ -71,11 +81,6 @@
    **Notes**: An authoritative introduction to tensor networks from a quantum physics perspective with a rigorous discussion of concepts such as scaling of entanglement, symmetries and group theoretic properties, parent Hamiltonians, and canonical forms of tensor networks.
 
  
-* **"The density-matrix renormalization group in the age of matrix product states"**<br/>
-   **Author**: Ulrich Schollwoeck <br/>
-   **Pre-print**: <a href="https://arxiv.org/abs/1008.3477">1008.3477</a><br/>
-   **Journal**: <a href="https://doi.org/10.1016/j.aop.2010.09.012">Annals of Physics 326, 96 (2011)</a><br/>
-   **Notes**: A nearly comprehensive, and very detailed explanation of matrix product state and DMRG methods as of 2011. This article could serve as a very good introduction for those familiar with quantum mechanics and who are willing to work carefully through the many helpful steps and details offered.
 
 * **"Tensor Networks and Applications"**<br/>
   **Author:** Miles Stoudenmire<br/>
