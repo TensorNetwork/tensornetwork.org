@@ -48,15 +48,14 @@ The above result for an exponential function implies that $\cos(a x)$ or $\sin(a
 
 ### Application Areas
 
+Early applcations of this format include representing bosons in quantum systems \cite{Jeckelmann} and compressing images\cite{latorre2005image}. More recently this image compression approach has been proposed for machine learning on classical and quantum computers \cite{DilipData2022,Wright2022Deterministic}.
+
 The QTT representation can be used to represent solutions of a wide range of differential equations \cite{khoromskij2014tensor}.
 
 For example, QTT representation has been used to represent velocity fields of fluids in numerical algorithms for solving
 the Navier-Stokes partial differential equation \cite{gourianov2022quantum,kiffner2023tensor}, with a similar approach used to solve the Vlasov-Poisson equations for plasma physics \cite{Ye2022}.
 
 Green's functions of quantum many-body systems can also be compactly described by the QTT representation \cite{Shinaoka2023Multiscale,ritter2023quantics}, and
-used to efficiently solve the Dyson and Bethe-Salpeter equations \cite{Shinaoka2023Multiscale}.
-
-Images can also be compressed in the QTT format \cite{latorre2005image} and used for machine learning with tensor networks on classical and quantum computers \cite{DilipData2022,Wright2022Deterministic}.
 
 ### Rigorous Results
 
