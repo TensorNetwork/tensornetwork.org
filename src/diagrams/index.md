@@ -1,6 +1,6 @@
 # Tensor Diagram Notation
 
-Tensor diagram notation\cite{Penrose:1971,Math3ma} is a simple, yet powerful
+Tensor diagram notation\cite{Penrose:1971,Cvitanovic,Math3ma} is a simple, yet powerful
 graphical notation for networks of contracted tensors.
 
 A tensor contraction of the form $\sum_j M_{ij} N_{jkl}$ can be notated 
@@ -14,7 +14,7 @@ the Einstein summation convention for notating tensor contractions.
 
 ## Tensor Diagram Rules
 
-There are two hard-and-fast rules of tensor diagrams:
+There are two primary rules of tensor diagrams:
 
 1. Tensors are notated by shapes (usually filled or shaded), 
    and tensor indices are notated by lines emanating from these shapes.
