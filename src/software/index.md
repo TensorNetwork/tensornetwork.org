@@ -16,6 +16,14 @@
   (sparse) arrays. Cyclops supports general tensor sparsity, so it is 
   possible to define graph algorithms with the use of sparse adjacency matrices
 
+* <a href="https://kaihsinwu.gitlab.io/Cytnx_doc/Intro.html">Cytnx</a> (Python/C++)<br/>
+  Cytnx is a library designed for Quantum/classical Physics simulations. 
+  Most of Cytnx APIs share very similar interfaces as the most common and popular 
+  libraries: numpy/scipy/pytorch. Cytnx also supports multi-devices (CPUs/GPUs) 
+  directly on the base container level. For algorithms in physics, Cytnx provides powerful 
+  tools such as UniTensor, Network, Bond, Symmetry etc. These objects are built on 
+  top of Tensor objects.
+
 * <a href="https://github.com/romeric/Fastor">Fastor</a> (C++)<br/>
   Fastor is a stack-based high performance tensor (multi-dimensional array) library written 
   in modern C++ [C++11/14/17] with powerful in-built tensor algebraic functionalities 
