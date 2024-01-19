@@ -67,6 +67,8 @@ Similar results can be proved for multivariate functions, with further considera
 
 Any univariate polynomial of degree $p$ can be represented by a QTT of rank at most $(1+p)$.\cite{Ali_Approximation_1_2}
 
+The discrete Fourier transform can be represented as an MPO tensor network with low rank (small bond dimension). In the QTT formalism, the discrete Fourier transform is equivalent to the ["quantum Fourier transform"](https://en.wikipedia.org/wiki/Quantum_Fourier_transform) algorithm known from quantum computing, but compressed into a tensor network.\cite{ChenQFT,Shinaoka2023Multiscale}
+
 ### References and Review Articles
 
 * **"Quantum-inspired algorithms for multivariate analysis: from interpolation to partial differential equations"**<br/>
