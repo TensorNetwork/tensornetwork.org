@@ -4,8 +4,7 @@ The zip-up algorithm gives an efficient
 way to multiply or apply a [[matrix product operator (MPO)|mpo]] 
 onto a [[matrix product state (MPS) / tensor train|mps]].
 It is one of the fastest algorithms for this purpose, and relatively
-easy to implement, but has a downside of not being fully controlled.
-(See discussion below.)
+easy to implement, but has a downside of not being fully controlled (see discussion below).
 
 ## Statement of the Problem
 
@@ -21,9 +20,9 @@ are minimized.
 
 ## Properties of the Algorithm
 
-* *Scaling*: $N\cdot(\chi^3 k d^2 + \chi^2 k^2 d^2)$ where $N$ is the length of the MPS (number of external indices), $\chi$ is the MPS rank, $k$ is the MPO rank, and $d$ is the local dimension (size of external indices).
-* *Direct?* Yes, computes result in a single pass and always succeeds.
-* *Controlled?* No, errors not strictly bounded by the individual truncations made in each step.
+* **Scaling:** $N\cdot(\chi^3 k d^2 + \chi^2 k^2 d^2)$ where $N$ is the length of the MPS (number of external indices), $\chi$ is the MPS rank, $k$ is the MPO rank, and $d$ is the local dimension (size of external indices).
+* **Direct?** Yes, computes result in a single pass and always succeeds.
+* **Controlled?** No, errors not strictly bounded by the individual truncations made in each step.
 
 ## Steps of the Algorithm
 
