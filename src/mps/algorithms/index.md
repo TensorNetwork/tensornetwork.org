@@ -37,8 +37,9 @@ by an MPO tensor network, resulting in a new MPS/TT that approximates
 the result.
 
 - [[Density Matrix Algorithm|mps/algorithms/denmat_mpo_mps]]
+- [[Zip-Up Algorithm|mps/algorithms/zip_up_mpo]]
+- [[Direct Algorithm|mps/algorithms/direct_mpo_mps]] (coming soon)
 - [[Fitting Algorithm|mps/algorithms/fitting_mpo]] (coming soon)
-- [[Zip-Up Algorithm|mps/algorithms/zip_up_mpo]] (coming soon)
 
 <a name="tevol"></a>
 ## Time Evolution Algorithms
