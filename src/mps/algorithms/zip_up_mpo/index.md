@@ -34,7 +34,9 @@ to form the tensor $C_1$. Next the tensor $C_1$ is factorized to obtain the unit
 
 ![medium](C1_factorization.png)
 
-As a technical note, because only $U_1$ is needed, it is possible to obtain it more efficiently than with an SVD. For instance, one could compute the eigenvalue factorization of $C_1 C^\dagger$ or use a rank-revealing QR factorization.
+Above, the index $\beta_1$ is the new index introduced by the factorization.
+
+As a technical note, because only $U_1$ is needed, it is possible to obtain it more efficiently than with an SVD. For instance, one could compute the eigenvalue factorization of $C_1 C^\dagger_1$ or use a rank-revealing QR factorization.
 
 The tensor $U_1$ is the first core of the new MPS.
 
@@ -44,7 +46,7 @@ To continue the algorithm at steps $j=2,3,\ldots,(N-1)$, repeat the steps shown 
 
 In step (1) one contracts $R_{j-1}$ from the previous step with the next MPO and MPS tensors (scaling $\chi^3 k d + \chi^2 k^2 d^2$) to form $C_j$. 
 
-In step (2), the tensor $C_j$ is factorized (such as by an SVD) to obtain $U_j$ (scaling $\chi^3 \cdot \min(k d^2, k^2 d)$. 
+In step (2), the tensor $C_j$ is factorized (such as by an SVD) by treating $(\beta_{j-1},s_j)$ as the collective row index to obtain $U_j$ (scaling $\chi^3 \cdot \min(k d^2, k^2 d)$. 
 
 In step (3), applying $U^\dagger_j$ to $C_j$ gives the $R_j$, the input to the next step.
 
