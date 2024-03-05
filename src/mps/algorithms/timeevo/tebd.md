@@ -91,7 +91,7 @@ construct a fourth-order TEBD evolution operator as
 with
 \begin{align}
   \delta_1 & \equiv \frac{1}{4 - 4^{\frac{1}{3}}} \delta \\
-  \delta_2 & \equiv \left(1 - 4 \delta_1\right) \delta \;.
+  \delta_2 & \equiv  \delta - 4 \delta_1 \;.
 \end{align}
 We then have
 \begin{equation}
