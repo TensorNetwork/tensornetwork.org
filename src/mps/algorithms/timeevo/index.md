@@ -25,7 +25,7 @@ then repeatedly applied to the MPS $\ket{\psi(t)}$ to yield
 time-evolved states $\ket{\psi(t+\delta)}$, $\ket{\psi(t+2\delta)}$
 etc.
 
-The _time-evolving block decimation_, also known as the Trotter method and abbreviated here as TEBD, was developed around 2004
+The _time-evolving block decimation_ method, also known as the Trotter method and abbreviated here as TEBD, was developed around 2004
 both for MPS\cite{vidal04:_effic_simul_one_dimen_quant,zwolak04,verstraete04:_matrix_produc_densit_operat} and the original
 classical DMRG\cite{white04:_real_time_evolut_using_densit,daley04:_time_hilber}.
 It uses a Trotter-Suzuki decomposition of $\hat U(\delta)$, which is

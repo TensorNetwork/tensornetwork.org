@@ -1,4 +1,4 @@
-# The time-evolution block-decimation (TEBD)
+# Time-evolving block-decimation (TEBD)
 
 <!--TOC-->
 
@@ -84,7 +84,7 @@ which has a third-order error per step
   \hat U^\mathrm{exact}(\delta) = \hat U^{\mathrm{TEBD2}}(\delta) + O(\delta^3)
 \end{equation}
 and hence a second-order error per time interval. Similarly, we can
-construct a fourth-order TEBD evolution operator as
+construct a fourth-order TEBD evolution operator\cite{Schollwoeck:2011} as
 \begin{equation}
   \hat U^{\mathrm{TEBD4}}(\delta) \equiv \hat U^{\mathrm{TEBD2}}(\delta_1) \hat U^{\mathrm{TEBD2}}(\delta_1) \hat U^{\mathrm{TEBD2}}(\delta_2) \hat U^{\mathrm{TEBD2}}(\delta_1) \hat U^{\mathrm{TEBD2}}(\delta_1)
 \end{equation}
@@ -107,7 +107,7 @@ $\hat H_2$, $\ldots$:
 \end{equation}
 where each $\hat H_\alpha$ is a sum
 \begin{equation}
-  \hat H_\alpha = \sum_{k=1}^{N_\alpha} \hat h_{\alpha}^k \label{eq:tebd:split_H}
+  \hat H_\alpha = \sum_{k=1}^{N_\alpha} \hat h_{\alpha}^k
 \end{equation}
 such that $\hat h_{\alpha}^k$ can be diagonalized efficiently
 and $[ \hat h_{\alpha}^k, \hat h_{\alpha}^l ] = 0$. The
