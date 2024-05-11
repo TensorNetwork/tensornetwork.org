@@ -67,9 +67,9 @@ Similar results can be proved for multivariate functions, with further considera
 
 Any univariate polynomial of degree $p$ can be represented by a QTT of rank at most $(1+p)$.\cite{Ali_Approximation_1_2}
 
-Constructive proofs together with efficient algorithms are given by Lindsey \cite{Lindsey_Multiscale}, showing results such as decaying ranks and rank bounds for band limited functions and rank bounds for functions with cusps or discontinuities that can be represented by polynomials across multiple scales.
+Constructive proofs together with efficient algorithms for compressing low-dimensional functions are given by Lindsey.\cite{Lindsey_Multiscale} Results include decaying ranks and rank bounds for band limited functions and rank bounds for functions with cusps or discontinuities that can be represented by polynomials across multiple scales.
 
-The discrete Fourier transform can be represented as an MPO tensor network with low rank (small bond dimension). In the QTT formalism, the discrete Fourier transform is equivalent to the ["quantum Fourier transform"](https://en.wikipedia.org/wiki/Quantum_Fourier_transform) algorithm known from quantum computing, but compressed into a tensor network.\cite{ChenQFT,Shinaoka2023Multiscale,Chen_Direct} An explicit representation for the MPO Fourier transform operator in terms of Chebyshev cardinal functions \cite{Chen_Direct}.
+The discrete Fourier transform can be represented as an MPO tensor network with low rank (small bond dimension). In the QTT formalism, the discrete Fourier transform is equivalent to the ["quantum Fourier transform"](https://en.wikipedia.org/wiki/Quantum_Fourier_transform) algorithm known from quantum computing, but compressed into a tensor network.\cite{ChenQFT,Shinaoka2023Multiscale,Chen_Direct} An explicit representation for the MPO Fourier transform operator has been found in terms of Chebyshev cardinal functions.\cite{Chen_Direct}
 
 ### References and Review Articles
 
