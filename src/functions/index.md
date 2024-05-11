@@ -67,7 +67,9 @@ Similar results can be proved for multivariate functions, with further considera
 
 Any univariate polynomial of degree $p$ can be represented by a QTT of rank at most $(1+p)$.\cite{Ali_Approximation_1_2}
 
-The discrete Fourier transform can be represented as an MPO tensor network with low rank (small bond dimension). In the QTT formalism, the discrete Fourier transform is equivalent to the ["quantum Fourier transform"](https://en.wikipedia.org/wiki/Quantum_Fourier_transform) algorithm known from quantum computing, but compressed into a tensor network.\cite{ChenQFT,Shinaoka2023Multiscale}
+Constructive proofs together with efficient algorithms are given by Lindsey \cite{Lindsey_Multiscale}, showing results such as decaying ranks and rank bounds for band limited functions and rank bounds for functions with cusps or discontinuities that can be represented by polynomials across multiple scales.
+
+The discrete Fourier transform can be represented as an MPO tensor network with low rank (small bond dimension). In the QTT formalism, the discrete Fourier transform is equivalent to the ["quantum Fourier transform"](https://en.wikipedia.org/wiki/Quantum_Fourier_transform) algorithm known from quantum computing, but compressed into a tensor network.\cite{ChenQFT,Shinaoka2023Multiscale,Chen_Direct} An explicit representation for the MPO Fourier transform operator in terms of Chebyshev cardinal functions \cite{Chen_Direct}.
 
 ### References and Review Articles
 
@@ -91,7 +93,6 @@ The discrete Fourier transform can be represented as an MPO tensor network with 
   **Author:** Boris N. Khoromskij<br/>
   **Journal**: <a href="https://doi.org/10.1007/s00365-011-9131-1">Constr Approx 34, 257–280 (2011)</a><br/>
   **Notes**: Introduces the quantics, or quantized tensor train (QTT) format for representing functions as [[tensor trains or matrix product states|mps]].
-
 
 * **"Image Compression and Entanglement"**<br/>
   **Author:** Jose I. Latorre<br/>
