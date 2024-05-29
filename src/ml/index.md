@@ -17,7 +17,7 @@ Please help to expand this list by submitting a pull request to the [tensornetwo
 
 Works are listed in reverse chronological order within each section.
 
-### Supervised Learning
+### Supervised Learning and Regression
 
 - [Machine learning with tree tensor networks, CP rank constraints, and tensor dropout](https://arxiv.org/abs/2305.19440), Hao Chen, Thomas Barthel, arxiv:2305.19440 <br/>
   _Uses tree tensor networks with a low-rank (low CP rank) representation of the individual tensos, plus other techniques such as dropout, to find supervised learning results with reduced computational cost and better generalization, on par with state-of-art._
@@ -34,6 +34,7 @@ Works are listed in reverse chronological order within each section.
 - [Exponential Machines](https://arxiv.org/abs/1605.03795), Alexander Novikov, Mikhail Trofimov, Ivan Oseledets, arxiv:1605.03795 (ICLR 2017 workshop track paper) <br/>
   _Proposes the use of tensor networks for supervised machine learning with an elegant interpretation of the function represented by the model and a stochastic Riemannian optimization procedure. State-of-the-art performance is demonstrated on multiple datasets._
 
+- [Learning multidimensional Fourier series with tensor trains](https://doi.org/10.1109/GlobalSIP.2014.7032146), Sander Wahls, Visa Koivunen, H. Vincent Poor, Michel Verhaegen, 2014 IEEE Global Conference on Signal and Information Processing (GlobalSIP) p. 394–398 \cite{wahls2014learning}
 
 ### Unsupervised Learning / Generative Modeling
 
