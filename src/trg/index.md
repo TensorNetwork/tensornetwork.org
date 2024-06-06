@@ -4,7 +4,7 @@
 
 The _tensor renormalization group_ or TRG algorithm
 is a strategy for evaluating a fully contracted network of tensors
-by decimating the network in a heirarchical fashion.\cite{Levin} 
+by decimating the network in a hierarchical fashion.\cite{Levin} 
 The strategy is to factorize each tensor in the network using a truncated
 [[singular value decomposition|background/svd]] (SVD) into two smaller
 factor tensors. Then each factor tensor is contracted with another factor
