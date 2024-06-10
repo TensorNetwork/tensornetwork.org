@@ -10,7 +10,7 @@ as a *binary fraction*
 x = 0.x_1x_2\cdots x_n = x_1/2 + x_2/2^2 + \ldots + x_n/2^n \ .
 \end{equation}
 described by bits $x_i = 0,1$. (For example, $1/3 \approx 0.010101$.)
-This way of writing numbers is similar to the to the binary representation of integers, but with the numbers stepping through
+This way of writing numbers is similar to the binary representation of integers, but with the numbers stepping through
 a finely-spaced grid of spacing $1/2^n$ instead of steps of size 1.
 
 Next we can write the values the function $f(x)$ takes on this grid as
