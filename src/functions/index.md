@@ -16,7 +16,7 @@ a finely-spaced grid of spacing $1/2^n$ instead of steps of size 1.
 Next we can write the values the function $f(x)$ takes on this grid as
 $f(x) = f(0.x_1x_2\cdots x_n) = F^{x_1 x_2 \cdots x_n}$ so that the values of $f(x)$ have been repackaged into an $n$-index tensor $F$.
 
-The last move is to approximate of $F$ as a tensor network, such as a [[matrix product state / tensor train|mps]]
+The last move is to approximate $F$ as a tensor network, such as a [[matrix product state / tensor train|mps]]
 network:
 \begin{equation}
 F^{x_1 x_2 \cdots x_n} = \sum_{\{\mathbf{\alpha}\}} A^{x_1}_{\alpha_1}
