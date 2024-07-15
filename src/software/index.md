@@ -128,6 +128,13 @@
   that are interchangeable with standard neural network layers. However, 
   the rich structure of MPS's allows for more interesting behavior...
 
+* <a href="https://github.com/ion-g-ion/torchTT/tree/main">TorchTT</a> (Python)<br/>
+  Tensor-Train decomposition package written in Python on top of pytorch. Supports GPU 
+  acceleration and automatic differentiation. It also contains routines for solving linear 
+  systems in the TT format and performing adaptive cross approximation 
+  (the AMEN solver/cross interpolation is inspired form the MATLAB TT-Toolbox). 
+  Some routines are implemented in C++ for an increased execution speed.
+
 * <a href="https://github.com/oseledets/TT-Toolbox">TT-Toolbox</a> (MATLAB)<br/>
   MATLAB implementation of basic operations with tensors in TT-format,
   including TT tensor and TT matrix formats, fast rounding procedures,
