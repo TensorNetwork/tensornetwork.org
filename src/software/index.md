@@ -168,7 +168,7 @@
   (the AMEN solver/cross interpolation is inspired form the MATLAB TT-Toolbox). 
   Some routines are implemented in C++ for an increased execution speed.
 
-* <a href="https://github.com/oseledets/ttpy">TT-Toolbox</a> (Python)<br/>
+* <a href="https://github.com/oseledets/ttpy">ttpy</a> (Python)<br/>
   Same as <a href="https://github.com/oseledets/TT-Toolbox">TT-Toolbox</a>
   but in Python.
 
