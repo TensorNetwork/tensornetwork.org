@@ -11,10 +11,17 @@
 
 (Listed in alphabetical order by project name.)
 
+* <a href="https://block2.readthedocs.io/en/latest/">block2</a> (Python/C++)<br/>
+  **block2** is an efficient and scalable implementation of
+  the Density Matrix Renormalization Group (DMRG) for quantum chemistry.
+  The code is highly optimized for production level calculation of realistic systems.
+  Like many quantum chemistry packages,
+  it can be used by reading parameters and instructions from a formatted input file.
+
 * <a href="http://solomon2.web.engr.illinois.edu/ctf/">Cyclops Tensor Framework</a> (C++)<br/>
   This library provides automatic parallelization of operations on multidimensional 
   (sparse) arrays. Cyclops supports general tensor sparsity, so it is 
-  possible to define graph algorithms with the use of sparse adjacency matrices
+  possible to define graph algorithms with the use of sparse adjacency matrices.
 
 * <a href="https://kaihsinwu.gitlab.io/Cytnx_doc/Intro.html">Cytnx</a> (Python/C++)<br/>
   Cytnx is a library designed for Quantum/classical Physics simulations. 
@@ -23,6 +30,15 @@
   directly on the base container level. For algorithms in physics, Cytnx provides powerful 
   tools such as UniTensor, Network, Bond, Symmetry etc. These objects are built on 
   top of Tensor objects.
+
+* <a href="https://kth-dmrg.readthedocs.io/en/latest/installation.html">DMRG++</a> (C++)<br/>
+  This library includes 4 algorithms for finding eigenstates of 1D quantum spin chains:
+  - xDMRG: Excited state DMRG. Finds highly excited eigenstates of finite systems.
+  - fDMRG: finite DMRG. Finds the ground state of finite systems.
+  - iDMRG: infinite DMRG. Finds the ground state of infinite translationally invariant systems.
+  - iTEBD: Imaginary Time Evolving Block Decimation.
+  Finds the ground state of infinite translationally
+  invariant systems from a quench in imaginary time.
 
 * <a href="https://github.com/romeric/Fastor">Fastor</a> (C++)<br/>
   Fastor is a stack-based high performance tensor (multi-dimensional array) library written 
@@ -38,8 +54,9 @@
   JAX/TensorFlow and PyTorch that it builds on top of.
 
 * <a href="https://itensor.org">ITensor</a> (Julia, C++)<br/>
-  ITensor is a library for tensor networks where tensor indices carry extra information and matching tensor
-  indices automatically contract. Also features MPS and MPO algorithms, such as DMRG, and quantum number block-sparse tensors.
+  ITensor is a library for tensor networks where tensor indices carry extra information
+  and matching tensor indices automatically contract. Also features MPS and MPO algorithms,
+  such as DMRG, and quantum number block-sparse tensors.
 
 * <a href="https://arxiv.org/abs/1402.0939">NCON</a> (MATLAB)<br/>
   NCON (Network Contractor) is a MATLAB routine which can be used for computing
@@ -56,7 +73,13 @@
   cost compared to classical tensor approaches significantly.
 
 * <a href="https://susmost.com">SuSMoST</a><br/>
-  SuSMoST (Surface Science Modelling and Simulation Toolkit) is meant to build and study classical lattice models of adsorption, such as Langmuir, Ising, Potts, or hard-core models. SuSMoST automatically builds a tensor network representation of a lattice model from samples of adsorption complexes. Several versions of the [[TRG|trg]] algorithm are implemented in SuSMoST. They can be used to compute the partition function and its derivatives for simulated lattice models.
+  SuSMoST (Surface Science Modelling and Simulation Toolkit) is meant to build and study
+  classical lattice models of adsorption, such as Langmuir, Ising, Potts, or hard-core models.
+  SuSMoST automatically builds a tensor network representation of a lattice model from
+  samples of adsorption complexes. Several versions of the [[TRG|trg]] algorithm are
+  implemented in SuSMoST.
+  They can be used to compute the partition function and its derivatives
+  for simulated lattice models.
 
 * <a href="https://syten.eu">SyTen</a> (C++) <br/>
   A symmetry-protected tensor networks toolkit in C++,
@@ -64,11 +87,21 @@
   and infinite projected entangled pair state utilities included.
 
 * <a href="https://github.com/issp-center-dev/TeNeS">TeNeS</a> (C++)<br/>
-  TeNeS is a package for calculating many-body quantum states on two-dimensional lattices based on iTPS (iPEPS). It can treat various spin and boson Hamiltonians through comprehensive input parameters, while we need a simple input format for predefined lattices and models. Furthermore, it supports MPI/OpenMP hybrid parallelization for supercomputers.
+  TeNeS is a package for calculating many-body quantum states on two-dimensional
+  lattices based on iTPS (iPEPS). It can treat various spin and boson Hamiltonians
+  through comprehensive input parameters, while we need a simple input format for
+  predefined lattices and models. Furthermore, it supports MPI/OpenMP hybrid parallelization
+  for supercomputers.
 
 * <a href="https://github.com/Jutho/TensorKit.jl">TensorKit</a> (Julia)<br/>
   A Julia package for large-scale tensor computations, with a hint of category theory.
-  TensorKit.jl aims to be a generic package for working with tensors as they appear throughout the physical sciences. Currently, most effort is oriented towards tensors as they appear in the context of quantum many body physics and in particular the field of tensor networks. Such tensors often have large dimensions and take on a specific structure when symmetries are present. To deal with generic symmetries, we employ notations and concepts from category theory all the way down to the definition of a tensor. At the same time, TensorKit.jl focusses on computational efficiency and performance.
+  TensorKit.jl aims to be a generic package for working with tensors as they appear throughout
+  the physical sciences. Currently, most effort is oriented towards tensors as they appear in
+  the context of quantum many body physics and in particular the field of tensor networks.
+  Such tensors often have large dimensions and take on a specific structure when symmetries
+  are present. To deal with generic symmetries, we employ notations and concepts from category
+  theory all the way down to the definition of a tensor. At the same time, TensorKit.jl
+  focuses on computational efficiency and performance.
 
 * <a href="https://github.com/tenpy/tenpy">TenPy</a> (Python)<br/>
   Tensor Network Python (TeNPy) is a Python library for the simulation of 
@@ -135,12 +168,23 @@
   (the AMEN solver/cross interpolation is inspired form the MATLAB TT-Toolbox). 
   Some routines are implemented in C++ for an increased execution speed.
 
+* <a href="https://github.com/oseledets/ttpy">ttpy</a> (Python)<br/>
+  Same as <a href="https://github.com/oseledets/TT-Toolbox">TT-Toolbox</a>
+  but in Python.
+
 * <a href="https://github.com/oseledets/TT-Toolbox">TT-Toolbox</a> (MATLAB)<br/>
   MATLAB implementation of basic operations with tensors in TT-format,
   including TT tensor and TT matrix formats, fast rounding procedures,
   methods for solutions of linear systems and eigenvalue problems,
   and the TT-cross method.
-  
+
+* <a href="https://github.com/QuantumLiquids/UltraDMRG">UltraDMRG</a> (C++)<br/>
+  This library is specifically designed to tackle two-dimensional
+  strongly correlated electron systems. It offers
+  MPI parallelization of Density Matrix Renormalization Group,
+  MPI parallelization of MPS-based time-dependent variational principle algorithm,
+  finite-temperature calculation.
+
 * <a href="https://gitlab.com/uni10/uni10/">Uni10</a> (C++)<br/>
   Universal Tensor Library, an open-source C++ library designed for 
   the development of tensor network algorithms. Provides a Network class to process 
@@ -151,14 +195,16 @@
   The Xerus library is a general purpose library for numerical 
   calculations with higher order tensors, Tensor-Train 
   Decompositions / Matrix Product States and general Tensor Networks. 
-  The focus of development was the simple usability and adaptibility to any 
+  The focus of development was the simple usability and adaptability to any 
   setting that requires higher order tensors or decompositions thereof.
 
 
 ## High-Performance, Lower-Level Tensor Software and Tensor Backends
 
 * <a href="https://developer.nvidia.com/cutensor">CuTensor</a> (C)<br/>
-  CuTensor is a library for high-performance contraction of arbitrary tensors on NVIDIA graphics processing units (GPUs). It is built on top of hardware-optimized, permutation-free contraction algorithms and can achieve very high performance.
+  CuTensor is a library for high-performance contraction of arbitrary tensors on
+  NVIDIA graphics processing units (GPUs). It is built on top of hardware-optimized,
+* permutation-free contraction algorithms and can achieve very high performance.
 
 * <a href="http://solomon2.web.engr.illinois.edu/ctf/">Cyclops Tensor Framework</a> (C++)<br/>
   This library provides automatic parallelization of operations on multidimensional 
@@ -166,7 +212,10 @@
   possible to define graph algorithms with the use of sparse adjacency matrices
   
 * <a href="https://github.com/springer13/hptt">HPTT</a> (C/C++)<br/>
-  High-performance tensor transpose (HPTT) is a library for permuting (transposing) tensor data including summing two tensors which may have a different ordering of indices. Performance is achieved by hardware and cache-friendly algorithms as well as multi-threading based on OpenMP.
+  High-performance tensor transpose (HPTT) is a library for permuting (transposing)
+  tensor data including summing two tensors which may have a different ordering of indices.
+  Performance is achieved by hardware and cache-friendly algorithms as well as multi-threading
+  based on OpenMP.
 
 * <a href="http://tensor-compiler.org">taco</a> (C/C++) <br/>
   taco is a library for compiling dense and sparse linear and tensor algebra expressions. 
@@ -175,8 +224,13 @@
   taco automatically generates efficient compute kernels (loops) to evaluate these expressions.
   
 * <a href="https://github.com/devinamatthews/tblis">TBLIS</a> (C/C++)<br/>
-  TBLIS is a contraction library for arbitrary (real-valued) tensors which uses a sophisticated permutation-free algorithm, avoiding the permutation overhead that would be incurred by a more naive permute and matrix-multiply algorithm.
+  TBLIS is a contraction library for arbitrary (real-valued) tensors
+  which uses a sophisticated permutation-free algorithm,
+  avoiding the permutation overhead that would be incurred by a more naive permute and
+  matrix-multiply algorithm.
 
 ## Other Resources
 
-* Review article ["The landscape of software for tensor computations"](https://arxiv.org/abs/2103.13756) by Psarras et al.\cite{psarras2021landscape} surveying and partially classifying existing tensor software.
+* Review article ["The landscape of software for tensor computations"](https://arxiv.org/abs/2103.13756) by
+  Psarras et al.\cite{psarras2021landscape} surveying and partially
+  classifying existing tensor software.
