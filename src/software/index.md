@@ -11,10 +11,17 @@
 
 (Listed in alphabetical order by project name.)
 
+* <a href="https://block2.readthedocs.io/en/latest/">block2</a> (Python/C++)<br/>
+  **block2** is an efficient and scalable implementation of
+  the Density Matrix Renormalization Group (DMRG) for quantum chemistry.
+  The code is highly optimized for production level calculation of realistic systems.
+  Like many quantum chemistry packages,
+  it can be used by reading parameters and instructions from a formatted input file.
+
 * <a href="http://solomon2.web.engr.illinois.edu/ctf/">Cyclops Tensor Framework</a> (C++)<br/>
   This library provides automatic parallelization of operations on multidimensional 
   (sparse) arrays. Cyclops supports general tensor sparsity, so it is 
-  possible to define graph algorithms with the use of sparse adjacency matrices
+  possible to define graph algorithms with the use of sparse adjacency matrices.
 
 * <a href="https://kaihsinwu.gitlab.io/Cytnx_doc/Intro.html">Cytnx</a> (Python/C++)<br/>
   Cytnx is a library designed for Quantum/classical Physics simulations. 
@@ -23,6 +30,13 @@
   directly on the base container level. For algorithms in physics, Cytnx provides powerful 
   tools such as UniTensor, Network, Bond, Symmetry etc. These objects are built on 
   top of Tensor objects.
+
+* <a href="https://kth-dmrg.readthedocs.io/en/latest/installation.html">DMRG++</a> (C++)<br/>
+  This library includes 4 algorithms for finding eigenstates of 1D quantum spin chains:
+  - xDMRG: Excited state DMRG. Finds highly excited eigenstates of finite systems.
+  - fDMRG: finite DMRG. Finds the ground state of finite systems.
+  - iDMRG: infinite DMRG. Finds the ground state of infinite translationally invariant systems.
+  - iTEBD: Imaginary Time Evolving Block Decimation. Finds the ground state of infinite translationally invariant systems from a quench in imaginary time.
 
 * <a href="https://github.com/romeric/Fastor">Fastor</a> (C++)<br/>
   Fastor is a stack-based high performance tensor (multi-dimensional array) library written 
@@ -135,12 +149,23 @@
   (the AMEN solver/cross interpolation is inspired form the MATLAB TT-Toolbox). 
   Some routines are implemented in C++ for an increased execution speed.
 
+* <a href="https://github.com/oseledets/ttpy">TT-Toolbox</a> (Python)<br/>
+  Same as <a href="https://github.com/oseledets/TT-Toolbox">TT-Toolbox</a>
+  but in Python.
+
 * <a href="https://github.com/oseledets/TT-Toolbox">TT-Toolbox</a> (MATLAB)<br/>
   MATLAB implementation of basic operations with tensors in TT-format,
   including TT tensor and TT matrix formats, fast rounding procedures,
   methods for solutions of linear systems and eigenvalue problems,
   and the TT-cross method.
-  
+
+* <a href="https://github.com/QuantumLiquids/UltraDMRG">UltraDMRG</a> (C++)<br/>
+  This library is specifically designed to tackle two-dimensional
+  strongly correlated electron systems. It offers
+  MPI parallelization of Density Matrix Renormalization Group,
+  MPI parallelization of MPS-based time-dependent variational principle algorithm,
+  finite-temperature calculation.
+
 * <a href="https://gitlab.com/uni10/uni10/">Uni10</a> (C++)<br/>
   Universal Tensor Library, an open-source C++ library designed for 
   the development of tensor network algorithms. Provides a Network class to process 
@@ -151,7 +176,7 @@
   The Xerus library is a general purpose library for numerical 
   calculations with higher order tensors, Tensor-Train 
   Decompositions / Matrix Product States and general Tensor Networks. 
-  The focus of development was the simple usability and adaptibility to any 
+  The focus of development was the simple usability and adaptability to any 
   setting that requires higher order tensors or decompositions thereof.
 
 
