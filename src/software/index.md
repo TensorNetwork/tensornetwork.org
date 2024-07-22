@@ -61,6 +61,10 @@
 * <a href="https://arxiv.org/abs/1402.0939">NCON</a> (MATLAB)<br/>
   NCON (Network Contractor) is a MATLAB routine which can be used for computing
   a broad class of tensor network diagrams in an efficient and convenient way.
+
+* <a href="https://github.com/Drachier/PyTreeNet?tab=readme-ov-file">PyTreeNet</a> (Python)<br/>
+  PyTreeNet is a Python implementation of tree tensor networks with a focus on the simulation
+  of quantum systems admitting a tree topology.
   
 * <a href="https://quimb.readthedocs.io/en/latest/">QUIMB</a> (Python)<br/>
   python library for contracting tensors and tensor networks,
