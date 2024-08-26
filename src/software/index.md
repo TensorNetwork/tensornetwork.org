@@ -135,7 +135,7 @@
 
 * <a href="https://github.com/google/TensorNetwork">TensorNetwork</a> (Python)<br/>
   python library for easy and efficient contraction of tensor
-  networks, supporting multiple powerful backends
+  networks, supporting multiple powerful backends.
 
 * <a href="http://www.tensortoolbox.org/">Tensor Toolbox</a> (MATLAB)<br/>
   The Tensor Toolbox is a MATLAB library supporting multiple tensor types, 
@@ -208,7 +208,7 @@
 * <a href="https://developer.nvidia.com/cutensor">CuTensor</a> (C)<br/>
   CuTensor is a library for high-performance contraction of arbitrary tensors on
   NVIDIA graphics processing units (GPUs). It is built on top of hardware-optimized,
-* permutation-free contraction algorithms and can achieve very high performance.
+  permutation-free contraction algorithms and can achieve very high performance.
 
 * <a href="http://solomon2.web.engr.illinois.edu/ctf/">Cyclops Tensor Framework</a> (C++)<br/>
   This library provides automatic parallelization of operations on multidimensional 
