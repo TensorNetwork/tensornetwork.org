@@ -18,7 +18,7 @@ The reported performance measurements were conducted on a two socket Intel Xeon 
     <td>11.63</td><td>424.60</td><td>764.69</td>
 </tr>
 <tr>
-    <td><a href="https://github.com/flame/blis">BLIS</a></td>
+    <td><a href="https://github.com/devinamatthews/tblis">TBLIS</a></td>
     <td>5.52</td><td>382.83</td><td>730.28</td>
 </tr>
 <tr>
