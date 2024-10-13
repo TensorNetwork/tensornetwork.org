@@ -96,6 +96,14 @@
   through comprehensive input parameters, while we need a simple input format for
   predefined lattices and models. Furthermore, it supports MPI/OpenMP hybrid parallelization
   for supercomputers.
+ 
+* <a href="https://github.com/anthony-nouy/tensap">tensap</a> (Python)<br/>
+  A Python package for the approximation of functions and tensors.
+  `tensap` features low-rank tensors (including canonical,
+  tensor-train and tree-based tensor formats or tree tensor networks),
+  sparse tensors, polynomials, and allows the plug-in of other approximation tools.
+  It provides different approximation methods based on interpolation,
+  least-squares projection or statistical learning.
 
 * <a href="https://github.com/Jutho/TensorKit.jl">TensorKit</a> (Julia)<br/>
   A Julia package for large-scale tensor computations, with a hint of category theory.
