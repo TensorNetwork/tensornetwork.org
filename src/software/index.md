@@ -96,7 +96,15 @@
   through comprehensive input parameters, while we need a simple input format for
   predefined lattices and models. Furthermore, it supports MPI/OpenMP hybrid parallelization
   for supercomputers.
- 
+
+* <a href="https://github.com/AndreiChertkov/teneva">teneva</a> (Python)<br/>
+  This python package provides a very compact implementation of basic operations
+  in the tensor-train (TT) format, including TT-SVD, TT-ALS, TT-ANOVA, TT-cross, TT-truncate,
+  Chebyshev interpolation, "add", "mul", "norm", "mean", "sample", etc.
+  It can be used for approximation of multidimensional arrays and multivariate functions,
+  as well as for efficient implementation of various operations
+  of linear algebra in the low rank TT-format. 
+
 * <a href="https://github.com/anthony-nouy/tensap">tensap</a> (Python)<br/>
   A Python package for the approximation of functions and tensors.
   `tensap` features low-rank tensors (including canonical, tensor-train 
@@ -179,6 +187,12 @@
   systems in the TT format and performing adaptive cross approximation 
   (the AMEN solver/cross interpolation is inspired form the MATLAB TT-Toolbox). 
   Some routines are implemented in C++ for an increased execution speed.
+
+* <a href="https://github.com/RikVoorhaar/ttml">ttml</a> (Python)<br/>
+  Tensor train based machine learning estimator.
+  Uses existing machine learning estimators to initialize a tensor train decomposition
+  on a particular feature space discretization.
+  Then, this tensor train is further optimized with Riemannian conjugate gradient descent.
 
 * <a href="https://github.com/oseledets/ttpy">ttpy</a> (Python)<br/>
   Same as <a href="https://github.com/oseledets/TT-Toolbox">TT-Toolbox</a>
