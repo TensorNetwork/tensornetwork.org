@@ -113,6 +113,12 @@
   It provides different approximation methods based on interpolation,
   least-squares projection or statistical learning.
 
+* <a href="https://github.com/thomasahle/tensorgrad">Tensorgrad</a> (Python)<br/>
+  Tensorgrad is a Python implementation of symbolic tensor algebra using tensor networks.
+  It supports basic operations such as sums and products, as well as more general functions and derivatives.
+  Its primary focus is to help developers derive, simplify, and visualize complex tensor expressions.
+  Additionally, Tensorgrad can be used as a machine learning library—similar to PyTorch—for writing ML code.
+
 * <a href="https://github.com/Jutho/TensorKit.jl">TensorKit</a> (Julia)<br/>
   A Julia package for large-scale tensor computations, with a hint of category theory.
   TensorKit.jl aims to be a generic package for working with tensors as they appear throughout
@@ -223,12 +229,6 @@
   Decompositions / Matrix Product States and general Tensor Networks. 
   The focus of development was the simple usability and adaptability to any 
   setting that requires higher order tensors or decompositions thereof.
-
-* <a href="https://github.com/thomasahle/tensorgrad">Tensorgrad</a> (Python)<br/>
-  Tensorgrad is a Python implementation of symbolic tensor algebra using tensor networks.
-  It supports basic operations such as sums and products, as well as more general functions and derivatives.
-  Its primary focus is to help developers derive, simplify, and visualize complex tensor expressions.
-  Additionally, Tensorgrad can be used as a machine learning library—similar to PyTorch—for writing ML code.
 
 
 ## High-Performance, Lower-Level Tensor Software and Tensor Backends
