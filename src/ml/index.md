@@ -36,20 +36,27 @@ Works are listed in reverse chronological order within each section.
 
 - [Learning multidimensional Fourier series with tensor trains](https://doi.org/10.1109/GlobalSIP.2014.7032146), Sander Wahls, Visa Koivunen, H. Vincent Poor, Michel Verhaegen, 2014 IEEE Global Conference on Signal and Information Processing (GlobalSIP) p. 394–398 \cite{wahls2014learning}
 
+### Active Learning (Tensor Cross Interpolation)
+
+- [Quantum state tomography with tensor train cross approximation](https://arxiv.org/abs/2207.06397), Alexander Lidiak, Casey Jameson, Zhen Qin, Gongguo Tang, Michael B. Wakin, Zhihui Zhu, Zhexuan Gong, arxiv:2207.06397 <br/>
+  _Learning a quantum wavefunction from samples taken in different bases using the tensor train cross approximation algorithm_
+
+- [Learning Feynman Diagrams with Tensor Trains](https://arxiv.org/abs/2207.06135), Yuriel Nunez-Fernandez, Matthieu Jeannin, Philipp T. Dumitrescu, Thomas Kloss, Jason Kaye, Olivier Parcollet, Xavier Waintal, arxiv:2207.06135 <br/>
+  _Learning of complicated functions occurring in series expansion methods (perturbation theory) used in quantum physics. After "actively" learning these high-dimensional functions using the cross approximation, they can be integrated very efficiently._
+
+- [Parallel cross interpolation for high-precision calculation of high-dimensional integrals](https://doi.org/10.1016/j.cpc.2019.106869), S. Dolgov and D. Savostyanov, Computer Physics Communications, 246, 106869 (2020).
+
+- [TT-cross approximation for multidimensional arrays](https://doi.org/10.1016/j.laa.2009.07.024), Ivan Oseledets, Eugene Tyrtyshnikov, Linear Algebra and its Applications, 431, 70-88 (2010).
+
+
 ### Unsupervised Learning / Generative Modeling
 
 - [Combining Monte Carlo and Tensor-network Methods for Partial Differential Equations via Sketching](https://arxiv.org/abs/2305.17884), Yian Chen, Yuehaw Khoo, arxiv:2305.17884 (2023) <br/>
 
 - [Generative modeling via Hierarchical Tensor Sketching](https://arxiv.org/abs/2304.05305), Y. Peng, Y. Chen, E. M. Stoudenmire, Y. Khoo, arxiv:2304.05305 (2023) <br/>
 
-- [Quantum state tomography with tensor train cross approximation](https://arxiv.org/abs/2207.06397), Alexander Lidiak, Casey Jameson, Zhen Qin, Gongguo Tang, Michael B. Wakin, Zhihui Zhu, Zhexuan Gong, arxiv:2207.06397 <br/>
-  _Learning a quantum wavefunction from samples taken in different bases using the tensor train cross approximation algorithm_
-
 - [Generative modeling via tensor train sketching](https://arxiv.org/abs/2202.11788), Y. Hur, J. G. Hoskins, M. Lindsey, E.M. Stoudenmire, Y. Khoo, arxiv:2202.11788 (2022) <br/>
   _Deterministic algorithm for learning of probability distributions and other functions based on sequential, sketched matrix factorizations_
-
-- [Learning Feynman Diagrams with Tensor Trains](https://arxiv.org/abs/2207.06135), Yuriel Nunez-Fernandez, Matthieu Jeannin, Philipp T. Dumitrescu, Thomas Kloss, Jason Kaye, Olivier Parcollet, Xavier Waintal, arxiv:2207.06135 <br/>
-  _Learning of complicated functions occurring in series expansion methods (perturbation theory) used in quantum physics. After "actively" learning these high-dimensional functions using the cross approximation, they can be integrated very efficiently._
 
 - [Generative modeling with projected entangled-pair states](https://arxiv.org/abs/2202.08177), Tom Vieijra, Laurens Vanderstraeten, Frank Verstraete, arxiv:2202.08177
 
