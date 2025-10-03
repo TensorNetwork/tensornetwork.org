@@ -70,6 +70,11 @@ Works are listed in reverse chronological order within each section.
 
 - [Unsupervised Generative Modeling Using Matrix Product States](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.8.031012), Zhao-Yu Han, Jun Wang, Heng Fan, Lei Wang, and Pan Zhang, Phys. Rev. X 8, 031012 (2018). \cite{PhysRevX.8.031012}
 
+
+### Diffusion Models
+
+- [Discrete generative diffusion models without stochastic differential equations: A tensor network approach](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.111.025302), Luke Causer, Grant M. Rotskoff, and Juan P. Garrahan, Phys. Rev. E 111, 025302
+
 ### Reinforcement Learning
 
 - [Learning Generative Models for Active Inference using Tensor Networks](https://arxiv.org/abs/2208.08713), Samuel T. Wauthier, Bram Vanhecke, Tim Verbelen, Bart Dhoedt, arxiv:2208.08713
