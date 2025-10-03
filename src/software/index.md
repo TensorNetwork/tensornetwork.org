@@ -70,6 +70,9 @@
   python library for contracting tensors and tensor networks,
   with support for matrix product states and algorithms, and advanced
   features such as determination of the optimal ordering of tensor contractions.\cite{quimb}
+
+* <a href="https://scipost.org/10.21468/SciPostPhysCodeb.40">QSpace</a> (C++, Matlab) <br/>
+   The QSpace tensor library provides a toolbox to exploit ‘quantum symmetry spaces’ in tensor network states in the quantum many-body context. It offers support for a wide range of non-Abelian symmetry groups, through an interface that lets the developer or user work as if there were no symmetries.
   
 * <a href="https://github.com/PGelss/scikit_tt">Scikit-TT</a> (Python)<br/>
   Scikit-TT is a Python library for applying the tensor-train (TT) format 
