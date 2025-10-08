@@ -90,11 +90,11 @@ Starting with a set of any number of random pivots, we can construct the pivot l
 
 ## Improving the Approximation
 
-The initial random pivots will most likely lead to a poor approximation of the tensor $F$ and so we start with very few, perhaps just one, initial pivot and look to add important pivots successively. Sweeping back and forth across the sites, at each site $l$ we construct the tensor $\Pi_l$ and compare it with the interpolation of $\Pi_l \approx T_lP_l^{-1}T_{l+1}$. Since the interpolation is exact at the pivots chosen, we search for the element with the maximum absolute error and add this as a pivot since this will have the largest reduction in error. 
+The initial random pivots will most likely lead to a poor approximation of the tensor $F$ and so we start with very few, perhaps just one, initial pivot and look to add important pivots successively. Sweeping back and forth across the sites, at each site $l$ we construct the tensor $\Pi_l$ and compare it with the interpolation of $\Pi_l \approx T_lP_l^{-1}T_{l+1}$. Since the interpolation is exact at the pivots chosen, we search for the element with the maximum absolute error and add this as a pivot since this will have the largest reduction in error\cite{nunez2022learning}. 
 
 ![medium](Pi_approx.png)
 
-Searching the entire matrix for the best pivot - full pivoting - is time intensive as it scales $O(nm)$ for an $(n\times m)$ matrix. However, rook pivoting is a cheaper alternative which starts by searching along a random column for the row with the largest error, then along that row for the column with the largest error and so on alternating between rows and columns until an element is found that maximises the error along both its row and column. This reduces the computational cost to $O[\text{max}(n,m)]$ and has almost as good convergence as full pivoting.
+Searching the entire matrix for the best pivot - full pivoting - is time intensive as it scales $O(nm)$ for an $(n\times m)$ matrix. However, rook pivoting is a cheaper alternative which starts by searching along a random column for the row with the largest error, then along that row for the column with the largest error and so on alternating between rows and columns until an element is found that maximises the error along both its row and column. This reduces the computational cost to $O[\text{max}(n,m)]$ and has almost as good convergence as full pivoting\cite{nunez2025learning}.
 
 Once a new pivot has been chosen, it is added to the pivot lists $\mathcal{I}_l$ and $\mathcal{J}_{l+1}$. Then the tensors $T_l$, $P_l^{-1}$ and $T_{l+1}$ are constructed using the new pivot lists and we move to the next site.
 
