@@ -41,7 +41,7 @@ The different multi-indices are stored in pivot lists. The row multi-indices are
 
 With multiple pivots the lists contain more elements, but no duplicates. See the table below for the pivot lists with the pivots (01010) and (01101):
 
-![small](Pivot_List_Table.png)
+![medium](Pivot_List_Table.png)
 
 Using these pivot lists, we build slices of the input tensor $F$. The simplest is the pivot matrix $P_l$ which has no free indices and includes only the pivots specified by the pivot lists. The rows of the pivot matrix are labelled by $\mathcal{I}_l$ and the columns labelled by $\mathcal{J}_{l+1}$.
 
