@@ -41,7 +41,7 @@ The different multi-indices are stored in pivot lists. The row multi-indices are
 
 With multiple pivots the lists contain more elements, but no duplicates. See the table below for the pivot lists with the pivots (01010) and (01101):
 
-![medium](Pivot_List_Table.png)
+![small](Pivot_List_Table.png)
 
 Using these pivot lists, we build slices of the input tensor $F$. The simplest is the pivot matrix $P_l$ which has no free indices and includes only the pivots specified by the pivot lists. The rows of the pivot matrix are labelled by $\mathcal{I}_l$ and the columns labelled by $\mathcal{J}_{l+1}$.
 
@@ -51,9 +51,10 @@ Using these pivot lists, we build slices of the input tensor $F$. The simplest i
 
 Consider a single element of the pivot matrix $P_2$ with its row labelled by the element of $\mathcal{I}_2$, $i=(01)$, and its column labelled by the element of $\mathcal{J}_{3}$, $j=(010)$. Then the location in the matrix (01,010), holds the element $F_{01010}$. Below is an example of the pivot matrix $P_2$ made up of 6 pivots where the top row contains those included in the table above. 
 
-    
-![small](Pivot_Matrix.png)
-![small](P2.png)
+<div style="display: flex; gap: 20px; justify-content: flex-start;">
+  <img src="Pivot_Matrix.png" style="width: 40%;">
+  <img src="P2.png" style="width: 40%;">
+</div>
 
 In general, $[P_l]_{ij} = F_{i\oplus j}$. Meaning the element of $P_l$ at $(i,j)$ is the element of $F$ specified by the pivot $i \oplus j$. Since the two pivot lists have the same number of elements, $P_l$ is a square matrix. Most importantly, it must be invertible meaning pivots must be chosen so that $\text{det}(P_l) \neq 0$.
 
@@ -62,7 +63,10 @@ A one-dimensional slice of F is the order 3 tensor with one free external index 
     T_l=F(\mathcal{I}_{l-1},\sigma_l,\mathcal{J}_{l+1})
 \end{equation}
 
-![small](1D_Slice.png) ![small](T2.png)
+<div style="display: flex; gap: 20px; justify-content: flex-start;">
+  <img src="1D_Slice.png" style="width: 40%;">
+  <img src="T2.png" style="width: 40%;">
+</div>
 
 
 The index $\sigma_l$ has the freedom to be any of the $d_l$ possible values available to that site. For example, 0 or 1 in this example of $F$ where all the external indices are of dimension 2.
