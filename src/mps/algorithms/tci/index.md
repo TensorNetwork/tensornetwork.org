@@ -3,9 +3,9 @@
 
 Without storing the entire tensor, the TCI algorithm constructs a compressed MPS representation of the input tensor by learning important elements of the tensor, called pivots, which are used to minimise the error of the approximation. By accessing only specific elements of the tensor, it constructs an decomposition of the input tensor based on matrix cross interpolation to create an MPS. It then sweeps across the sites of the MPS, improving them two at a time to find good pivots and reduce the error of the approximation. 
 
-When a compressed representation is available, the TCI algorithm will find it. However, when the tensor is not compressible, the algorithm will not converge with small internal index dimensions. TCI works well on tensors with structure, such as those representing smooth functions on a lattice, but poorly when there is little or no structure such as a tensor with random inputs. The algorithm has found applications in physics, such as in high energy physics to approximate high dimensional integrals of Feynman diagrams, and further applications are being explored such as the algorithm's relation to machine learning.
+When a compressed representation is available, the TCI algorithm will find it. However, when the tensor is not compressible, the algorithm will not converge with small internal index dimensions. TCI works well on tensors with structure, such as those representing smooth functions on a lattice, but poorly when there is little or no structure such as a tensor with random inputs. The algorithm has found applications in physics, such as in high energy physics to approximate high dimensional integrals of Feynman diagrams, and further applications are being explored such as the algorithm's relation to machine learning\cite{nunez2025learning}.
 
-## Matrix Cross Interpolation
+## Matrix Cross Interpolation\cite{nunez2022learning}
 
 Cross Interpolation factorises a matrix $A$ using only a subset of the elements of $A$. By choosing a subset of the rows of the matrix and the same number of columns we can construct the interpolation from three factor matrices. We call the list of all the rows of the matrix $\mathbb{I}$ and all columns $\mathbb{J}$, the subset that have been chosen for the interpolation are $\mathcal{I}$ and $\mathcal{J}$. The first matrix is just the columns chosen $A(\mathbb{I}, \mathcal{J})$, the third is just the rows chosen $A(\mathcal{I}, \mathbb{J})$, and the middle factor is the inverse of the matrix comprised of the intersections of these rows and columns $A(\mathcal{I}, \mathcal{J})^{-1}$. The cross interpolation formula is then
 
@@ -18,11 +18,11 @@ Cross Interpolation factorises a matrix $A$ using only a subset of the elements 
 ![medium](Matrix_Cross_Interpolation.png)
 
 
-$A(\mathcal{I},\mathcal{J})$ is called the pivot matrix and its elements pivots. With $\chi$ pivots, the interpolation is exact at the rows and columns that the pivots are in, and it reconstructs the entire matrix exactly if it has rank at most $\chi$.
+$A(\mathcal{I},\mathcal{J})$ is called the pivot matrix and its elements pivots. With $\chi$ pivots, the interpolation is exact at the rows and columns that the pivots are in, and it reconstructs the entire matrix exactly if it has rank at most $\chi$\cite{dolgov2020parallel}.
 
 If the rank is greater than $\chi$, the error depends on the pivots chosen and we must search for good ones. Choosing the best pivots to minimise the error of the interpolation is difficult as there is an exponentially large number of choices of pivot matrices. Different methods exist to find good pivots with varying trade-offs between time complexity, stability and accuracy and we will discuss two later.
 
-## High level Overview
+## High level Overview \cite{nunez2022learning}
 
 We can think of Tensor Cross Interpolation as an extension of matrix cross interpolation where we repeatedly interpolate to decompose the tensor down into more and more factors. Consider the input tensor $F$ with $N$ indices $\sigma_1,\sigma_2,\dots ,\sigma_N$. We can view the tensor as a matrix by grouping all the indices after the first into what we will call a multi-index $(\sigma_2,\dots,\sigma_N)$ so the matrix is $F_{(\sigma_1),(\sigma_2,\dots ,\sigma_N)}$. Now we can use matrix cross interpolation to decompose it into three matrices, keeping only a small number $\chi$ of pivots.
 
@@ -43,7 +43,7 @@ With multiple pivots the lists contain more elements, but no duplicates. See the
 
 ![medium](Pivot_List_Table.png)
 
-Using these pivot lists, we build slices of the input tensor $F$. The simplest is the pivot matrix $P_l$ which has no free indices and includes only the pivots specified by the pivot lists. The rows of the pivot matrix are labelled by $\mathcal{I}_l$ and the columns labelled by $\mathcal{J}_{l+1}$
+Using these pivot lists, we build slices of the input tensor $F$. The simplest is the pivot matrix $P_l$ which has no free indices and includes only the pivots specified by the pivot lists. The rows of the pivot matrix are labelled by $\mathcal{I}_l$ and the columns labelled by $\mathcal{J}_{l+1}$.
 
 \begin{equation}
     P_l = F(\mathcal{I}_l, \mathcal{J}_{l+1})
@@ -52,8 +52,8 @@ Using these pivot lists, we build slices of the input tensor $F$. The simplest i
 Consider a single element of the pivot matrix $P_2$ with its row labelled by the element of $\mathcal{I}_2$, $i=(01)$, and its column labelled by the element of $\mathcal{J}_{3}$, $j=(010)$. Then the location in the matrix (01,010), holds the element $F_{01010}$. Below is an example of the pivot matrix $P_2$ made up of 6 pivots where the top row contains those included in the table above. 
 
     
-![medium](Pivot_Matrix.png)
-![medium](P2.png)
+![small](Pivot_Matrix.png)
+![small](P2.png)
 
 In general, $[P_l]_{ij} = F_{i\oplus j}$. Meaning the element of $P_l$ at $(i,j)$ is the element of $F$ specified by the pivot $i \oplus j$. Since the two pivot lists have the same number of elements, $P_l$ is a square matrix. Most importantly, it must be invertible meaning pivots must be chosen so that $\text{det}(P_l) \neq 0$.
 
@@ -62,8 +62,8 @@ A one-dimensional slice of F is the order 3 tensor with one free external index 
     T_l=F(\mathcal{I}_{l-1},\sigma_l,\mathcal{J}_{l+1})
 \end{equation}
 
-![medium](1D_Slice.png)
-![medium](T2.png)
+![small](1D_Slice.png) ![small](T2.png)
+
 
 The index $\sigma_l$ has the freedom to be any of the $d_l$ possible values available to that site. For example, 0 or 1 in this example of $F$ where all the external indices are of dimension 2.
 
@@ -73,7 +73,7 @@ Finally, the two-dimensional slice of $F$ is an order 4 tensor with two free ext
     \Pi_l = F(\mathcal{I}_{l-1},\sigma_l,\sigma_{l+1},\mathcal{J}_{l+2})
 \end{equation}
 
-![medium](2D_Slice.png)
+![small](2D_Slice.png)
 
 ## Building the MPS
 
@@ -112,5 +112,3 @@ Once the algorithm is converged and the TCI form has been found, adjacent $T_l$ 
  More on which functions/tensors TCI works well on
 
 -->
-
-
