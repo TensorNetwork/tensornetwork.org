@@ -15,7 +15,7 @@ Cross Interpolation factorises a matrix $A$ using only a subset of the elements 
 \end{equation}
 
 
-![medium](Matrix_Cross_Interpolation.pdf)
+![medium](Matrix_Cross_Interpolation.png)
 
 
 $A(\mathcal{I},\mathcal{J})$ is called the pivot matrix and its elements pivots. With $\chi$ pivots, the interpolation is exact at the rows and columns that the pivots are in, and it reconstructs the entire matrix exactly if it has rank at most $\chi$.
@@ -27,20 +27,9 @@ If the rank is greater than $\chi$, the error depends on the pivots chosen and w
 We can think of Tensor Cross Interpolation as an extension of matrix cross interpolation where we repeatedly interpolate to decompose the tensor down into more and more factors. Consider the input tensor $F$ with $N$ indices $\sigma_1,\sigma_2,\dots ,\sigma_N$. We can view the tensor as a matrix by grouping all the indices after the first into what we will call a multi-index $(\sigma_2,\dots,\sigma_N)$ so the matrix is $F_{(\sigma_1),(\sigma_2,\dots ,\sigma_N)}$. Now we can use matrix cross interpolation to decompose it into three matrices, keeping only a small number $\chi$ of pivots.
 
 
-![medium](TCI_Intuition/pdf)
+![medium](TCI_Intuition.png)
 
 We can then take the largest of these matrices and regroup the indices. We have $\chi$ pivots which are a subset of all possible values of $\sigma_1$ and we group these with $\sigma_2$ to form the matrix $F_{(\sigma_1,\sigma_2),(\sigma_3,\dots ,\sigma_N)}$. Again we apply cross interpolation to decompose this tensor. We can continue in such a way until we have factored $F$ into $N$ tensors with $(N-1)$ pivot matrices between them. These pivot matrices are finally absorbed into adjacent tensors to form a matrix product state.
-
-<!-- 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\linewidth, trim = 000 0 000 180, clip]{Diagrams/TCI Intuition.pdf}
-    %\caption{How repeated cross interpolation can decompose a tensor}
-    \label{fig:placeholder}
-\end{figure}
-
-split fig in two?
--->
 
 In practice, Tensor Cross Interpolation efficiently constructs this initial interpolation of the tensor and then improves the approximation by learning pivots to minimise its error.
 
@@ -52,16 +41,7 @@ The different multi-indices are stored in pivot lists. The row multi-indices are
 
 With multiple pivots the lists contain more elements, but no duplicates. See the table below for the pivot lists with the pivots (01010) and (01101):
 
-\begin{longtable}{c|c c}
-$l$ & $\mathcal{I}_l$ & $\mathcal{J}_{l+1}$ \\
-\midrule
-0 & $\mathcal{I}_0 = \{()\}$ & $\mathcal{J}_1 = \{(01010),(01101)\}$ \\
-1 & $\mathcal{I}_1 = \{(0)\}$ & $\mathcal{J}_2 = \{(1010),(1101)\}$ \\
-2 & $\mathcal{I}_2 = \{(01)\}$ & $\mathcal{J}_3 = \{(010),(101)\}$ \\
-3 & $\mathcal{I}_3 = \{(010),(011)\}$ & $\mathcal{J}_4 = \{(10),(01)\}$ \\
-4 & $\mathcal{I}_4 = \{(0101),(0110)\}$ & $\mathcal{J}_5 = \{(0),(1)\}$  \\
-5 & $\mathcal{I}_5 = \{(01010), (01101)\}$ & $\mathcal{J}_6 = \{()\}$  \\
-\end{longtable}
+![medium](Pivot_List_Table.png)
 
 Using these pivot lists, we build slices of the input tensor $F$. The simplest is the pivot matrix $P_l$ which has no free indices and includes only the pivots specified by the pivot lists. The rows of the pivot matrix are labelled by $\mathcal{I}_l$ and the columns labelled by $\mathcal{J}_{l+1}$
 
@@ -72,8 +52,8 @@ Using these pivot lists, we build slices of the input tensor $F$. The simplest i
 Consider a single element of the pivot matrix $P_2$ with its row labelled by the element of $\mathcal{I}_2$, $i=(01)$, and its column labelled by the element of $\mathcal{J}_{3}$, $j=(010)$. Then the location in the matrix (01,010), holds the element $F_{01010}$. Below is an example of the pivot matrix $P_2$ made up of 6 pivots where the top row contains those included in the table above. 
 
     
-![medium](Pivot_Matrix.pdf)
-![medium](P2.pdf)
+![medium](Pivot_Matrix.png)
+![medium](P2.png)
 
 In general, $[P_l]_{ij} = F_{i\oplus j}$. Meaning the element of $P_l$ at $(i,j)$ is the element of $F$ specified by the pivot $i \oplus j$. Since the two pivot lists have the same number of elements, $P_l$ is a square matrix. Most importantly, it must be invertible meaning pivots must be chosen so that $\text{det}(P_l) \neq 0$.
 
@@ -82,8 +62,8 @@ A one-dimensional slice of F is the order 3 tensor with one free external index 
     T_l=F(\mathcal{I}_{l-1},\sigma_l,\mathcal{J}_{l+1})
 \end{equation}
 
-![medium](1D_Slice.pdf)
-![medium](T2.pdf)
+![medium](1D_Slice.png)
+![medium](T2.png)
 
 The index $\sigma_l$ has the freedom to be any of the $d_l$ possible values available to that site. For example, 0 or 1 in this example of $F$ where all the external indices are of dimension 2.
 
@@ -102,13 +82,13 @@ Starting with a set of any number of random pivots, we can construct the pivot l
     F \approx \tilde{F} = T_1P_1^{-1} \dots T_lP_l^{-1}T_{l+1} \dots P_{N-1}^{-1}T_N
 \end{equation}
 
-![medium](TCI_form.pdf)
+![medium](TCI_form.png)
 
 ## Improving the Approximation
 
 The initial random pivots will most likely lead to a poor approximation of the tensor $F$ and so we start with very few, perhaps just one, initial pivot and look to add important pivots successively. Sweeping back and forth across the sites, at each site $l$ we construct the tensor $\Pi_l$ and compare it with the interpolation of $\Pi_l \approx T_lP_l^{-1}T_{l+1}$. Since the interpolation is exact at the pivots chosen, we search for the element with the maximum absolute error and add this as a pivot since this will have the largest reduction in error. 
 
-![medium](Pi_approx.pdf)
+![medium](Pi_approx.png)
 
 Searching the entire matrix for the best pivot - full pivoting - is time intensive as it scales $O(nm)$ for an $(n\times m)$ matrix. However, rook pivoting is a cheaper alternative which starts by searching along a random column for the row with the largest error, then along that row for the column with the largest error and so on alternating between rows and columns until an element is found that maximises the error along both its row and column. This reduces the computational cost to $O[\text{max}(n,m)]$ and has almost as good convergence as full pivoting.
 
@@ -118,7 +98,7 @@ These sweeps continue until a predefined convergence condition is satisfied, suc
 
 Once the algorithm is converged and the TCI form has been found, adjacent $T_l$ and $P_l^{-1}$ tensors can be contracted to form an MPS.
 
-![medium](TCI_form_to_MPS.pdf)
+![medium](TCI_form_to_MPS.png)
 
 <!--
 ## Topics that could be discussed
