@@ -51,9 +51,9 @@ Using these pivot lists, we build slices of the input tensor $F$. The simplest i
 
 Consider a single element of the pivot matrix $P_2$ with its row labelled by the element of $\mathcal{I}_2$, $i=(01)$, and its column labelled by the element of $\mathcal{J}_{3}$, $j=(010)$. Then the location in the matrix (01,010), holds the element $F_{01010}$. Below is an example of the pivot matrix $P_2$ made up of 6 pivots where the top row contains those included in the table above. 
 
-<div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
-  <img src="Pivot_Matrix.png" style="width: 30%; height: auto;">
-  <img src="P2.png" style="width: 30%; height: auto;">
+<div style="display: flex; justify-content: center; gap: 50px; align-items: center;">
+  <img src="Pivot_Matrix.png" style="width: 25%; height: auto;">
+  <img src="P2.png" style="width: 25%; height: auto;">
 </div>
 
 In general, $[P_l]_{ij} = F_{i\oplus j}$. Meaning the element of $P_l$ at $(i,j)$ is the element of $F$ specified by the pivot $i \oplus j$. Since the two pivot lists have the same number of elements, $P_l$ is a square matrix. Most importantly, it must be invertible meaning pivots must be chosen so that $\text{det}(P_l) \neq 0$.
@@ -63,9 +63,9 @@ A one-dimensional slice of F is the order 3 tensor with one free external index 
     T_l=F(\mathcal{I}_{l-1},\sigma_l,\mathcal{J}_{l+1})
 \end{equation}
 
-<div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
-  <img src="1D_Slice.png" style="width: 30%; height: auto;">
-  <img src="T2.png" style="width: 30%; height: auto;">
+<div style="display: flex; justify-content: center; gap: 50px; align-items: center;">
+  <img src="1D_Slice.png" style="width: 25%; height: auto;">
+  <img src="T2.png" style="width: 25%; height: auto;">
 </div>
 
 
