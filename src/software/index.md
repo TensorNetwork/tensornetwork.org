@@ -65,6 +65,9 @@
 * <a href="https://github.com/Drachier/PyTreeNet?tab=readme-ov-file">PyTreeNet</a> (Python)<br/>
   PyTreeNet is a Python implementation of tree tensor networks with a focus on the simulation
   of quantum systems admitting a tree topology.
+
+* <a href="https://scipost.org/10.21468/SciPostPhysCodeb.40">QSpace</a> (C++, Matlab) <br/>
+   The QSpace tensor library provides a toolbox to exploit ‘quantum symmetry spaces’ in tensor network states in the quantum many-body context. It offers support for a wide range of non-Abelian symmetry groups, through an interface that lets the developer or user work as if there were no symmetries.
   
 * <a href="https://quimb.readthedocs.io/en/latest/">QUIMB</a> (Python)<br/>
   python library for contracting tensors and tensor networks,
@@ -75,7 +78,7 @@
   A Python package designed to simplify the development and application of quantum
   and classical machine learning models.
   It includes modules for loading features into a quantum circuit via an MPS representation.
-  
+
 * <a href="https://github.com/PGelss/scikit_tt">Scikit-TT</a> (Python)<br/>
   Scikit-TT is a Python library for applying the tensor-train (TT) format 
   to various numerical problems in order to reduce the memory consumption and computational
