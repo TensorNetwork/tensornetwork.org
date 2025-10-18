@@ -74,6 +74,11 @@
   with support for matrix product states and algorithms, and advanced
   features such as determination of the optimal ordering of tensor contractions.\cite{quimb}
 
+* <a href="https://pypi.org/project/qulearn/">qulearn</a> (Python)<br/>
+  A Python package designed to simplify the development and application of quantum
+  and classical machine learning models.
+  It includes modules for loading features into a quantum circuit via an MPS representation.
+
 * <a href="https://github.com/PGelss/scikit_tt">Scikit-TT</a> (Python)<br/>
   Scikit-TT is a Python library for applying the tensor-train (TT) format 
   to various numerical problems in order to reduce the memory consumption and computational
@@ -196,6 +201,14 @@
   systems in the TT format and performing adaptive cross approximation 
   (the AMEN solver/cross interpolation is inspired form the MATLAB TT-Toolbox). 
   Some routines are implemented in C++ for an increased execution speed.
+
+* <a href="https://pypi.org/project/ttfemesh/">ttfemesh</a> (Python)<br/>
+  A Python library for generating tensor train representations of finite element meshes. 
+  It provides a toolkit for creating domains, generating meshes, computing 
+  tensorized Jacobians, Dirichlet masks and concatenation maps, all of which are essential for 
+  solving partial differential equations using tensor train decompositions.
+  It is intended to ease the barrier to entry for researchers wanting to experiment with
+  TTs for PDEs.
 
 * <a href="https://github.com/RikVoorhaar/ttml">ttml</a> (Python)<br/>
   Tensor train based machine learning estimator.
