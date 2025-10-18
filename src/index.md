@@ -13,11 +13,14 @@ into networks of smaller tensors,
 with applications in applied mathematics, chemistry, physics, machine
 learning, and many other fields.
 
+<b>Resources</b>:
+
+- [[Review Articles & Learning Resources|reviews_resources]]
+- [Tensor4All Discourse Forum](https://tensor4all.discourse.group) <span style="color: #F89D00;">[New]</span>
 
 <b>Fundamentals</b>:
 
 - [[Tensor Diagram Notation|diagrams]]
-- [[Review Articles & Learning Resources|reviews_resources]]
 - [[Symmetries in Tensor Networks|symmetries]]
 
 <b>Types of Tensor Networks</b>:
