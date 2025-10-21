@@ -58,14 +58,14 @@
    **Pre-print**: <a href="https://arxiv.org/abs/2202.02138">2202.02138</a><br/>
    **Notes**: Presents an overview of the key ideas and skills necessary to begin implementing tensor network methods numerically, which is intended to facilitate the practical application of tensor network methods for researchers that are already versed with their theoretical foundations. These skills include an introduction to the contraction of tensor networks, to optimal tensor decompositions, and to the manipulation of gauge degrees of freedom in tensor networks. 
 
-* <a href="https://link.springer.com/book/10.1007/978-3-030-34489-4">**"Tensor Network Contractions: Methods and Applications to Quantum Many-Body Systems"**</a><br/>
+* **"Tensor Network Contractions: Methods and Applications to Quantum Many-Body Systems"**<br/>
    **Authors**: Shi-Ju Ran, Emanuele Tirrito, Cheng Peng, Xi Chen, Luca Tagliacozzo, Gang Su, Maciej Lewenstein<br/>
    **Link**: <a href="https://link.springer.com/book/10.1007/978-3-030-34489-4"> Springer Lecture Notes in Physics, Open Access Book</a><br/>
    **Notes**: An open-access book reviewing basics of tensor networks in diagram notation, then introducing advanced techniques for tasks such as contracting two-dimensional tensor networks.
 
 * **"Efficient Numerical Simulations Using Matrix-Product States"**<br/>
    **Authors**: Frank Pollmann<br/>
-   <a href="http://quantumtensor.pks.mpg.de/wp-content/uploads/2016/06/notes_1.pdf">Link to Notes</a><br/>
+   <a href="https://www.ggi.infn.it/sft/SFT_2016/LectureNotes/Pollmann.pdf">Link to Notes</a><br/>
    **Notes**: An introduction to matrix product state methods in physics building up to Trotter gate (TEBD) algorithms for time evolution and the infinite DMRG algorithm.
 
 * **"Tangent-space methods for uniform matrix product states"**<br/>
@@ -104,7 +104,11 @@
   **Journal**: <a href="https://www.sciencedirect.com/science/article/pii/S0003491619302532">Annals of Physics 411, 167998 (2019) (open access)</a><br/>
   **Notes**: Explains five current time-evolution methods for matrix-product states in extensive detail and tests them on four relevant problem settings. The content of this review is also the basis of the articles on time-evolution methods on this website.
 
-
+* **"Tensor numerical methods in scientific computing"**<br/>
+  **Author**: Boris N. Khoromskij <br/>
+  **Journal**: <a href="https://www.degruyterbrill.com/document/doi/10.1515/9783110365917/html">De Gruyter, 2018</a><br/>
+  **Notes**: Introduction to tensor-based techniques for computational problems. A thorough introduction to quantized tensor trains (QTTs) and their applications to numerical problems.
+  
 ### Selected Original Literature
 
 * **"O(d log(n))-Quantics Approximation of Nd tensors in High-Dimensional Numerical Modeling"**<br/>
@@ -175,7 +179,7 @@
   **Authors:** Ian McCulloch<br/>
   **Pre-print:** <a href="https://arxiv.org/abs/cond-mat/0701428">cond-mat/0701428</a><br/>
   **Journal**: <a href="https://doi.org/10.1088/1742-5468/2007/10/p10014">J. Stat. Mech.: Theory and Experiment 10, P10014 (2007)</a><br/>
-  **Notes:** Describes the "calculus" of matrix product states, the structure of matrix product states and opearators, and how the DMRG algorithm can be formulated in terms of tensor networks.
+  **Notes:** Describes the "calculus" of matrix product states, the structure of matrix product states and operators, and how the DMRG algorithm can be formulated in terms of tensor networks.
 
 * **"Classical Simulation of Infinite-Size Quantum Lattice Systems in One Spatial Dimension"**<br/>
   **Authors:** Guifre Vidal<br/>
