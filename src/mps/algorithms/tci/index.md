@@ -111,15 +111,12 @@ Although Matrix Cross Interpolation gives a good understanding of TCI, explicitl
 
 For example, the LDU factorisation decomposes the matrix into three parts and the inverse of two permutation matrices $\Pi = P^{-1}LDUQ^{-1}$. $L$ is lower triangular with 1s along the diagonal, $U$ upper triangular with 1s along the diagonal, and $D$ holds the singular values of the matrix and $P$ and $Q$ keep track of the row and column permutations to order the values along D in descending order of magnitude.
 
-![medium](LDU_MCI_comparsison.png)
-
+![medium](LDU_MCI_comparison.png)
 
 By truncating the matrix $D$, such as by using a partially rank revealing LU decomposition, we ensure that only large eigenvalues are kept. A partially rank revealing decomposition uses Gaussian elimination to construct the decomposition matrices by starting with the largest values in the $D$ matrix, once values fall below a threshold or a certain number have been found, the remaining diagonal values are set to 0. Decomposing the matrix in this way finds an approximate rank without needing to find the full rank of the matrix. Keeping just these largest pivot values, we can reshape the LDU factorisation into the combinations $P^{-1}$ matrices and $T$ tensors that we need, resulting in a more stable algorithm which avoids explictly evaluting inverses \cite{nunez2025learning}.
 
 ![medium](LDU_parts_one.png)
 ![medium](LDU_parts_two.png)
-
-
 
 
 <!--
