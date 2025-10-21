@@ -179,7 +179,7 @@
   **Authors:** Ian McCulloch<br/>
   **Pre-print:** <a href="https://arxiv.org/abs/cond-mat/0701428">cond-mat/0701428</a><br/>
   **Journal**: <a href="https://doi.org/10.1088/1742-5468/2007/10/p10014">J. Stat. Mech.: Theory and Experiment 10, P10014 (2007)</a><br/>
-  **Notes:** Describes the "calculus" of matrix product states, the structure of matrix product states and opearators, and how the DMRG algorithm can be formulated in terms of tensor networks.
+  **Notes:** Describes the "calculus" of matrix product states, the structure of matrix product states and operators, and how the DMRG algorithm can be formulated in terms of tensor networks.
 
 * **"Classical Simulation of Infinite-Size Quantum Lattice Systems in One Spatial Dimension"**<br/>
   **Authors:** Guifre Vidal<br/>
