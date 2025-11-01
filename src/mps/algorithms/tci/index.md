@@ -1,41 +1,45 @@
-# Tensor Cross Interpolation
+# Tensor Cross Interpolation (TT-cross)
 
 
-Without storing the entire tensor, the TCI algorithm constructs a compressed MPS representation of the input tensor by learning important elements of the tensor, called pivots, which are used to minimise the error of the approximation. By accessing only specific elements of the tensor, it constructs an decomposition of the input tensor based on matrix cross interpolation to create an MPS. It then sweeps across the sites of the MPS, improving them two at a time to find good pivots and reduce the error of the approximation. 
+Without storing an entire, exponentially large tensor, the TT-cross or tensor cross interpolation (TCI) algorithm \cite{oseledets2010tt, savostyanov2011, savostyanov2014, dolgov2020parallel} constructs a compressed [[MPS or tensor train (TT)|mps]] representation of an input tensor. Note that by input tensor one means a multi-linear function of discrete inputs, which could be a piece of code that generates components of the input tensor "on the fly" or could be another tensor network. The algorithm learns important slices of the input tensor, called pivots, which are used to minimise the error of the approximation. By accessing only specific elements of the input tensor, it constructs an decomposition this tensor based on matrix cross interpolation, with the result being an MPS tensor network. The algorithm continues to refine this MPS by sweeping over its tensor cores, usually two at a time, improving to find good pivots and reduce the error of the approximation. 
 
-When a compressed representation is available, the TCI algorithm will find it. However, when the tensor is not compressible, the algorithm will not converge with small internal index dimensions. TCI works well on tensors with structure, such as those representing smooth functions on a lattice, but poorly when there is little or no structure such as a tensor with random inputs. The algorithm has found applications in physics, such as in high energy physics to approximate high dimensional integrals of Feynman diagrams, and further applications are being explored such as the algorithm's relation to machine learning\cite{nunez2025learning}.
+When a compressed representation is available, the TCI algorithm will often find it. However, when the tensor is not compressible, the algorithm will not converge with small internal index dimensions or ranks. TCI can also fail if the function has non-zero values only in isolated regions unless a good initial guess of the MPS or its pivots is provided.
+
+TCI therefore well on tensors with structure, such as those representing smooth functions on a lattice, but poorly when there is little or no structure such as a tensor with random inputs. The algorithm has found applications in physics, such as in high energy physics to approximate high dimensional integrals of Feynman diagrams, and further applications are being explored such as the algorithm's relation to machine learning\cite{nunez2025learning}.
+
 
 ## Matrix Cross Interpolation\cite{nunez2022learning}
 
-Cross Interpolation factorises a matrix $A$ using only a subset of the elements of $A$. By choosing a subset of the rows of the matrix and the same number of columns we can construct the interpolation from three factor matrices. We call the list of all the rows of the matrix $\mathbb{I}$ and all columns $\mathbb{J}$, the subset that have been chosen for the interpolation are $\mathcal{I}$ and $\mathcal{J}$. The first matrix is just the columns chosen $A(\mathbb{I}, \mathcal{J})$, the third is just the rows chosen $A(\mathcal{I}, \mathbb{J})$, and the middle factor is the inverse of the matrix comprised of the intersections of these rows and columns $A(\mathcal{I}, \mathcal{J})^{-1}$. The cross interpolation formula is then
+Cross interpolation factorises a matrix $A$ using only a subset of the elements of $A$. By choosing a subset of the rows of the matrix and the same number of columns we can construct the interpolation from three factor matrices. The list of all the rows of the matrix can be notated as $\mathbb{I}$ and all columns $\mathbb{J}$. The subset that have been chosen for the interpolation are called $\mathcal{I}$ and $\mathcal{J}$. 
 
+The first matrix of the factorization consists of the selected columns, namely $A(\mathbb{I}, \mathcal{J})$. The third consists of selected rows $A(\mathcal{I}, \mathbb{J})$. The middle factor is the inverse of the matrix comprised of the intersections of these rows and columns $A(\mathcal{I}, \mathcal{J})^{-1}$. The cross interpolation approximation s then
 
 \begin{equation}
-    A = A(\mathbb{I}, \mathbb{J}) \approx A(\mathbb{I},\mathcal{J})A(\mathcal{I},\mathcal{J})^{-1} A(\mathcal{I},\mathbb{J})
+    A  = A(\mathbb{I}, \mathbb{J}) \approx A(\mathbb{I},\mathcal{J})A(\mathcal{I},\mathcal{J})^{-1} A(\mathcal{I},\mathbb{J})
 \end{equation}
-
 
 ![medium](Matrix_Cross_Interpolation.png)
 
 
-$A(\mathcal{I},\mathcal{J})$ is called the pivot matrix and its elements pivots. With $\chi$ pivots, the interpolation is exact at the rows and columns that the pivots are in, and it reconstructs the entire matrix exactly if it has rank at most $\chi$\cite{dolgov2020parallel}.
+$A(\mathcal{I},\mathcal{J})$ is called the pivot matrix and its elements pivots. With $\chi$ pivots, the factorization is exact on the rows and columns coinciding with the pivots (to check this, slice the right hand side above only on selected rows and columns). It is for this reason that it is called an interpolation. If $A$ is exactly low rank with rank $\chi$, then the factorization is exact for the entire matrix \cite{dolgov2020parallel}.
 
-If the rank is greater than $\chi$, the error depends on the pivots chosen and we must search for good ones. Choosing the best pivots to minimise the error of the interpolation is difficult as there is an exponentially large number of choices of pivot matrices. Different methods exist to find good pivots with varying trade-offs between time complexity, stability and accuracy and we will discuss two later.
+If the rank is greater than $\chi$, the error depends on the pivots chosen. Choosing the pivots that guarantee the minimum interpolation error is difficult as there is an exponentially large number of choices of pivot matrices. Various heuristic methods exist to find good pivots with varying trade-offs between time complexity, stability and accuracy. These are discussed further below.
 
 ## High level Overview \cite{nunez2022learning}
 
-We can think of Tensor Cross Interpolation as an extension of matrix cross interpolation where we repeatedly interpolate to decompose the tensor down into more and more factors. Consider the input tensor $F$ with $N$ indices $\sigma_1,\sigma_2,\dots ,\sigma_N$. We can view the tensor as a matrix by grouping all the indices after the first into what we will call a multi-index $(\sigma_2,\dots,\sigma_N)$ so the matrix is $F_{(\sigma_1),(\sigma_2,\dots ,\sigma_N)}$. Now we can use matrix cross interpolation to decompose it into three matrices, keeping only a small number $\chi$ of pivots.
+In this section we outline how matrix cross interpolation can be extended to a large tensor by a recursive process. The resulting algorithm has exponential cost, however, and is only suitable for tensors small enough to be stored in memory. We later discuss more efficient methods for initializing and iteratively improving MPS approximations in cross interpolation form.
 
+Tensor cross interpolation can be thought of an extension of matrix cross interpolation where one repeatedly or recursively interpolates an input tensor to decompose it into more and more factors. Consider the input tensor $F$ with $N$ indices $\sigma_1,\sigma_2,\dots ,\sigma_N$. We can view the tensor as a matrix by grouping all the indices after the first into what we will call a multi-index $(\sigma_2,\dots,\sigma_N)$ so the matrix is $F_{(\sigma_1),(\sigma_2,\dots ,\sigma_N)}$. Now we can use matrix cross interpolation to decompose it into three matrices, keeping only a small number $\chi$ of pivots.
 
 ![medium](TCI_Intuition.png)
 
-We can then take the largest of these matrices and regroup the indices. We have $\chi$ pivots which are a subset of all possible values of $\sigma_1$ and we group these with $\sigma_2$ to form the matrix $F_{(\sigma_1,\sigma_2),(\sigma_3,\dots ,\sigma_N)}$. Again we apply cross interpolation to decompose this tensor. We can continue in such a way until we have factored $F$ into $N$ tensors with $(N-1)$ pivot matrices between them. These pivot matrices are finally absorbed into adjacent tensors to form a matrix product state.
+We can then take the rightmost of these matrices (the row matrix) and regroup or reshape its indices. The new row index of this reshaping consists of $\chi$ pivots which are a subset of all possible values of $\sigma_1$ and we group these with $\sigma_2$ to form the matrix $F_{(\sigma_1,\sigma_2),(\sigma_3,\dots ,\sigma_N)}$. Again we apply cross interpolation to decompose this tensor. We can continue in such a way until we have factored $F$ into $N$ tensors with $(N-1)$ pivot matrices between them. These pivot matrices are finally absorbed into adjacent tensors to form a matrix product state.
 
-In practice, Tensor Cross Interpolation efficiently constructs this initial interpolation of the tensor and then improves the approximation by learning pivots to minimise its error.
+In practice, tensor cross interpolation efficiently constructs this initial interpolation of the tensor and then improves the approximation by learning pivots to minimise its error.
 
 ## Pivot lists
 
-To generalise Matrix Cross Interpolation to higher order tensors, we must keep track of which elements of the input tensor are used as pivots. We also need to keep track of where these pivots are in the factors of the input tensor. We do this by grouping together indices of the input tensor. The groupings are called multi-indices and we group them into row multi-indices which label the rows of the pivot matrices, and column multi-indices which label their columns.
+To generalise matrix cross interpolation to higher order tensors, we must keep track of which elements of the input tensor are used as pivots. We also need to keep track of where these pivots are in the factors of the input tensor. We do this by grouping together indices of the input tensor. The groupings are called multi-indices and we group them into row multi-indices which label the rows of the pivot matrices, and column multi-indices which label their columns.
 
 The different multi-indices are stored in pivot lists. The row multi-indices are stored in $\mathcal{I}_l$ which holds the indices of a pivot up to and including site $l$. The column multi-indices are stored in $\mathcal{J}_l$ which stores the indices from site $l$ up to the final site. For example, for just one pivot (01010), $\mathcal{I}_2=\{(01)\}$ and $\mathcal{J}_3=\{(010)\}$. We can concatenate ($\oplus$) elements of $\mathcal{I}_2$ and $\mathcal{J}_3$, which we call $i$ and $j$ respectively, to get a full multi-index denoting a location in $F$. Here $i=(01)$ and $j=(010)$ so that $i\oplus j =(01010)$ which identifies the element of $F$, $F_{01010}$.
 
@@ -79,7 +83,7 @@ Finally, the two-dimensional slice of $F$ is an order 4 tensor with two free ext
 
 ![small](2D_Slice.png)
 
-## Building the MPS
+## Building the Initial MPS Efficiently
 
 Starting with a set of any number of random pivots, we can construct the pivot lists by splitting these pivots $(N+1)$ times to construct each $\mathcal{I}_l$ and $\mathcal{J}_l$ where $l=0,...,N$. Then we construct the initial TCI approximation $\tilde{F}$ of $F$ as 
 \begin{equation}
@@ -107,7 +111,7 @@ Once the algorithm is converged and the TCI form has been found, adjacent $T_l$ 
 
 ## Implementation Notes
 
-Although Matrix Cross Interpolation gives a good understanding of TCI, explicitly calculating the inverse of pivot matrices is both computationally costly and can lead to instabilities or poor convergence if pivots lead to pivot matrices with small eigenvalues. In general we want to avoid this and can do so by using alternative decompositions of the $\Pi_l$ matrix. 
+Although matrix cross interpolation gives a good understanding of TCI, explicitly calculating the inverse of pivot matrices is both computationally costly and can lead to instabilities or poor convergence if pivots lead to pivot matrices with small eigenvalues. In general we want to avoid this and can do so by using alternative decompositions of the $\Pi_l$ matrix. 
 
 For example, the LDU factorisation decomposes the matrix into three parts and the inverse of two permutation matrices $\Pi = P^{-1}LDUQ^{-1}$. $L$ is lower triangular with 1s along the diagonal, $U$ upper triangular with 1s along the diagonal, and $D$ holds the singular values of the matrix and $P$ and $Q$ keep track of the row and column permutations to order the values along D in descending order of magnitude.
 
@@ -118,6 +122,9 @@ By truncating the matrix $D$, such as by using a partially rank revealing LU dec
 ![medium](LDU_parts_one.png)
 ![medium](LDU_parts_two.png)
 
+---
+
+Thanks to [Nicholas Woodford](https://github.com/nrwoodford) for contributing this page.
 
 <!--
 ## Topics that could be discussed
