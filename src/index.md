@@ -39,7 +39,7 @@ learning, and many other fields.
   * [[Summing MPS/TT Networks|mps/algorithms#summing]]
   * [[Multiplying an MPS/TT by an MPO|mps/algorithms#mpo]]
   * [[Time Evolution Algorithms|mps/algorithms/timeevo]]
-  * [[Tensor Cross Interpolation/TT-Cross|mps/algorithms/tci]]
+  * [[Tensor Cross Interpolation/TT-Cross|mps/algorithms/tci]] &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #F89D00;">[New]</span>
 - [[Tensor Renormalization Group (TRG) Algorithm|trg]]
 
 <b>Computing with Tensor Networks</b>:
