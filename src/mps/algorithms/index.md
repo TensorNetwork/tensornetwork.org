@@ -58,3 +58,11 @@ systems.
   - [[Time-Dependent Variational Principle (TDVP)|mps/algorithms/timeevo/tdvp]]
 - [[Krylov Time Evolution (Global Krlyov)|mps/algorithms/timeevo/global-krylov]]
 - [[Additional tricks|mps/algorithms/timeevo/tricks]]
+
+
+<a name="tci"></a>
+## Tensor Cross Interpolation/TT-Cross Algorithm
+
+Tensor cross interpolation (TCI) also known as tensor train cross interpolation (TT-Cross), efficiently constructs compressed MPS representations of tensors and has found applications in physics and machine learning. 
+
+- [[Tensor Cross Interpolation|mps/algorithms/tci]]
