@@ -148,7 +148,7 @@ function parseBibTex(fname::String)
       authors = split(all_authors," and")
       for a in authors
         a = strip(a)
-        rev = r"(\w+?), (.+)"
+        rev = r"(.+?), (.+)"
         if occursin(rev,a)
           m = match(rev,a)
           push!(bt.authors,"$(m.captures[2]) $(m.captures[1])")
