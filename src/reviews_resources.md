@@ -22,6 +22,14 @@
    **Journal**: <a href="https://www.nature.com/articles/s42254-019-0086-7">Nature Reviews Physics volume 1, pages 538–550 (2019)</a><br/>
    **Notes**: Accessible review of tensor networks, focusing on more recent developments and the growing role of tensor networks in other areas beyond their origin in condensed matter quantum physics.
 
+* **"Lecture Series: Tensor Networks for Many-Body Physics and Beyond"**<br/>
+  **Author**: Jan von Delft <br/>
+  **<a href="https://www2.physik.uni-muenchen.de/lehre/vorlesungen/sose_24/tensor_networks_25/index.html">Link to Lectures</a>** <br/>
+  **Notes**: 1-semester lecture course, including videos and tutorial
+             exercises. Topics include: tensor network basics, DMRG, tangent-space
+             methods, tensor cross interpolation, tensor renormalization group, PEPS,
+             NRG.
+
 * **"Lectures on Matrix Product States and Density Matrix Renormalization Group (DMRG)"** <br/>
   **Author**: Ulrich Schollwoeck <br/>
   **<a href="https://www.theorie.physik.uni-muenchen.de/activities/schools/archiv/asc_school_17/video_schollwoeck/index.html">Link to Videos</a>** <br/>
@@ -46,6 +54,11 @@
    **Notes**: For those with a quantum information background, this is a very friendly and readable introduction to tensor networks and tensor diagram notation.
 
 ### More Technical Review Articles, Books, etc.
+
+* **"Density Matrix and Tensor Network Renormalization"**<br/>
+   **Author**: Tao Xiang <br/>
+   **Link**: <a href="https://doi.org/10.1017/9781009398671">Cambridge University Press, ISBN: 9781009398671</a><br/>
+   **Notes**: Renormalization group theory of tensor network states provides a powerful tool for studying quantum many-body problems and a new paradigm for understanding entangled structures of complex systems. In recent decades the theory has rapidly evolved into a universal framework and language employed by researchers in fields ranging from condensed matter theory to machine learning. This book presents a pedagogical and comprehensive introduction to this field for the first time. After an introductory survey on the major advances in tensor network algorithms and their applications, it introduces step-by-step the tensor network representations of quantum states and the tensor-network renormalization group methods developed over the past three decades. Basic statistical and condensed matter physics models are used to demonstrate how the tensor network renormalization works. An accessible primer for scientists and engineers, this book would also be ideal as a reference text for a graduate course in this area.
 
 * **"The density-matrix renormalization group in the age of matrix product states"**<br/>
    **Author**: Ulrich Schollwoeck <br/>
