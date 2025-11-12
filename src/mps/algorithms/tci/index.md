@@ -5,7 +5,7 @@ Without storing an entire, exponentially large tensor, the TT-cross or tensor cr
 
 When a compressed representation is available, the TCI algorithm will often find it. However, when the tensor is not compressible, the algorithm will not converge with small internal index dimensions or ranks. TCI can also fail if the function has non-zero values only in isolated regions unless a good initial guess of the MPS or its pivots is provided.
 
-TCI therefore works well for learning tensors or functions with structure, such as those representing smooth functions on a lattice, but works poorly when there is little or no structure such as a tensor with a small number of non-zero entries following no obvious pattern. The algorithm has found applications in physics, such as for approximating high dimensional integrals of Feynman diagrams, and further applications are being explored such as the algorithm's relation to machine learning\cite{nunez2025learning}.
+TCI therefore works well for learning tensors or functions with structure, such as those representing smooth functions on a lattice, but works poorly when there is little or no structure such as a tensor with a small number of non-zero entries following no obvious pattern. The algorithm has found applications in physics, such as for approximating high dimensional integrals of Feynman diagrams,\cite{nunez2022learning} and further applications are being explored such as the algorithm's relation to machine learning.\cite{nunez2025learning}
 
 
 ## Matrix Cross Interpolation\cite{nunez2022learning}
