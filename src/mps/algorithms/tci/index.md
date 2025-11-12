@@ -8,9 +8,9 @@ When a compressed representation is available, the TCI algorithm will often find
 TCI therefore works well for learning tensors or functions with structure, such as those representing smooth functions on a lattice, but works poorly when there is little or no structure such as a tensor with a small number of non-zero entries following no obvious pattern. The algorithm has found applications in physics, such as for approximating high dimensional integrals of Feynman diagrams,\cite{nunez2022learning} and further applications are being explored such as the algorithm's relation to machine learning.\cite{nunez2025learning}
 
 
-## Matrix Cross Interpolation\cite{nunez2022learning}
+## Matrix Cross Interpolation\cite{Goreinov1997}
 
-Cross interpolation factorises a matrix $A$ using only a subset of the elements of $A$. By choosing a subset of the rows of the matrix and the same number of columns we can construct the interpolation from three factor matrices. The list of all the rows of the matrix can be notated as $\mathbb{I}$ and all columns $\mathbb{J}$. The subset that have been chosen for the interpolation are called $\mathcal{I}$ and $\mathcal{J}$. 
+Cross interpolation factorises a matrix $A$ using only a subset of the elements of $A$. (Cross interpolation is also known as the skeleton approximation and is closely related to the Nyström approximation.) By choosing a subset of the rows of the matrix and the same number of columns we can construct the interpolation from three factor matrices. The list of all the rows of the matrix can be notated as $\mathbb{I}$ and all columns $\mathbb{J}$. The subset that have been chosen for the interpolation are called $\mathcal{I}$ and $\mathcal{J}$. 
 
 The first matrix of the factorization consists of the selected columns, namely $A(\mathbb{I}, \mathcal{J})$. The third consists of selected rows $A(\mathcal{I}, \mathbb{J})$. The middle factor is the inverse of the matrix comprised of the intersections of these rows and columns $A(\mathcal{I}, \mathcal{J})^{-1}$. The cross interpolation approximation is then
 
