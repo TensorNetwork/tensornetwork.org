@@ -107,6 +107,12 @@ Works are listed in reverse chronological order within each section.
 - [Modeling sequences with quantum states: a look under the hood](https://iopscience.iop.org/article/10.1088/2632-2153/ab8731), Tai-Danae Bradley, E M Stoudenmire, and John Terilla, _Machine Learning: Science and Technology_, **1** 035008 (2020) \cite{Bradley_2020} <br/>
   _Deterministic algorithm for learning "Born rule" distributions based on forming and diagonalizing density matrices_
 
+- [TTOpt: A maximum volume quantized tensor train-based optimization and its application to reinforcement learning](https://proceedings.neurips.cc/paper_files/paper/2022/file/a730abbcd6cf4a371ca9545db5922442-Paper-Conference.pdf), K. Sozykin, A. Chertkov, R. Schutski, A. Phan, A. Cichocki, I. Oseledets, _Advances in neural information processing systems_ (2022) <br/>
+  _Novel gradient-free optimization method based on the combination of efficient quantized tensor train representation and a generalized maximum matrix volume principle_
+
+- [PROTES: probabilistic optimization with tensor sampling](https://proceedings.neurips.cc/paper_files/paper/2023/file/028957869e560af14243ac37663a471e-Paper-Conference.pdf), A. Batsheva, A. Chertkov, G. Ryzhakov, I. Oseledets, _Advances in neural information processing systems_ (2023) <br/>
+  _Novel gradient-free optimization method based on the probabilistic sampling from a probability density function given in the low-parametric tensor train format_
+
 
 
 ### Compression of Neural Networks
