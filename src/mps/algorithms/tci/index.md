@@ -43,11 +43,11 @@ To generalise matrix cross interpolation to higher order tensors, we must keep t
 
 The different multi-indices are stored in pivot lists. The row multi-indices are stored in $\mathcal{I}_l$ which holds the indices of a pivot up to and including site $l$. The column multi-indices are stored in $\mathcal{J}_l$ which stores the indices from site $l$ up to the final site. For example, for just one pivot (01010), $\mathcal{I}_2=\{(01)\}$ and $\mathcal{J}_3=\{(010)\}$. We can concatenate ($\oplus$) elements of $\mathcal{I}_2$ and $\mathcal{J}_3$, which we call $i$ and $j$ respectively, to get a full multi-index denoting a location in $F$. Here $i=(01)$ and $j=(010)$ so that $i\oplus j =(01010)$ which identifies the element of $F$, $F_{01010}$.
 
-With multiple pivots the lists contain more elements, but no duplicates as this would cause two or more rows/columns to be the same. This means they are not linearly independant and implies eigenvalues of 0 which we are aiming to avoid. Removing any pivots causing duplicates can be done by using an alternative decomposition of the matrix which is discussed later in the Implementation Notes section. See the table below for the pivot lists with the pivots (01010) and (10111):
+With multiple pivots the lists contain more elements, but no duplicates as this would cause two or more rows/columns to be the same. This means they are not linearly independent and implies eigenvalues of 0 which we are aiming to avoid. Removing any pivots causing duplicates can be done by using an alternative decomposition of the matrix which is discussed later in the Implementation Notes section. See the table below for the pivot lists with the pivots (01010) and (10111):
 
 ![medium](Pivot_List_Table.png)
 
-Clearly, since there are no duplciates, the lengths of complimentary lists are equal: the length of $\mathcal{I}_l$ is equal to $\mathcal{J}_{l+1}$.
+Clearly, since there are no duplicates, the lengths of complimentary lists are equal: the length of $\mathcal{I}_l$ is equal to $\mathcal{J}_{l+1}$.
 
 Using these pivot lists, we build slices of the input tensor $F$. The simplest is the pivot matrix $P_l$ which has no free indices and includes only the pivots specified by the pivot lists. The rows of the pivot matrix are labelled by $\mathcal{I}_l$ and the columns labelled by $\mathcal{J}_{l+1}$.
 
