@@ -15,6 +15,11 @@
    **Notes:** Tensor networks provide a compressed, holographic description of the complicated vacuum fluctuations in strongly correlated systems, and as such they break down the infamous many-body exponential wall. These lecture notes provide a concise overview of the most important conceptual, computational and mathematical aspects of this theory.
 
 
+* **"Who can compete with quantum computers? Lecture notes on quantum inspired tensor networks computational techniques"**<br/>
+   **Authors**: Xavier Waintal, Chen-How Huang, Christoph W. Groth <br/>
+   **Pre-print**: <a href="https://arxiv.org/abs/2601.03035">2601.03035</a><br/>
+   **Notes:**  Lectures on tensor networks with a strong emphasis on the core algorithms involving Matrix Product States (MPS) and Matrix Product Operators (MPO). Particular care has been given to disentangle aspects of tensor networks from the quantum many-body setting. Topics include  representing functions with tensor networks using the "quantics" representation and mapping a known function into an MPS (the Tensor Cross Interpolation, or TCI, algorithm).
+
 * **"A Practical Introduction to Tensor Networks: Matrix Product States and 
    Projected Entangled Pair States"**<br/>
    **Author**: Roman Orus <br/>
