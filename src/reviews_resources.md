@@ -9,6 +9,12 @@
 
 ### Introductory Reviews and Lectures
 
+* **"Les Houches Lectures Notes on Tensor Networks"**<br/>
+   **Authors**: Bram Vancraeynest-De Cuiper, Weronika Wiesiolek, Frank Verstraete <br/>
+   **Pre-print**: <a href="https://arxiv.org/abs/2512.24390">2512.24390</a><br/>
+   **Notes:** Tensor networks provide a compressed, holographic description of the complicated vacuum fluctuations in strongly correlated systems, and as such they break down the infamous many-body exponential wall. These lecture notes provide a concise overview of the most important conceptual, computational and mathematical aspects of this theory.
+
+
 * **"A Practical Introduction to Tensor Networks: Matrix Product States and 
    Projected Entangled Pair States"**<br/>
    **Author**: Roman Orus <br/>
