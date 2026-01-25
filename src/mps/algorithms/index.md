@@ -11,6 +11,16 @@ for [[MPS/TT tensor networks|mps]].
 - [[Compression of MPS/TT|mps/index#compression]] (Using Density Matrix Algorithm)
 - [[Sampling from MPS/TT|mps/algorithms/sampling]]
 
+<a name="ttsvd"></a>
+## Decomposing Tensors into MPS/TT Form
+
+The following algorithms convert a tensor into MPS/TT form:
+
+- [[TT-SVD Algorithm|mps/algorithms/ttsvd]].
+  Direct algorithm using repeated SVD to decompose a full tensor into TT/MPS format with controllable accuracy.
+- [[Tensor Cross Interpolation (TCI)|mps/algorithms/tci]].
+  Constructs MPS/TT without storing the full tensor, using only sampled elements.
+
 <a name="linear"></a>
 ## Solving Linear Equations
 
