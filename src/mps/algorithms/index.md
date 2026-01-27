@@ -12,7 +12,7 @@ for [[MPS/TT tensor networks|mps]].
 - [[Sampling from MPS/TT|mps/algorithms/sampling]]
 
 <a name="ttsvd"></a>
-## Decomposing Tensors into MPS/TT Form
+## Converting Tensors into MPS/TT Form
 
 The following algorithms convert a tensor into MPS/TT form:
 
@@ -69,10 +69,3 @@ systems.
 - [[Krylov Time Evolution (Global Krlyov)|mps/algorithms/timeevo/global-krylov]]
 - [[Additional tricks|mps/algorithms/timeevo/tricks]]
 
-
-<a name="tci"></a>
-## Tensor Cross Interpolation/TT-Cross Algorithm
-
-Tensor cross interpolation (TCI) also known as tensor train cross interpolation (TT-Cross), efficiently constructs compressed MPS representations of tensors and has found applications in physics and machine learning. 
-
-- [[Tensor Cross Interpolation|mps/algorithms/tci]]
