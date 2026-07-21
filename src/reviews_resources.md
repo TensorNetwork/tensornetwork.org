@@ -9,6 +9,11 @@
 
 ### Introductory Reviews and Lectures
 
+* **"Tensor Cookbook: Mastering Tensors through Diagrams"**<br/>
+   **Authors**: Beheshteh T. Rakhshan, Guillaume Rabusseau <br/>
+   **Pre-print**: <a href="https://arxiv.org/abs/2605.16610">2605.16610</a><br/>
+   **Notes:** High-dimensional data arise naturally in many areas of science and engineering, but algebraic expressions for tensors involving many indices become difficult to interpret and implement. The graphical language of tensor networks encodes contractions as edges in a graph, reducing notational overhead and revealing structural properties obscured by index notation. This manuscript provides a self-contained guide to tensor networks and their use in tensor algebra.  We also illustrate how tensor networks simplify the derivation of gradients and the manipulation of high-dimensional probability distributions. Throughout, we show that the diagrammatic approach yields genuinely shorter and more transparent proofs of classical identities, rank bounds, and gradient formulas that would otherwise require laborious index manipulation.
+
 * **"Les Houches Lectures Notes on Tensor Networks"**<br/>
    **Authors**: Bram Vancraeynest-De Cuiper, Weronika Wiesiolek, Frank Verstraete <br/>
    **Pre-print**: <a href="https://arxiv.org/abs/2512.24390">2512.24390</a><br/>
