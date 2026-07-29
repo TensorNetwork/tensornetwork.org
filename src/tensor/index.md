@@ -28,6 +28,7 @@ $\mathbb{R}^N$ are ordered collections of $N$ real numbers which can be
 added or subtracted element-wise and multiplied by real scalars.
 These elements are the familiar real vectors, for example
 
+$$
 \begin{align*}
 \mathbf{v} & = (0.1,\  7.2,\ 3.0) \\\\
 e^1 & = (1,0,0) \\\\
@@ -35,7 +36,7 @@ e^2 & = (0,1,0) \\\\
 e^3 & = (0,0,1) \\\\
 \mathbf{v} & = 0.1 e^1 + 7.2 e^2 + 3.0 e^3
 \end{align*}
-
+$$
 
 ### Example 2: Hermitian matrices
 
@@ -49,8 +50,8 @@ matrix with a complex number is not generally Hermitian.
 ## Background: Dual Vectors
 
 Given a vector space $V$, one can consider the set of linear functions 
-on $V$. This set is denoted $V^*$. By a linear function, what is meant 
-is a function $f \in V^*$ such that
+on $V$. This set is denoted $V^\ast$. By a linear function, what is meant 
+is a function $f \in V^\ast$ such that
 
 $$
 f(\alpha \mathbf{v} + \beta \mathbf{w}) = \alpha f(\mathbf{v}) + \beta f(\mathbf{w})
@@ -58,10 +59,10 @@ $$
 
 for any $\mathbf{v}, \mathbf{w} \in V$ and scalars $\alpha, \beta$.
 
-It turns out that the set $V^*$ is a vector space, and is known as the *dual space*,
+It turns out that the set $V^\ast$ is a vector space, and is known as the *dual space*,
 or the dual of the space $V$. Its elements are known as *dual vectors* or *covectors*.
-The reason for the term *dual* is that just as elements of $V^*$ are linear functions
-on $V$, likewise elements of $V$ can be viewed as linear functions on $V^*$.
+The reason for the term *dual* is that just as elements of $V^\ast$ are linear functions
+on $V$, likewise elements of $V$ can be viewed as linear functions on $V^\ast$.
 
 In quantum physics, Dirac bra-ket notation is used to distinguish between vectors
 and covectors, with "kets" being vectors and "bras" being covectors.
@@ -69,23 +70,26 @@ and covectors, with "kets" being vectors and "bras" being covectors.
 ## Tensors
 
 Given some vector space $V$, a tensor $T$ is a multilinear function whose
-arguments are $r$ elements of $V^*$ and $s$ elements of $V$. 
+arguments are $r$ elements of $V^\ast$ and $s$ elements of $V$. 
 Such a tensor is said to be of type $(r,s)$.
 
 For example, a tensor of type $(1,1)$ is a function $T$ such that
 
 $$
-T(\alpha f + \beta g, \gamma v + \delta w)
-= 
+T(\alpha f + \beta g, \gamma v + \delta w) = 
 \alpha \gamma T(f,v) + \beta \gamma T(g,v) + \alpha \delta T(f,w) + \beta \delta T(g,w)
 $$
 
-Say that the vector spaces $V$ (and therefore $V^*$) are two-dimensional. Take
-$\{e^1, e^2\}$ to be a basis of $V$ and $\{e_1, e_2\}$ a basis of $V^*$. Then 
+Say that the vector spaces $V$ (and therefore $V^\ast$) are two-dimensional. Take
+$\{e^1, e^2\}$ to be a basis of $V$ and $\{e_1, e_2\}$ a basis of $V^\ast$. Then 
 the numbers
 
-\begin{align}
+$$
+\begin{align*}
 T_{11} = T(e_1, e^1) \ ;\ T_{12} = T(e_1, e^2) \\\\
 T_{21} = T(e_2, e^1) \ ;\ T_{22} = T(e_2, e^2)
-\end{align}
+\end{align*}
+$$
+
+define the tensor.
 
