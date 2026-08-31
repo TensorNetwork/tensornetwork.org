@@ -35,8 +35,6 @@ Combinatorial factors therefore arise automatically. A step that consumes two mo
 
 $$a^2\left|n\right\rangle = n(n-1)\left|n-2\right\rangle .$$
 
-A caveat on notation is warranted. The dagger is an algebraic label rather than a Hermitian conjugate: the construction borrows the symbols of second quantization, but the evolved object is a classical probability distribution, normalized so that its entries sum to one (the 1-norm) rather than so that their squares do (the 2-norm of a wave function).
-
 The builder below assembles elementary steps and displays each reaction as a balanced equation together with its generated operator term; hovering over an operator reveals the truncated matrix it represents. Load a preset with the two buttons, the reversible Schlögl model or a seven-species gene toggle switch, or clear the mechanism and build your own.
 
 <div id="rn-builder"></div>
@@ -105,7 +103,7 @@ The generator admits the same structure. Because each operator term couples only
 
 <div id="rn-mpo"></div>
 
-Time evolution then proceeds by contracting the operator network with the state network and compressing the result to a prescribed bond dimension\cite{schollwock2011}. The controls below compare the number of parameters in the tensor-network representation with the size of the full distribution as the chain length increases.
+Time evolution then proceeds with the dedicated time-stepping algorithms developed for evolving a Matrix Product State under a linear differential equation (see [[time evolution|mps/algorithms/timeevo]])\cite{schollwock2011}. The controls below compare the number of parameters in the tensor-network representation with the size of the full distribution as the chain length increases.
 
 Truncation is not free. On a truncated site the identity $\langle 1|a^{\dagger} = \langle 1|$ acquires a boundary term, so a naive hard cut-off leaks probability and $\langle 1|\mathbb{W} \ne 0$ exactly. The pragmatic response is to choose $d$ generously and monitor $\langle 1|p\rangle$ as a diagnostic; the principled one is to zero the rate of every reaction step that would carry a configuration past the cap, removing that step's gain and loss together, which restores exact conservation on the finite space at the price of a boundary term in the commutation relations of the truncated operators\cite{nicholson2023}.
 
