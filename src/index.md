@@ -53,6 +53,7 @@ learning, and many other fields.
 - [[Probability and Statistics|statistics]]
 - [[Quantum Physics|quantum_phys]]
 - [[Out-of-equilibrium Statistical Physics|stat_phys]]
+- [[Stochastic Chemical Kinetics|stoch_kin]]
 
 
 <br/>
