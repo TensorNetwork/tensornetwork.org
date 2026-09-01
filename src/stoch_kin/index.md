@@ -141,4 +141,4 @@ This procedure has been implemented for a reaction-diffusion chain by representi
 
 The same operator-to-tensor-network route has been pursued in many groups, from tensor-train solvers for the chemical master equation\cite{kazeev2014,gelss2016} to matrix-product-state methods for driven and large-deviation dynamics\cite{banuls2019} and broader treatments of stochastic mechanics\cite{baez2018}. The framework is modular: the occupation-number construction supplies the local operator structure, tensor diagram notation makes it explicit, and the Matrix Product State and Operator provide the compression that extends it to systems well beyond direct enumeration.
 
-Thanks to Jamie Obala for contributing this page.
+Thanks to Jamie Obala for contributing this page and Conor Scheidt for initial design of the applets.
