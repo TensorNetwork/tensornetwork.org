@@ -156,6 +156,13 @@
   perform computations with NumPy, MXNet, PyTorch, TensorFlow, and CuPy
   in order to be scalable on both CPU and GPU.\cite{tensorly}
 
+* <a href="https://github.com/jerhoud/TensorMixedStates.jl">TensorMixedStates</a> (Julia)<br/>
+  A Julia library to simulate closed and open quantum systems, pure and mixed states, using
+  matrix product states, built on ITensor. A density matrix is itself an MPS, so that a
+  Lindblad equation is evolved directly, by TDVP or the WI and WII approximations. Also
+  features ground and excited states by DMRG, steady states, thermal states, quantum circuits
+  with noisy gates, and conserved quantities.\cite{tensormixedstates}
+
 * <a href="https://jutho.github.io/TensorOperations.jl/stable/">TensorOperations</a> (Julia) <br/>
   Julia package for tensor contractions and related operations.
   Offers fast tensor operations using a convenient Einstein index notation,
