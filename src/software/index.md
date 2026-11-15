@@ -137,6 +137,9 @@
   theory all the way down to the definition of a tensor. At the same time, TensorKit.jl
   focuses on computational efficiency and performance.
 
+* <a href="https://github.com/JoeyT1994/TensorNetworkQuantumSimulator.jl">TensorNetworkQuantumSimulator.jl</a> (Julia)<br/>
+  Quantum circuit and dynamics simulation with tensor networks of near-arbitrary geometry, with OpenQASM 2 and Qiskit.jl import.
+
 * <a href="https://github.com/tenpy/tenpy">TenPy</a> (Python)<br/>
   Tensor Network Python (TeNPy) is a Python library for the simulation of 
   quantum systems with tensor networks. The philosophy of this library is 
