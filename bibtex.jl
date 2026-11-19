@@ -14,8 +14,8 @@
 #   doi = {10.1103/PhysRevB.90.155136}
 #   }
 #
-# note that multi-byte characters (umlauts, accented letters, long
-# dashes) are not supported and will lead to StringIndexError in getEntry().
+# Field values must be enclosed in braces; nested braces are allowed
+# and are removed from the output.
 
 mutable struct BTEntry
   ref_num::Int
@@ -99,51 +99,71 @@ function convertToMD(bt::BTEntry)::String
   return md
 end
 
-function getEntry(contents::String,start::Int)::String
-  lev = 1
-  n = start
-  while (lev > 0 && n < length(contents))
-    if (contents[n] == '{') lev += 1 end
-    if (contents[n] == '}') lev -= 1 end
-    #@show n,contents[n],lev
-    n += 1
+#
+# Return the text inside the braces that open at byte index `open`,
+# skipping over nested pairs of braces.
+#
+function bracedContents(s::AbstractString,open::Int)::String
+  depth = 0
+  i = open
+  while i <= ncodeunits(s)
+    c = s[i]
+    if c == '{'
+      depth += 1
+    elseif c == '}'
+      depth -= 1
+      (depth == 0) && return s[nextind(s,open):prevind(s,i)]
+    end
+    i = nextind(s,i)
   end
-  return contents[start:n-1]
+  return s[nextind(s,open):end]
+end
+
+const latex_accents = Dict('"' => '\u0308', '\'' => '\u0301', '`' => '\u0300',
+                           '^' => '\u0302', '~' => '\u0303')
+
+#
+# Convert LaTeX accents such as \"o, \'{e}, or \~n into Unicode characters
+#
+function latexToUnicode(s::AbstractString)::String
+  s = replace(s,r"\\ss(?![A-Za-z])" => "ß")
+  s = replace(s,r"\\([\"'`^~])\s*\{?\\?([A-Za-z])\}?" => function(m)
+                letter = m[findlast(isletter,m)]
+                return string(letter,latex_accents[m[2]])
+              end)
+  return Base.Unicode.normalize(s,:NFC)
+end
+
+function getField(name::String,entry::String;latex::Bool=true)::String
+  m = match(Regex("\\b$(name)\\s*=\\s*(\\{)","i"),entry)
+  isnothing(m) && return ""
+  value = bracedContents(entry,m.offsets[1])
+  latex && (value = latexToUnicode(value))
+  return strip(replace(value,r"[{}]" => ""))
 end
 
 function parseBibTex(fname::String)
-  contents = open(fname) do file read(file,String) end
+  contents = read(fname,String)
 
   entries = Dict{String,BTEntry}()
 
-  btre = r"@(.+?){(.+?),"s
-
-  function getField(re,source::String)::String
-    if occursin(re,source)
-      return strip(match(re,source).captures[1])
-    end
-    return ""
-  end
-
-  for m in eachmatch(btre,contents)
-    btype = convert(String,m.captures[1])
-    name = convert(String,m.captures[2])
+  for m in eachmatch(r"@(\w+)\s*(\{)\s*([^,\s]+)\s*,",contents)
+    btype = String(m.captures[1])
+    name = String(m.captures[3])
     bt = BTEntry(btype,name)
-    start = m.offset+length(m.match)
-    entry = getEntry(contents,start)
+    entry = bracedContents(contents,m.offsets[2])
 
-    bt.btype = btype
-    bt.title = getField(r"title\W*=\W*{(.+?)}"is,entry)
-    bt.journal = getField(r"journal\W*=\W*{(.+?)}"is,entry)
-    bt.volume = getField(r"volume\W*=\W*{(.+?)}"is,entry)
-    bt.pages = getField(r"pages\W*=\W*{(.+?)}"is,entry)
-    bt.year = getField(r"year\W*=\W*{(.+?)}"is,entry)
-    bt.doi = getField(r"doi\W*=\W*{(.+?)}"is,entry)
-    bt.eprint = getField(r"eprint\W*=\W*{(.+?)}"is,entry)
-    bt.url = getField(r"url\W*=\W*{(.+?)}"is,entry)
-    bt.school = getField(r"school\W*=\W*{(.+?)}"is,entry)
+    bt.title = getField("title",entry)
+    bt.journal = getField("journal",entry)
+    bt.volume = getField("volume",entry)
+    bt.pages = getField("pages",entry)
+    bt.year = getField("year",entry)
+    bt.doi = getField("doi",entry;latex=false)
+    bt.eprint = getField("eprint",entry;latex=false)
+    bt.url = getField("url",entry;latex=false)
+    bt.school = getField("school",entry)
 
-    all_authors = getField(r"author[s]*\W*=\W*{(.+?)}"is,entry)
+    all_authors = getField("authors?",entry)
     if all_authors != ""
       authors = split(all_authors," and")
       for a in authors
