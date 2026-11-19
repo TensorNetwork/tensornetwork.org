@@ -4,6 +4,17 @@ theory, and software.
 This repository contains both the content for the site (in the src/ folder) and 
 the program (generate.jl) for generating the website (https://tensornetwork.org).
 
+Deployment
+==========
+
+The site is hosted on GitHub Pages. Every push to `master` (including merged
+pull requests) runs the workflow in `.github/workflows/pages.yml`, which runs
+`generate.jl` and deploys the result, usually within a few minutes.
+Pull requests are built but not deployed, so build errors show up as a failed
+check on the pull request.
+
+The page shown for missing URLs is generated from `src/404.md`.
+
 Local Content Generation
 ========================
 
