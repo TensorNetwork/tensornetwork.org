@@ -1,282 +1,225 @@
-\documentclass[tikz,border=10pt]{standalone}
-\usepackage{amsmath}
-\usepackage{tikz}
-\usetikzlibrary{shapes,arrows,positioning,calc,decorations.pathreplacing}
+% Diagrams for the TT-SVD page. Each tikzpicture becomes one SVG.
+%
+% Build (from this folder):
+%   latex diagrams.tex
+%   dvisvgm --no-fonts --exact-bbox --page=1- --output=fig-%p diagrams.dvi
+%   mv fig-1.svg ttsvd_reshape.svg
+%   mv fig-2.svg ttsvd_svd_step.svg
+%   mv fig-3.svg ttsvd_first_tensor.svg
+%   mv fig-4.svg ttsvd_iteration.svg
+%   mv fig-5.svg ttsvd_left_canonical.svg
+%   mv fig-6.svg ttsvd_rounding.svg
+%   rm -f diagrams.aux diagrams.log diagrams.dvi
+%
+% Colors and line weights follow the other figures on the site:
+% gray = generic tensor, pink = isometry (U / left-orthogonal),
+% blue circle = singular values, orange = V^dagger.
 
-% Tensor network styles
+\documentclass[dvisvgm,tikz,border=4pt]{standalone}
+\usepackage{newtxtext,newtxmath}
+\usetikzlibrary{calc}
+
+\definecolor{tgray}{HTML}{D5D5D5}
+\definecolor{tpink}{HTML}{CB6D9D}
+\definecolor{tblue}{HTML}{82A2DA}
+\definecolor{torange}{HTML}{FFA902}
+
 \tikzset{
-    tensor/.style={draw, fill=blue!20, minimum size=0.8cm, rounded corners=2pt},
-    tensorU/.style={draw, fill=green!20, minimum size=0.8cm, rounded corners=2pt},
-    tensorS/.style={draw, fill=yellow!30, minimum size=0.6cm, circle},
-    tensorV/.style={draw, fill=red!20, minimum size=0.8cm, rounded corners=2pt},
-    tensorA/.style={draw, fill=green!30, minimum size=0.7cm, rounded corners=2pt},
-    tensorRem/.style={draw, fill=orange!20, minimum size=0.8cm, rounded corners=2pt},
-    iso/.style={draw, fill=green!30, isosceles triangle, isosceles triangle apex angle=60,
-                minimum width=0.8cm, minimum height=0.7cm, inner sep=1pt},
-    bond/.style={thick},
-    ext/.style={thick},
-    label/.style={font=\small},
-    equals/.style={font=\Large},
+  every picture/.style={line width=1.6pt, line cap=butt},
+  sq/.style={draw, line width=1.6pt, minimum size=0.62cm, inner sep=0pt},
+  gen/.style={sq, fill=tgray},
+  iso/.style={sq, fill=tpink},
+  vdag/.style={sq, fill=torange},
+  sv/.style={draw, line width=1.6pt, circle, fill=tblue, minimum size=0.48cm, inner sep=0pt},
+  pill/.style={draw, line width=1.6pt, fill=tgray, rounded corners=5pt,
+               minimum height=0.62cm, inner sep=0pt},
+  lbl/.style={font=\large},
+  idx/.style={font=\normalsize},
+  op/.style={font=\LARGE},
+}
+
+% \legs{node}{n}{width}: n evenly spaced legs on top of a pill of given width
+\newcommand{\legs}[3]{%
+  \foreach \j in {1,...,#2} {
+    \draw ($(#1.north west)!{(\j-0.5)/#2}!(#1.north east)$) -- ++(0,0.5);
+  }%
 }
 
 \begin{document}
 
-% ============================================
-% Diagram 1: Full tensor and initial reshape
-% ============================================
-\begin{tikzpicture}[scale=1]
-    % Full tensor
-    \node[tensor, minimum size=1.2cm] (T) at (0,0) {$T$};
+% ------------------------------------------------------------------
+% 1. Reshape the full tensor into a matrix
+% ------------------------------------------------------------------
+\begin{tikzpicture}
+  \node[pill, minimum width=3.0cm] (T) at (0,0) {};
+  \legs{T}{5}{3.0}
+  \foreach \j/\s in {1/s_1, 2/s_2, 3/s_3, 4/\cdots, 5/s_N} {
+    \node[idx, above] at ($(T.north west)!{(\j-0.5)/5}!(T.north east)+(0,0.5)$) {$\s$};
+  }
+  \node[lbl, below=3pt] at (T.south) {$T$};
 
-    % External indices
-    \draw[ext] (T.north) -- ++(0,0.6) node[above, label] {$s_1$};
-    \draw[ext] ($(T.north)!0.3!(T.north east)$) -- ++(0.2,0.6) node[above, label] {$s_2$};
-    \draw[ext] ($(T.north)!0.6!(T.north east)$) -- ++(0.4,0.5) node[above, label] {$s_3$};
-    \draw[ext] ($(T.north)!0.3!(T.north west)$) -- ++(-0.2,0.6) node[above, label] {$s_4$};
-    \draw[ext] ($(T.north)!0.6!(T.north west)$) -- ++(-0.4,0.5) node[above, label] {$s_5$};
+  \node[op] at (2.5,0.15) {$\longrightarrow$};
 
-    % Arrow
-    \node[equals] at (2.2,0) {$\longrightarrow$};
-    \node[font=\small] at (2.2,-0.5) {reshape};
-
-    % Matrix form
-    \node[tensor, minimum width=1.8cm, minimum height=1.2cm] (M) at (5,0) {$M^{(1)}$};
-
-    % Matrix indices
-    \draw[ext] (M.west) -- ++(-0.6,0) node[left, label] {$s_1$};
-    \draw[ext] (M.east) -- ++(0.6,0) node[right, label] {$(s_2 s_3 s_4 s_5)$};
-
-    % Dimension labels
-    \node[font=\scriptsize, below] at (M.south west) {$d_1$ rows};
-    \node[font=\scriptsize, below] at (M.south east) {$d_2 d_3 d_4 d_5$ cols};
+  \node[gen, minimum size=0.8cm] (M) at (5.0,0.15) {};
+  \draw (M.west) -- ++(-0.7,0) node[idx, left] {$s_1$};
+  \draw (M.east) -- ++(0.7,0) node[idx, right] {$(s_2\, s_3 \cdots s_N)$};
+  \node[lbl, below=3pt] at (M.south) {$M^{(1)}$};
 \end{tikzpicture}
 
-% ============================================
-% Diagram 2: SVD decomposition step
-% ============================================
-\begin{tikzpicture}[scale=1]
-    % Matrix
-    \node[tensor, minimum width=1.8cm, minimum height=1.2cm] (M) at (0,0) {$M^{(1)}$};
-    \draw[ext] (M.west) -- ++(-0.5,0) node[left, label] {$s_1$};
-    \draw[ext] (M.east) -- ++(0.5,0);
+% ------------------------------------------------------------------
+% 2. SVD of the first unfolding, with truncation
+% ------------------------------------------------------------------
+\begin{tikzpicture}
+  \node[pill, minimum width=3.0cm] (T) at (0,0) {};
+  \legs{T}{5}{3.0}
+  \node[lbl, below=3pt] at (T.south) {$M^{(1)}$};
 
-    % Equals
-    \node[equals] at (2,0) {$=$};
+  \node[op] at (2.2,0) {$\approx$};
 
-    % U matrix
-    \node[tensorU, minimum width=0.9cm, minimum height=1.2cm] (U) at (3.5,0) {$U$};
-    \draw[ext] (U.west) -- ++(-0.5,0) node[left, label] {$s_1$};
-    \draw[bond] (U.east) -- ++(0.3,0);
+  \node[iso] (U) at (3.4,0) {};
+  \draw (U.north) -- ++(0,0.5);
+  \node[sv] (S) at (4.9,0) {};
+  \node[pill, minimum width=2.4cm, fill=torange] (V) at (7.2,0) {};
+  \legs{V}{4}{2.4}
+  \draw (U.east) -- (S.west);
+  \draw (S.east) -- (V.west);
+  \node[idx, above] at ($(U.east)!0.5!(S.west)$) {$\alpha_1$};
 
-    % S matrix (diagonal)
-    \node[tensorS] (S) at (4.7,0) {$S$};
-    \draw[bond] (S.east) -- ++(0.3,0);
-
-    % V^dagger matrix
-    \node[tensorV, minimum width=1.4cm, minimum height=0.9cm] (V) at (6.2,0) {$V^\dagger$};
-    \draw[ext] (V.east) -- ++(0.5,0);
-
-    % Bond dimension label
-    \node[font=\scriptsize] at (4.7, -0.9) {$r_1$};
-
-    % Arrow to truncated version
-    \node[equals] at (8,0) {$\approx$};
-    \node[font=\small] at (8,-0.5) {truncate};
-
-    % Truncated U
-    \node[tensorU, minimum width=0.7cm, minimum height=1.0cm] (Ut) at (9.8,0) {$\tilde{U}$};
-    \draw[ext] (Ut.west) -- ++(-0.5,0) node[left, label] {$s_1$};
-    \draw[bond] (Ut.east) -- ++(0.3,0);
-
-    % Truncated S
-    \node[tensorS, minimum size=0.5cm] (St) at (10.7,0) {$\tilde{S}$};
-    \draw[bond] (St.east) -- ++(0.3,0);
-
-    % Truncated V^dagger
-    \node[tensorV, minimum width=1.2cm, minimum height=0.7cm] (Vt) at (12,0) {$\tilde{V}^\dagger$};
-    \draw[ext] (Vt.east) -- ++(0.5,0);
-
-    % Truncated bond dimension
-    \node[font=\scriptsize] at (10.7, -0.8) {$\tilde{r}_1 \leq r_1$};
+  \node[lbl, below=3pt] at (U.south) {$U^{(1)}$};
+  \node[lbl, below=3pt] at (S.south |- U.south) {$S^{(1)}$};
+  \node[lbl, below=3pt] at (V.south) {$V^{(1)\dagger}$};
 \end{tikzpicture}
 
-% ============================================
-% Diagram 3: First tensor extracted
-% ============================================
-\begin{tikzpicture}[scale=1]
-    % Truncated U becomes A^{s_1}
-    \node[tensorA] (A1) at (0,0) {$A^{s_1}$};
-    \draw[ext] (A1.north) -- ++(0,0.5) node[above, label] {$s_1$};
-    \draw[bond] (A1.east) -- ++(0.4,0) node[right, label] {$\alpha_1$};
-
-    % Multiplication sign
-    \node[font=\Large] at (1.5,0) {$\times$};
-
-    % Remainder tensor
-    \node[tensorRem, minimum width=1.4cm] (R) at (3.2,0) {$\tilde{T}^{(2)}$};
-    \draw[bond] (R.west) -- ++(-0.4,0) node[left, label] {$\alpha_1$};
-    \draw[ext] (R.north) -- ++(0,0.5);
-    \draw[ext] ($(R.north)+(0.2,0)$) -- ++(0.15,0.45);
-    \draw[ext] ($(R.north)+(-0.2,0)$) -- ++(-0.15,0.45);
-    \draw[ext] ($(R.north)+(0.4,0)$) -- ++(0.25,0.4);
-    \node[font=\scriptsize] at (3.2, 1.0) {$s_2, s_3, s_4, s_5$};
-
-    % Explanation
-    \node[font=\small, align=left] at (6.5, 0) {$A^{s_1} = \tilde{U}$ (reshaped)\\[2pt]
-    $\tilde{T}^{(2)} = \tilde{S}\tilde{V}^\dagger$ (reshaped)};
+% ------------------------------------------------------------------
+% 3. First MPS/TT tensor and remainder
+% ------------------------------------------------------------------
+\begin{tikzpicture}
+  \node[iso] (A) at (0,0) {};
+  \draw (A.north) -- ++(0,0.5) node[idx, above] {$s_1$};
+  \node[pill, minimum width=2.4cm] (R) at (2.4,0) {};
+  \legs{R}{4}{2.4}
+  \foreach \j/\s in {1/s_2, 2/s_3, 3/\cdots, 4/s_N} {
+    \node[idx, above] at ($(R.north west)!{(\j-0.5)/4}!(R.north east)+(0,0.5)$) {$\s$};
+  }
+  \draw (A.east) -- (R.west);
+  \node[idx, above] at ($(A.east)!0.5!(R.west)$) {$\alpha_1$};
+  \node[lbl, below=3pt] at (A.south) {$A^{s_1}$};
+  \node[lbl, below=3pt] at (R.south) {$\tilde{T}^{(2)}$};
 \end{tikzpicture}
 
-% ============================================
-% Diagram 4: Full TT-SVD iteration process
-% ============================================
-\begin{tikzpicture}[scale=0.9]
-    % Step 1: Full tensor
-    \node[font=\bfseries] at (-2, 0) {Step 1:};
-    \node[tensor, minimum size=1cm] (T1) at (0,0) {$T$};
-    \foreach \i/\x in {1/-0.3, 2/-0.1, 3/0.1, 4/0.3} {
-        \draw[ext] ($(T1.north)+(\x,0)$) -- ++(0,0.5);
+% ------------------------------------------------------------------
+% 4. Full sequence of SVDs
+% ------------------------------------------------------------------
+\begin{tikzpicture}
+  \def\dx{1.05}
+  % row 1: full tensor
+  \node[pill, minimum width=3.2cm] (T) at (1.6,0) {};
+  \legs{T}{5}{3.2}
+
+  % row 2
+  \begin{scope}[yshift=-2.0cm]
+    \node[iso] (a1) at (0,0) {};
+    \node[pill, minimum width=2.4cm] (r) at (2.25,0) {};
+    \legs{r}{4}{2.4}
+  \end{scope}
+  \draw (a1.north) -- ++(0,0.5);
+  \draw (a1.east) -- (r.west);
+
+  % row 3
+  \begin{scope}[yshift=-4.0cm]
+    \node[iso] (b1) at (0,0) {};
+    \node[iso] (b2) at (\dx,0) {};
+    \node[pill, minimum width=1.8cm] (rr) at (2.85,0) {};
+    \legs{rr}{3}{1.8}
+  \end{scope}
+  \foreach \n in {b1,b2} \draw (\n.north) -- ++(0,0.5);
+  \draw (b1.east) -- (b2.west);
+  \draw (b2.east) -- (rr.west);
+
+  % row 4: final MPS/TT
+  \begin{scope}[yshift=-6.6cm]
+    \node[iso] (f1) at (0,0) {};
+    \node[iso] (f2) at (\dx,0) {};
+    \node[iso] (f3) at (2*\dx,0) {};
+    \node[iso] (f4) at (3.9*\dx,0) {};
+    \node[gen] (f5) at (4.9*\dx,0) {};
+  \end{scope}
+  \foreach \n in {f1,f2,f3,f4,f5} \draw (\n.north) -- ++(0,0.5);
+  \draw (f1.east) -- (f2.west);
+  \draw (f2.east) -- (f3.west);
+  \draw (f3.east) -- ++(0.2,0);
+  \draw (f4.west) -- ++(-0.2,0);
+  \node at ($(f3.east)!0.5!(f4.west)$) {$\cdots$};
+  \draw (f4.east) -- (f5.west);
+  \node[lbl, below=3pt] at (f1.south) {$A^{s_1}$};
+  \node[lbl, below=3pt] at (f2.south) {$A^{s_2}$};
+  \node[lbl, below=3pt] at (f3.south) {$A^{s_3}$};
+  \node[lbl, below=3pt] at (f4.south) {$A^{s_{N-1}}$};
+  \node[lbl, below=3pt] at (f5.south) {$A^{s_N}$};
+
+  % arrows
+  \foreach \y/\t in {-0.55/SVD, -2.55/SVD} {
+    \draw[->, line width=1.0pt] (-1.1,\y) -- ++(0,-0.95) node[midway, left, font=\large] {\t};
+  }
+  \node at (-1.1,-4.9) {$\vdots$};
+  \draw[->, line width=1.0pt] (-1.1,-5.4) -- ++(0,-0.8) node[midway, left, font=\large] {SVD};
+\end{tikzpicture}
+
+% ------------------------------------------------------------------
+% 5. Left-orthogonality of the MPS/TT tensors
+% ------------------------------------------------------------------
+\begin{tikzpicture}
+  \node[iso] (A) at (0,0.65) {};
+  \node[iso] (B) at (0,-0.65) {};
+  \draw (A.south) -- (B.north);
+  \draw (A.west) -- ++(-0.35,0) arc[start angle=90, end angle=270, radius=0.65] -- (B.west);
+  \draw (A.east) -- ++(0.5,0) node[idx, right] {$\alpha_k$};
+  \draw (B.east) -- ++(0.5,0) node[idx, right] {$\alpha'_k$};
+  \node[idx, above=2pt] at (A.north) {$A^{s_k}$};
+  \node[idx, below=2pt] at (B.south) {$\bar{A}^{s_k}$};
+
+  \node[op] at (2.2,0) {$=$};
+
+  \draw (3.6,0.65) arc[start angle=90, end angle=270, radius=0.65];
+  \node[idx, right] at (3.6,0.65) {$\alpha_k$};
+  \node[idx, right] at (3.6,-0.65) {$\alpha'_k$};
+\end{tikzpicture}
+
+% ------------------------------------------------------------------
+% 6. TT-rounding of an existing MPS/TT
+% ------------------------------------------------------------------
+\begin{tikzpicture}
+  \def\dx{1.05}
+  % top: right-orthogonalized input (bond dimension R)
+  \foreach \i in {1,...,5} {
+    \ifnum\i=1
+      \node[gen] (t\i) at (\i*\dx,0) {};
+    \else
+      \node[vdag] (t\i) at (\i*\dx,0) {};
+    \fi
+    \draw (t\i.north) -- ++(0,0.5);
+  }
+  \foreach \i [evaluate=\i as \j using int(\i+1)] in {1,...,4}
+    \draw[line width=3.2pt] (t\i.east) -- (t\j.west);
+  \node[lbl, below=3pt] at ($(t1.south)!0.5!(t5.south)$) {right-orthogonal, bond dimension $R$};
+
+  % bottom: after left-to-right SVD sweep (bond dimension r)
+  \begin{scope}[yshift=-2.0cm]
+    \foreach \i in {1,...,5} {
+      \ifnum\i=5
+        \node[gen] (u\i) at (\i*\dx,0) {};
+      \else
+        \node[iso] (u\i) at (\i*\dx,0) {};
+      \fi
+      \draw (u\i.north) -- ++(0,0.5);
     }
-    \node[font=\scriptsize] at (0, 0.9) {$s_1 \cdots s_N$};
+  \end{scope}
+  \foreach \i [evaluate=\i as \j using int(\i+1)] in {1,...,4}
+    \draw (u\i.east) -- (u\j.west);
+  \node[lbl, below=3pt] at ($(u1.south)!0.5!(u5.south)$) {left-orthogonal, bond dimension $r \leq R$};
 
-    \node at (1.5,0) {$\xrightarrow{\text{SVD}}$};
-
-    % After first SVD
-    \node[tensorA] (A1) at (3,0) {$A^{s_1}$};
-    \draw[ext] (A1.north) -- ++(0,0.5) node[above, font=\scriptsize] {$s_1$};
-    \draw[bond] (A1.east) -- ++(0.3,0);
-
-    \node[tensorRem, minimum size=0.9cm] (R1) at (4.5,0) {};
-    \draw[bond] (R1.west) -- ++(-0.3,0);
-    \foreach \i/\x in {1/-0.2, 2/0, 3/0.2} {
-        \draw[ext] ($(R1.north)+(\x,0)$) -- ++(0,0.5);
-    }
-    \node[font=\scriptsize] at (4.5, 0.9) {$s_2 \cdots s_N$};
-
-    % Step 2
-    \node[font=\bfseries] at (-2, -2) {Step 2:};
-    \node[tensorA] (A1b) at (0,-2) {$A^{s_1}$};
-    \draw[ext] (A1b.north) -- ++(0,0.5);
-    \draw[bond] (A1b.east) -- ++(0.3,0);
-
-    \node[tensorRem, minimum size=0.9cm] (R1b) at (1.5,-2) {};
-    \draw[bond] (R1b.west) -- ++(-0.3,0);
-    \foreach \i/\x in {1/-0.2, 2/0, 3/0.2} {
-        \draw[ext] ($(R1b.north)+(\x,0)$) -- ++(0,0.5);
-    }
-
-    \node at (3,-2) {$\xrightarrow{\text{SVD}}$};
-
-    \node[tensorA] (A1c) at (4.5,-2) {$A^{s_1}$};
-    \draw[ext] (A1c.north) -- ++(0,0.5);
-    \draw[bond] (A1c.east) -- ++(0.3,0);
-
-    \node[tensorA] (A2c) at (5.8,-2) {$A^{s_2}$};
-    \draw[bond] (A2c.west) -- ++(-0.3,0);
-    \draw[ext] (A2c.north) -- ++(0,0.5);
-    \draw[bond] (A2c.east) -- ++(0.3,0);
-
-    \node[tensorRem, minimum size=0.8cm] (R2c) at (7.2,-2) {};
-    \draw[bond] (R2c.west) -- ++(-0.3,0);
-    \foreach \i/\x in {1/-0.15, 2/0.15} {
-        \draw[ext] ($(R2c.north)+(\x,0)$) -- ++(0,0.5);
-    }
-
-    % Dots
-    \node at (2.5, -3.5) {$\vdots$};
-
-    % Final step
-    \node[font=\bfseries] at (-2, -5) {Final:};
-
-    \node[tensorA] (Af1) at (0,-5) {$A^{s_1}$};
-    \draw[ext] (Af1.north) -- ++(0,0.5);
-    \draw[bond] (Af1.east) -- ++(0.3,0);
-
-    \node[tensorA] (Af2) at (1.5,-5) {$A^{s_2}$};
-    \draw[bond] (Af2.west) -- ++(-0.3,0);
-    \draw[ext] (Af2.north) -- ++(0,0.5);
-    \draw[bond] (Af2.east) -- ++(0.3,0);
-
-    \node[tensorA] (Af3) at (3,-5) {$A^{s_3}$};
-    \draw[bond] (Af3.west) -- ++(-0.3,0);
-    \draw[ext] (Af3.north) -- ++(0,0.5);
-    \draw[bond] (Af3.east) -- ++(0.3,0);
-
-    \node at (4.2, -5) {$\cdots$};
-
-    \node[tensorA] (AfN) at (5.4,-5) {$A^{s_N}$};
-    \draw[bond] (AfN.west) -- ++(-0.3,0);
-    \draw[ext] (AfN.north) -- ++(0,0.5);
-
-    % Label
-    \node[font=\small] at (2.7, -6) {TT/MPS in left-canonical form};
-\end{tikzpicture}
-
-% ============================================
-% Diagram 5: Left-canonical property
-% ============================================
-\begin{tikzpicture}[scale=1]
-    % Left orthogonality condition
-    \node[tensorA] (A) at (0,0) {$A^{s_k}$};
-    \draw[ext] (A.north) -- ++(0,0.5) node[above, font=\scriptsize] {$s_k$};
-    \draw[bond] (A.west) -- ++(-0.4,0) node[left, font=\scriptsize] {$\alpha_{k-1}$};
-    \draw[bond] (A.east) -- ++(0.4,0) node[right, font=\scriptsize] {$\alpha_k$};
-
-    % Conjugate below
-    \node[tensorA, fill=green!50] (Adag) at (0,-1.2) {$\bar{A}^{s_k}$};
-    \draw[ext] (Adag.south) -- ++(0,-0.5) node[below, font=\scriptsize] {$s_k$};
-    \draw[bond] (Adag.west) -- ++(-0.4,0) node[left, font=\scriptsize] {$\alpha_{k-1}$};
-    \draw[bond] (Adag.east) -- ++(0.4,0) node[right, font=\scriptsize] {$\alpha'_k$};
-
-    % Connect s_k indices
-    \draw[ext, dotted] (A.north) ++(0,0.5) -- ++(0.8,0) -- ++(0,-2.2) -- ++(-0.8,0);
-    \draw[ext, dotted] (A.west) ++(-0.4,0) -- ++(-0.3,0) -- ++(0,-1.2) -- ++(0.3,0);
-
-    \node[font=\small] at (0, -2.3) {sum over $s_k, \alpha_{k-1}$};
-
-    % Equals
-    \node[equals] at (2.5, -0.6) {$=$};
-
-    % Identity
-    \draw[bond] (3.5, 0) -- (3.5, -1.2);
-    \node[font=\scriptsize] at (3.9, 0) {$\alpha_k$};
-    \node[font=\scriptsize] at (3.9, -1.2) {$\alpha'_k$};
-    \node[font=\small] at (3.5, -2.3) {$\delta_{\alpha_k, \alpha'_k}$};
-\end{tikzpicture}
-
-% ============================================
-% Diagram 6: Error accumulation (visual)
-% ============================================
-\begin{tikzpicture}[scale=1]
-    \node[font=\bfseries] at (0, 1) {Error bound:};
-
-    % Original tensor
-    \node[tensor] (T) at (0,0) {$T$};
-
-    \node at (1,0) {$-$};
-
-    % Approximate TT
-    \node[tensorA, minimum size=0.5cm] (A1) at (2,0) {};
-    \draw[bond] (A1.east) -- ++(0.2,0);
-    \node[tensorA, minimum size=0.5cm] (A2) at (2.7,0) {};
-    \draw[bond] (A2.east) -- ++(0.2,0);
-    \node[tensorA, minimum size=0.5cm] (A3) at (3.4,0) {};
-    \draw[bond] (A3.east) -- ++(0.2,0);
-    \node at (4.0,0) {$\cdots$};
-    \node[tensorA, minimum size=0.5cm] (AN) at (4.6,0) {};
-    \draw[bond] (AN.west) -- ++(-0.2,0);
-
-    % Frobenius norm
-    \node at (5.5, 0) {$\Big\|_F$};
-    \node at (-0.7, 0) {$\Big\|$};
-
-    % Inequality
-    \node at (6.3, 0) {$\leq$};
-
-    % Error bound
-    \node at (8.5, 0) {$\displaystyle\sqrt{\sum_{k=1}^{N-1} \epsilon_k^2}$};
-
-    % Explanation
-    \node[font=\small, align=left] at (4, -1.2) {$\epsilon_k$ = truncation error at step $k$};
+  \draw[->, line width=1.0pt] (-0.1,-0.45) -- ++(0,-1.1)
+     node[midway, left, font=\large, align=right] {SVD\\sweep};
 \end{tikzpicture}
 
 \end{document}
