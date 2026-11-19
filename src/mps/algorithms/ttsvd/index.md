@@ -3,7 +3,7 @@
 The TT-SVD algorithm\cite{Oseledets:2011} decomposes a tensor into
 [[matrix product state (MPS) or tensor train (TT)|mps]] form.
 Starting from the full tensor, it applies the
-[singular value decomposition (SVD)](https://en.wikipedia.org/wiki/Singular_value_decomposition)
+[[singular value decomposition (SVD)|svd]]
 repeatedly, splitting off one index at a time into its own MPS/TT tensor.
 Discarding small singular values at each step compresses the result,
 and the error this introduces is known exactly.

@@ -20,6 +20,7 @@ learning, and many other fields.
 <b>Fundamentals</b>:
 
 - [[Tensor Diagram Notation|diagrams]]
+- [[Singular Value Decomposition (SVD)|svd]]
 - [[Symmetries in Tensor Networks|symmetries]]
 
 <b>Types of Tensor Networks</b>:
