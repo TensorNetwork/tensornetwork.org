@@ -2,7 +2,7 @@ The Tensor Network is an *open-source review article* about tensor network algor
 theory, and software.
 
 This repository contains both the content for the site (in the src/ folder) and 
-the program (generator.jl) for generating the website (https://tensornetwork.org).
+the program (generate.jl) for generating the website (https://tensornetwork.org).
 
 Local Content Generation
 ========================
@@ -11,8 +11,7 @@ To generate the website locally from a checked-out git repository,
 follow these steps:
 
 - install the Julia language binary from
-  [julialang.org](https://julialang.org/downloads/). Version 1.2
-  works, version 0.4.5 doesn't.
+  [julialang.org](https://julialang.org/downloads/).
 - install cmark from [the github repository](https://github.com/commonmark/cmark).
 - make sure that the git repository is _not_ cloned into a folder
   `tensornetwork.org`, if necessary, rename it:
@@ -25,10 +24,14 @@ follow these steps:
 
 ````
     $ cd tensornetwork.org-git
-    $ julia generate.jl
+    $ ./generate.jl
+
+  (equivalent to `julia --startup-file=no -O0 generate.jl`; the
+  flags roughly halve the build time)
 ````
 
 - a new folder `tensornetwork.org` will be generated one level up
+  (its previous contents, except hidden files such as `.git`, are deleted first)
 - inside that folder, start a tiny HTTP server to serve the files locally:
 
 ````
