@@ -220,8 +220,6 @@ for f in readdir(odir)
 end
 cp("css",joinpath(odir,"css"))
 cp("images",joinpath(odir,"images"))
-cp("htaccess_file",joinpath(odir,".htaccess"); force=true)
-chmod(joinpath(odir,".htaccess"),0o644)
 
 for (root,dirs,files) in walkdir(idir)
   rel = relpath(root,idir)

@@ -1,0 +1,51 @@
+# Builds the site with generate.jl and deploys it to GitHub Pages.
+# Pull requests are only built (to catch errors); pushes to master are deployed.
+name: Build and deploy site
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  # Superseded PR builds are cancelled; deployments always run to completion
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # generate.jl writes to ../tensornetwork.org, so check out into a
+      # subfolder to keep the output inside the workspace
+      - uses: actions/checkout@v7
+        with:
+          path: source
+      - uses: julia-actions/setup-julia@v3
+        with:
+          version: '1'
+      - name: Install cmark
+        run: sudo apt-get update && sudo apt-get install -y cmark
+      - name: Generate site
+        working-directory: source
+        run: ./generate.jl
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: tensornetwork.org
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
